@@ -1,0 +1,24 @@
+---
+description: Revue de performance hebdomadaire (phase 5) — diagnostic + plan d'action priorisé
+argument-hint: <slug-client>
+---
+Revue hebdo pour `$ARGUMENTS`.
+
+1. Lis `clients/<slug>/client-brief.md` et `tracking.md`.
+2. **Collecte** :
+   - Cuik MCP → données Search Console : impressions, clics, CTR, position par URL/requête (7 et 28 derniers jours).
+   - Haloscan MCP → positions des mots-clés suivis, cannibalisations détectées.
+   - Si le brief indique PostHog → PostHog MCP : sessions, conversions attribuées au contenu.
+   - Si client local → demande-moi de coller le geo-grid/avis BrightLocal et les insights GBP avant de conclure.
+3. **⛔ Règle des 90 jours (garde-fou prioritaire)** : pour tout contenu publié il y a **moins de 90 jours**, la volatilité des positions est NORMALE (Google teste : il monte/descend la page et observe le comportement des utilisateurs). Aucun refresh ni action corrective sur ces contenus, quelles que soient les courbes. Deux seules exceptions : erreur factuelle avérée, ou problème technique bloquant (signalé par Cuik). J30 et J60 = observation seule ; le verdict et l'action se prennent à J90.
+4. **Diagnostic** (règles, uniquement sur les contenus ≥ 90 jours) :
+   - fortes impressions + faible CTR → refresh title/meta ;
+   - bloqué positions 4-20 → **gisement prioritaire** : approfondir/mailler pour viser le top 3 (hors top 3, très peu de trafic) ;
+   - cannibalisation → fusion ;
+   - chute brutale → vérifier technique (Cuik) ;
+   - contenu en érosion selon sa typologie → voir re-check ci-dessous.
+5. **Re-check bimestriel par typologie** : ~1 semaine sur 8, passe en revue les contenus publiés selon leur colonne `typologie` dans tracking.md — `actu` : l'actualité a-t-elle évolué ? `guide` : informations manquantes à compléter (nouveaux outils/pratiques sortis) ? `evergreen` : rien sauf érosion. ~80 % de l'article reste identique ; on complète, on ne réécrit pas.
+6. **Équilibre du trafic** : signale si 3-4 pages concentrent >60-70 % du trafic SEO (fragilité — une page qui tombe = trafic mort) ou si le SEO dépasse ~60 % du trafic total du client (dépendance à une source unique).
+7. **Livrable** : tableau des contenus avec verdict (on_track / à agir / <90j-observation), puis **plan d'action priorisé de la semaine** (max 5 actions, chacune mappée sur une command : /refresh, /write, /gbp-post…).
+8. **Historisation** : sauvegarde le livrable intégral dans `clients/<slug>/reports/YYYY-MM-DD-revue-hebdo.md` avec un bandeau d'en-tête (client, date, période des données, sources utilisées, statut « interne »), et ajoute la ligne dans l'index `clients/<slug>/reports/README.md` (à la première revue : créer le dossier en copiant `clients/_template/reports/README.md`). **Une revue générée ne se réécrit plus** (trace d'audit) — la semaine suivante = un nouveau fichier.
+9. Mets à jour la colonne "dernier relevé" de `tracking.md` et les checkpoints J30/J60/J90. La ligne « Historique des revues hebdo » de tracking.md reste le résumé condensé ; elle référence le fichier de la revue.

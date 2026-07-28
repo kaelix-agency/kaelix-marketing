@@ -1,0 +1,23 @@
+{
+  "mcpServers": {
+     "haloscan": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@occirank/haloscan-server",
+        "start"
+      ],
+      "env": {
+        "HALOSCAN_API_KEY": "${HALOSCAN_API_KEY}"
+      }
+    },
+    "cuik": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "github:Nemzytch/cuik-mcp"],
+      "env": {
+        "CUIK_API_KEY": "${CUIK_API_KEY}"
+      }
+    }
+  }
+}
