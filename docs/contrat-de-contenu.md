@@ -1,5 +1,7 @@
 # Contrat de contenu — la frontière entre le repo marketing et les sites clients
 
+> **Version courante du contrat : v2** (2026-08-01). Chaque site déclare la version qu'il supporte dans son `client-brief.md` — un article ne peut utiliser que les composants de la version supportée par SON site. Voir §4.
+
 Ce document définit le **standard unique** que tout contenu produit par ce repo respecte, et que tout site client implémente. C'est le contrat qui permet à un même article MDX d'être publié sur n'importe quel site de l'agence en héritant automatiquement de SON design.
 
 ## 1. Le principe : contenu sémantique pur, design côté site
@@ -58,19 +60,81 @@ Règles :
 - `geo` : obligatoire pour `content/zones/`, interdit ailleurs. Les valeurs proviennent exclusivement du `nap.md` du client.
 - Le site génère le JSON-LD (Article/BlogPosting, FAQPage, LocalBusiness/Service, BreadcrumbList) **à partir du frontmatter** — le contenu n'écrit jamais de `<script>` schema à la main.
 
-## 4. Whitelist de composants (contrat v1)
+## 4. Whitelist de composants — versions du contrat
 
-Le corps de l'article ne peut invoquer QUE ces composants. Chaque template de site les implémente dans son design ; l'article les invoque sans connaître leur apparence.
+Le corps de l'article ne peut invoquer QUE les composants de la whitelist, **dans la version supportée par le site cible**. Chaque template les implémente dans son design ; l'article les invoque sans connaître leur apparence.
+
+### 4.1 Versions
+
+| Version | Composants | Date |
+|---|---|---|
+| **v1** | `<Callout type="info\|astuce\|attention">`, `<CTA>`, `<FAQ />` | contrat initial |
+| **v2** | v1 **+** `<StatGrid>`, `<ExpertQuote>`, `<Testimonial>`, `<ErrorTip>` **+** `type="retenir"` sur `<Callout>` | 2026-08-01 |
+
+**Règles de version** :
+- La version supportée est déclarée dans le `client-brief.md` de chaque client (§2 Repo du site). **C'est elle qui fait foi**, pas la version courante du contrat.
+- **Une version est tout ou rien** : un site est `v1` tant qu'il n'a pas implémenté **l'intégralité** de la v2. Pas de v1.5, pas de « v2 sauf Testimonial » — sinon « la version supportée » ne veut plus rien dire et le rédacteur ne sait plus sur quoi compter.
+- **Tout nouveau site onboardé vise v2 directement.** Les sites existants basculent quand leur template a implémenté les 5 ajouts.
+- Sur un site v1, les composants v2 sont **indisponibles** : on compense en Markdown pur (blockquote pour une citation, liste pour un « à retenir », table pour un comparatif). On n'utilise jamais un composant non supporté « en attendant ».
+
+### 4.2 Composants v1
 
 | Composant | Usage | Props |
 |---|---|---|
-| `<Callout type="info\|astuce\|attention">` | encart « à retenir », avertissement, conseil | `type`, children (Markdown) |
+| `<Callout type="info\|astuce\|attention">` | encart d'information, avertissement, conseil | `type`, children (Markdown) |
 | `<CTA type="devis\|essai\|contact\|newsletter">` | mécanisme de capture (obligatoire : ≥1 par contenu) | `type`, `label?` |
 | `<FAQ />` | rend la section FAQ depuis le frontmatter | aucune |
 
-Tout le reste : **Markdown pur** (tables en syntaxe `|---|`, listes, blockquotes, code). 
+### 4.3 Composants v2
 
-Évolution du contrat : ajouter un composant = (1) l'implémenter dans TOUS les templates de sites actifs, (2) l'ajouter ici avec sa version, (3) mettre à jour la skill `article-writer`. Un article qui utilise un composant hors whitelist casse le build du site — c'est le comportement voulu. Version du contrat supportée par chaque client : notée dans son `client-brief.md`.
+#### `<Callout type="retenir">` — extension de la v1
+
+Résumé de section. **2 à 4 puces maximum**, chacune auto-suffisante. Recommandé en fin de chaque grande section : c'est un format d'extraction privilégié par les moteurs IA, qui citent des passages, pas des pages.
+
+⚠️ **Fail-closed obligatoire.** `retenir` est le seul ajout v2 qui n'est pas un nouveau composant mais une **nouvelle valeur de prop** — un site v1 ne fera donc pas naturellement échouer le build en le rencontrant. **Tout template, v1 comme v2, doit traiter un `type` de Callout inconnu comme une erreur de build**, jamais comme un rendu par défaut silencieux. Tant qu'un template ne l'implémente pas, ce contrôle retombe entièrement sur le fact-check et le gate humain — le signaler dans la PR.
+
+#### `<StatGrid stats={[{value, label, source, sourceUrl}]}>`
+
+Grille de **2 à 4 statistiques**. Met en scène des chiffres qui, noyés en prose, ne seraient ni vus ni extraits.
+
+- **Chaque stat porte sa source et son lien.** Aucune exception : une stat sans source ne passe pas le fact-check et ne doit pas être écrite (invariant 7 de `CLAUDE.md`).
+- Les données first-party du client se citent `source: "donnée interne <client>, <année>"` — `sourceUrl` peut alors être omis, mais la donnée doit être tracée au `client-brief.md` §7.
+- Seule prop du contrat exigeant une expression JS. C'est assumé : aplatir ces stats en enfants Markdown détruirait la structure qui rend `source` contrôlable automatiquement.
+
+#### `<ExpertQuote author role quote photo? >`
+
+Citation du **porte-parole expert du client**, déclaré dans son `client-brief.md` §3. C'est un levier E-E-A-T direct : une opinion attribuée à un humain identifiable vaut mieux qu'une affirmation anonyme.
+
+- ⛔ **RÈGLE DE VÉRACITÉ — NON NÉGOCIABLE.** Une ExpertQuote n'est **jamais inventée**. Deux origines légitimes, aucune autre :
+  1. **reprise du first-party** du brief (verbatim, entretien, prise de position déjà exprimée) — tracer la source dans la PR ;
+  2. **rédigée comme PROPOSITION**, explicitement signalée comme telle dans le corps de la PR et **validée par le client avant merge**. Le gate humain porte cette validation.
+- Une proposition non validée ne se merge pas. Elle ne se présente jamais comme une citation acquise — ni dans l'article, ni dans la PR, ni dans un rapport.
+- `photo` est **optionnelle** et la source canonique reste le **registre auteur du site** : si le template connaît déjà le porte-parole, il résout la photo lui-même et ignore la prop. Le contenu transporte l'identité (`author`, `role`), pas un fichier.
+
+#### `<Testimonial author source rating? quote>`
+
+Avis client **réel**, aux moments de décision du lecteur.
+
+- ⛔ **Avis réel uniquement**, copié depuis une source vérifiable (fiche Google, plateforme d'avis) référencée dans le `client-brief.md`. `source` est **obligatoire**.
+- **Jamais généré. Jamais reformulé au point de trahir l'original** — on peut couper (avec `…`), jamais réécrire le propos.
+- `rating` optionnel (note sur 5) — uniquement si la source en porte une.
+
+#### `<ErrorTip error good>`
+
+Paire « **L'erreur** → **Le bon réflexe** ». Format idéal pour le vécu terrain (artisan, praticien) : c'est de l'**information gain** au sens strict — une erreur observée sur des chantiers réels n'est pas réplicable par un concurrent équipé du même LLM.
+
+- `error` : ce que font les gens · `good` : ce qu'il faut faire. Les deux courts et concrets.
+- Doit venir d'un first-party du brief, pas d'une erreur générique déduite du sujet.
+
+### 4.4 Tout le reste
+
+**Markdown pur** (tables en syntaxe `|---|`, listes, blockquotes, code). Les composants transportent du **sens structuré**, jamais de l'apparence — si un besoin ressemble à de la mise en forme, il relève du template, pas de la whitelist.
+
+### 4.5 Évolution du contrat
+
+Ajouter un composant = (1) l'implémenter dans **TOUS** les templates de sites actifs, (2) l'ajouter ici avec sa version, (3) mettre à jour la skill `article-writer`, (4) mettre à jour la checklist `fact-check` si le composant porte des affirmations vérifiables. Un article qui utilise un composant hors whitelist casse le build du site — c'est le comportement voulu.
+
+Le coût est délibéré : chaque composant ajouté est une **obligation d'implémentation pour tous les sites**. On n'étend le contrat que sur un besoin récurrent et démontré, jamais sur une envie ponctuelle.
 
 ## 5. Images
 
@@ -84,7 +148,9 @@ Tout le reste : **Markdown pur** (tables en syntaxe `|---|`, listes, blockquotes
 |---|---|---|
 | Produit | MDX sémantique + frontmatter valide | rendu HTML, design, performance |
 | Tables, titres, listes | syntaxe Markdown | styles typographiques (prose) + mapping composants |
-| Blocs riches | invoque la whitelist | implémente la whitelist dans son design system |
+| Blocs riches | invoque la whitelist **de la version supportée par le site** | implémente la whitelist **de sa version déclarée** (v1 ou v2) dans son design system |
+| Composants v2 (`StatGrid`, `ExpertQuote`, `Testimonial`, `ErrorTip`, `Callout type="retenir"`) | fournit les données structurées (valeurs, sources, auteurs) | rend la grille, la citation, l'avis, la paire erreur/réflexe ; résout la photo du porte-parole depuis son registre auteur ; **échoue au build sur un `type` de Callout inconnu** |
+| Affichage de l'article (sommaire, temps de lecture, date de MàJ, bloc auteur, articles reliés) | — (fournit `dateModified`, `cluster`, `author` au frontmatter) | génère et affiche (cf. `interactions-repos.md` §4) |
 | Schema JSON-LD | fournit les données (frontmatter) | génère et injecte les scripts |
 | Validation | fact-check + gate humain | schéma de frontmatter (build) + CI |
 | Core Web Vitals, sitemap, OG, canonical | — (hors périmètre) | template Next.js |

@@ -51,12 +51,25 @@ Ce document explique **comment les deux mondes communiquent** : le repo marketin
 ## 4. Onboarding d'un site au contrat
 
 Quand un nouveau client arrive (ou qu'un site existant rejoint le standard), côté SITE il faut une fois :
+
+**Socle (toutes versions)**
 1. Le pipeline MDX (Velite/Contentlayer ou équivalent) + le **schéma de frontmatter** (validation au build).
 2. Le **layout d'article** : conteneur typographique (`prose` ou équivalent) + mapping des éléments (`table`, `img`, `a`, `h2`…).
-3. L'implémentation de la **whitelist v1** (`<Callout>`, `<CTA>`, `<FAQ>`) dans le design du site.
+3. L'implémentation de la **whitelist selon la version déclarée** : **v1** = `<Callout>` (`info|astuce|attention`), `<CTA>`, `<FAQ>` · **v2** = v1 + `<StatGrid>`, `<ExpertQuote>`, `<Testimonial>`, `<ErrorTip>` + `<Callout type="retenir">`. Une version est **tout ou rien** ; tout nouveau site vise **v2**. Dans les deux cas : **échouer au build sur un `type` de Callout inconnu** (fail-closed — sans ça, un article v2 déployé sur un site v1 passerait silencieusement).
 4. La **génération JSON-LD** depuis le frontmatter (Article, FAQPage, LocalBusiness si zones, Breadcrumb).
 5. Sitemap automatique incluant `content/`.
-Puis côté REPO MARKETING : renseigner dans le `client-brief.md` l'URL du repo, le chemin contenu, la version du contrat supportée. À partir de là, `/write` publie chez ce client sans autre configuration.
+
+**Exigences d'affichage de l'article** — côté template, **jamais dans le contenu** (le MDX reste sémantique pur ; ces éléments se déduisent du frontmatter et de la structure) :
+
+| Exigence | Source | Pourquoi |
+|---|---|---|
+| **Sommaire cliquable** généré depuis les H2 (ancres) | structure de l'article | navigation sur les formats longs ; les ancres deviennent des cibles citables |
+| **Temps de lecture** calculé et affiché | corps de l'article | fixe l'attente du lecteur avant qu'il ne rebondisse |
+| **Date de dernière mise à jour** visible | `dateModified` | signal de fraîcheur pour le lecteur ET pour les moteurs |
+| **Bloc auteur sous le H1** (nom, rôle, photo) | `author` + registre auteur du site | E-E-A-T : un contenu attribué à un humain identifiable ; c'est aussi ce registre qui résout la photo d'`<ExpertQuote>` |
+| **Bloc « articles reliés »** en fin | champ `cluster` du frontmatter | matérialise le cluster ; c'est le maillage qui pousse la puissance vers les pages business |
+
+Puis côté REPO MARKETING : renseigner dans le `client-brief.md` l'URL du repo, le chemin contenu, **la version du contrat supportée (v1 ou v2)**, le porte-parole expert et la source d'avis clients. À partir de là, `/write` publie chez ce client sans autre configuration.
 
 ## 5. Outillage : git + gh (GitHub CLI)
 

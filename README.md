@@ -115,7 +115,7 @@ Toute nouvelle règle suit le circuit : (1) l'intégrer à la command/skill conc
 
 Ce repo est **isolé** des repos de sites. La publication traverse la frontière ainsi :
 
-1. `/write` produit un **MDX sémantique pur** (frontmatter typé + Markdown + whitelist `Callout`/`CTA`/`FAQ`) — jamais de style : le design appartient au site.
+1. `/write` produit un **MDX sémantique pur** (frontmatter typé + Markdown + composants de la whitelist) — jamais de style : le design appartient au site. La whitelist dépend de la **version du contrat supportée par le site**, déclarée dans son `client-brief.md` : **v1** = `Callout`/`CTA`/`FAQ` · **v2** = + `StatGrid`/`ExpertQuote`/`Testimonial`/`ErrorTip` + `Callout type="retenir"` (contrat courant, visé par tout nouveau site).
 2. Claude Code dépose le fichier dans le repo du site client (`content/blog/` ou `content/zones/`, chemin dans le `client-brief.md`), branche `content/<slug>`, PR.
 3. Le **build du site valide le frontmatter** (schéma typé) : invalide = PR rouge (gate mécanique).
 4. **Tu merges** (gate humain) → le site rend l'article dans SON design : conteneur typographique (`prose`) pour les éléments Markdown (dont les **tables**), mapping MDX vers ses composants pour les blocs riches.

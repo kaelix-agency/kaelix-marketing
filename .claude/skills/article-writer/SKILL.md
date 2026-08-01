@@ -36,6 +36,20 @@ Chaque règle ci-dessous répond à un risque documenté : le contenu génériqu
 ## Variation anti-uniformité
 - Adapter format et longueur à la SERP (guide / comparatif / liste / FAQ) — ne pas produire des contenus de structure et de longueur identiques en série. *Pourquoi : l'uniformité de structure sur des dizaines de pages est un signal détectable de production automatisée massive.*
 
+## Densité et incarnation (benchmark 2026)
+
+Un article qui ranke aujourd'hui n'est pas un mur de prose : il est **dense en éléments riches** et **incarné** par des humains identifiables. Ces règles viennent d'un benchmark de contenus de référence (2026-08-01, `docs/rationnel-des-choix.md` §1.12).
+
+- **≥1 élément riche par grande section** : `StatGrid`, tableau comparatif titré, `Callout type="retenir"`, `ErrorTip`… **Un article de 2000+ mots sans aucun élément visuel est refusé.** Un pavé de texte n'est ni scanné par le lecteur ni extrait par les moteurs.
+- **≥1 `ExpertQuote` par article** dès que le brief définit un porte-parole. ⛔ Règle de véracité : soit la citation vient du first-party du brief, soit elle est **rédigée comme proposition, signalée comme telle dans la PR et validée par le client avant merge**. Jamais présentée comme une citation acquise.
+- **1-2 `Testimonial` aux moments de décision du lecteur**, uniquement si le brief référence une source d'avis réels. Avis authentique et sourcé — jamais généré, jamais reformulé au point de trahir l'original.
+- **Stats first-party mises en scène** en `StatGrid`, pas noyées en prose. Un chiffre interne est l'actif le moins réplicable du client : il mérite d'être vu.
+- **Prise de position assumée** : quand le sujet s'y prête, l'article défend un avis d'expert argumenté — l'opinion EST un information gain, le consensus recopié n'en est pas un. La position doit être défendable par le client ; à défaut, la signaler au gate plutôt que l'édulcorer.
+- **Tableaux comparatifs toujours titrés** : un H3 descriptif au-dessus de la table Markdown (pas une table orpheline au fil du texte). Le H3 est ce qui rend le tableau trouvable et citable.
+- **`Callout type="retenir"` en fin de chaque grande section** (recommandé) : 2-4 puces auto-suffisantes. C'est le format que les moteurs IA extraient le plus volontiers.
+
+**⚠️ Version du contrat d'abord.** Ces composants n'existent qu'en **v2**. Vérifier dans le `client-brief.md` la version supportée par le site AVANT de rédiger. **Sur un site v1, les composants v2 sont indisponibles** — on compense en Markdown pur : blockquote attribuée pour la citation, liste à puces pour le « à retenir », table titrée pour le comparatif. Les règles de densité et de véracité s'appliquent identiquement ; seul le véhicule change. **Ne jamais utiliser un composant non supporté**, même « en attendant » : le build du site casse, et c'est le comportement voulu.
+
 ## Pages business SaaS (comparaison, alternatives, fonctionnalités, témoignages)
 Quand le contenu est une page business (pas un article) : écrire pour que l'utilisateur **vive sa douleur en temps réel** dans le texte, puis présenter la solution. Comparaisons « marque vs X » : justes et factuelles, sans dénigrer — on aide à choisir. Pages témoignages : capter ce trafic de marque plutôt que le laisser aux plateformes d'avis.
 
@@ -43,7 +57,7 @@ Quand le contenu est une page business (pas un article) : écrire pour que l'uti
 Le livrable est un fichier **MDX sémantique pur** conforme au contrat :
 - **Frontmatter complet et valide** (schéma §3 du contrat) : title, description, slug, dates, author, typology, keywords, cluster, faq (3-6 paires), geo (pages locales uniquement, depuis nap.md). Le site le valide au build : un frontmatter invalide = PR rouge.
 - **Aucun style dans le corps** : pas de classes CSS, de `<div>`, de HTML de mise en page, de couleurs. Le design appartient au site (conteneur typographique + mapping de composants). Une table s'écrit en syntaxe Markdown `|---|` ; elle héritera automatiquement du design du site.
-- **Composants : whitelist v1 uniquement** — `<Callout type>`, `<CTA type>` (le mécanisme de capture obligatoire passe par lui), `<FAQ />`. Tout autre composant casse le build du site (comportement voulu). Vérifier dans le client-brief.md la version du contrat supportée par le site.
+- **Composants : la whitelist de la version supportée par le site**, jamais plus (contrat §4). **v1** : `<Callout type="info|astuce|attention">`, `<CTA type>` (le mécanisme de capture obligatoire passe par lui), `<FAQ />`. **v2** : v1 + `<StatGrid>`, `<ExpertQuote>`, `<Testimonial>`, `<ErrorTip>` + `<Callout type="retenir">`. Une version est tout ou rien : un site est v1 tant qu'il n'a pas implémenté l'intégralité de la v2. **Vérifier la version dans le `client-brief.md` §2 AVANT de rédiger** — tout composant hors version casse le build du site (comportement voulu).
 - **Images** : `public/blog/<slug>/`, WebP/AVIF, alt descriptif obligatoire.
 - **Emplacement** : `content/blog/<slug>.mdx` (articles) ou `content/zones/<slug>.mdx` (pages locales), branche `content/<slug>`, PR — jamais de push direct.
 

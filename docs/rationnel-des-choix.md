@@ -60,6 +60,26 @@ Il manquait un maillon entre l'onboarding (qui produit le ciblage et 5 première
 
 **Articulation avec l'existant** : `/onboard-client` produit le ciblage (le plan STOP s'il est absent) → `/content-plan` produit la carte du prévu → `/weekly-review` l'exécute et met à jour les statuts → `/research` part des sujets « prévu » du mois → `tracking.md` enregistre le réalisé. Deux fichiers, deux rôles, aucun recouvrement : **`content-plan.md` = le prévu, `tracking.md` = le réalisé**.
 
+### 1.12 Pourquoi le contrat de contenu passe en v2
+Décision 2026-08-01, demande opérateur, après analyse de 4 articles de référence de **mama-seo.fr** — le site de la consultante dont `notes-podcast-seo.md` encode déjà la méthode. Autrement dit : on a benchmarké la mise en œuvre concrète d'une méthode qu'on avait jusqu'ici sous forme de principes. L'écart observé n'était pas méthodologique mais **matériel** : nos articles conformes à la v1 sont justes et vides ; les leurs sont denses (un élément riche par section) et incarnés (un expert nommé, des avis réels, des chiffres mis en scène).
+
+**Ce qui a été retenu, et pourquoi.**
+- **Composants v2** (`StatGrid`, `ExpertQuote`, `Testimonial`, `ErrorTip`, `Callout type="retenir"`) : chacun transporte du **sens structuré** que le Markdown ne sait pas porter — une stat sans son couple source/lien n'est pas contrôlable automatiquement, une citation sans `author`/`role` n'est pas un signal E-E-A-T, une paire erreur/réflexe perd sa symétrie en liste à puces. C'est le critère d'admission : un composant existe parce que la structure est vérifiable ou exploitable, jamais parce que « ça rend mieux ».
+- **Patterns rédactionnels** (tableaux titrés, prises de position, stats mises en scène, densité, sujets en phase de décision) : ils vivent dans `article-writer`, pas dans le contrat — ce sont des exigences d'écriture, pas des composants. Les mettre dans la whitelist aurait été confondre le fond et le véhicule.
+- **Exigences template** (sommaire, temps de lecture, date de MàJ, bloc auteur, articles reliés) : elles vivent dans `interactions-repos.md` §4, côté SITE. Toutes se déduisent du frontmatter ou de la structure — aucune ne redescend dans le contenu, sinon on rouvrirait la porte à l'apparence dans le MDX (§1.6).
+
+**Ce qui a été différé, et pourquoi.**
+- **Timeline comparative** : élégante, mais vue une fois. On n'étend le contrat que sur un besoin **récurrent** — à reconsidérer en v2.1 si le besoin revient sur plusieurs clients.
+- **Quiz interactif** : c'est un **free tool**, donc un projet par client (avec sa propre conversion à mesurer), pas un composant d'article. Le mettre dans la whitelist obligerait tous les templates à implémenter un moteur de quiz pour un usage rare.
+
+**Ce qui a été écarté, et pourquoi.**
+- **Codes promo / liens d'affiliation** : ils relèvent du modèle économique d'une **consultante solo** qui monétise son audience. Nos clients vendent leur propre offre ; un lien d'affiliation dans leur contenu détournerait leur trafic et brouillerait leur intention commerciale.
+- **Tutoiement systématique** : c'est la voix d'**une** marque, pas une bonne pratique. La voix est une décision par client, déclarée dans son `client-brief.md` §3. Importer le tutoiement comme règle transverse produirait des artisans qui parlent comme une consultante parisienne.
+
+**La règle de véracité — extension de l'invariant fact-check.** `ExpertQuote` et `Testimonial` sont les deux composants qui font **parler un humain réel**. C'est précisément là qu'un LLM est le plus dangereux : il produit une citation plausible sans effort, et une fausse citation attribuée à un client nommé n'est pas une erreur factuelle ordinaire — c'est un faux, publié sous la signature du client. D'où : une ExpertQuote vient du first-party OU est une **proposition explicitement signalée dans la PR et validée par le client avant merge** ; un Testimonial est un avis **réel, sourcé, jamais reformulé au point de trahir l'original**. Non négociable : c'est la même logique que « jamais de verbatim inventé » (§`icp`/`personas`) et « jamais de stat sans source », appliquée à un support plus exposé.
+
+**Le coût est assumé.** Chaque composant de la whitelist est une **obligation d'implémentation pour TOUS les templates de sites actifs** (§1.6). La v2 en ajoute cinq d'un coup : les sites existants ne basculent pas instantanément. D'où la règle **tout ou rien** — un site reste v1 tant qu'il n'a pas implémenté l'intégralité de la v2 (pas de v1.5 : une version partielle rendrait « la version supportée » inexploitable par le rédacteur) — et la compensation en Markdown pur sur les sites v1. Corollaire mécanique : `Callout type="retenir"` étant une valeur de prop et non un composant, il **n'échoue pas naturellement au build** sur un site v1 ; le contrat impose donc aux templates d'échouer sur un `type` inconnu (fail-closed). Sans ça, le seul ajout v2 qui traverserait silencieusement la frontière serait aussi celui qu'on recommande le plus souvent.
+
 ---
 
 ## 2. Rationnel des skills
@@ -125,6 +145,7 @@ Il n'y a pas de limite théorique au volume de publication ; la limite réelle e
 ## 4. Sources et traçabilité des décisions
 - Méthodologie SEO 6 phases : `docs/methodologie-seo.md`.
 - Enseignements du retour d'expérience praticien (règle 90 j, stratégie 3 étapes, architecture SaaS, free tools, fact-check, règle du scroll, re-check bimestriel, équilibre du trafic, PMF) : `docs/notes-podcast-seo.md`.
+- Benchmark de mise en œuvre (4 articles de référence de mama-seo.fr, analysés le 2026-08-01) → contrat de contenu v2, patterns de densité/incarnation d'`article-writer`, exigences d'affichage des templates : justifié en §1.12, spécifié dans `docs/contrat-de-contenu.md` §4 et `docs/interactions-repos.md` §4.
 - Toute nouvelle règle intégrée au repo doit : (1) être ajoutée à la command/skill concernée, (2) être justifiée ici, (3) citer sa source dans docs/.
 
 ---

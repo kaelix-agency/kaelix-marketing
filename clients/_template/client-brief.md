@@ -43,7 +43,11 @@ Supprimer les commentaires <!-- --> au fur et à mesure du remplissage.
 | Chemin local convenu | <!-- ex. ~/dev/sites/<slug> — où Claude Code trouve le clone --> |
 | Chemin des articles | `content/blog/` <!-- écart à documenter ici si site hérité --> |
 | Chemin des pages locales | `content/zones/` <!-- clients locaux uniquement --> |
-| Version du contrat de contenu supportée | `v1` <!-- whitelist Callout/CTA/FAQ — cf. docs/contrat-de-contenu.md §4 -->|
+| **Version du contrat de contenu supportée** | `v1` / `v2` <!-- ⚠️ CHAMP CRITIQUE : c'est lui qui détermine les composants utilisables par /write.
+     v1 = Callout(info/astuce/attention), CTA, FAQ · v2 = + StatGrid, ExpertQuote, Testimonial, ErrorTip, Callout(retenir).
+     TOUT OU RIEN : le site reste v1 tant qu'il n'a pas implémenté l'INTÉGRALITÉ de la v2 (pas de v1.5).
+     Tout nouveau site vise v2. Sur un site v1, les composants v2 se compensent en Markdown pur.
+     Détail : docs/contrat-de-contenu.md §4 — exigences d'implémentation : docs/interactions-repos.md §4. -->|
 | Branche par défaut | `main` |
 | Rendu | `SSG` / `SSR` / ⚠️ `CSR` <!-- les IA lisent mal le rendu JS client — vérifié à la baseline Cuik --> |
 
@@ -55,8 +59,36 @@ Supprimer les commentaires <!-- --> au fur et à mesure du remplissage.
 - **Ton** : <!-- ex. direct, sans jargon, tutoiement / vouvoiement -->
 - **Vocabulaire maison** : <!-- les mots que le client emploie pour son métier, ses produits, ses clients -->
 - **Interdits** : <!-- mots bannis, promesses à ne jamais faire, sujets sensibles, concurrents à ne pas citer -->
-- **Auteur affiché** (frontmatter `author`, E-E-A-T) : <!-- nom + fonction -->
+- **Auteur affiché** (frontmatter `author`, E-E-A-T) : <!-- nom + fonction — c'est la signature de l'article -->
 - **Exemples de référence** : <!-- 1-2 contenus existants qui incarnent bien la voix -->
+
+### Porte-parole expert
+
+<!-- La personne que les articles CITENT (composant <ExpertQuote>, contrat v2). Peut être la même
+     que l'auteur affiché, ou non (ex. articles signés par l'agence, citations du dirigeant).
+     ⛔ RÈGLE DE VÉRACITÉ — une citation n'est JAMAIS inventée. Deux origines légitimes seulement :
+        (1) reprise d'un first-party du brief (verbatim, entretien, prise de position exprimée) ;
+        (2) rédigée comme PROPOSITION, signalée comme telle dans la PR et VALIDÉE PAR LE CLIENT
+            avant merge — le gate humain porte cette validation.
+     Sans autorisation de citation ci-dessous, on ne produit aucune ExpertQuote. -->
+
+| Champ | Valeur |
+|---|---|
+| Nom | |
+| Rôle / titre | <!-- tel qu'il doit s'afficher : « Jean Dupont, maître artisan couvreur » --> |
+| Photo | <!-- chemin dans le repo du site, ou « registre auteur du site » si le template la résout --> |
+| **Autorisation de citation** | ⬜ oui / ⬜ non <!-- « non » = aucune ExpertQuote produite, même en proposition --> |
+| Verbatims disponibles | <!-- renvoi vers les entrées correspondantes du §7 first-party --> |
+
+### Source d'avis clients
+
+<!-- Alimente le composant <Testimonial> (contrat v2). ⛔ Avis RÉELS uniquement, copiés depuis une
+     source vérifiable. Jamais générés, jamais reformulés au point de trahir l'original.
+     Sans source renseignée ici, on ne produit aucun Testimonial. -->
+
+| Plateforme | URL | Nb d'avis | Note moyenne |
+|---|---|---|---|
+| <!-- fiche Google, Trustpilot, plateforme sectorielle… --> | | | |
 
 ## 4. Cibles
 
