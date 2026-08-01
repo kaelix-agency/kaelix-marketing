@@ -12,11 +12,13 @@ Le cerveau marketing multi-clients de l'agence, piloté par Claude Code. Ce repo
 ## 1. Installation (une fois)
 
 1. Clone ce repo, ouvre-le dans Claude Code.
-2. Copie `.env.example` → `.env` et renseigne les clés API (Haloscan, Cuik, PostHog).
+2. Copie `.env.example` → `.env` et renseigne les clés API.
    ⚠️ **Vérifie les URLs des serveurs MCP dans `.mcp.json`** auprès de la documentation officielle de chaque outil (elles évoluent) : doc Haloscan, doc Cuik, doc PostHog. Ajuste `url`/`headers` selon leur méthode d'authentification (certains utilisent OAuth au lieu d'un Bearer token).
-3. Lance `claude` dans le repo et vérifie que les 3 MCP répondent (`/mcp`).
-4. Prérequis côté comptes : accès Search Console des sites clients connecté dans Cuik ; projets créés dans Haloscan ; BrightLocal et fiches GBP gérés à part (ponts manuels).
-5. **Publication croisée** : `gh` (GitHub CLI) installé et authentifié — de préférence via un **fine-grained PAT restreint** aux seuls repos clients (`Contents: write` + `Pull requests: write`), exposé en `GH_TOKEN`. Détail et séquence type : `docs/interactions-repos.md` §5.
+3. **Serveurs configurés dans `.mcp.json` : Haloscan et Cuik** — les deux outils de référence, communs à tous les clients. **PostHog n'y est pas : il se configure au cas par cas**, uniquement pour les clients dont le `client-brief.md` §8 déclare une instance connectée (ajouter alors son entrée dans `.mcp.json` + la clé dans `.env`). Les commands n'invoquent PostHog que si le brief l'indique.
+4. Lance `claude` dans le repo et vérifie que les MCP répondent (`/mcp`).
+   ℹ️ Les clés doivent exister **avant** le lancement : un serveur MCP reçoit une copie figée de l'environnement au démarrage. Clés ajoutées en cours de session = redémarrer Claude Code, sinon les serveurs continuent avec une clé vide (erreurs 401/403).
+5. Prérequis côté comptes : accès Search Console des sites clients connecté dans Cuik ; projets créés dans Haloscan ; BrightLocal et fiches GBP gérés à part (ponts manuels).
+6. **Publication croisée** : `gh` (GitHub CLI) installé et authentifié — de préférence via un **fine-grained PAT restreint** aux seuls repos clients (`Contents: write` + `Pull requests: write`), exposé en `GH_TOKEN`. Détail et séquence type : `docs/interactions-repos.md` §5.
 
 ## 2. Onboarder un client
 
@@ -27,12 +29,15 @@ La commande copie les gabarits, t'interroge (dont le statut **product-market fit
 
 **Le `client-brief.md` est l'actif le plus important du repo** : c'est lui qui donne la voix, les cibles, le ciblage et les données first-party à toutes les productions. Tiens-le à jour.
 
+Enchaîne ensuite sur `/content-plan <client>` : l'onboarding donne les 5 premières actions, le plan éditorial donne les 6 mois suivants (et c'est un livrable présentable au client une fois validé).
+
 ## 3. Le cycle de travail (routines)
 
 > Déroulé opérationnel complet (semaine type, checklists de session, cycle mensuel) : **`docs/routines-operationnelles.md`**.
 
 | Quand | Command | Ce que ça fait |
 |---|---|---|
+| **Après l'onboarding** (puis ~trimestriel) | `/content-plan <client> [horizon-mois]` | plan éditorial pluri-mois : clusters (pilier + satellites), **refreshes de l'existant 4-20 AVANT les créations**, un persona et un mécanisme de capture par sujet, volume calé sur ta **capacité de relecture** → `content-plan.md` (🕓 brouillon, **tu valides**) |
 | Avant chaque contenu | `/research <client> <mot-clé>` | SERP, intention, **règle du scroll**, gap, angle first-party, paris émergents → brief de production |
 | Production | `/write <client> <mot-clé>` | MDX complet (avec mécanisme de **capture** et **typologie**) + schema + passe **fact-check**, écrit dans le repo du site (branche/PR), **tu merges** |
 | Selon suivi | `/refresh <client> <url> <raison>` | correction ciblée — **refuse les contenus < 90 jours** (Google teste) |
@@ -70,11 +75,17 @@ La commande copie les gabarits, t'interroge (dont le statut **product-market fit
 ```
 clients/<slug>/
 ├── client-brief.md   ← stratégie marketing/commerciale + marque + ciblage 3 étapes + architecture pages + first-party
+├── icp.md            ← profil d'ENTREPRISE cible (skill icp) — le brief pointe dessus, ne le duplique pas
+├── personas.md       ← les PERSONNES dans ces entreprises (skill personas) — idem
 ├── nap.md            ← coordonnées canoniques (clients locaux)
-├── tracking.md       ← journal des contenus (typologie), checkpoints 30/60/90j, re-checks bimestriels, revues hebdo
-├── audits/           ← rapports /tech-audit datés
-└── reports/          ← rapports mensuels /report
+├── content-plan.md   ← plan éditorial pluri-mois : la carte du PRÉVU (document vivant, statuts par sujet)
+├── tracking.md       ← journal du RÉALISÉ (typologie, persona), checkpoints 30/60/90j, re-checks bimestriels, paris émergents
+├── prompts/          ← prompts d'exécution vers le repo du site, 1 fichier daté + index
+├── audits/           ← rapports /tech-audit datés + index
+└── reports/          ← revues hebdo (internes) + rapports mensuels /report + index
 ```
+
+Les gabarits vides de tous ces fichiers vivent dans `clients/_template/` — `/onboard-client` les copie.
 
 ## 7. MCP vs ponts manuels
 

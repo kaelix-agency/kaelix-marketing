@@ -18,10 +18,18 @@ marketing-repo/
 │   ├── _template/             ← gabarits à copier pour chaque nouveau client
 │   │   ├── client-brief.md    ← stratégie marketing/commerciale + marque + ciblage SEO
 │   │   ├── nap.md             ← NAP source de vérité (clients locaux uniquement)
-│   │   └── tracking.md        ← suivi des contenus (typologie, checkpoints, re-checks)
+│   │   ├── tracking.md        ← suivi des contenus (typologie, checkpoints, re-checks)
+│   │   ├── content-plan.md    ← plan éditorial pluri-mois (clusters + sujets datés)
+│   │   ├── prompts/README.md  ← index des prompts
+│   │   ├── reports/README.md  ← index des livrables de suivi
+│   │   └── audits/README.md   ← index des audits techniques
 │   └── <slug-client>/         ← un dossier par client (mêmes fichiers, remplis)
+│       ├── icp.md             ← profil d'ENTREPRISE cible (skill `icp`) — source de vérité, non dupliquée dans le brief
+│       ├── personas.md        ← les PERSONNES dans ces entreprises (skill `personas`) — idem
+│       ├── content-plan.md    ← carte du PRÉVU : clusters, sujets par mois, statuts. **Document vivant** (≠ figé) : jamais re-généré, aucune ligne effacée — un sujet abandonné change de statut
 │       ├── prompts/           ← prompts d'exécution pour le repo du site : 1 fichier daté par prompt (`YYYY-MM-DD-<slug>.md`) + index README ; jamais d'append à un prompt existant
-│       └── reports/           ← livrables de suivi historisés : revues hebdo (`YYYY-MM-DD-revue-hebdo.md`, internes) + rapports mensuels client (`YYYY-MM-rapport-client.md`, statut brouillon→validé→envoyé ; figé après envoi) + index README
+│       ├── reports/           ← livrables de suivi historisés : revues hebdo (`YYYY-MM-DD-revue-hebdo.md`, internes) + rapports mensuels client (`YYYY-MM-rapport-client.md`, statut brouillon→validé→envoyé ; figé après envoi) + index README
+│       └── audits/            ← rapports `/tech-audit` datés (`YYYY-MM-DD-tech-audit.md`) + index README
 └── docs/
     ├── methodologie-seo.md    ← méthodologie de référence (6 phases)
     ├── routines-operationnelles.md ← playbook : semaine type, déroulés, checklists
@@ -60,6 +68,7 @@ marketing-repo/
 | Routine | Command | Cadence |
 |---|---|---|
 | Onboarding client (stratégie 3 étapes + architecture par type) | `/onboard-client` | à l'arrivée |
+| Plan éditorial pluri-mois (clusters, refreshes avant créations, throttle relecture) | `/content-plan` | après onboarding, révision trimestrielle |
 | Recherche d'un sujet (SERP, scroll, gap, information gain) | `/research` | avant chaque contenu |
 | Production d'un contenu (rédaction + fact-check + gate) | `/write` | à la demande |
 | Refresh d'un contenu (garde-fou 90 j) | `/refresh` | selon suivi |

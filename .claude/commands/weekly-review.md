@@ -4,7 +4,7 @@ argument-hint: <slug-client>
 ---
 Revue hebdo pour `$ARGUMENTS`.
 
-1. Lis `clients/<slug>/client-brief.md` et `tracking.md`.
+1. Lis `clients/<slug>/client-brief.md`, `tracking.md` (le réalisé) et `content-plan.md` s'il existe (le prévu) — les sujets au statut **« prévu »** du mois en cours sont la matière première du plan d'action de l'étape 7. Si aucun plan éditorial n'existe encore, le signaler : la weekly exécute un plan, elle n'en tient pas lieu.
 2. **Collecte** :
    - Cuik MCP → données Search Console : impressions, clics, CTR, position par URL/requête (7 et 28 derniers jours).
    - Haloscan MCP → positions des mots-clés suivis, cannibalisations détectées.
@@ -22,3 +22,4 @@ Revue hebdo pour `$ARGUMENTS`.
 7. **Livrable** : tableau des contenus avec verdict (on_track / à agir / <90j-observation), puis **plan d'action priorisé de la semaine** (max 5 actions, chacune mappée sur une command : /refresh, /write, /gbp-post…).
 8. **Historisation** : sauvegarde le livrable intégral dans `clients/<slug>/reports/YYYY-MM-DD-revue-hebdo.md` avec un bandeau d'en-tête (client, date, période des données, sources utilisées, statut « interne »), et ajoute la ligne dans l'index `clients/<slug>/reports/README.md` (à la première revue : créer le dossier en copiant `clients/_template/reports/README.md`). **Une revue générée ne se réécrit plus** (trace d'audit) — la semaine suivante = un nouveau fichier.
 9. Mets à jour la colonne "dernier relevé" de `tracking.md` et les checkpoints J30/J60/J90. La ligne « Historique des revues hebdo » de tracking.md reste le résumé condensé ; elle référence le fichier de la revue.
+10. **Mets à jour les statuts des sujets de `content-plan.md`** : `prévu` → `en production` → `publié`, ou `reporté` / `abandonné` **avec le motif** quand la semaine réordonne le programme. ⚠️ Le plan est un document vivant : on ne le re-génère jamais et **aucune ligne ne s'efface** — un sujet qui tombe change de statut, il ne disparaît pas (c'est la trace de l'écart entre le prévu et le réalisé). Si le plan dérive structurellement (plus d'un mois de retard, ou cadence tenable dépassée), le signaler : c'est le signal d'une révision via `/content-plan`, pas d'un rattrapage au forceps.

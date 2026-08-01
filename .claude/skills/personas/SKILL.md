@@ -21,7 +21,7 @@ L'ICP dit **quelles entreprises** viser ; les personas disent **à qui parler de
 5. **Verbatim > invention.** Pré-clients, les douleurs sont des hypothèses : les flaguer comme telles. Collecter le réel dès que possible (entretiens bêta, avis publics des concurrents — le review mining donne les verbatims des douleurs non résolues) et remplacer les hypothèses au fil de l'eau. Ne jamais présenter un verbatim inventé comme une citation réelle (invariant fact-check).
 
 ## Ce que les personas pilotent (règles d'application)
-- **Chaque contenu déclare son persona avant production** (dans le brief /research ; le noter dans `tracking.md`, colonne Note). Un contenu « pour tout le monde » se voit refuser le brief.
+- **Chaque contenu déclare son persona avant production** — au plan (`content-plan.md`, colonne Persona), puis dans le brief `/research`, puis dans `tracking.md` (**colonne Persona** dédiée : une colonne rend l'invariant vérifiable d'un coup d'œil, une mention en note ne le permet pas). Un contenu « pour tout le monde » se voit refuser le brief.
 - **L'angle** : même sujet, angles différents — au décideur on parle coût, risque, ROI d'équipe ; à l'utilisateur on parle temps gagné, irritants quotidiens, réussite personnelle (quota, RDV pris).
 - **Le canal** : on publie là où le persona s'informe, pas là où c'est pratique.
 - **Les objections** alimentent FAQ, pages de vente et battlecards ; les critères de succès alimentent les preuves à fabriquer (cas clients, métriques).

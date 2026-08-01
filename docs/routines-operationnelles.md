@@ -30,16 +30,18 @@ C'est la routine pivot : tout le reste de la semaine en découle.
    - les contenus **< 90 jours** sont « en observation » — la volatilité est normale, on ne touche à rien ;
    - les pages **4-20** sont le gisement prioritaire (avant toute création).
 4. Valider (ou amender) le **plan d'action de la semaine** (max 5 actions). C'est ce plan qui définit les sessions de production à venir.
-5. Vérifier que Claude a mis à jour `tracking.md` (dernier relevé + checkpoints J30/J60/J90 dus cette semaine) et archivé la revue dans `clients/<slug>/reports/YYYY-MM-DD-revue-hebdo.md` (+ index).
+   - Les actions se puisent **en priorité dans les sujets « prévu » du mois** de `content-plan.md` : la weekly exécute le plan éditorial, elle ne réinvente pas un programme chaque lundi.
+   - Ce qui glisse, se réordonne ou tombe se répercute dans le plan par un **changement de statut** (`reporté`, `abandonné` avec motif) — jamais par une suppression de ligne.
+5. Vérifier que Claude a mis à jour `tracking.md` (dernier relevé + checkpoints J30/J60/J90 dus cette semaine), répercuté les statuts dans `content-plan.md`, et archivé la revue dans `clients/<slug>/reports/YYYY-MM-DD-revue-hebdo.md` (+ index).
 6. Committer le repo.
 
-Checklist de sortie : ☐ plan de la semaine validé ☐ tracking à jour ☐ revue archivée dans `reports/` ☐ avis en attente traités ou planifiés ☐ commit.
+Checklist de sortie : ☐ plan de la semaine validé ☐ tracking à jour ☐ statuts du plan éditorial à jour ☐ revue archivée dans `reports/` ☐ avis en attente traités ou planifiés ☐ commit.
 
 ---
 
 ## 3. Une session de production (de l'idée à la PR)
 
-Pour chaque contenu du plan de la semaine :
+Pour chaque contenu du plan de la semaine (issu des sujets « prévu » de `content-plan.md`) :
 
 1. `/research <client> <mot-clé>` → obtenir le **brief de production** (angle, format, typologie, first-party à mobiliser, capture, maillage).
    - Stop si : la règle du scroll disqualifie le mot-clé, la cannibalisation pointe vers un refresh, ou aucun élément first-party n'est mobilisable (→ demander au client avant de produire).
@@ -59,13 +61,15 @@ Le rythme se calibre sur ta capacité de **relecture**, pas de génération : un
 
 ---
 
-## 5. Le cycle mensuel
+## 5. Le cycle mensuel (et la révision trimestrielle du plan)
 
 **1er lundi du mois — audit technique** : `/tech-audit <client>` → lire les findings par sévérité → router : contenu (→ tâches `/refresh`/`/write` de la semaine), template/technique (→ à transmettre côté dev du site, hors repo), configuration. Archiver dans `clients/<slug>/audits/`.
 
 **Début de mois — rapport client** : `/report <client> <période>` → le brouillon est archivé d'office dans `clients/<slug>/reports/<période>-rapport-client.md` (statut 🕓) → relire le narratif (chiffres réels, contenus < 90 j présentés « en test », santé du trafic) → ajuster → **envoyer soi-même** → passer le statut à 📤 envoyé le JJ/MM (fichier figé ensuite ; index README à jour).
 
 **~1 semaine sur 8 — re-check bimestriel** (intégré à la weekly) : passer le parc de contenus par typologie — `actu` : l'actualité a-t-elle bougé ? `guide` : quoi compléter ? `evergreen` : érosion seulement. ~80 % du contenu reste identique ; on complète, on ne réécrit pas.
+
+**~1 fois par trimestre — révision du plan éditorial** : `/content-plan <client>` ne se relance pas pour écraser le plan, il sert à **prolonger l'horizon et re-qualifier ce qui reste**. Concrètement : les sujets `publié` sortent du radar, les `reporté` sont soit re-datés soit passés en `abandonné` (avec motif), les mots-clés du trimestre écoulé sont re-vérifiés (une SERP bouge, un mot-clé disqualifié par la règle du scroll peut redevenir viable — et l'inverse), et de nouveaux mois sont ajoutés au bout. À déclencher aussi hors calendrier si le `client-brief.md` change substantiellement (nouvelle offre, nouvel ICP, nouvelle zone). Le plan révisé repasse en 🕓 brouillon jusqu'à ta validation.
 
 ---
 
@@ -86,5 +90,6 @@ Le rythme se calibre sur ta capacité de **relecture**, pas de génération : un
 1. `/onboard-client <slug> <type> <domaine>` — prévoir 1 à 2 h : l'entretien (activité, cibles, first-party, **PMF**), le ciblage 3 étapes, la baseline technique, le NAP si local.
 2. Vérifier les accès : Search Console connectée dans Cuik, projet Haloscan créé, BrightLocal + GBP si local, PostHog/GA4 si SaaS.
 3. Valider le plan des 5 premières actions (souvent : des refreshes de l'existant 4-20 AVANT de la création).
-4. Client local : dérouler le setup citations depuis `nap.md` (GBP → Pages Jaunes → le reste), chaque annuaire vérifié à la main.
-5. Premier `/weekly-review` la semaine suivante : la boucle est lancée.
+4. **`/content-plan <slug>`** — prévoir 30-45 min : le plan éditorial des 6 mois. L'onboarding donne le point de départ, le plan donne la trajectoire. Deux choses à préparer avant de lancer la command : la **cadence contractuelle** (combien de contenus/mois sont vendus) et ta **capacité réelle de relecture** — c'est la seconde qui plafonne le volume. Relire le brouillon, ajuster, passer en ✅ validé : le plan validé est présentable au client (c'est souvent le premier livrable qui rend la mission tangible pour lui).
+5. Client local : dérouler le setup citations depuis `nap.md` (GBP → Pages Jaunes → le reste), chaque annuaire vérifié à la main.
+6. Premier `/weekly-review` la semaine suivante : la boucle est lancée — elle exécute le plan et en met les statuts à jour.
