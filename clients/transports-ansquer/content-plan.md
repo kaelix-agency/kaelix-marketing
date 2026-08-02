@@ -26,6 +26,8 @@
 
 **⭐ Priorité business (retour client via opérateur, gate du 2026-08-02)** : développer en priorité les **tournées VL régulières en IdF** — persona P1. Cette priorité **prime sur les volumes Haloscan** : les paris émergents du cluster F sont assumés et justifiés par elle. Le calendrier alterne chaque mois 1 contenu P1 + 1 contenu P2 (le quick-win conteneurs, difficulté nulle, reste pertinent).
 
+**⛔ Règle de dégradation first-party (gate du 2026-08-02)** : si le first-party d'un sujet ⭐ n'est pas reçu à **J-7 de sa production**, le sujet **glisse d'un mois** (statut `reporté`, motif tracé au tableau et au journal) et son slot est pris par le sujet suivant du calendrier. On ne publie jamais un pari émergent vidé de son information gain — un contenu générique sur un mot-clé à volume nul cumule les deux raisons de ne pas exister.
+
 ---
 
 ## 1. Clusters
@@ -39,6 +41,8 @@
 | **Objectif SEO** | top 3 sur « depotage conteneur » + « empotage conteneur » (cumul ~210/mois, difficulté quasi nulle) ; capter la traîne « combien de palettes » (~230/mois cumulés) |
 | **Mot-clé pilier** | dépotage / empotage conteneur (Gennevilliers) |
 | **Persona dominant** | P2 — importateur/chargeur du port |
+
+**Répartition d'intention tranchée (anti-cannibalisation interne au cluster)** : guide 08 = *process* (étapes, responsabilités, code CTU, coûts du service) — sa section dimensionnement se limite à 2-3 phrases + renvoi vers l'article palettes · article palettes 09 = **seul détenteur** de la table 20'/40'/40'HC (dimensionnement, poids, gerbage, calage) — et renvoie au guide pour le process. Maillage croisé obligatoire dans les deux sens.
 
 **Sujets rattachés** :
 - [ ] Guide fusionné empotage + dépotage (08/2026)
@@ -111,6 +115,8 @@
 
 **Répartition d'intention tranchée (anti-cannibalisation interne au cluster)** : pilier satellite 08 = *quoi/comment* (mise en place, cadence, contrat) · comparatif 09 = *choix du modèle* (dédié vs messagerie vs coursier) · article 10 = *les € du modèle* (prix/tournée, /mois, vs chauffeur salarié). Frontières externes : le refresh hub `/transport/` (12/2026) garde une section critères courte sans viser « transport dédié » en title/H1 ; le futur guide affrètement limitera sa section « vs messagerie vs dédié » à un paragraphe-renvoi vers le comparatif ; « externalisation logistique PME » (01/2027) = coûts stockage/logistique globale, jamais le coût transport/tournée.
 
+**Capture — option lead magnet (décision à la production)** : sur les 3 sujets du cluster, en plus du CTA devis, envisager un **« modèle de cahier des charges de tournée régulière » en téléchargement contre email**. Un seul asset servi par les trois articles ; trancher au moment du `/write` du premier sujet.
+
 **Sujets rattachés** :
 - [ ] « Mettre en place une tournée de livraison régulière » (08/2026) — pari-émergent
 - [ ] « Transport dédié, messagerie ou coursier ponctuel » (09/2026)
@@ -132,7 +138,7 @@
 | 11/2026 | refresh | Homepage — pousser la grappe locale au top 3 (post-J90, selon relevés weekly-review d'octobre) | transporteur gennevilliers (4→top 3) + transport gennevilliers (9→top 3) | locale | P1 | — | D | appel + devis | photos réelles flotte/quais (demandées au client, cf. prompts/2026-08-02) | prévu |
 | 11/2026 | refresh | `/transport/course-urgente/` — élargir en hub urgence : + coursier urgent, + transport express IdF, gap prix indicatifs/délais par département | course urgente + coursier urgent + transport express ile de france (~160 cumulés) | transactionnelle | P3 | — | E | téléphone + devis | ⚠️ à alimenter : délais réels constatés par zone, exemples de courses | prévu |
 | 12/2026 | refresh | Hub `/transport/` — critères de choix intégrés en section COURTE (frontière : renvoi vers le comparatif F, ne jamais viser « transport dédié » en title/H1), ZFE/accès Paris, atout multimodal | transporteur ile de france (100) | commerciale | P1 | — | B/D | devis | atout port multimodal ; contraintes ZFE vécues (à alimenter) | prévu |
-| 12/2026 | refresh | Pilier A `/stockage/depotage-empotage-conteneurs/` — épaississement (293→700+ mots) avec le jus des 2 articles conteneurs | depotage empotage conteneurs gennevilliers | transactionnelle-locale | P2 | — | A | devis | données terrain collectées d'ici là | prévu |
+| 12/2026 | refresh | Pilier A `/stockage/depotage-empotage-conteneurs/` — épaississement (293→700+ mots) avec les données terrain collectées via les 2 articles conteneurs (jamais de contenu recopié) | depotage empotage conteneurs gennevilliers | transactionnelle-locale | P2 | — | A | devis | données terrain collectées d'ici là | prévu |
 | 01/2027 | création | Externaliser sa logistique quand on est une PME : coûts, seuils de bascule, méthode (déplacé de 10/2026 par l'alternance P1/P2) | externalisation logistique pme (~0 affiché ; « externaliser logistique » 720 en corps) | info | P1 | guide | C | devis/contact | ⚠️ à alimenter par le client : coût au m²/palette, seuil de bascule, cas client anonymisé — **⚠️ analyse dégradée : requalifier via `/research` avant production, en intégrant l'angle tournées régulières (gate 2026-08-02) ; frontière : coûts stockage/logistique globale, jamais le coût transport/tournée (→ sujet F de 10/2026)** | prévu |
 | 01/2027 | refresh | Pilier C `/stockage/externalisation-logistique/` — enrichissement avec les données du satellite PME | externalisation logistique (260, CPC 34 €) | commerciale | P1 | — | C | devis | idem satellite PME | prévu |
 | 01/2027 | création | Prestataire logistique en Île-de-France : que couvre la prestation (stockage, cross-dock, préparation) — pari émergent | prestataire logistique ile de france (10, CPC 18,50 €) | commerciale | P1 | evergreen | C | devis | entrepôt 300 m², 2 quais | **reporté** — rééquilibrage priorité tournées VL (gate 2026-08-02) ; réexamen à la révision de 11/2026 |
