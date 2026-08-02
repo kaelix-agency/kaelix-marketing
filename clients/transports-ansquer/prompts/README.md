@@ -15,3 +15,4 @@ Prompts destinés au **repo du site du client** : ils déclenchent des PR côté
 | Fichier | Type | Période / objet | Statut |
 |---|---|---|---|
 | [`2026-08-02-questions-onboarding-client.md`](./2026-08-02-questions-onboarding-client.md) | communication client | questions en attente de l'onboarding (first-party, NAP, GBP, photos) | 🕓 brouillon |
+| [`2026-08-02-chantier-pipeline-mdx-v2.md`](./2026-08-02-chantier-pipeline-mdx-v2.md) | technique | pipeline MDX + whitelist v2 + 5 exigences d'affichage + bascule noindex (prérequis publication 08/2026) | 🕓 brouillon |
