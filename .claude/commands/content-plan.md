@@ -16,7 +16,9 @@ Plan éditorial pour `$ARGUMENTS` (horizon par défaut : **6 mois**). Utilise le
    - d'abord les **REFRESHES** de l'existant en **positions 4-20** (les pousser vers le top 3 est le levier le plus rentable : hors top 3, très peu de trafic, et on augmente le trafic sans rien créer) ;
    - ensuite les **CRÉATIONS**, par ordre de valeur : (1) argent (transactionnel/commercial) → (2) phase de choix (comparaisons, alternatives) → (3) informationnel longue traîne.
 
-4. **Qualification de CHAQUE sujet** (aucun sujet n'entre au plan sans les huit) :
+4. **Qualification de CHAQUE sujet — délègue au subagent `serp-analyst`, par lots parallèles.** Un plan de 6 mois représente des dizaines de mots-clés : les analyser en séquentiel dans cette session saturerait le contexte avant la fin. Invoque **une instance par sujet**, plusieurs en parallèle dans le même message, et assemble les mini-briefs. Fournis à chaque instance : le mot-clé, le chemin du dossier client, et **la liste des sujets déjà retenus dans le lot** (c'est ce qui permet de détecter les collisions entre deux sujets d'un même plan). Traite un mini-brief marqué `⚠️ analyse dégradée` comme incomplet, jamais comme un feu vert.
+
+   Aucun sujet n'entre au plan sans les huit qualifications suivantes — le `serp-analyst` en couvre les cinq premières, **les trois dernières restent ici** (elles demandent le brief et les personas, que l'agent n'a pas à charger) :
    - **mot-clé + intention** via Haloscan MCP (intention lue dans la SERP réelle, pas à l'intuition) ;
    - **règle du scroll** : si le premier résultat organique n'arrive qu'après 3 à 5 scrolls (pubs, AI Overviews, packs), le trafic organique est résiduel → **disqualifier** le mot-clé et proposer une variante à SERP plus organique. Consigner le sujet écarté avec son motif ;
    - **anti-cannibalisation** sur trois fronts : Haloscan, `tracking.md` (le publié) **et les sujets déjà inscrits au plan** — deux lignes du plan ne visent jamais la même intention. Conflit → refresh/fusion plutôt que création ;

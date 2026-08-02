@@ -38,9 +38,9 @@ Enchaîne ensuite sur `/content-plan <client>` : l'onboarding donne les 5 premi�
 | Quand | Command | Ce que ça fait |
 |---|---|---|
 | **Après l'onboarding** (puis ~trimestriel) | `/content-plan <client> [horizon-mois]` | plan éditorial pluri-mois : clusters (pilier + satellites), **refreshes de l'existant 4-20 AVANT les créations**, un persona et un mécanisme de capture par sujet, volume calé sur ta **capacité de relecture** → `content-plan.md` (🕓 brouillon, **tu valides**) |
-| Avant chaque contenu | `/research <client> <mot-clé>` | SERP, intention, **règle du scroll**, gap, angle first-party, paris émergents → brief de production |
-| Production | `/write <client> <mot-clé>` | MDX complet (avec mécanisme de **capture** et **typologie**) + schema + passe **fact-check**, écrit dans le repo du site (branche/PR), **tu merges** |
-| Selon suivi | `/refresh <client> <url> <raison>` | correction ciblée — **refuse les contenus < 90 jours** (Google teste) |
+| Avant chaque contenu | `/research <client> <mot-clé>` | SERP, intention, **règle du scroll**, gap, angle first-party, paris émergents → brief de production (analyse déléguée au `serp-analyst`) |
+| Production | `/write <client> <mot-clé>` | MDX complet (avec mécanisme de **capture** et **typologie**) + schema + **double PASS `fact-checker` / `contract-checker`**, écrit dans le repo du site (branche/PR), **tu merges** |
+| Selon suivi | `/refresh <client> <url> <raison>` | correction ciblée — **refuse les contenus < 90 jours** (Google teste) ; même double PASS que `/write` |
 | Régulier (local) | `/gbp-post <client>` | brouillons de posts GBP, **tu publies** |
 | À chaque avis (local) | `/review-response <client>` | brouillon de réponse, **tu publies** (gate renforcé) |
 | **Hebdomadaire** | `/weekly-review <client>` | collecte (Cuik/Haloscan/PostHog + collages BrightLocal/GBP), diagnostic **hors fenêtre des 90 j**, équilibre du trafic, re-check bimestriel par typologie, plan d'action priorisé |
@@ -58,7 +58,22 @@ Enchaîne ensuite sur `/content-plan <client>` : l'onboarding donne les 5 premi�
 | `local-seo` | NAP, GBP, avis, citations FR | une incohérence NAP érode silencieusement la confiance de Google ; la vélocité d'avis récents bat le total historique |
 | `client-report` | rapport mensuel client | relier l'effort au résultat, chiffres réels, prudence d'attribution (les IA renvoient vers la homepage), contenus < 90 j « en test » |
 
-## 5. Les règles du jeu (résumé — détail et justifications dans CLAUDE.md et docs/rationnel-des-choix.md)
+## 5. Les agents (contexte isolé) et leur raison d'être
+
+Trois subagents (`.claude/agents/`), invoqués par les commands. **Pas d'agent orchestrateur** : la session principale et toi orchestrez, rien n'est décidé hors de ta vue. Détail : `docs/rationnel-des-choix.md` §1.13.
+
+| Agent | Rôle | Pourquoi il est isolé |
+|---|---|---|
+| `fact-checker` | vérification factuelle après rédaction, avant PR | le skill `fact-check` s'exécutait dans la session qui venait d'écrire — le vérificateur portait le biais du rédacteur. En contexte vierge, il ne sait pas ce que la session espérait démontrer : c'est la différence entre **se relire et être relu** |
+| `contract-checker` | conformité mécanique au contrat de contenu | tout ce qui est vérifiable par une règle (frontmatter, whitelist de version, maillage, longueurs) doit l'être **avant** le gate — pour que ta relecture porte sur le fond et la voix, les seules choses qu'une machine ne juge pas |
+| `serp-analyst` | analyse d'un mot-clé, **une instance par mot-clé, en parallèle** | un plan éditorial qualifie des dizaines de mots-clés ; en séquentiel le contexte sature et les derniers sujets sont moins bien analysés que les premiers — un biais purement mécanique |
+
+**Trois règles à connaître** :
+- **La rédaction n'est pas déléguée.** Elle a besoin du contexte complet et simultané (brief, voix, first-party, arbitrages en cours de session). L'isolation aide à vérifier, elle handicape la création.
+- **Les vérificateurs n'ont aucun droit d'écriture.** Un contrôle qui peut corriger le texte devient co-auteur. Ils rendent un rapport ; la session applique et les relance. `/write` et `/refresh` exigent un **double PASS** avant d'ouvrir la PR.
+- **⚠️ Les contrôles empêchés se voient.** Fichier absent, source hors ligne, outil MCP indisponible, repo du site non cloné → le rapport affiche **« non vérifiable » avec la raison**, jamais un ✅ silencieux. Un rapport muet sur ses angles morts est pire qu'un contrôle absent : tu croirais le point couvert.
+
+## 6. Les règles du jeu (résumé — détail et justifications dans CLAUDE.md et docs/rationnel-des-choix.md)
 
 - **Gate humain partout** : Claude prépare, tu valides et publies. La relecture est la seule phase manuelle — et la limite réelle du volume de production.
 - **⛔ Règle des 90 jours** : aucun contenu de moins de 90 jours ne se touche. Google teste ; la position n'est fiable qu'à J90.
@@ -70,7 +85,7 @@ Enchaîne ensuite sur `/content-plan <client>` : l'onboarding donne les 5 premi�
 - **Chaque contenu capture quelque chose** (email, essai, devis, mini-outil).
 - **Chiffres réels** dans les rapports ; équilibre du trafic surveillé (SEO ≤ ~60 % du total ; pas de dépendance à 3-4 pages).
 
-## 6. Structure d'un dossier client
+## 7. Structure d'un dossier client
 
 ```
 clients/<slug>/
@@ -87,7 +102,7 @@ clients/<slug>/
 
 Les gabarits vides de tous ces fichiers vivent dans `clients/_template/` — `/onboard-client` les copie.
 
-## 7. MCP vs ponts manuels
+## 8. MCP vs ponts manuels
 
 | Source | Accès | Utilisé par |
 |---|---|---|
@@ -97,7 +112,7 @@ Les gabarits vides de tous ces fichiers vivent dans `clients/_template/` — `/o
 | BrightLocal (geo-grid, citations, avis) | **manuel** — tu colles l'export dans la session | weekly-review, report, nap.md |
 | Fiche GBP (posts, avis, insights) | **manuel** — tu publies/colles | gbp-post, review-response, report |
 
-## 8. Bonnes pratiques
+## 9. Bonnes pratiques
 
 > Version détaillée et organisée par moment de la semaine : `docs/routines-operationnelles.md` §6.
 
@@ -107,11 +122,11 @@ Les gabarits vides de tous ces fichiers vivent dans `clients/_template/` — `/o
 - Le re-check bimestriel (typologie actu/guide/evergreen) maintient le parc de contenus sans tout réécrire (~80 % reste identique).
 - Quand une routine devient pénible à répéter (beaucoup de clients/contenus), c'est le signal pour automatiser — ce repo est alors la spec de l'orchestrateur à construire (voir docs/rationnel-des-choix.md §5).
 
-## 9. Faire évoluer le repo
+## 10. Faire évoluer le repo
 
 Toute nouvelle règle suit le circuit : (1) l'intégrer à la command/skill concernée, (2) la justifier dans `docs/rationnel-des-choix.md`, (3) tracer sa source dans `docs/` (ex. `notes-podcast-seo.md`). Un repo dont on ne sait plus POURQUOI les règles existent finit contourné.
 
-## 10. Comment ce repo publie vers les sites clients (résumé)
+## 11. Comment ce repo publie vers les sites clients (résumé)
 
 Ce repo est **isolé** des repos de sites. La publication traverse la frontière ainsi :
 
@@ -123,6 +138,6 @@ Ce repo est **isolé** des repos de sites. La publication traverse la frontière
 
 Un nouveau site rejoint le standard en implémentant une fois le contrat (pipeline MDX + schéma + whitelist + JSON-LD) : voir `docs/interactions-repos.md` §4.
 
-## 11. Ajouter un canal plus tard
+## 12. Ajouter un canal plus tard
 
 Le repo est extensible : un nouveau canal (LinkedIn, Meta…) = une nouvelle command + éventuellement une skill, et une section « canaux actifs » dans le brief du client. Le cœur (briefs, tracking, gate) ne change pas.

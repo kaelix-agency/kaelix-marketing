@@ -11,6 +11,7 @@ Refresh pour `$ARGUMENTS`.
    - `position` (bloqué positions 4-20) → approfondir le contenu (sections manquantes vs SERP via Haloscan MCP), renforcer le maillage interne entrant, enrichir les entités. C'est le levier le plus rentable du SEO : pousser l'existant vers le top 3.
    - `technique` → corriger les findings signalés (Cuik MCP).
    - `date` → actualiser chiffres/exemples selon la typologie (actu : mettre à jour l'actualité ; guide : compléter les manques — ~80 % du contenu reste identique), mettre à jour dateModified.
-3. Passer le skill `fact-check` sur les parties modifiées.
-4. Applique les modifications dans le dépôt du site (branche + PR), gate identique à `/write`.
+3. **Même chaîne de vérification que `/write`, sur le contenu modifié** : délègue au subagent **`fact-checker`** (chemin du contenu + chemin du dossier client), applique ses corrections, puis délègue au subagent **`contract-checker`**. **Double PASS obligatoire** avant la PR. Relance différenciée : correction factuelle → re-`fact-checker` ; correction structurelle → re-`contract-checker`.
+   - Un refresh touche un contenu **déjà publié** : le contrat a pu changer de version depuis (v1 → v2). Le `contract-checker` contrôle le fichier **entier**, pas seulement le diff — c'est l'occasion de le remettre à niveau. Mais attention : passer un article v1 en v2 est une modification de fond, pas une correction — la soumettre au gate, pas la glisser dans un refresh `ctr`.
+4. Applique les modifications dans le dépôt du site (branche + PR), gate identique à `/write` (corps de PR : rapports des deux agents + points non vérifiables + « ⚠️ Citations à valider »).
 5. Mets à jour `tracking.md` (date de refresh, raison, nature des changements).

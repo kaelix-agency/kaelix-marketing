@@ -9,11 +9,12 @@ Ce dépôt est le **cerveau marketing** de l'agence : il stocke la connaissance 
 ```
 marketing-repo/
 ├── CLAUDE.md                  ← ce fichier (règles + architecture)
-├── .mcp.json                  ← serveurs MCP (Haloscan, Cuik, PostHog)
+├── .mcp.json                  ← serveurs MCP (Haloscan, Cuik ; PostHog au cas par cas)
 ├── README.md                  ← documentation d'utilisation
 ├── .claude/
 │   ├── commands/              ← les routines (slash commands)
-│   └── skills/                ← les contrats qualité (méthodologie)
+│   ├── skills/                ← les contrats qualité (méthodologie)
+│   └── agents/                ← les subagents (contexte isolé) : fact-checker, serp-analyst, contract-checker
 ├── clients/
 │   ├── _template/             ← gabarits à copier pour chaque nouveau client
 │   │   ├── client-brief.md    ← stratégie marketing/commerciale + marque + ciblage SEO
@@ -78,6 +79,21 @@ marketing-repo/
 | Suivi de performance (+ re-check bimestriel par typologie) | `/weekly-review` | hebdomadaire |
 | Audit technique | `/tech-audit` | mensuel |
 | Rapport client (santé du trafic incluse) | `/report` | mensuel |
+
+## Agents
+
+Trois subagents en **contexte isolé** (`.claude/agents/`). La session principale et l'opérateur orchestrent — **pas d'agent orchestrateur**. Le POURQUOI de chacun : `docs/rationnel-des-choix.md` §1.13.
+
+| Agent | Quand l'invoquer | Droits |
+|---|---|---|
+| `fact-checker` | **systématiquement** après toute rédaction ou refresh, AVANT la PR | lecture + web, **aucune écriture** |
+| `contract-checker` | après le `fact-checker`, AVANT la PR | lecture seule, aucun accès web |
+| `serp-analyst` | dans `/research` et `/content-plan`, **une instance par mot-clé, en parallèle** | Haloscan + web + lecture |
+
+- **La rédaction reste en session principale** : elle a besoin du contexte complet (brief, voix, first-party, historique). L'isolation est un atout pour vérifier, un handicap pour créer.
+- **Les vérificateurs n'écrivent pas.** Un contrôle qui peut modifier le texte devient co-auteur et cesse d'être un contrôle. Ils rendent un rapport ; la session principale corrige et les relance (relance différenciée : correction factuelle → `fact-checker`, correction structurelle → `contract-checker`).
+- **Double PASS obligatoire** avant toute PR de contenu (`/write`, `/refresh`).
+- **⚠️ Règle des contrôles empêchés** : un contrôle qu'un agent n'a pas pu exécuter (fichier absent, source hors ligne, outil MCP indisponible, repo du site non cloné) s'affiche **« non vérifiable » avec sa raison** — jamais un ✅, jamais une omission. Un rapport muet sur ses angles morts est pire qu'un contrôle absent : le gate humain croit le point couvert.
 
 ## Types de clients
 
