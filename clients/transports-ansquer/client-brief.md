@@ -154,11 +154,11 @@ Type `local` : pages service (×zone), fiche GBP, avis, citations. **Particulari
 
 | Outil | Connecté ? | Détail |
 |---|---|---|
-| Search Console (via Cuik MCP) | ❌ **non** | seule propriété dispo dans Cuik : yurican.com. **Action : connecter `sc-domain:transportsansquer.fr`** puis soumettre le sitemap (12 URL) et surveiller les 404 post-migration pendant 1 mois |
-| Haloscan | ✅ requêtes à la demande | pas de projet suivi dédié pour l'instant |
+| Search Console (via Cuik MCP) | 🕓 **en cours** (décision 2026-08-02) | propriété **Domaine** `transportsansquer.fr` sur le compte Google KAELIX, vérification TXT dans la zone DNS **OVH** ; puis soumission du sitemap (21 URLs au 01/08) + surveillance 404 pendant 1 mois ; puis connexion OAuth à Cuik (vérifier avec `list_gsc_domains`) |
+| Haloscan | ✅ requêtes à la demande | pas de projet suivi dédié pour l'instant (optionnel, côté interface Haloscan) |
 | PostHog | ❌ | non utilisé — ne pas invoquer |
-| GA4 | ❌ | aucun analytics sur le site (choix perf/consentement des audits) |
-| BrightLocal (pont manuel) | à mettre en place | geo-grid + suivi citations/avis — exports collés en session |
+| GA4 / autre analytics | ❌ **décision : GSC seule** (2026-08-02) | site volontairement sans analytics ni cookies ; les conversions se comptent côté formulaire (emails Resend reçus). Réévaluation quand le trafic le justifiera |
+| BrightLocal (pont manuel) | 🕓 planifié **après l'accès GBP** (décision 2026-08-02) | baseline geo-grid au moment de l'activation ; exports collés en session |
 
 - **Rappel** : Haloscan = mots-clés/positions ; Search Console = clics/impressions. Jamais mélangés.
 
@@ -183,3 +183,4 @@ Type `local` : pages service (×zone), fiche GBP, avis, citations. **Particulari
 | Date | Ce qui a changé | Par |
 |---|---|---|
 | 2026-08-02 | Création du brief (onboarding) : identité, repo, voix + interdits client, ciblage Haloscan A/B/C, architecture, first-party du code du site, décisions opérateur (PMF validé, pas de porte-parole, avis = fiche Google seule, contrat v2) | Claude (session onboarding) |
+| 2026-08-02 | Configs tranchées (opérateur) : GSC = compte KAELIX + TXT DNS OVH (propriété domaine) ; analytics = GSC seule ; BrightLocal = après accès GBP ; canal client = WhatsApp. Posture live vérifiée : robots.txt OK, sitemap 21 URLs | Claude (session config) |

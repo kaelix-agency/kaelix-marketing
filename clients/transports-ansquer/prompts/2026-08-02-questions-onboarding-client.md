@@ -66,8 +66,29 @@ Bien à vous,
 | Refresh hub urgence (11) | bloc 3 (délais par zone) |
 | Externalisation PME (01/2027) | bloc 4 (coût m²/palette, cas client) |
 
+## Version WhatsApp — canal retenu (décision opérateur 2026-08-02)
+
+> Trois messages à envoyer à la suite. Le draft email ci-dessus reste la référence de fond ; cette version condense sans rien perdre des 9 lignes first-party.
+
+**Message 1/3**
+
+> Bonjour [Prénom] 👋 Le nouveau site est en ligne et tourne bien. On attaque maintenant le référencement, avec votre priorité en tête : développer les tournées régulières en VL. Pour que nos contenus disent ce que vos concurrents ne peuvent pas dire, j'ai besoin de votre matière terrain. Le plus simple : 20-30 min au téléphone cette semaine — sinon répondez ici, même partiellement, tout m'aide.
+
+**Message 2/3**
+
+> Ce qu'il me faut, en vrac :
+> 🚚 Tournées : cadences réelles, une tournée type (nb de points, zones), votre façon de contractualiser (engagement, préavis), une fourchette de prix publiable par gabarit (9/14/20 m³) — ou de quoi comparer avec un chauffeur salarié
+> 📦 Conteneurs : durée moyenne d'un dépotage 40', fourchette de prix, 2-3 anecdotes de quai
+> 🏢 Entreprise : année de création + votre parcours, SIRET, la référence de votre inscription au registre des commissionnaires (on veut l'afficher, personne ne le fait), horaires réels jour par jour, délais constatés par zone (Paris / petite / grande couronne)
+> 🤝 3-5 concurrents que vous croisez vraiment + 2-3 missions parlantes (anonymisées si besoin)
+
+**Message 3/3**
+
+> Et deux choses côté Google : 1️⃣ une invitation « gestionnaire » sur votre fiche Google Business (je vous envoie l'adresse à inviter) — on la complète et on lance la collecte d'avis, c'est votre levier n°1. 2️⃣ quelques photos réelles : fourgons, les deux quais, l'entrepôt, l'équipe si OK. Une vraie photo vaut mieux que toutes les images de banque. Et bien sûr : rien n'est publié sans votre validation 👍
+
 ## Points ouverts avant envoi
 
-- [ ] Prénom du destinataire + canal (email ? WhatsApp ?) — le contact opérationnel n'est pas encore renseigné au brief.
-- [ ] Email KAELIX à indiquer pour l'invitation gestionnaire GBP (bloc 5).
-- [ ] Valider la formule de contact (vouvoiement conservé, ton direct).
+- [x] Canal : **WhatsApp** (décision opérateur 2026-08-02) — version 3 messages ci-dessus.
+- [ ] Prénom du destinataire (placeholder [Prénom] du message 1).
+- [ ] Email KAELIX pour l'invitation gestionnaire GBP — à envoyer au client au moment du message 3 (« je vous envoie l'adresse à inviter »).
+- [ ] Relecture finale opérateur → statut 📤 émis après envoi.
