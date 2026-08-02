@@ -32,7 +32,8 @@
 
 | Mot-clé | Repéré le | Hypothèse (pourquoi ce pari) | Contenu publié | Volume à date | Verdict |
 |---|---|---|---|---|---|
-| | | | | | |
+| tournée régulière transport (+ champ « transport régulier PME ») | 2026-08-02 | priorité business client (tournées VL IdF) ; terme de marché établi chez les concurrents (TopChrono, Cap Express) mais volumes Haloscan NA ; format guide vacant dans la SERP | — (prévu 08/2026, cluster F) | ~0 (NA) | en cours |
+| combien coûte une tournée régulière externalisée | 2026-08-02 | requête de phase de décision ultra-qualifiée ; le voisin « tarif livraison au km » (142/mois) prouve la demande prix ; personne ne chiffre une tournée régulière (tout est au km one-shot, tout PL) | — (prévu 10/2026, cluster F) | ~0 (NA) | en cours |
 
 ## 4. Re-checks bimestriels
 
