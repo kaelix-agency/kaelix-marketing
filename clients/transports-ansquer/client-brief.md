@@ -4,7 +4,7 @@
 |---|---|
 | **Slug** | `transports-ansquer` |
 | **Créé le** | 2026-08-02 |
-| **Dernière mise à jour** | 2026-08-02 |
+| **Dernière mise à jour** | 2026-08-05 |
 
 ---
 
@@ -26,10 +26,10 @@
 | URL du repo | https://github.com/kaelix-agency/transports-ansquer |
 | Forge | `github` (`gh`) |
 | Chemin local convenu | `D:\Users\Axel\KAELIX\transports-ansquer` |
-| Chemin des articles | ⚠️ **pipeline MDX à implémenter** — le blog tourne aujourd'hui sur un registre TypeScript (`src/lib/blog`, articles en TSX). Cible : `content/blog/` conforme au contrat. Prérequis à la première publication `/write`. |
-| Chemin des pages locales | n/a pour l'instant (pages service portées par `src/app/`) |
-| **Version du contrat de contenu supportée** | `v2` — décision opérateur (2026-08-02). Composants v2 **non encore implémentés** dans le template : implémentation native + exigences d'affichage à planifier AVANT la première publication. |
-| Branche par défaut | `main` |
+| Chemin des articles | ✅ **`content/blog/`** — pipeline MDX v2 opérationnel depuis le 2026-08-05 (PR #1 mergée et déployée). Frontmatter Zod strict, whitelist v2 complète, fail-closed au build. Modèle à dupliquer : `content/blog/exemple-contrat-v2.mdx` (brouillon permanent). |
+| Chemin des pages locales | n/a pour l'instant (pages service portées par `src/app/`) ; le champ `geo` est réservé à un futur `content/zones/` (interdit dans `content/blog/`) |
+| **Version du contrat de contenu supportée** | `v2` — **implémentée et effective sur le site** (2026-08-05). Les 7 composants rendus dans le design du site ; 2 écarts d'implémentation validés au gate, répercutés dans `docs/contrat-de-contenu.md` : `image` = objet `{src, alt}` ; CTA sans parcours sur le site (`essai`, `newsletter`) = build rouge. |
+| Branche par défaut | `master` (corrigé 2026-08-05 — le repo n'a jamais eu de `main`) ; `master` = branche de référence prod, PR de chantier vers `master` |
 | Rendu | `SSG` — 100 % pré-rendu statique (vérifié aux audits des 21-22/07/2026), HTML complet servi aux IA |
 
 - **État du site** : rebuild Next.js **en ligne sur transportsansquer.fr** (constaté au crawl du 02/08/2026 — architecture `/transport/*` + `/stockage/*`, 16 pages indexables, ancien WordPress remplacé, redirections 308 en un saut). Audits internes des 21-22/07/2026 : score 9,3/10, aucun bloquant technique. Les audits décrivaient l'architecture `/services/*`, restructurée depuis en deux hubs.
@@ -133,7 +133,7 @@ Type `local` : pages service (×zone), fiche GBP, avis, citations. **Particulari
 | 2 | Citations NAP (annuaires FR) | à faire | — | après validation `nap.md` |
 | 3 | `/` + hubs `/transport/` `/stockage/` | existantes | transport gennevilliers | fenêtre 90 j — observation |
 | 4 | Pages de service (14) | existantes | 1 mot-clé chacune | 280-544 mots ; épaississement 700+ à programmer à J90 |
-| 5 | Blog (pipeline MDX v2 à construire) | vide, noindex | traîne des clusters §5C | 1er cluster : conteneurs (dépotage/empotage au port) puis affrètement |
+| 5 | Blog (pipeline MDX v2 ✅ opérationnel depuis le 2026-08-05) | vide, noindex (bascule index automatique au 1er article publié) | traîne des clusters §5C | 1er cluster : conteneurs (dépotage/empotage au port) puis affrètement |
 
 - **Free tools** : n/a (client local). Équivalent capture : formulaire devis `/devis/` (fonctionnel depuis migration Resend du 01/08/2026) — chaque contenu doit appeler une action (devis, appel, email).
 
@@ -154,7 +154,7 @@ Type `local` : pages service (×zone), fiche GBP, avis, citations. **Particulari
 
 | Outil | Connecté ? | Détail |
 |---|---|---|
-| Search Console (via Cuik MCP) | 🕓 **en cours** (décision 2026-08-02) | propriété **Domaine** `transportsansquer.fr` sur le compte Google KAELIX, vérification TXT dans la zone DNS **OVH** ; puis soumission du sitemap (21 URLs au 01/08) + surveillance 404 pendant 1 mois ; puis connexion OAuth à Cuik (vérifier avec `list_gsc_domains`) |
+| Search Console (via Cuik MCP) | 🕓 **en cours** (décision 2026-08-02) | propriété **Domaine** `transportsansquer.fr` sur le compte Google KAELIX, vérification TXT dans la zone DNS **OVH** ; puis soumission du sitemap (20 URLs, recompté au 05/08 — la valeur « 21 » notée au 01/08 était erronée) + surveillance 404 pendant 1 mois ; puis connexion OAuth à Cuik (vérifier avec `list_gsc_domains`) |
 | Haloscan | ✅ requêtes à la demande | pas de projet suivi dédié pour l'instant (optionnel, côté interface Haloscan) |
 | PostHog | ❌ | non utilisé — ne pas invoquer |
 | GA4 / autre analytics | ❌ **décision : GSC seule** (2026-08-02) | site volontairement sans analytics ni cookies ; les conversions se comptent côté formulaire (emails Resend reçus). Réévaluation quand le trafic le justifiera |
@@ -184,3 +184,4 @@ Type `local` : pages service (×zone), fiche GBP, avis, citations. **Particulari
 |---|---|---|
 | 2026-08-02 | Création du brief (onboarding) : identité, repo, voix + interdits client, ciblage Haloscan A/B/C, architecture, first-party du code du site, décisions opérateur (PMF validé, pas de porte-parole, avis = fiche Google seule, contrat v2) | Claude (session onboarding) |
 | 2026-08-02 | Configs tranchées (opérateur) : GSC = compte KAELIX + TXT DNS OVH (propriété domaine) ; analytics = GSC seule ; BrightLocal = après accès GBP ; canal client = WhatsApp. Posture live vérifiée : robots.txt OK, sitemap 21 URLs | Claude (session config) |
+| 2026-08-05 | Chantier pipeline MDX v2 exécuté et déployé : `master` = branche de prod (fast-forward + connexion Vercel↔GitHub, Production Branch master), PR #1 mergée (`d44f449`), articles en `content/blog/`, contrat v2 effectif. Corrections factuelles : branche par défaut `master` (pas `main`), sitemap 20 URLs (pas 21). Vérifs post-deploy : 16 pages OK, blog noindex, draft 404 | Claude (session chantier MDX v2) |

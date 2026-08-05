@@ -43,7 +43,9 @@ author: ""           # nom de l'auteur affiché (E-E-A-T)
 typology: guide      # actu | guide | evergreen — pilote le re-check bimestriel
 keywords: []         # mot-clé principal en premier
 cluster: ""          # pillar de rattachement (cohérence maillage)
-image: ""            # image de couverture (chemin public/), optionnel
+image:               # image de couverture, optionnelle — objet {src, alt}
+  src: ""            #   chemin public/ absolu
+  alt: ""            #   texte alternatif OBLIGATOIRE si image présente (contrat d'accessibilité)
 faq:                 # 3-6 paires — rend la section FAQ ET génère le JSON-LD FAQPage
   - q: ""
     a: ""
@@ -56,6 +58,7 @@ draft: false
 
 Règles :
 - `title`/`description`/`slug`/`dates`/`author`/`typology` : **obligatoires**.
+- `image` : objet `{src, alt}` — une image sans texte alternatif ne passe pas la validation (évolution du 2026-08-05, issue de l'implémentation transports-ansquer ; voir `rationnel-des-choix.md`).
 - `faq` : obligatoire pour les articles et pages locales (c'est le format d'extraction des moteurs IA).
 - `geo` : obligatoire pour `content/zones/`, interdit ailleurs. Les valeurs proviennent exclusivement du `nap.md` du client.
 - Le site génère le JSON-LD (Article/BlogPosting, FAQPage, LocalBusiness/Service, BreadcrumbList) **à partir du frontmatter** — le contenu n'écrit jamais de `<script>` schema à la main.
@@ -84,6 +87,8 @@ Le corps de l'article ne peut invoquer QUE les composants de la whitelist, **dan
 | `<Callout type="info\|astuce\|attention">` | encart d'information, avertissement, conseil | `type`, children (Markdown) |
 | `<CTA type="devis\|essai\|contact\|newsletter">` | mécanisme de capture (obligatoire : ≥1 par contenu) | `type`, `label?` |
 | `<FAQ />` | rend la section FAQ depuis le frontmatter | aucune |
+
+⚠️ **Disponibilité des types de CTA** (règle du 2026-08-05) : les 4 types appartiennent au contrat, mais un type sans parcours réellement câblé sur le site cible (pas de page d'essai, pas de newsletter…) est une **erreur de build**, jamais un bouton mort ni un lien de repli silencieux. Le fail-closed couvre les parcours, pas seulement la syntaxe. Le rédacteur vérifie les types disponibles dans le `client-brief.md` §2 du client avant d'employer un CTA.
 
 ### 4.3 Composants v2
 

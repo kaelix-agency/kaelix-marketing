@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Statut** | 📤 émis le 2026-08-05 — session Claude Code sur le repo du site |
+| **Statut** | ✅ exécuté le 2026-08-05 — PR #1 mergée (gate opérateur « GO MERGE ») et déployée en production |
 | **Repo cible** | `D:\Users\Axel\KAELIX\transports-ansquer` (github.com/kaelix-agency/transports-ansquer) |
 | **Type** | technique (prérequis bloquant de la première publication du plan éditorial — 08/2026) |
 | **Créé le** | 2026-08-02 |
@@ -98,4 +98,4 @@ Critères d'acceptation : `npm run build` vert avec l'article exemple en draft �
 | Brouillon rédigé | 2026-08-02 | calé sur contrat v2 + interactions-repos §4 |
 | Émis (session repo site) | 2026-08-05 | cible corrigée `main` → `master` ; master préalablement fast-forwardé sur `refonte-3-poles` (état prod) et poussé |
 | PR ouverte | 2026-08-05 | [PR #1](https://github.com/kaelix-agency/transports-ansquer/pull/1) vers `master` — build vert, 85/85 e2e, 4 tests build-rouge OK ; en attente du gate opérateur |
-| Mergée / déployée | | passe le fichier en ✅ exécuté + MAJ `client-brief.md` §2 (chemin des articles → `content/blog/`) |
+| Mergée / déployée | 2026-08-05 | merge commit `d44f449` ; déploiement prod **automatique** (Vercel↔GitHub connecté le jour même, Production Branch `master`) ; vérifs post-deploy OK (16 pages, sitemap 20 URLs sans le draft, blog noindex, draft 404). Note : pipeline natif `next build` retenu plutôt que Velite (choix laissé ouvert par le prompt) ; `client-brief.md` §2 mis à jour |

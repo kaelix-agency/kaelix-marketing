@@ -95,6 +95,12 @@ Décision 2026-08-01, demande opérateur. Le repo fonctionne en commands + skill
 
 **La règle des contrôles empêchés — commune aux trois.** Un contrôle qu'un agent n'a pas pu exécuter (fichier absent, source hors ligne, outil MCP indisponible, repo du site non cloné) s'affiche **⚠️ non vérifiable, avec sa raison**. Jamais un ✅, jamais une omission. C'est la règle la plus importante des trois fichiers : un rapport silencieux sur ses angles morts fait croire au gate humain qu'un point est couvert, ce qui est **pire que pas de contrôle du tout** — le contrôle absent, on le sait ; le contrôle qu'on croit fait, non. Corollaire côté `serp-analyst` : si un outil Haloscan attendu devient inaccessible (renommage côté serveur MCP), le mini-brief le signale au lieu de continuer comme si de rien n'était — la dérive devient visible au premier usage.
 
+### 1.14 Deux évolutions du contrat v2 issues de la première implémentation
+Source : implémentation transports-ansquer validée au gate opérateur, 2026-08-05 (PR #1 du repo du site). La première mise en œuvre réelle du contrat a fait remonter deux imprécisions ; plutôt que des exceptions locales, elles deviennent des règles du contrat (`docs/contrat-de-contenu.md` §3 et §4.2) :
+
+- **`image` = objet `{src, alt}`, alt obligatoire.** Le contrat disait `image: ""` sans préciser ; or une couverture sans texte alternatif fait échouer l'accessibilité du site qui la rend (et l'ancien registre du site imposait déjà `imageAlt`). L'alternative textuelle est une donnée ÉDITORIALE, pas un détail de rendu : elle appartient au contenu, donc au frontmatter.
+- **Un type de CTA sans parcours câblé sur le site cible = build rouge.** Le fail-closed ne couvre pas que la syntaxe (type dans l'énumération) mais les parcours : un `<CTA type="essai">` sur un site sans page d'essai produirait un bouton mort, pire qu'une erreur. Les 4 types restent au contrat ; leur disponibilité par site se déclare dans le `client-brief.md` §2.
+
 ---
 
 ## 2. Rationnel des skills
