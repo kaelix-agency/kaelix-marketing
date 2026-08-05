@@ -97,5 +97,5 @@ Critères d'acceptation : `npm run build` vert avec l'article exemple en draft �
 |---|---|---|
 | Brouillon rédigé | 2026-08-02 | calé sur contrat v2 + interactions-repos §4 |
 | Émis (session repo site) | 2026-08-05 | cible corrigée `main` → `master` ; master préalablement fast-forwardé sur `refonte-3-poles` (état prod) et poussé |
-| PR ouverte | | |
+| PR ouverte | 2026-08-05 | [PR #1](https://github.com/kaelix-agency/transports-ansquer/pull/1) vers `master` — build vert, 85/85 e2e, 4 tests build-rouge OK ; en attente du gate opérateur |
 | Mergée / déployée | | passe le fichier en ✅ exécuté + MAJ `client-brief.md` §2 (chemin des articles → `content/blog/`) |
