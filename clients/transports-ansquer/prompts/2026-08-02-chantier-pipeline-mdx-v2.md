@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Statut** | 🕓 brouillon — relecture opérateur avant émission vers le repo du site |
+| **Statut** | 📤 émis le 2026-08-05 — session Claude Code sur le repo du site |
 | **Repo cible** | `D:\Users\Axel\KAELIX\transports-ansquer` (github.com/kaelix-agency/transports-ansquer) |
 | **Type** | technique (prérequis bloquant de la première publication du plan éditorial — 08/2026) |
 | **Créé le** | 2026-08-02 |
@@ -83,7 +83,7 @@ Aujourd'hui `/blog/` est en noindex et exclu du sitemap. Mécanique attendue :
 
 ### 7. Livraison
 
-- Branche `feat/contrat-contenu-v2`, commits atomiques, **PR vers `main`** avec : résumé, capture de l'article d'exemple rendu, résultat des 4 tests build-rouge, et la liste des points de design à valider (rendu des 7 composants).
+- Branche `feat/contrat-contenu-v2`, commits atomiques, **PR vers `master`** (branche de prod du repo site, alignée sur le déploiement Vercel du 2026-08-01 par fast-forward le 2026-08-05) avec : résumé, capture de l'article d'exemple rendu, résultat des 4 tests build-rouge, et la liste des points de design à valider (rendu des 7 composants).
 - `gh pr checks --watch` : tous les checks verts (build, e2e migration WordPress existants inclus — rien ne doit régresser).
 - **Ne merge pas** : le merge est le gate humain de l'opérateur.
 
@@ -96,6 +96,6 @@ Critères d'acceptation : `npm run build` vert avec l'article exemple en draft �
 | Étape | Date | Note |
 |---|---|---|
 | Brouillon rédigé | 2026-08-02 | calé sur contrat v2 + interactions-repos §4 |
-| Émis (session repo site) | | |
+| Émis (session repo site) | 2026-08-05 | cible corrigée `main` → `master` ; master préalablement fast-forwardé sur `refonte-3-poles` (état prod) et poussé |
 | PR ouverte | | |
 | Mergée / déployée | | passe le fichier en ✅ exécuté + MAJ `client-brief.md` §2 (chemin des articles → `content/blog/`) |
