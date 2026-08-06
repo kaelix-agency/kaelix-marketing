@@ -28,7 +28,7 @@
 
 **Horaires réels confirmés par le client (entretien + reconfirmation du 2026-08-06)** : lundi-vendredi 7h30-12h30 / 13h30-16h00 ; **fermé samedi-dimanche SAUF demande exceptionnelle**.
 
-⚠️ **Écart actif avec le site** : le JSON-LD LocalBusiness du site déclare encore du 24/7 (`src/app/layout.tsx`, `openingHoursSpecification` 00:00→23:59, vérifié le 2026-08-06). Correction = chantier site **prêt à émettre** : `prompts/2026-08-06-chantier-horaires-schema-site.md`. Les horaires GBP seront alignés dès l'accès à la fiche.
+✅ **Écart schema résolu le 2026-08-06** (PR #2 mergée et déployée) : le JSON-LD LocalBusiness du site sert désormais lun-ven 07:30-12:30 + 13:30-16:00, week-end sans spécification — vérifié sur transportsansquer.fr après déploiement. Les horaires ci-dessous sont **la source appliquée au site** (`src/lib/company.ts`, export `openingHours`). Restent à aligner : les horaires GBP, dès l'accès à la fiche.
 
 | Jour | Horaires |
 |---|---|
@@ -116,3 +116,4 @@
 | 2026-08-02 | Création du fichier — NAP canonique posé depuis les données opérateur + `src/lib/company.ts` du site (cohérents entre eux) | n/a (pas de changement de coordonnées) | 2026-08-02 |
 | 2026-08-06 | Horaires réels reçus (entretien client) : 7h30-12h30 / 13h30-16h00, lun-ven supposé. Écart 24/7 du schema site documenté → chantier site en brouillon | schema site (chantier à émettre) → GBP (dès accès) → annuaires (aucune citation soumise encore) | |
 | 2026-08-06 (2) | Reconfirmation client : sam-dim fermés sauf demande exceptionnelle (formulation publique cadrée, jamais « astreinte ») + **SIRET 90069725100016** reçu. Chantier schema passé « prêt à émettre » | schema site (émission imminente) → GBP (dès accès) → annuaires | |
+| 2026-08-06 (3) | **Écart schema 24/7 résolu** : PR #2 du repo site mergée (`dbf5e14`) et déployée, JSON-LD + mention /contact/ vérifiés en ligne. Horaires canoniques de ce fichier = source appliquée au site | schema site ✅ → GBP (dès accès) → annuaires | 2026-08-06 |

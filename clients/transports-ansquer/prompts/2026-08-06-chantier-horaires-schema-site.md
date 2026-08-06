@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Statut** | 📤 émis le 2026-08-06 — PR #2 ouverte, en attente du gate opérateur |
+| **Statut** | ✅ exécuté le 2026-08-06 — PR #2 mergée (gate opérateur après vérification de la preview) et déployée en production |
 | **Repo cible** | `D:\Users\Axel\KAELIX\transports-ansquer` (github.com/kaelix-agency/transports-ansquer) |
 | **Type** | correctif (cohérence NAP — critère de référencement local) |
 | **Créé le** | 2026-08-06 |
@@ -73,4 +73,4 @@ opérateur, comme toujours.
 | Prêt à émettre | 2026-08-06 | sam-dim confirmés fermés sauf exceptionnel + formulation week-end cadrée (reconfirmation client) |
 | Émis (session repo site) | 2026-08-06 | GO opérateur ; branche `fix/horaires-schema` depuis `master` à jour (`d44f449`) |
 | PR ouverte | 2026-08-06 | [PR #2](https://github.com/kaelix-agency/transports-ansquer/pull/2), commit `8f17ba6` — horaires centralisés dans `company.ts`, schema 2 plages lun-ven, mention week-end page contact ; build vert, 85/85 e2e ; preview Vercel auto : transports-ansquer-mvko920vx |
-| Mergée / déployée | | MAJ `nap.md` (écart schema résolu) |
+| Mergée / déployée | 2026-08-06 | merge commit `dbf5e14` ; déploiement prod automatique (Vercel↔GitHub) Ready ; vérifs en ligne OK : mention /contact/ présente, JSON-LD lun-ven 07:30-12:30 + 13:30-16:00 sans sam/dim ni 24/7, sitemap 20 URLs, blog noindex. `nap.md` : écart schema résolu |
