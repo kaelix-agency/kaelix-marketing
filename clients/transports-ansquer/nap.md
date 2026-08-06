@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Statut** | 🕓 à formaliser (socle posé le 2026-08-02 ; SIRET, horaires et catégories GBP à valider par le client) |
+| **Statut** | 🕓 à formaliser (socle posé le 2026-08-02 ; horaires reçus le 2026-08-06 — restent SIRET, samedi/dimanche et catégories GBP) |
 | **Validé le** | — |
 | **Dernière vérification de cohérence** | 2026-08-02 (site = `src/lib/company.ts` du repo, cohérent avec ce fichier) |
 
@@ -22,21 +22,23 @@
 | Téléphone format international | +33 6 03 87 31 66 |
 | Email public | contact@transportsansquer.fr |
 | Site web (URL canonique) | https://transportsansquer.fr/ (sans www, avec slash final — convention `trailingSlash: true` du site) |
-| SIRET | à renseigner (demandé par plusieurs annuaires) |
+| SIRET | à renseigner (demandé par plusieurs annuaires) — « donné » selon le client à l'entretien du 2026-08-06 mais jamais reçu en pratique : à récupérer à la relance |
 
 ## 2. Horaires
 
-⚠️ **À valider par le client.** Le schema LocalBusiness du site a historiquement déclaré du 24/7, mais le client a explicitement refusé toute promesse d'astreinte « 24 h/24 — 7 j/7 » affichée (retour du 28/07/2026). Les horaires GBP, le schema et ce fichier doivent être alignés sur les horaires réels une fois connus.
+**Horaires réels du dépôt reçus à l'entretien client du 2026-08-06 : 7h30-12h30 / 13h30-16h00.** Jours couverts supposés lundi-vendredi (⚠️ samedi/dimanche à confirmer explicitement).
+
+⚠️ **Écart actif avec le site** : le JSON-LD LocalBusiness du site déclare encore du 24/7 (`src/app/layout.tsx`, `openingHoursSpecification` 00:00→23:59, vérifié le 2026-08-06) — contradictoire avec le refus client de toute promesse d'astreinte 24/7 (28/07/2026) ET avec les horaires réels. Correction = chantier site à émettre : `prompts/2026-08-06-chantier-horaires-schema-site.md` (🕓 brouillon). Les horaires GBP seront alignés dès l'accès à la fiche.
 
 | Jour | Horaires |
 |---|---|
-| Lundi | à renseigner |
-| Mardi | à renseigner |
-| Mercredi | à renseigner |
-| Jeudi | à renseigner |
-| Vendredi | à renseigner |
-| Samedi | à renseigner |
-| Dimanche | fermé (à confirmer) |
+| Lundi | 7h30-12h30, 13h30-16h00 |
+| Mardi | 7h30-12h30, 13h30-16h00 |
+| Mercredi | 7h30-12h30, 13h30-16h00 |
+| Jeudi | 7h30-12h30, 13h30-16h00 |
+| Vendredi | 7h30-12h30, 13h30-16h00 |
+| Samedi | fermé (⚠️ à confirmer) |
+| Dimanche | fermé (⚠️ à confirmer) |
 
 - **Fermetures exceptionnelles** : à renseigner.
 
@@ -111,3 +113,4 @@
 | Date | Ce qui a changé | Propagation (GBP → PJ → reste) | Terminé le |
 |---|---|---|---|
 | 2026-08-02 | Création du fichier — NAP canonique posé depuis les données opérateur + `src/lib/company.ts` du site (cohérents entre eux) | n/a (pas de changement de coordonnées) | 2026-08-02 |
+| 2026-08-06 | Horaires réels reçus (entretien client) : 7h30-12h30 / 13h30-16h00, lun-ven supposé. Écart 24/7 du schema site documenté → chantier site en brouillon | schema site (chantier à émettre) → GBP (dès accès) → annuaires (aucune citation soumise encore) | |

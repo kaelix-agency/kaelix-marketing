@@ -4,7 +4,7 @@
 |---|---|
 | **Slug** | `transports-ansquer` |
 | **Créé le** | 2026-08-02 |
-| **Dernière mise à jour** | 2026-08-05 |
+| **Dernière mise à jour** | 2026-08-06 |
 
 ---
 
@@ -16,7 +16,7 @@
 - **Statut product-market fit** : `PMF validé` (confirmé opérateur, 2026-08-02)
 - **Canaux actifs** : SEO (site rebuild en ligne), fiche Google Business Profile. Autres canaux : aucun connu à ce jour.
 - **Concurrents** : business à confirmer avec le client. Vus en SERP locale : **leaderfret.com** (plateforme logistique à Gennevilliers, positionné sur `logistique gennevilliers` et `entreprise logistique gennevilliers`) ; eliterail-fr.fr et balticassist.fr apparaissent dans les co-occurrences Haloscan mais sont hors cœur de métier. Gros acteurs présents physiquement sur le port (XPO, DB Schenker) : requêtes de marque captées historiquement par l'ancienne page stockage.
-- **Contact opérationnel** : à renseigner (qui répond côté client pour un chiffre interne ou une validation).
+- **Contact opérationnel** : le dirigeant — prénom « Martin » (entretien du 2026-08-06 ; ⚠️ nom complet et canal de validation à confirmer).
 - **YMYL** : non
 
 ## 2. Repo du site
@@ -39,9 +39,12 @@
 
 - **Ton** : B2B sobre et concret, vouvoiement. Phrases courtes, vocabulaire métier assumé, zéro superlatif marketing. Pas de tirets cadratins dans les textes (convention du repo du site, commit du 29/07/2026).
 - **Vocabulaire maison** : commissionnaire de transport, dépotage/empotage, cross-docking, groupage/dégroupage, hayon, quai PL/VL, affrètement, tournée régulière, « le port » (= port de Gennevilliers).
-- **Interdits** (retour client du 28/07/2026, codé dans `src/lib/company.ts`) :
+- **Interdits** (retour client du 28/07/2026, codé dans `src/lib/company.ts` ; complétés à l'entretien du 2026-08-06) :
   - ⛔ ne jamais afficher le **nombre de véhicules** (fait paraître la structure trop petite face aux appels d'offres) ;
-  - ⛔ ne jamais promettre d'astreinte « **24 h/24 — 7 j/7** ».
+  - ⛔ ne jamais promettre d'astreinte « **24 h/24 — 7 j/7** » ;
+  - ⛔ ne jamais publier de **fourchette tarifaire** (refus client explicite, entretien 2026-08-06) ;
+  - ⛔ ne jamais attribuer les « **23 ans** » à l'entreprise (créée en **2021**) — c'est l'expérience du dirigeant (§7, garde-fous) ;
+  - ⛔ ne jamais citer un **nom de client** sans autorisation écrite — anonymisation par défaut (§7).
 - **Auteur affiché** (frontmatter `author`) : « Transports Ansquer » (organisation) — le JSON-LD `BlogPosting` du site signe déjà en Organization. Pas de signature individuelle tant qu'aucun porte-parole n'est désigné.
 - **Exemples de référence** : pages `/transport/hayon-20m3-paris/` et `/stockage/externalisation-logistique/` (les plus développées, 520-544 mots).
 
@@ -139,7 +142,15 @@ Type `local` : pages service (×zone), fiche GBP, avis, citations. **Particulari
 
 ## 7. Données first-party disponibles
 
-> Statut opérateur (2026-08-02) : rien de plus que ce qui est déjà codé dans le site. **À collecter auprès du client** — liste de questions en bas de section.
+> Collecte n°1 : **entretien client du 2026-08-06** (transcription brute archivée côté opérateur). Les éléments marqués ⚠️ sont illisibles ou ambigus dans la transcription : **à reconfirmer avant toute publication** — jamais de chiffre douteux dans un contenu. Couverture ligne par ligne des besoins du plan : `content-plan.md`, table « First-party ».
+
+### Garde-fous de véracité (entretien 2026-08-06)
+
+- ⛔ **« 23 ans » = expérience du DIRIGEANT. L'entreprise a été créée en 2021.** Ne jamais confondre : pas de « 23 ans d'existence », pas de « depuis 23 ans, nous… ». Formulation autorisée : « fondée en 2021 par un professionnel qui a 23 ans de métier ».
+- ⛔ **Refus client de toute fourchette tarifaire publiée** (site et blog, confirmé en entretien). Les contenus « prix/coût » traitent la méthode et les facteurs de coût, jamais les prix Ansquer. Conséquence tracée au plan : article 10/2026 à requalifier.
+- ⛔ **Noms de clients : anonymisation par défaut.** Palimex (et d'autres) cités en entretien — ne jamais publier un nom sans autorisation écrite. Formes autorisées : « un industriel francilien », « un client du port », « une collectivité du 95 ».
+
+### Socle produit (depuis le code du site, 2026-08-02)
 
 | Élément | Type | Utilisable publiquement ? | Déjà utilisé dans | Ajouté le |
 |---|---|---|---|---|
@@ -148,7 +159,35 @@ Type `local` : pages service (×zone), fiche GBP, avis, citations. **Particulari
 | Commissionnaire de transport inscrit au registre national | statut réglementaire | oui | affrètement / international | 2026-08-02 |
 | Implantation physique DANS le port de Gennevilliers (bât. G1, quai 8) | différenciateur | oui | toutes pages | 2026-08-02 |
 
-**À demander au client (prochain échange)** : année de création et parcours du dirigeant · volumes traités (palettes/mois, tournées/semaine) · délais moyens constatés (ex. course urgente intra-IdF) · 2-3 cas clients anonymisables (problème → solution) · prises de position métier (ex. pourquoi dépoter au port plutôt qu'en périphérie) · zones réellement couvertes et zones refusées · SIRET + horaires réels (pour NAP/GBP).
+### Cluster F ⭐ — Tournées régulières (sujets 08, 09, 10/2026)
+
+| Élément | Donnée (entretien 2026-08-06) | Publiable ? |
+|---|---|---|
+| Cadence et organisation réelles | tournées **quotidiennes** en IdF, 52 semaines/an ; **3 camions, un secteur attitré chacun** ; **6 à 7 points de livraison par tournée**, retour au dépôt | oui |
+| Rotations types par gabarit | 20 m³ : ~3 cycles charge/décharge par tournée ; 14 m³ : ~3 décharges pour 2-3 clients groupés ⚠️ (passage confus, à reformuler avec le client) | après reconfirmation |
+| Secteurs cités | 94, 78, 95 + un 4ᵉ département ⚠️ (« 82 » dans la transcription — probablement 92, à confirmer) | après reconfirmation |
+| Engagement / préavis | pas de durée ferme imposée ; contrat-cadre plus ou moins formalisé ; souplesse assumée (une interruption de quelques semaines n'est pas un problème ; l'arrêt est de toute façon encadré par la loi) | oui (sans détail juridique) |
+| **Seuil de bascule ponctuel → régulier** | l'hebdomadaire est le seuil : « une tournée ou un transport toutes les semaines » justifie le régulier ; **une fois par mois = encore du ponctuel**. Logique : engagement à l'année = tarifs négociés, moins chers que le ponctuel (⛔ sans chiffres) | oui — c'est LA donnée du comparatif 09/2026 |
+| Exemple de navette commissionnaire | navette fixe **tous les mardis**, enlèvement Paris → livraison ⚠️ (ville illisible), cartons en nombre ⚠️ (« 20 centaines » illisible) | après reconfirmation, anonymisé |
+| Cas client transport exceptionnel | client industriel (⛔ Palimex — anonymiser) : transports exceptionnels ponctuels en plus du régulier | oui, anonymisé |
+
+### Cluster A — Conteneurs (sujets 08, 09/2026)
+
+| Élément | Donnée (entretien 2026-08-06) | Publiable ? |
+|---|---|---|
+| Durée de dépotage d'un 40' | **entièrement dépendante du contenu** : 2 voitures = moins d'1 h ; un conteneur de colis en vrac = beaucoup plus. Chiffres précis ⚠️ (« 700 colis », « 9 000 colis », « 34 heures » — illisibles/incohérents dans la transcription, à refaire poser au client) | l'idée oui, les chiffres après reconfirmation |
+| Anecdote de quai (information gain) | conteneur (import Chine) annoncé très chargé (~10 000 colis + palettes ⚠️) → **anticipation : main-d'œuvre supplémentaire réservée** (intérim ou prestation) pour dépoter vite | oui, sans chiffre précis |
+| Grille tarifaire indicative dépotage | **refusée** (refus tarifaire global) | non |
+
+### Entreprise / E-E-A-T (bloc auteur, page entreprise, refresh 11/2026)
+
+| Élément | Donnée (entretien 2026-08-06) | Publiable ? |
+|---|---|---|
+| Année de création | **2021** | oui |
+| Parcours du dirigeant | ~23 ans de métier ; déménagement puis transport ; chauffeur → responsable (d'exploitation ⚠️ à préciser) → directeur d'agence ⚠️ (employeur illisible : « Ker » — à confirmer avant toute mention) | oui une fois précisé — TOUJOURS attribué au dirigeant, jamais à l'entreprise |
+| Prénom du contact/dirigeant | « Martin » (interpellé ainsi en entretien) ⚠️ nom complet et rôle exact à confirmer → alimentera §1 Contact opérationnel | interne seulement pour l'instant |
+| SIRET | « donné » selon le client, mais absent de la transcription — **non reçu en pratique** | — (à récupérer, cf. nap.md) |
+| Horaires réels du dépôt | **7h30-12h30 / 13h30-16h00** (jours couverts à confirmer — supposé lun-ven) | oui — répercuté dans `nap.md` ; ⚠️ le schema du site déclare encore 24/7 (chantier site à émettre) |
 
 ## 8. Analytics
 
@@ -185,3 +224,4 @@ Type `local` : pages service (×zone), fiche GBP, avis, citations. **Particulari
 | 2026-08-02 | Création du brief (onboarding) : identité, repo, voix + interdits client, ciblage Haloscan A/B/C, architecture, first-party du code du site, décisions opérateur (PMF validé, pas de porte-parole, avis = fiche Google seule, contrat v2) | Claude (session onboarding) |
 | 2026-08-02 | Configs tranchées (opérateur) : GSC = compte KAELIX + TXT DNS OVH (propriété domaine) ; analytics = GSC seule ; BrightLocal = après accès GBP ; canal client = WhatsApp. Posture live vérifiée : robots.txt OK, sitemap 21 URLs | Claude (session config) |
 | 2026-08-05 | Chantier pipeline MDX v2 exécuté et déployé : `master` = branche de prod (fast-forward + connexion Vercel↔GitHub, Production Branch master), PR #1 mergée (`d44f449`), articles en `content/blog/`, contrat v2 effectif. Corrections factuelles : branche par défaut `master` (pas `main`), sitemap 20 URLs (pas 21). Vérifs post-deploy : 16 pages OK, blog noindex, draft 404 | Claude (session chantier MDX v2) |
+| 2026-08-06 | First-party de l'entretien client intégré au §7, restructuré par sujet du plan (clusters F, A, entreprise). 3 nouveaux interdits (§3) : pas de fourchette tarifaire, 23 ans = dirigeant / entreprise 2021, anonymisation des clients. Contact : dirigeant « Martin » (à confirmer). Horaires réels → nap.md ; article 10/2026 → à requalifier (refus tarifs) ; relance client préparée (blocs 4-5 + ⚠️ de transcription) | Claude (session first-party) |
