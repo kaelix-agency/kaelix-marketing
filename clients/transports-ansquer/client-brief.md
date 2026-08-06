@@ -15,8 +15,8 @@
 - **Type** : `local` (B2B — SEO local + requêtes métier IdF)
 - **Statut product-market fit** : `PMF validé` (confirmé opérateur, 2026-08-02)
 - **Canaux actifs** : SEO (site rebuild en ligne), fiche Google Business Profile. Autres canaux : aucun connu à ce jour.
-- **Concurrents** : business à confirmer avec le client. Vus en SERP locale : **leaderfret.com** (plateforme logistique à Gennevilliers, positionné sur `logistique gennevilliers` et `entreprise logistique gennevilliers`) ; eliterail-fr.fr et balticassist.fr apparaissent dans les co-occurrences Haloscan mais sont hors cœur de métier. Gros acteurs présents physiquement sur le port (XPO, DB Schenker) : requêtes de marque captées historiquement par l'ancienne page stockage.
-- **Contact opérationnel** : le dirigeant — prénom « Martin » (entretien du 2026-08-06 ; ⚠️ nom complet et canal de validation à confirmer).
+- **Concurrents** : **business, donnés par le client (2026-08-06) : VBC-Paris, SR Transport, NEOLYS** → analyse Haloscan de leurs domaines à lancer (étape A du §5). Vus en SERP locale : **leaderfret.com** (plateforme logistique à Gennevilliers, positionné sur `logistique gennevilliers` et `entreprise logistique gennevilliers`) ; eliterail-fr.fr et balticassist.fr apparaissent dans les co-occurrences Haloscan mais sont hors cœur de métier. Gros acteurs présents physiquement sur le port (XPO, DB Schenker) : requêtes de marque captées historiquement par l'ancienne page stockage.
+- **Contact opérationnel** : **Martin Ansquer**, dirigeant (confirmé le 2026-08-06) ; canal client = WhatsApp (décision 2026-08-02).
 - **YMYL** : non
 
 ## 2. Repo du site
@@ -52,13 +52,13 @@
 
 | Champ | Valeur |
 |---|---|
-| Nom | — |
-| Rôle / titre | — |
-| Photo | — |
-| **Autorisation de citation** | ☑ **non** (décision opérateur 2026-08-02 : pas de porte-parole) |
+| Nom | Martin Ansquer (**pressenti** — échange du 2026-08-06) |
+| Rôle / titre | dirigeant ; 23 ans de métier — déménageur → chauffeur → responsable → directeur d'agence chez Keiffer |
+| Photo | aucune (aucune photo de qualité n'existe à ce jour, cf. §7 action shooting) |
+| **Autorisation de citation** | ☑ **non** — toujours PAS d'autorisation formelle (rappel du 2026-08-06) |
 | Verbatims disponibles | aucun |
 
-⛔ **Conséquence : aucune `ExpertQuote` n'est produite pour ce client**, même en proposition, tant que ce bloc n'est pas rempli et autorisé.
+⛔ **Conséquence : aucune `ExpertQuote` n'est produite pour ce client**, même en proposition, tant que l'autorisation n'est pas actée ici. Le parcours ci-dessus reste **interne** : pas de mention nominative publiée avant cette autorisation.
 
 ### Source d'avis clients
 
@@ -91,7 +91,7 @@
 | leaderfret.com | fret regulier | n/a | 1 | 3 | moyen — équivalent de notre « tournée régulière » |
 | leaderfret.com | fret léger | n/a | 4 | 6 | moyen — vocabulaire alternatif VL à couvrir sémantiquement |
 
-- ⚠️ **Étape A incomplète** : Haloscan ne voit que 3 concurrents SERP (empreintes minuscules). À enrichir avec les concurrents business donnés par le client, puis relancer l'analyse sur leurs domaines.
+- ✅ **Concurrents business reçus (2026-08-06) : VBC-Paris, SR Transport, NEOLYS.** Prochaine action étape A : identifier leurs domaines exacts et relancer l'analyse Haloscan dessus (mots-clés qui leur rapportent, pages gagnantes).
 
 ### Étape B — Existant en positions 4-20
 
@@ -132,7 +132,7 @@ Type `local` : pages service (×zone), fiche GBP, avis, citations. **Particulari
 
 | Ordre | Page / section | Statut | Mot-clé principal | Commentaire |
 |---|---|---|---|---|
-| 1 | Fiche GBP + collecte d'avis | existante, sous-exploitée | transporteur gennevilliers (pack local) | **levier n°1** — 1 seul avis aujourd'hui |
+| 1 | Fiche GBP + collecte d'avis | existante, sous-exploitée — **accès promis par le client (2026-08-06), en attente** | transporteur gennevilliers (pack local) | **levier n°1** — 1 seul avis aujourd'hui ; 📸 photos GBP dépendantes du mini-shooting (§7) |
 | 2 | Citations NAP (annuaires FR) | à faire | — | après validation `nap.md` |
 | 3 | `/` + hubs `/transport/` `/stockage/` | existantes | transport gennevilliers | fenêtre 90 j — observation |
 | 4 | Pages de service (14) | existantes | 1 mot-clé chacune | 280-544 mots ; épaississement 700+ à programmer à J90 |
@@ -142,12 +142,12 @@ Type `local` : pages service (×zone), fiche GBP, avis, citations. **Particulari
 
 ## 7. Données first-party disponibles
 
-> Collecte n°1 : **entretien client du 2026-08-06** (transcription brute archivée côté opérateur). Les éléments marqués ⚠️ sont illisibles ou ambigus dans la transcription : **à reconfirmer avant toute publication** — jamais de chiffre douteux dans un contenu. Couverture ligne par ligne des besoins du plan : `content-plan.md`, table « First-party ».
+> Collecte n°1 : **entretien client du 2026-08-06** (transcription brute archivée côté opérateur), complétée le **même jour par l'échange opérateur de reconfirmation** qui a levé l'essentiel des ⚠️. Il ne reste qu'un ⚠️ mineur (rotations 14 m³). Couverture ligne par ligne des besoins du plan : `content-plan.md`, table « First-party ».
 
 ### Garde-fous de véracité (entretien 2026-08-06)
 
 - ⛔ **« 23 ans » = expérience du DIRIGEANT. L'entreprise a été créée en 2021.** Ne jamais confondre : pas de « 23 ans d'existence », pas de « depuis 23 ans, nous… ». Formulation autorisée : « fondée en 2021 par un professionnel qui a 23 ans de métier ».
-- ⛔ **Refus client de toute fourchette tarifaire publiée** (site et blog, confirmé en entretien). Les contenus « prix/coût » traitent la méthode et les facteurs de coût, jamais les prix Ansquer. Conséquence tracée au plan : article 10/2026 à requalifier.
+- ⛔ **Refus client DÉFINITIF de tout élément tarifaire sur le site** (entretien 2026-08-06, confirmé et renforcé à l'échange du même jour). Les contenus « prix/coût » traitent la méthode et les facteurs de coût, jamais les prix Ansquer. Conséquence tracée au plan : article 10/2026 à requalifier.
 - ⛔ **Noms de clients : anonymisation par défaut.** Palimex (et d'autres) cités en entretien — ne jamais publier un nom sans autorisation écrite. Formes autorisées : « un industriel francilien », « un client du port », « une collectivité du 95 ».
 
 ### Socle produit (depuis le code du site, 2026-08-02)
@@ -164,30 +164,33 @@ Type `local` : pages service (×zone), fiche GBP, avis, citations. **Particulari
 | Élément | Donnée (entretien 2026-08-06) | Publiable ? |
 |---|---|---|
 | Cadence et organisation réelles | tournées **quotidiennes** en IdF, 52 semaines/an ; **3 camions, un secteur attitré chacun** ; **6 à 7 points de livraison par tournée**, retour au dépôt | oui |
-| Rotations types par gabarit | 20 m³ : ~3 cycles charge/décharge par tournée ; 14 m³ : ~3 décharges pour 2-3 clients groupés ⚠️ (passage confus, à reformuler avec le client) | après reconfirmation |
-| Secteurs cités | 94, 78, 95 + un 4ᵉ département ⚠️ (« 82 » dans la transcription — probablement 92, à confirmer) | après reconfirmation |
+| Rotations types par gabarit | 20 m³ : ~3 cycles charge/décharge par tournée ; 14 m³ : ~3 décharges pour 2-3 clients groupés ⚠️ (seul point encore confus — à reformuler avec le client à l'occasion) | après reconfirmation |
+| Secteurs de tournée | **94, 78, 95, 92 — confirmés** (échange du 2026-08-06 ; le « 82 » de la transcription était bien 92) | oui |
 | Engagement / préavis | pas de durée ferme imposée ; contrat-cadre plus ou moins formalisé ; souplesse assumée (une interruption de quelques semaines n'est pas un problème ; l'arrêt est de toute façon encadré par la loi) | oui (sans détail juridique) |
 | **Seuil de bascule ponctuel → régulier** | l'hebdomadaire est le seuil : « une tournée ou un transport toutes les semaines » justifie le régulier ; **une fois par mois = encore du ponctuel**. Logique : engagement à l'année = tarifs négociés, moins chers que le ponctuel (⛔ sans chiffres) | oui — c'est LA donnée du comparatif 09/2026 |
-| Exemple de navette commissionnaire | navette fixe **tous les mardis**, enlèvement Paris → livraison ⚠️ (ville illisible), cartons en nombre ⚠️ (« 20 centaines » illisible) | après reconfirmation, anonymisé |
+| Exemple de navette commissionnaire | **tournée type du mardi confirmée (2026-08-06)** : collecte Paris → déchargement à Issy-les-Moulineaux → rechargement Clamart et alentours → déchargement Nanterre — boucle francilienne multi-points (la lecture « livraison en province » de la transcription était fausse) | oui, anonymisé |
 | Cas client transport exceptionnel | client industriel (⛔ Palimex — anonymiser) : transports exceptionnels ponctuels en plus du régulier | oui, anonymisé |
 
 ### Cluster A — Conteneurs (sujets 08, 09/2026)
 
 | Élément | Donnée (entretien 2026-08-06) | Publiable ? |
 |---|---|---|
-| Durée de dépotage d'un 40' | **entièrement dépendante du contenu** : 2 voitures = moins d'1 h ; un conteneur de colis en vrac = beaucoup plus. Chiffres précis ⚠️ (« 700 colis », « 9 000 colis », « 34 heures » — illisibles/incohérents dans la transcription, à refaire poser au client) | l'idée oui, les chiffres après reconfirmation |
-| Anecdote de quai (information gain) | conteneur (import Chine) annoncé très chargé (~10 000 colis + palettes ⚠️) → **anticipation : main-d'œuvre supplémentaire réservée** (intérim ou prestation) pour dépoter vite | oui, sans chiffre précis |
-| Grille tarifaire indicative dépotage | **refusée** (refus tarifaire global) | non |
+| Durée de dépotage d'un 40' | **confirmée (2026-08-06)** : entièrement dépendante du chargement — 2 voitures = moins d'1 h ; **en vrac avec colis 40×40, jusqu'à 3-4 heures pour un conteneur entier** | oui |
+| **Différenciateur opérationnel (first-party clé)** | **la force d'Ansquer : gonfler les effectifs par différents leviers (intérim, décalage de planning) pour traiter vite les missions lourdes** — c'est l'information gain des contenus conteneurs et manutention | oui |
+| Anecdote de quai | conteneur import (Chine) annoncé très chargé (colis en vrac + palettes) → renfort de main-d'œuvre anticipé, illustration du différenciateur ci-dessus | oui, sans chiffre non confirmé |
+| Grille tarifaire indicative dépotage | **refusée — refus tarifaire DÉFINITIF** (2026-08-06) | non |
 
 ### Entreprise / E-E-A-T (bloc auteur, page entreprise, refresh 11/2026)
 
 | Élément | Donnée (entretien 2026-08-06) | Publiable ? |
 |---|---|---|
-| Année de création | **2021** | oui |
-| Parcours du dirigeant | ~23 ans de métier ; déménagement puis transport ; chauffeur → responsable (d'exploitation ⚠️ à préciser) → directeur d'agence ⚠️ (employeur illisible : « Ker » — à confirmer avant toute mention) | oui une fois précisé — TOUJOURS attribué au dirigeant, jamais à l'entreprise |
-| Prénom du contact/dirigeant | « Martin » (interpellé ainsi en entretien) ⚠️ nom complet et rôle exact à confirmer → alimentera §1 Contact opérationnel | interne seulement pour l'instant |
-| SIRET | « donné » selon le client, mais absent de la transcription — **non reçu en pratique** | — (à récupérer, cf. nap.md) |
-| Horaires réels du dépôt | **7h30-12h30 / 13h30-16h00** (jours couverts à confirmer — supposé lun-ven) | oui — répercuté dans `nap.md` ; ⚠️ le schema du site déclare encore 24/7 (chantier site à émettre) |
+| Année de création | **2021** (cohérente avec le SIREN 900 697 251) | oui |
+| Parcours du dirigeant | **confirmé (2026-08-06)** : Martin Ansquer, 23 ans de métier — déménageur → chauffeur → responsable → **directeur d'agence chez Keiffer** | ⛔ interne : pas de mention nominative publiée tant que l'autorisation porte-parole n'est pas actée (§3) ; formulation impersonnelle autorisée (« fondée en 2021 par un professionnel qui a 23 ans de métier ») |
+| Contact/dirigeant | **Martin Ansquer** (§1 Contact opérationnel) | interne |
+| SIRET | **90069725100016** reçu le 2026-08-06 → reporté dans `nap.md` | oui (annuaires/mentions) |
+| Horaires réels du dépôt | **lun-ven 7h30-12h30 / 13h30-16h00 ; fermé sam-dim SAUF demande exceptionnelle** (confirmé 2026-08-06) → `nap.md` à jour ; chantier schema du site prêt à émettre | oui — mention week-end à formuler sans promesse d'astreinte |
+| Photos | **aucune photo réelle de qualité n'existe** → 📸 **ACTION : organiser un mini-shooting avec le client (smartphone suffisant : flotte, quais, entrepôt, équipe)** — impacte le refresh homepage 11/2026 et la fiche GBP | — |
+| Registre des commissionnaires | statut « inscrit au registre » confirmé de longue date ; **référence exacte PAS en main** (certificat DRIEAT à retrouver par le client). ⛔ Règle : les contenus peuvent écrire « inscrit au registre des commissionnaires », **aucun numéro** tant que la pièce n'est pas fournie | oui (statut), non (numéro) |
 
 ## 8. Analytics
 
@@ -225,3 +228,4 @@ Type `local` : pages service (×zone), fiche GBP, avis, citations. **Particulari
 | 2026-08-02 | Configs tranchées (opérateur) : GSC = compte KAELIX + TXT DNS OVH (propriété domaine) ; analytics = GSC seule ; BrightLocal = après accès GBP ; canal client = WhatsApp. Posture live vérifiée : robots.txt OK, sitemap 21 URLs | Claude (session config) |
 | 2026-08-05 | Chantier pipeline MDX v2 exécuté et déployé : `master` = branche de prod (fast-forward + connexion Vercel↔GitHub, Production Branch master), PR #1 mergée (`d44f449`), articles en `content/blog/`, contrat v2 effectif. Corrections factuelles : branche par défaut `master` (pas `main`), sitemap 20 URLs (pas 21). Vérifs post-deploy : 16 pages OK, blog noindex, draft 404 | Claude (session chantier MDX v2) |
 | 2026-08-06 | First-party de l'entretien client intégré au §7, restructuré par sujet du plan (clusters F, A, entreprise). 3 nouveaux interdits (§3) : pas de fourchette tarifaire, 23 ans = dirigeant / entreprise 2021, anonymisation des clients. Contact : dirigeant « Martin » (à confirmer). Horaires réels → nap.md ; article 10/2026 → à requalifier (refus tarifs) ; relance client préparée (blocs 4-5 + ⚠️ de transcription) | Claude (session first-party) |
+| 2026-08-06 (2) | Reconfirmations client : secteurs 94/78/95/92, dépotage vrac 3-4 h + différenciateur « gonfler les effectifs », tournée type du mardi (boucle IdF), horaires sam-dim fermés sauf exceptionnel, parcours Martin Ansquer (ex-Keiffer) SANS autorisation de citation. Nouveaux : concurrents VBC-Paris/SR Transport/NEOLYS, SIRET → nap.md, règle registre commissionnaires (statut oui, numéro non tant que certificat DRIEAT absent), GBP accès promis, 📸 action mini-shooting (aucune photo n'existe), refus tarifaire DÉFINITIF | Claude (session first-party, échange 2) |

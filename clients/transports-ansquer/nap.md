@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Statut** | 🕓 à formaliser (socle posé le 2026-08-02 ; horaires reçus le 2026-08-06 — restent SIRET, samedi/dimanche et catégories GBP) |
+| **Statut** | 🟢 quasi complet (socle 2026-08-02 ; horaires complets + SIRET reçus le 2026-08-06 — restent les catégories GBP à relever sur la fiche) |
 | **Validé le** | — |
 | **Dernière vérification de cohérence** | 2026-08-02 (site = `src/lib/company.ts` du repo, cohérent avec ce fichier) |
 
@@ -22,13 +22,13 @@
 | Téléphone format international | +33 6 03 87 31 66 |
 | Email public | contact@transportsansquer.fr |
 | Site web (URL canonique) | https://transportsansquer.fr/ (sans www, avec slash final — convention `trailingSlash: true` du site) |
-| SIRET | à renseigner (demandé par plusieurs annuaires) — « donné » selon le client à l'entretien du 2026-08-06 mais jamais reçu en pratique : à récupérer à la relance |
+| SIRET | **90069725100016** (SIREN 900 697 251 — cohérent avec la création 2021 ; reçu le 2026-08-06) |
 
 ## 2. Horaires
 
-**Horaires réels du dépôt reçus à l'entretien client du 2026-08-06 : 7h30-12h30 / 13h30-16h00.** Jours couverts supposés lundi-vendredi (⚠️ samedi/dimanche à confirmer explicitement).
+**Horaires réels confirmés par le client (entretien + reconfirmation du 2026-08-06)** : lundi-vendredi 7h30-12h30 / 13h30-16h00 ; **fermé samedi-dimanche SAUF demande exceptionnelle**.
 
-⚠️ **Écart actif avec le site** : le JSON-LD LocalBusiness du site déclare encore du 24/7 (`src/app/layout.tsx`, `openingHoursSpecification` 00:00→23:59, vérifié le 2026-08-06) — contradictoire avec le refus client de toute promesse d'astreinte 24/7 (28/07/2026) ET avec les horaires réels. Correction = chantier site à émettre : `prompts/2026-08-06-chantier-horaires-schema-site.md` (🕓 brouillon). Les horaires GBP seront alignés dès l'accès à la fiche.
+⚠️ **Écart actif avec le site** : le JSON-LD LocalBusiness du site déclare encore du 24/7 (`src/app/layout.tsx`, `openingHoursSpecification` 00:00→23:59, vérifié le 2026-08-06). Correction = chantier site **prêt à émettre** : `prompts/2026-08-06-chantier-horaires-schema-site.md`. Les horaires GBP seront alignés dès l'accès à la fiche.
 
 | Jour | Horaires |
 |---|---|
@@ -37,9 +37,10 @@
 | Mercredi | 7h30-12h30, 13h30-16h00 |
 | Jeudi | 7h30-12h30, 13h30-16h00 |
 | Vendredi | 7h30-12h30, 13h30-16h00 |
-| Samedi | fermé (⚠️ à confirmer) |
-| Dimanche | fermé (⚠️ à confirmer) |
+| Samedi | fermé — intervention exceptionnelle possible sur demande |
+| Dimanche | fermé — intervention exceptionnelle possible sur demande |
 
+- **Formulation publique du week-end** : « interventions exceptionnelles le week-end sur demande » — jamais présentée comme une astreinte ni un service permanent (interdit client du 28/07/2026). Côté schema : le week-end reste SANS `openingHoursSpecification` (fermé) ; la mention vit dans le texte, pas dans les horaires structurés.
 - **Fermetures exceptionnelles** : à renseigner.
 
 ## 3. Catégories GBP
@@ -114,3 +115,4 @@
 |---|---|---|---|
 | 2026-08-02 | Création du fichier — NAP canonique posé depuis les données opérateur + `src/lib/company.ts` du site (cohérents entre eux) | n/a (pas de changement de coordonnées) | 2026-08-02 |
 | 2026-08-06 | Horaires réels reçus (entretien client) : 7h30-12h30 / 13h30-16h00, lun-ven supposé. Écart 24/7 du schema site documenté → chantier site en brouillon | schema site (chantier à émettre) → GBP (dès accès) → annuaires (aucune citation soumise encore) | |
+| 2026-08-06 (2) | Reconfirmation client : sam-dim fermés sauf demande exceptionnelle (formulation publique cadrée, jamais « astreinte ») + **SIRET 90069725100016** reçu. Chantier schema passé « prêt à émettre » | schema site (émission imminente) → GBP (dès accès) → annuaires | |
