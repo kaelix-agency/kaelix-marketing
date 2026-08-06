@@ -34,6 +34,7 @@ Sans le mot-clé, ne produis rien. Sans le chemin client, analyse quand même ma
 - **Outil Haloscan indisponible ou en erreur** → première ligne du brief : `⚠️ analyse dégradée : outil <nom> inaccessible`, puis continue avec ce que tu as. Ne fais jamais comme si de rien n'était : la session principale doit savoir que le verdict repose sur des données partielles.
 - **Fichier client absent** (`tracking.md`, `content-plan.md`) → `⚠️ cannibalisation non vérifiable : <fichier> absent`.
 - **SERP illisible** → dis-le plutôt que d'inventer un classement.
+- **Budget d'exécution** : au bout de **2 échecs d'outil** (tous outils et toutes causes confondus, retries compris) ou d'environ **10 minutes** d'analyse, n'insiste plus — rends **immédiatement** le mini-brief en mode dégradé avec ce que tu as, première ligne `⚠️ analyse dégradée : budget d'exécution atteint (<cause>)`, chaque contrôle manquant marqué ⚠️. Tu es une instance parmi d'autres en parallèle : une instance qui s'acharne retarde tout le lot, un mini-brief partiel et honnête rendu à l'heure vaut mieux.
 
 Un mini-brief silencieux sur ses angles morts vaut moins qu'un mini-brief court et honnête.
 
