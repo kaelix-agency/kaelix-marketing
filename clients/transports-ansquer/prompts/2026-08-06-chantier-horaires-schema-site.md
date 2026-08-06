@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Statut** | ✅ prêt à émettre — horaires complets confirmés par le client (reconfirmation du 2026-08-06, sam-dim compris) |
+| **Statut** | 📤 émis le 2026-08-06 — PR #2 ouverte, en attente du gate opérateur |
 | **Repo cible** | `D:\Users\Axel\KAELIX\transports-ansquer` (github.com/kaelix-agency/transports-ansquer) |
 | **Type** | correctif (cohérence NAP — critère de référencement local) |
 | **Créé le** | 2026-08-06 |
@@ -71,6 +71,6 @@ opérateur, comme toujours.
 |---|---|---|
 | Brouillon rédigé | 2026-08-06 | déclenché par l'entretien client (horaires réels reçus) |
 | Prêt à émettre | 2026-08-06 | sam-dim confirmés fermés sauf exceptionnel + formulation week-end cadrée (reconfirmation client) |
-| Émis (session repo site) | | |
-| PR ouverte | | |
+| Émis (session repo site) | 2026-08-06 | GO opérateur ; branche `fix/horaires-schema` depuis `master` à jour (`d44f449`) |
+| PR ouverte | 2026-08-06 | [PR #2](https://github.com/kaelix-agency/transports-ansquer/pull/2), commit `8f17ba6` — horaires centralisés dans `company.ts`, schema 2 plages lun-ven, mention week-end page contact ; build vert, 85/85 e2e ; preview Vercel auto : transports-ansquer-mvko920vx |
 | Mergée / déployée | | MAJ `nap.md` (écart schema résolu) |
