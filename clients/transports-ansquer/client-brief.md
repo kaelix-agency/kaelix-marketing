@@ -4,7 +4,7 @@
 |---|---|
 | **Slug** | `transports-ansquer` |
 | **Créé le** | 2026-08-02 |
-| **Dernière mise à jour** | 2026-08-06 |
+| **Dernière mise à jour** | 2026-08-20 |
 
 ---
 
@@ -132,7 +132,7 @@ Type `local` : pages service (×zone), fiche GBP, avis, citations. **Particulari
 
 | Ordre | Page / section | Statut | Mot-clé principal | Commentaire |
 |---|---|---|---|---|
-| 1 | Fiche GBP + collecte d'avis | existante, sous-exploitée — **accès promis par le client (2026-08-06), en attente** | transporteur gennevilliers (pack local) | **levier n°1** — 1 seul avis aujourd'hui ; 📸 photos GBP dépendantes du mini-shooting (§7) |
+| 1 | Fiche GBP + collecte d'avis | existante, sous-exploitée — ✅ **accès effectif** (constaté 2026-08-20 : compte Google KAELIX gestionnaire de la fiche) ; mise en conformité **en cours, à finir manuellement** (relevés + décisions : `nap.md`) | transporteur gennevilliers (pack local) | **levier n°1** — 1 seul avis aujourd'hui ; 📸 photos GBP dépendantes du mini-shooting (§7) ; ⛔ adresse de la fiche : ne jamais modifier (décision 2026-08-20, éviter re-vérification) |
 | 2 | Citations NAP (annuaires FR) | à faire | — | après validation `nap.md` |
 | 3 | `/` + hubs `/transport/` `/stockage/` | existantes | transport gennevilliers | fenêtre 90 j — observation |
 | 4 | Pages de service (14) | existantes | 1 mot-clé chacune | 280-544 mots ; épaississement 700+ à programmer à J90 |
@@ -230,3 +230,4 @@ Type `local` : pages service (×zone), fiche GBP, avis, citations. **Particulari
 | 2026-08-06 | First-party de l'entretien client intégré au §7, restructuré par sujet du plan (clusters F, A, entreprise). 3 nouveaux interdits (§3) : pas de fourchette tarifaire, 23 ans = dirigeant / entreprise 2021, anonymisation des clients. Contact : dirigeant « Martin » (à confirmer). Horaires réels → nap.md ; article 10/2026 → à requalifier (refus tarifs) ; relance client préparée (blocs 4-5 + ⚠️ de transcription) | Claude (session first-party) |
 | 2026-08-06 (2) | Reconfirmations client : secteurs 94/78/95/92, dépotage vrac 3-4 h + différenciateur « gonfler les effectifs », tournée type du mardi (boucle IdF), horaires sam-dim fermés sauf exceptionnel, parcours Martin Ansquer (ex-Keiffer) SANS autorisation de citation. Nouveaux : concurrents VBC-Paris/SR Transport/NEOLYS, SIRET → nap.md, règle registre commissionnaires (statut oui, numéro non tant que certificat DRIEAT absent), GBP accès promis, 📸 action mini-shooting (aucune photo n'existe), refus tarifaire DÉFINITIF | Claude (session first-party, échange 2) |
 | 2026-08-06 (3) | Chantier horaires/schema exécuté : PR #2 du repo site mergée (`dbf5e14`, gate opérateur) et déployée automatiquement. Le site sert les horaires réels (JSON-LD lun-ven 2 plages, mention week-end sur /contact/) — l'écart 24/7 est résolu, vérifié en ligne | Claude (session chantier horaires) |
+| 2026-08-20 | **Mission GBP** : accès fiche effectif (compte KAELIX gestionnaire — le point « accès promis » est levé). Relevés : tél fiche **01 41 21 07 69** (écart vs canonique) ; horaires sans coupure méridienne ; catégorie « Service logistique » ; description vide ; nom ✅. **Aucune modification appliquée** (blocage captures Chrome) → checklist manuelle émise. **Décisions client/opérateur** : téléphone canonique = **06 03 87 31 66 partout** ; **adresse fiche GBP intouchable** (zéro risque de re-vérification) ; client déclare « 49 route principale du port » ; **adresse canonique à arbitrer** (site : 51 ; annuaires : 49 ; siège légal Presles 95 ≠ exploitation) — détail `nap.md` §1. Relevé code site : tél 06 partout ✅ (aucun 01), adresse « 51 » dans `company.ts` (JSON-LD + /contact/) — correction site en attente d'arbitrage | Claude (mission GBP) |
