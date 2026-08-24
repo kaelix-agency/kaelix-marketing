@@ -12,7 +12,7 @@
 
 | Date publi. | Type | Mot-clé | URL | Typologie | Persona | Statut | J30 | J60 | J90 | Dernier relevé | Note |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| | | | | | | | | | | | |
+| 2026-08-24 | création | tournée de livraison régulière (pari émergent, cluster F ⭐) | `/blog/tournee-livraison-reguliere/` | guide | P1 | ✅ publié (PR #3 mergée, gate opérateur) | ~2026-09-23 | ~2026-10-23 | ~2026-11-22 | | 1er article du site ; double PASS + re-passe visuels ; 2 schémas SVG first-party + cover stock ; bascule blog noindex→index à ce merge ; GSC : soumission dès la connexion |
 
 ### Contenus en fenêtre de test (< 90 jours) <!-- ⛔ ne rien toucher -->
 
@@ -21,6 +21,7 @@
 | Date publi. | URL | J90 prévu le | Observation en cours |
 |---|---|---|---|
 | ~fin 07/2026 (à confirmer) | tout le site (16 pages — `/`, hubs `/transport/` et `/stockage/`, 14 pages de service) | ~fin 10/2026 | Google re-teste tout après migration ; volatilité normale ; aucune action corrective avant J90 hors erreur factuelle/technique |
+| 2026-08-24 | `/blog/tournee-livraison-reguliere/` (1er article) | 2026-11-22 | ⛔ aucune retouche avant J90 (J30/J60 = observation) ; exceptions habituelles erreur factuelle/technique |
 
 ## 2. Historique des revues hebdo
 

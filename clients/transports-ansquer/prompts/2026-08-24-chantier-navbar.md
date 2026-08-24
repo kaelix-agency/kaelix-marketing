@@ -1,6 +1,6 @@
 # Chantier — navigation principale (navbar)
 
-> **Statut : 📤 émis** — exécution immédiate dans la session émettrice (2026-08-24), PR site dédiée.
+> **Statut : ✅ exécuté** — PR #4 mergée le 2026-08-24 (ordre opérateur) et déployée.
 
 | | |
 |---|---|

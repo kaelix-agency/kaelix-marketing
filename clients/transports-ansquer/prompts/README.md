@@ -17,4 +17,4 @@ Prompts destinés au **repo du site du client** : ils déclenchent des PR côté
 | [`2026-08-02-questions-onboarding-client.md`](./2026-08-02-questions-onboarding-client.md) | communication client | questions en attente de l'onboarding (first-party, NAP, GBP, photos) | 🕓 brouillon |
 | [`2026-08-02-chantier-pipeline-mdx-v2.md`](./2026-08-02-chantier-pipeline-mdx-v2.md) | technique | pipeline MDX + whitelist v2 + 5 exigences d'affichage + bascule noindex (prérequis publication 08/2026) | 🕓 brouillon |
 | [`2026-08-06-chantier-horaires-schema-site.md`](./2026-08-06-chantier-horaires-schema-site.md) | technique | horaires réels dans le schema LocalBusiness + page contact (écart 24/7) — PR #2 site | ✅ exécuté |
-| [`2026-08-24-chantier-navbar.md`](./2026-08-24-chantier-navbar.md) | technique | navbar : Blog dans la barre desktop, Entreprise → footer/mobile, allègement 1024 px, harmonisation libellés | 📤 émis |
+| [`2026-08-24-chantier-navbar.md`](./2026-08-24-chantier-navbar.md) | technique | navbar : Blog dans la barre desktop, Entreprise → footer/mobile, allègement 1024 px, harmonisation libellés | ✅ exécuté |
