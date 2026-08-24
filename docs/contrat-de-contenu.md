@@ -146,6 +146,7 @@ Le coût est délibéré : chaque composant ajouté est une **obligation d'impl�
 - Chemin : `public/blog/<slug>/nom-descriptif.webp` (WebP/AVIF privilégiés).
 - `alt` obligatoire et descriptif (accessibilité + SEO + contexte IA).
 - Le rendu (`next/image`, lazy-loading, dimensions) est l'affaire du site via le mapping `img` — le contenu ne s'en occupe pas.
+- **Attentes de rendu côté site** (standard posé aux retours de gate des 2026-08-20/24, premier article) : le texte garde une **mesure de lecture** (~65-75 caractères — la « pleine largeur » du texte dégrade la lisibilité et se refuse) ; les **figures s'affichent plus larges que la colonne de texte** (hiérarchie visuelle) avec légende ; le site **anime sobrement** (révélation au scroll, cascade sur les grilles de chiffres, `prefers-reduced-motion` toujours respecté, contenu visible sans JavaScript). Tout site qui implémente le contrat implémente ces attentes.
 
 ## 6. Responsabilités de part et d'autre de la frontière
 
