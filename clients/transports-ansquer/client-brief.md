@@ -47,6 +47,7 @@
   - ⛔ ne jamais citer un **nom de client** sans autorisation écrite — anonymisation par défaut (§7).
 - **Auteur affiché** (frontmatter `author`) : « Transports Ansquer » (organisation) — le JSON-LD `BlogPosting` du site signe déjà en Organization. Pas de signature individuelle tant qu'aucun porte-parole n'est désigné.
 - **Exemples de référence** : pages `/transport/hayon-20m3-paris/` et `/stockage/externalisation-logistique/` (les plus développées, 520-544 mots).
+- **Politique visuelle des contenus** (gate opérateur 2026-08-20) : photos stock **tolérées** en cover et en ambiance (tant qu'aucune photo réelle n'existe — cf. §7 action mini-shooting) ; **schémas maison privilégiés** (tournées, flux, seuils — c'est l'information gain visuel), dessinés **aux couleurs du design system du site** (`globals.css` : paper `#f2f0ea`/`#fbfaf7`, ink `#10161a`, petrol `#0f3d3e`, signal `#b83f06`, rule `#d5d0c4`) ; fichiers dans `public/blog/<slug>/` du repo site. ⛔ Les interdits du client s'appliquent aux visuels comme au texte (pas de comptage de flotte, pas de tarif, pas de tiret cadratin).
 
 ### Porte-parole expert
 

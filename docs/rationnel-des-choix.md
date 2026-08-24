@@ -101,6 +101,9 @@ Source : implémentation transports-ansquer validée au gate opérateur, 2026-08
 - **`image` = objet `{src, alt}`, alt obligatoire.** Le contrat disait `image: ""` sans préciser ; or une couverture sans texte alternatif fait échouer l'accessibilité du site qui la rend (et l'ancien registre du site imposait déjà `imageAlt`). L'alternative textuelle est une donnée ÉDITORIALE, pas un détail de rendu : elle appartient au contenu, donc au frontmatter.
 - **Un type de CTA sans parcours câblé sur le site cible = build rouge.** Le fail-closed ne couvre pas que la syntaxe (type dans l'énumération) mais les parcours : un `<CTA type="essai">` sur un site sans page d'essai produirait un bouton mort, pire qu'une erreur. Les 4 types restent au contrat ; leur disponibilité par site se déclare dans le `client-brief.md` §2.
 
+### 1.15 Pourquoi le rythme visuel est une règle d'`article-writer`
+Source : retour de gate opérateur du 2026-08-20 sur le premier article produit (transports-ansquer, PR #3). L'article était structurellement irréprochable (extraction, composants, maillage) mais se lisait comme un document : paragraphes de longueur uniforme, aucune image figurative, zéro adresse au lecteur. Le gate a demandé de le « rendre vivant » — et la correction est devenue règle (`article-writer`, section « Rythme visuel et vie du texte ») plutôt que retouche locale : ≥1 visuel par ~800 mots, hiérarchie schéma first-party > graphique conceptuel > photo (un schéma d'un processus réel du client est un information gain visuel, non réplicable, quand une photo stock est réplicable par tous), variation des longueurs, adresse directe, micro-scènes. Deux garde-fous fondent la hiérarchie : un graphique conceptuel n'invente **jamais** de données, et un schéma affirme des faits donc **passe au fact-check comme le texte**.
+
 ---
 
 ## 2. Rationnel des skills

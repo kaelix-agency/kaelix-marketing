@@ -48,6 +48,16 @@ Un article qui ranke aujourd'hui n'est pas un mur de prose : il est **dense en �
 - **Tableaux comparatifs toujours titrés** : un H3 descriptif au-dessus de la table Markdown (pas une table orpheline au fil du texte). Le H3 est ce qui rend le tableau trouvable et citable.
 - **`Callout type="retenir"` en fin de chaque grande section** (recommandé) : 2-4 puces auto-suffisantes. C'est le format que les moteurs IA extraient le plus volontiers.
 
+## Rythme visuel et vie du texte
+
+Règles issues du retour de gate opérateur du 2026-08-20 sur le premier article (`docs/rationnel-des-choix.md`) : la structure d'extraction (réponse directe, passages auto-suffisants, H2 descriptifs, composants) rend l'article **citable** ; ces règles le rendent **lisible par un humain**. La vivacité s'ajoute à la structure d'extraction, elle ne la remplace jamais.
+
+- **≥1 visuel figuratif par ~800 mots**, en plus des composants (qui sont des blocs de mise en forme, pas des images). **Un article de 2000+ mots sans aucune image est refusé.** Syntaxe : Markdown pur `![alt](src "légende")`, image seule sur sa ligne, fichiers dans `public/blog/<slug>/` — le rendu (figure, légende) est l'affaire du site.
+- **Hiérarchie des visuels** : (1) **schéma first-party** (un processus réel du client mis en image : circuit, flux, organisation — c'est de l'information gain visuel) > (2) **graphique conceptuel** (seuils, frises, comparaisons de principe — **jamais de données inventées** : un axe sans chiffre sourcé reste un axe sans chiffre) > (3) **photo** (cover ou ambiance, selon la politique du brief client §3). Un schéma affirme des faits : il passe au fact-check comme le texte.
+- **Variation des longueurs de paragraphes** : alterner paragraphes développés et phrases isolées très courtes. Un mur de paragraphes de 4 lignes se scanne mal, même bien structuré.
+- **Adresse directe au lecteur** : questions franches (« À partir de quand, concrètement ? »), interpellations (« Et vous, dans tout ça ? ») — au moins quelques-unes par article, jamais en ouverture de l'intro réponse-directe.
+- **Micro-scènes concrètes** : faire vivre une situation réelle (« Suivez le fourgon : ») plutôt qu'énoncer un principe abstrait — uniquement à partir du first-party ou de faits établis, jamais de fiction chiffrée.
+
 **⚠️ Version du contrat d'abord.** Ces composants n'existent qu'en **v2**. Vérifier dans le `client-brief.md` la version supportée par le site AVANT de rédiger. **Sur un site v1, les composants v2 sont indisponibles** — on compense en Markdown pur : blockquote attribuée pour la citation, liste à puces pour le « à retenir », table titrée pour le comparatif. Les règles de densité et de véracité s'appliquent identiquement ; seul le véhicule change. **Ne jamais utiliser un composant non supporté**, même « en attendant » : le build du site casse, et c'est le comportement voulu.
 
 ## Pages business SaaS (comparaison, alternatives, fonctionnalités, témoignages)
