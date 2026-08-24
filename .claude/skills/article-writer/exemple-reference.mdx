@@ -1,0 +1,226 @@
+---
+title: "Tournée de livraison régulière : mise en place et contrat"
+description: "Cadence, contrat, cahier des charges : mettre en place une tournée de livraison régulière externalisée en Île-de-France, avec l'exemple d'une tournée réelle."
+slug: tournee-livraison-reguliere
+datePublished: "2026-08-24"
+dateModified: "2026-08-24"
+author: "Transports Ansquer"
+typology: guide
+keywords:
+  - tournée de livraison régulière
+  - tournée régulière transport
+  - transport régulier de marchandises
+  - tournée de livraison dédiée
+  - navette régulière
+  - livraison régulière entreprise
+cluster: tournees-regulieres
+image:
+  src: "/blog/tournee-livraison-reguliere/cover-fourgons-paris.jpg"
+  alt: "Fourgons de livraison blancs dans une rue parisienne, en tournée"
+draft: false
+faq:
+  - q: "Comment fonctionne une tournée de livraison régulière ?"
+    a: "Le transporteur affecte un véhicule à un circuit récurrent : secteur défini, points de passage connus, cadence fixe, souvent quotidienne ou hebdomadaire. Chez Transports Ansquer, une tournée dessert 6 à 7 points de livraison, puis le véhicule rentre au dépôt de Gennevilliers."
+  - q: "Quel engagement et quel préavis pour une tournée externalisée ?"
+    a: "Le cadre habituel est un contrat-cadre souple, reconduit tant que le flux existe. Chez Transports Ansquer, aucune durée ferme n'est imposée et une interruption de quelques semaines, par exemple une fermeture estivale, ne remet pas la tournée en cause."
+  - q: "Quelle différence entre transport régulier de marchandises et de voyageurs ?"
+    a: "Au sens réglementaire, le « service régulier » désigne le transport collectif de personnes sur des lignes à horaires fixes. Une tournée de livraison régulière relève du transport routier de marchandises : un circuit récurrent de collectes et de livraisons opéré pour une entreprise."
+  - q: "Navette régulière ou tournée de livraison : quelle différence ?"
+    a: "La navette relie deux points fixes en aller-retour. La tournée enchaîne plusieurs arrêts sur un circuit, 6 à 7 points en pratique chez Transports Ansquer. Les deux reposent sur le même principe : un flux récurrent confié à un transporteur, avec cadence et itinéraire convenus."
+---
+
+{/*
+  ═══════════════════════════════════════════════════════════════════════
+  EXEMPLE DE RÉFÉRENCE — calibrage few-shot du skill article-writer.
+
+  CONTEXTE : 1er article publié du système. Client transports-ansquer
+  (local B2B, contrat v2), sujet « tournée de livraison régulière »,
+  pari émergent P1 ⭐ (priorité business > volumes Haloscan), publié le
+  2026-08-24 (PR #3, double PASS + 2 retours de gate opérateur intégrés).
+  Copie conforme de la version mergée : content/blog/ du repo du site.
+
+  CE QUI FAIT SA QUALITÉ, validée au gate — c'est CE NIVEAU qu'on imite,
+  jamais le sujet :
+  - VÉRACITÉ TRACÉE : chaque affirmation remonte au first-party du brief
+    (tournée du mardi, seuil hebdomadaire, secteurs, engagement souple)
+    ou à une source externe vérifiée (glossaire ART, décret 2017-461) ;
+    chaque stat de la StatGrid porte sa source.
+  - FRONTIÈRES D'INTENTION TENUES : process ici, comparatif et prix
+    renvoyés aux sujets 09 et 10 du cluster (anti-cannibalisation) ;
+    lève d'entrée les 2 confusions de la SERP (logiciel de tournées,
+    service régulier voyageurs).
+  - COMPOSANTS v2 EN USAGE RÉEL : StatGrid sourcée, ErrorTip rabattu sur
+    le first-party, Callouts retenir par section, CTA devis unique câblé,
+    FAQ 4 paires auto-suffisantes ; PAS d'ExpertQuote ni Testimonial —
+    le brief ne les autorise pas (c'est aussi ça, la conformité).
+  - VISUELS FIRST-PARTY : schéma de la tournée du mardi (processus réel
+    du client mis en image = information gain visuel) + frise conceptuelle
+    du seuil SANS donnée inventée ; cover stock ; ~1 visuel/725 mots.
+  - VIVACITÉ : paragraphes très courts entre les développés (« Le flux
+    commande, le contrat suit. »), adresse directe (« Et vous, dans tout
+    ça ? »), micro-scène (« Suivez le fourgon : ») — ajoutée SUR la
+    structure d'extraction (intro réponse-directe ~100 mots, H2
+    descriptifs, passages auto-suffisants), jamais à sa place.
+  - GARDE-FOUS CLIENT RESPECTÉS : aucun comptage de flotte (ni déductible),
+    zéro tarif, « 23 ans » = le dirigeant jamais l'entreprise, clients
+    anonymisés, aucun tiret cadratin, pas de 24/7.
+
+  ⚠️ Cet exemple est en CONTRAT v2. Sur un site v1 : mêmes exigences,
+  composants compensés en Markdown pur (SKILL.md, section version).
+  ═══════════════════════════════════════════════════════════════════════
+*/}
+
+{/*
+  Article 08/2026, cluster F (tournées régulières), persona P1.
+  Emplacement réservé : lien vers le comparatif « transport dédié, messagerie
+  ou coursier » (article 09/2026) à insérer dans la section « À quel rythme »
+  dès sa publication.
+*/}
+
+Vos livraisons vers les mêmes destinataires reviennent chaque semaine, et vous les traitez encore au coup par coup : réservation, brief du transporteur, suivi, à refaire à chaque envoi. Une **tournée de livraison régulière** règle ce problème. Vous confiez à un transporteur un circuit récurrent, avec des points de passage définis, une cadence fixe et un véhicule qui connaît vos destinataires.
+
+Ce guide décrit la mise en place concrète d'une tournée externalisée : comment elle fonctionne au quotidien, à partir de quelle fréquence elle se justifie, ce que contient le contrat et ce qu'il faut préparer avant de démarrer. Avec un exemple réel de tournée francilienne, décrite point par point.
+
+## Une tournée de livraison régulière, de quoi parle-t-on ?
+
+Une tournée de livraison régulière est un **circuit de collectes et de livraisons confié à un transporteur, qui le répète à cadence convenue** : chaque jour, chaque semaine, selon votre flux. Les destinataires, les créneaux et l'itinéraire sont définis une fois, puis le circuit tourne. Vous n'avez plus à commander chaque transport : le passage est prévu.
+
+Deux confusions reviennent souvent quand une entreprise se renseigne sur le sujet. Autant les lever d'entrée.
+
+### Externaliser sa tournée, ou optimiser la sienne ?
+
+La plupart des contenus qui parlent de « tournée de livraison » s'adressent aux entreprises qui livrent **avec leurs propres véhicules** et cherchent un logiciel d'optimisation d'itinéraires. Ce n'est pas le sujet ici.
+
+Externaliser une tournée régulière, c'est l'inverse : **le transporteur fournit le véhicule, le conducteur et l'organisation du circuit**. Vous ne gérez ni planning de conduite, ni entretien de flotte, ni remplacement du conducteur absent.
+
+### Transport régulier de marchandises, pas de voyageurs
+
+Au sens réglementaire, le « service régulier » désigne le transport collectif de **personnes**, sur des lignes à arrêts et horaires fixes, comme le définit le [glossaire de l'Autorité de régulation des transports](https://www.autorite-transports.fr/glossaire/service-regulier/). Une tournée de livraison régulière relève d'un autre cadre : le **transport régulier de marchandises**, un contrat entre une entreprise et un transporteur routier pour un flux récurrent. Si vous cherchez des informations sur les lignes de voyageurs, ce guide n'est pas le bon.
+
+<Callout type="retenir">
+  - Une tournée régulière est un circuit de livraison récurrent confié à un transporteur, à cadence fixe.
+  - Le transporteur fournit véhicule, conducteur et organisation : rien à voir avec un logiciel d'optimisation pour flotte en propre.
+  - On parle de transport de marchandises, pas de « service régulier » de voyageurs au sens réglementaire.
+</Callout>
+
+## Comment fonctionne un transport régulier de marchandises au quotidien
+
+Le principe de fonctionnement est simple : **un secteur attitré, un circuit maîtrisé, un conducteur qui connaît vos points**. Chez Transports Ansquer, les tournées régulières tournent tous les jours ouvrés, 52 semaines par an, sur des secteurs attitrés couvrant quatre départements franciliens : le Val-de-Marne (94), les Yvelines (78), le Val-d'Oise (95) et les Hauts-de-Seine (92).
+
+Concrètement, une tournée dessert **6 à 7 points de livraison**, puis le véhicule rentre au dépôt, sur le port de Gennevilliers. Le conducteur connaît les adresses, les quais, les interlocuteurs et les habitudes de chaque point : c'est ce qui fait la différence avec une course confiée chaque fois à un prestataire différent.
+
+<StatGrid
+  stats={[
+    {
+      value: "6 à 7",
+      label: "points de livraison desservis par tournée",
+      source: "donnée interne Transports Ansquer, 2026",
+    },
+    {
+      value: "52",
+      label: "semaines d'activité par an sur les tournées régulières",
+      source: "donnée interne Transports Ansquer, 2026",
+    },
+    {
+      value: "4",
+      label: "départements couverts en secteurs attitrés (94, 78, 95, 92)",
+      source: "donnée interne Transports Ansquer, 2026",
+    },
+  ]}
+/>
+
+Et vous, dans tout ça ? Rien à organiser. Le circuit tourne, vous suivez votre activité.
+
+Le gabarit du véhicule se choisit en fonction de votre flux : fourgon 9 m³ pour les colis et petits volumes, 14 m³ pour les flux intermédiaires, [20 m³ avec hayon](/transport/hayon-20m3-paris/) dès qu'il y a des palettes à charger sans quai. Ce choix se fait à la mise en place, sur la base de votre cahier des charges.
+
+## Un exemple réel : la tournée du mardi
+
+Voici, anonymisée, une tournée régulière opérée chaque mardi par Transports Ansquer pour un client francilien. Une seule boucle, quatre temps. Suivez le fourgon :
+
+1. **Collecte dans Paris** : le véhicule charge la marchandise chez l'expéditeur.
+2. **Déchargement à Issy-les-Moulineaux** : première livraison de la boucle.
+3. **Rechargement à Clamart et alentours** : le véhicule ne repart pas à vide, il reprend du fret au passage.
+4. **Déchargement à Nanterre**, puis retour au dépôt de Gennevilliers.
+
+![Schéma de la tournée du mardi : le fourgon part du dépôt de Gennevilliers, collecte à Paris, décharge à Issy-les-Moulineaux, recharge à Clamart et alentours, décharge à Nanterre puis revient au dépôt, une boucle sans retour à vide.](/blog/tournee-livraison-reguliere/tournee-du-mardi.svg "La tournée type du mardi : une boucle francilienne où le véhicule recharge en cours de route au lieu de rentrer à vide.")
+
+Une même boucle enchaîne donc collectes et livraisons : les kilomètres servent deux fois. C'est l'intérêt économique d'une tournée construite sur un flux connu, par rapport à des courses ponctuelles qui repartent de zéro à chaque commande.
+
+Une course ponctuelle, elle, serait rentrée à vide.
+
+<Callout type="astuce">
+  Si vos flux comportent des retours, emballages consignés, palettes Europe, marchandise refusée, intégrez-les au cahier des charges dès le départ : une boucle de tournée les absorbe naturellement, là où une course ponctuelle les facture comme un transport de plus.
+</Callout>
+
+## À quel rythme une tournée régulière se justifie-t-elle ?
+
+À partir de quand, concrètement ?
+
+La question se tranche avec un repère simple, constaté chez les clients en tournée : **l'hebdomadaire est le seuil**. Une livraison ou une collecte qui revient toutes les semaines justifie une tournée régulière. Une expédition par mois reste du transport ponctuel.
+
+<ErrorTip
+  error="Gérer chaque semaine les mêmes envois comme des courses ponctuelles, réservées et briefées au coup par coup."
+  good="Dès qu'un flux revient chaque semaine, le passer en tournée régulière : circuit et interlocuteurs stables, engagement à l'année, conditions négociées une fois."
+/>
+
+![Frise du seuil de bascule : jusqu'à un envoi par mois, le transport ponctuel suffit ; à partir d'un envoi par semaine, la tournée régulière se justifie.](/blog/tournee-livraison-reguliere/seuil-bascule.svg "En dessous d'un envoi par semaine, le ponctuel suffit ; à partir de l'hebdomadaire, la tournée régulière prend le relais.")
+
+### Quel régime pour quelle fréquence ?
+
+| Fréquence de vos envois | Régime adapté |
+|---|---|
+| Plusieurs envois par semaine, ou quotidiens | Tournée régulière |
+| Un envoi chaque semaine | Tournée régulière : c'est le seuil |
+| Un à deux envois par mois | Transport ponctuel |
+| Envoi imprévu à faire partir aujourd'hui | [Course urgente dédiée](/transport/course-urgente/) |
+
+En dessous du seuil hebdomadaire, une tournée n'a pas de sens économique : le régulier se négocie sur un engagement à l'année, c'est ce qui le rend intéressant par rapport au ponctuel. Pour les besoins isolés ou imprévus, une [course urgente en véhicule dédié](/transport/course-urgente/) reste la bonne réponse.
+
+Reste une question voisine, que ce guide ne traite pas : faut-il une tournée dédiée, de la messagerie ou un coursier ponctuel pour vos livraisons récurrentes ? Elle mérite un comparatif complet, à paraître sur ce blog.
+
+## Contrat et engagement : ce qu'il faut savoir
+
+C'est la crainte classique avant d'externaliser : « et si je m'engage et que mon flux s'arrête ? ». En pratique, le cadre est plus souple que ce qu'imaginent la plupart des entreprises.
+
+Chez Transports Ansquer, une tournée régulière repose sur un **contrat-cadre sans durée ferme imposée**. Le circuit est reconduit tant que le flux existe. Une interruption de quelques semaines, par exemple une fermeture estivale ou un creux d'activité, ne remet pas la tournée en cause : elle se suspend, puis reprend.
+
+Le flux commande, le contrat suit.
+
+<Callout type="info">
+  En transport routier de marchandises, la relation entre une entreprise et son transporteur est encadrée par défaut : à défaut de convention écrite, c'est le contrat type défini par le [décret n° 2017-461](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000034330431) qui s'applique. Un contrat-cadre de tournée vient préciser ce socle : points desservis, cadence, conditions convenues.
+</Callout>
+
+Côté budget, une tournée régulière se chiffre sur devis, en fonction du circuit : nombre de points, volumes, cadence, gabarit du véhicule. L'engagement à l'année permet de négocier des conditions plus intéressantes que le ponctuel répété, c'est le levier économique du régulier.
+
+<Callout type="retenir">
+  - Le cadre habituel est un contrat-cadre souple, reconduit tant que le flux existe.
+  - Chez Transports Ansquer, pas de durée ferme imposée : une interruption de quelques semaines ne casse pas la tournée.
+  - Le chiffrage se fait sur devis, à partir du circuit réel : points, volumes, cadence, gabarit.
+</Callout>
+
+## Préparer la mise en place : votre cahier des charges
+
+Un transporteur peut construire votre tournée à partir de six informations. Les préparer avant le premier échange fait gagner un aller-retour à tout le monde :
+
+- **Les points de passage** : adresses de collecte et de livraison, avec leurs particularités d'accès (quai, hayon nécessaire, centre-ville, zone piétonne).
+- **La cadence** : quotidienne, hebdomadaire, certains jours fixes.
+- **Les volumes et le conditionnement** : palettes, colis, bacs, et les quantités habituelles par passage.
+- **Les créneaux horaires** de vos destinataires : heures d'ouverture, créneaux de réception imposés.
+- **Les flux retour** éventuels : consignes, emballages, marchandise reprise.
+- **Votre interlocuteur** côté exploitation, pour les ajustements du quotidien.
+
+Six réponses. Pas un projet, une liste.
+
+À partir de là, le transporteur propose un circuit, un gabarit de véhicule et un [devis de tournée régulière](/transport/tournee-reguliere/) construit sur votre flux réel.
+
+Transports Ansquer opère ses tournées régulières depuis le port de Gennevilliers, au cœur des flux logistiques franciliens. L'entreprise a été fondée en 2021 par un professionnel qui compte 23 ans de métier dans le transport et la logistique.
+
+<Callout type="retenir">
+  - Six informations suffisent pour construire une tournée : points, cadence, volumes, créneaux, flux retour, interlocuteur.
+  - Le gabarit du véhicule (9, 14 ou 20 m³ hayon) découle du cahier des charges, pas l'inverse.
+  - Une [tournée régulière](/transport/tournee-reguliere/) se met en place sur un flux existant : inutile d'attendre un volume plus gros.
+</Callout>
+
+<CTA type="devis" label="Décrire votre tournée à mettre en place" />
+
+<FAQ />

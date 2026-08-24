@@ -15,6 +15,13 @@ Chaque règle ci-dessous répond à un risque documenté : le contenu génériqu
 - L'intention et le format cible sont connus (issus de la SERP réelle — pas d'article court là où les leaders publient des guides profonds).
 - Pas de cannibalisation avec une page existante.
 
+## Exemple de référence (calibrage few-shot)
+
+**Lire [`exemple-reference.mdx`](./exemple-reference.mdx) avant toute rédaction.** C'est le premier article publié du système (transports-ansquer, 2026-08-24), promu exemple après double PASS et deux retours de gate opérateur. Son commentaire d'en-tête détaille ce qui fait sa qualité : véracité tracée au first-party, frontières d'intention, composants v2 en usage réel, visuels first-party, vivacité sur structure d'extraction, garde-fous client.
+
+- **Les articles imitent son niveau d'exigence, pas son sujet** — ni son plan, ni ses formules, ni sa longueur : la variation anti-uniformité (section ci-dessous) prime, l'exemple calibre le niveau, pas le moule.
+- ⚠️ **L'exemple est en contrat v2.** Sur un site v1, mêmes exigences, composants compensés en Markdown pur comme prévu à la section version du contrat.
+
 ## Structure imposée
 1. **H1 unique** portant l'angle (≠ title tag mot pour mot).
 2. **Intro réponse-directe** : les ~100 premiers mots répondent à l'intention. *Pourquoi : c'est ce que Google extrait en featured snippet et ce que les moteurs IA citent en priorité.*
