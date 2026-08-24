@@ -4,7 +4,7 @@
 |---|---|
 | **Slug** | `transports-ansquer` |
 | **Créé le** | 2026-08-02 |
-| **Dernière mise à jour** | 2026-08-20 |
+| **Dernière mise à jour** | 2026-08-24 |
 
 ---
 
@@ -47,7 +47,7 @@
   - ⛔ ne jamais citer un **nom de client** sans autorisation écrite — anonymisation par défaut (§7).
 - **Auteur affiché** (frontmatter `author`) : « Transports Ansquer » (organisation) — le JSON-LD `BlogPosting` du site signe déjà en Organization. Pas de signature individuelle tant qu'aucun porte-parole n'est désigné.
 - **Exemples de référence** : pages `/transport/hayon-20m3-paris/` et `/stockage/externalisation-logistique/` (les plus développées, 520-544 mots).
-- **Politique visuelle des contenus** (gate opérateur 2026-08-20) : photos stock **tolérées** en cover et en ambiance (tant qu'aucune photo réelle n'existe — cf. §7 action mini-shooting) ; **schémas maison privilégiés** (tournées, flux, seuils — c'est l'information gain visuel), dessinés **aux couleurs du design system du site** (`globals.css` : paper `#f2f0ea`/`#fbfaf7`, ink `#10161a`, petrol `#0f3d3e`, signal `#b83f06`, rule `#d5d0c4`) ; fichiers dans `public/blog/<slug>/` du repo site. ⛔ Les interdits du client s'appliquent aux visuels comme au texte (pas de comptage de flotte, pas de tarif, pas de tiret cadratin).
+- **Politique visuelle des contenus** (gate opérateur 2026-08-20, rendue **définitive** le 2026-08-24 : aucun shooting, jamais) : photos stock Unsplash en cover et en ambiance — régime permanent du site (⛔ jamais de stock sur la fiche GBP, logo seul) ; **schémas maison privilégiés** (tournées, flux, seuils — c'est l'information gain visuel), dessinés **aux couleurs du design system du site** (`globals.css` : paper `#f2f0ea`/`#fbfaf7`, ink `#10161a`, petrol `#0f3d3e`, signal `#b83f06`, rule `#d5d0c4`) ; fichiers dans `public/blog/<slug>/` du repo site. ⛔ Les interdits du client s'appliquent aux visuels comme au texte (pas de comptage de flotte, pas de tarif, pas de tiret cadratin).
 
 ### Porte-parole expert
 
@@ -55,7 +55,7 @@
 |---|---|
 | Nom | Martin Ansquer (**pressenti** — échange du 2026-08-06) |
 | Rôle / titre | dirigeant ; 23 ans de métier — déménageur → chauffeur → responsable → directeur d'agence chez Keiffer |
-| Photo | aucune (aucune photo de qualité n'existe à ce jour, cf. §7 action shooting) |
+| Photo | aucune (décision définitive 2026-08-24 : pas de shooting) |
 | **Autorisation de citation** | ☑ **non** — toujours PAS d'autorisation formelle (rappel du 2026-08-06) |
 | Verbatims disponibles | aucun |
 
@@ -133,7 +133,7 @@ Type `local` : pages service (×zone), fiche GBP, avis, citations. **Particulari
 
 | Ordre | Page / section | Statut | Mot-clé principal | Commentaire |
 |---|---|---|---|---|
-| 1 | Fiche GBP + collecte d'avis | existante, sous-exploitée — ✅ **accès effectif** (constaté 2026-08-20 : compte Google KAELIX gestionnaire de la fiche) ; mise en conformité **en cours, à finir manuellement** (relevés + décisions : `nap.md`) | transporteur gennevilliers (pack local) | **levier n°1** — 1 seul avis aujourd'hui ; 📸 photos GBP dépendantes du mini-shooting (§7) ; ⛔ adresse de la fiche : ne jamais modifier (décision 2026-08-20, éviter re-vérification) |
+| 1 | Fiche GBP + collecte d'avis | existante, sous-exploitée — ✅ **accès effectif** (constaté 2026-08-20 : compte Google KAELIX gestionnaire de la fiche) ; mise en conformité **en cours, à finir manuellement** (relevés + décisions : `nap.md`) | transporteur gennevilliers (pack local) | **levier n°1** — 1 seul avis aujourd'hui ; ⛔ **aucune photo stock sur GBP** (décision définitive 2026-08-24), logo seul ; ⛔ adresse de la fiche : ne jamais modifier (décision 2026-08-20, éviter re-vérification) ; collecte d'avis : lien court « Demander des avis » à récupérer (étape 8 de la checklist manuelle) puis transmettre à Martin — **envoi à vérifier auprès de l'opérateur** |
 | 2 | Citations NAP (annuaires FR) | à faire | — | après validation `nap.md` |
 | 3 | `/` + hubs `/transport/` `/stockage/` | existantes | transport gennevilliers | fenêtre 90 j — observation |
 | 4 | Pages de service (14) | existantes | 1 mot-clé chacune | 280-544 mots ; épaississement 700+ à programmer à J90 |
@@ -190,14 +190,14 @@ Type `local` : pages service (×zone), fiche GBP, avis, citations. **Particulari
 | Contact/dirigeant | **Martin Ansquer** (§1 Contact opérationnel) | interne |
 | SIRET | **90069725100016** reçu le 2026-08-06 → reporté dans `nap.md` | oui (annuaires/mentions) |
 | Horaires réels du dépôt | **lun-ven 7h30-12h30 / 13h30-16h00 ; fermé sam-dim SAUF demande exceptionnelle** (confirmé 2026-08-06) → `nap.md` à jour ; ✅ **schema du site corrigé et déployé le 2026-08-06** (PR #2, mention week-end sur /contact/ sans promesse d'astreinte) | oui — appliqué sur le site |
-| Photos | **aucune photo réelle de qualité n'existe** → 📸 **ACTION : organiser un mini-shooting avec le client (smartphone suffisant : flotte, quais, entrepôt, équipe)** — impacte le refresh homepage 11/2026 et la fiche GBP | — |
-| Registre des commissionnaires | statut « inscrit au registre » confirmé de longue date ; **référence exacte PAS en main** (certificat DRIEAT à retrouver par le client). ⛔ Règle : les contenus peuvent écrire « inscrit au registre des commissionnaires », **aucun numéro** tant que la pièce n'est pas fournie | oui (statut), non (numéro) |
+| Photos | ⛔ **point FERMÉ (décision définitive, 2026-08-24) : aucun shooting.** Régime permanent : photos stock Unsplash sur le site (politique visuelle §3) ; **aucun stock sur la fiche GBP** — logo seul | stock : oui (site) / non (GBP) |
+| Registre des commissionnaires | ⛔ **point FERMÉ (2026-08-24) : recherche du certificat DRIEAT abandonnée définitivement.** Règle pérenne : les contenus écrivent « inscrit au registre des commissionnaires », **jamais aucun numéro** | oui (statut), non (numéro — définitif) |
 
 ## 8. Analytics
 
 | Outil | Connecté ? | Détail |
 |---|---|---|
-| Search Console (via Cuik MCP) | 🕓 **en cours** (décision 2026-08-02) | propriété **Domaine** `transportsansquer.fr` sur le compte Google KAELIX, vérification TXT dans la zone DNS **OVH** ; puis soumission du sitemap (20 URLs, recompté au 05/08 — la valeur « 21 » notée au 01/08 était erronée) + surveillance 404 pendant 1 mois ; puis connexion OAuth à Cuik (vérifier avec `list_gsc_domains`) |
+| Search Console (via Cuik MCP) | ✅ **propriété vérifiée** (TXT zone DNS OVH, début 08/2026 ; reconfirmée visuellement par l'opérateur le 2026-08-24) | propriété **Domaine** `transportsansquer.fr` sur le compte Google KAELIX. **Restent** : soumission du sitemap (**22 URLs** depuis la publication du 1er article le 2026-08-24) + surveillance 404 pendant 1 mois ; puis connexion OAuth à Cuik (vérifier avec `list_gsc_domains`) |
 | Haloscan | ✅ requêtes à la demande | pas de projet suivi dédié pour l'instant (optionnel, côté interface Haloscan) |
 | PostHog | ❌ | non utilisé — ne pas invoquer |
 | GA4 / autre analytics | ❌ **décision : GSC seule** (2026-08-02) | site volontairement sans analytics ni cookies ; les conversions se comptent côté formulaire (emails Resend reçus). Réévaluation quand le trafic le justifiera |
@@ -231,4 +231,5 @@ Type `local` : pages service (×zone), fiche GBP, avis, citations. **Particulari
 | 2026-08-06 | First-party de l'entretien client intégré au §7, restructuré par sujet du plan (clusters F, A, entreprise). 3 nouveaux interdits (§3) : pas de fourchette tarifaire, 23 ans = dirigeant / entreprise 2021, anonymisation des clients. Contact : dirigeant « Martin » (à confirmer). Horaires réels → nap.md ; article 10/2026 → à requalifier (refus tarifs) ; relance client préparée (blocs 4-5 + ⚠️ de transcription) | Claude (session first-party) |
 | 2026-08-06 (2) | Reconfirmations client : secteurs 94/78/95/92, dépotage vrac 3-4 h + différenciateur « gonfler les effectifs », tournée type du mardi (boucle IdF), horaires sam-dim fermés sauf exceptionnel, parcours Martin Ansquer (ex-Keiffer) SANS autorisation de citation. Nouveaux : concurrents VBC-Paris/SR Transport/NEOLYS, SIRET → nap.md, règle registre commissionnaires (statut oui, numéro non tant que certificat DRIEAT absent), GBP accès promis, 📸 action mini-shooting (aucune photo n'existe), refus tarifaire DÉFINITIF | Claude (session first-party, échange 2) |
 | 2026-08-06 (3) | Chantier horaires/schema exécuté : PR #2 du repo site mergée (`dbf5e14`, gate opérateur) et déployée automatiquement. Le site sert les horaires réels (JSON-LD lun-ven 2 plages, mention week-end sur /contact/) — l'écart 24/7 est résolu, vérifié en ligne | Claude (session chantier horaires) |
+| 2026-08-24 | **1er article publié** (PR #3 + PR #4 navbar mergées, ordre opérateur) — fenêtre 90 j article ouverte, blog en index. **Décisions d'état** : GSC propriété ✅ vérifiée (TXT OVH début 08, reconfirmée visuellement) — restent sitemap + Cuik ; 📸 **photos : FERMÉ** (aucun shooting, stock Unsplash sur le site, jamais sur GBP) ; **DRIEAT : ABANDONNÉ définitivement** (statut publiable, jamais de numéro). Points réellement ouverts : checklist manuelle GBP (8 champs), arbitrage adresse 49/51, collecte d'avis (envoi du lien à Martin à vérifier) | Claude (session publication) |
 | 2026-08-20 | **Mission GBP** : accès fiche effectif (compte KAELIX gestionnaire — le point « accès promis » est levé). Relevés : tél fiche **01 41 21 07 69** (écart vs canonique) ; horaires sans coupure méridienne ; catégorie « Service logistique » ; description vide ; nom ✅. **Aucune modification appliquée** (blocage captures Chrome) → checklist manuelle émise. **Décisions client/opérateur** : téléphone canonique = **06 03 87 31 66 partout** ; **adresse fiche GBP intouchable** (zéro risque de re-vérification) ; client déclare « 49 route principale du port » ; **adresse canonique à arbitrer** (site : 51 ; annuaires : 49 ; siège légal Presles 95 ≠ exploitation) — détail `nap.md` §1. Relevé code site : tél 06 partout ✅ (aucun 01), adresse « 51 » dans `company.ts` (JSON-LD + /contact/) — correction site en attente d'arbitrage | Claude (mission GBP) |
