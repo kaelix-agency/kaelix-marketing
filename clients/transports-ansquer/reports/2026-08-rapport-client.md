@@ -3,7 +3,7 @@
 | **Client** | Transports Ansquer |
 | **Période** | 2026-08 |
 | **Généré le** | 2026-08-28 (gabarit de mise en page — rapport réel à finaliser début 09/2026) |
-| **Statut** | 🕓 brouillon |
+| **Statut** | 🕓 brouillon (mise en page ✅ validée au gate du 2026-08-28 — format standard KAELIX ; contenu à finaliser 1-3/09) |
 | **Sources** | tracking.md, content-plan.md, client-brief.md (journal), Haloscan (positions du 28/08) ; Search Console via Cuik : **non connectée** (différé) → aucune donnée clics/impressions ; GBP insights / BrightLocal : non fournis |
 | **Points à confirmer avant validation** | ⚠️ « fiche Google conforme » : la mise en conformité est **en cours, à finir manuellement** (checklist 8 champs, brief §6) — à confirmer ou reformuler · ⚠️ « Bing Webmaster connecté » : **aucune trace dans le repo** — à confirmer ou retirer · ⚠️ « Search Console connectée » : propriété **vérifiée** oui, connexion à l'outil de suivi non — formuler « propriété vérifiée » · ⚠️ date exacte de mise en ligne du site (fin juillet) · le mois n'est pas terminé au 28/08 : compléter avec les éventuelles réalisations du 29-31/08 · ⚠️ lien « fiche Google » : URL réelle de la fiche à renseigner (`nap.md`, champ à compléter), lien Maps générique en attendant |
 

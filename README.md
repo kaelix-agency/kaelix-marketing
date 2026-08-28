@@ -95,6 +95,7 @@ clients/<slug>/
 ├── nap.md            ← coordonnées canoniques (clients locaux)
 ├── content-plan.md   ← plan éditorial pluri-mois : la carte du PRÉVU (document vivant, statuts par sujet)
 ├── tracking.md       ← journal du RÉALISÉ (typologie, persona), checkpoints 30/60/90j, re-checks bimestriels, paris émergents
+├── todo-operateur.md ← actions qui attendent l'opérateur (contact client, validations, arbitrages), maintenue à chaque weekly et gate
 ├── prompts/          ← prompts d'exécution vers le repo du site, 1 fichier daté + index
 ├── audits/           ← rapports /tech-audit datés + index
 ├── research/         ← briefs de production /research datés + index (persistés avant le gate)

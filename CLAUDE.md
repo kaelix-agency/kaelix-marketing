@@ -21,6 +21,7 @@ marketing-repo/
 │   │   ├── nap.md             ← NAP source de vérité (clients locaux uniquement)
 │   │   ├── tracking.md        ← suivi des contenus (typologie, checkpoints, re-checks)
 │   │   ├── content-plan.md    ← plan éditorial pluri-mois (clusters + sujets datés)
+│   │   ├── todo-operateur.md  ← actions qui attendent l'OPÉRATEUR (pas le système) — maintenue à chaque weekly et à chaque gate
 │   │   ├── prompts/README.md  ← index des prompts
 │   │   ├── reports/README.md  ← index des livrables de suivi
 │   │   ├── audits/README.md   ← index des audits techniques
@@ -29,6 +30,7 @@ marketing-repo/
 │       ├── icp.md             ← profil d'ENTREPRISE cible (skill `icp`) — source de vérité, non dupliquée dans le brief
 │       ├── personas.md        ← les PERSONNES dans ces entreprises (skill `personas`) — idem
 │       ├── content-plan.md    ← carte du PRÉVU : clusters, sujets par mois, statuts. **Document vivant** (≠ figé) : jamais re-généré, aucune ligne effacée — un sujet abandonné change de statut
+│       ├── todo-operateur.md  ← to-do de l'opérateur : [action | origine | échéance | statut] ; alimentée par `/weekly-review` (étape 11) et la section ④ du `/report`
 │       ├── prompts/           ← prompts d'exécution pour le repo du site : 1 fichier daté par prompt (`YYYY-MM-DD-<slug>.md`) + index README ; jamais d'append à un prompt existant
 │       ├── reports/           ← livrables de suivi historisés : revues hebdo (`YYYY-MM-DD-revue-hebdo.md`, internes) + rapports mensuels client (`YYYY-MM-rapport-client.md`, statut brouillon→validé→envoyé ; figé après envoi) + index README
 │       ├── audits/            ← rapports `/tech-audit` datés (`YYYY-MM-DD-tech-audit.md`) + index README

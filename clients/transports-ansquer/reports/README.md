@@ -21,4 +21,4 @@ Deux types de livrables cohabitent ici, avec des régimes différents — **ne j
 | Fichier | Type | Période | Statut |
 |---|---|---|---|
 | [`2026-08-28-revue-hebdo.md`](./2026-08-28-revue-hebdo.md) | revue hebdo (1re du client) | semaine du 24/08 au 28/08/2026 | interne — ✅ validée le 28/08 |
-| [`2026-08-rapport-client.md`](./2026-08-rapport-client.md) · [PDF](./2026-08-rapport-client.pdf) | rapport client | 2026-08 | 🕓 **brouillon / gabarit de mise en page** (28/08) — contenu réel à finaliser début 09 ; ⚠️ points « à confirmer » listés dans le bandeau interne |
+| [`2026-08-rapport-client.md`](./2026-08-rapport-client.md) · [PDF](./2026-08-rapport-client.pdf) | rapport client | 2026-08 | 🕓 **brouillon** — mise en page ✅ validée au gate du 28/08 (format standard KAELIX) ; contenu à finaliser 1-3/09 après levée des points « à confirmer » du bandeau (GBP conforme, trace Bing, URL fiche, 29-31/08) — cf. `todo-operateur.md` #4 |
