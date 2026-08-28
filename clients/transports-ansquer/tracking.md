@@ -13,6 +13,7 @@
 | Date publi. | Type | Mot-clé | URL | Typologie | Persona | Statut | J30 | J60 | J90 | Dernier relevé | Note |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | 2026-08-24 | création | tournée de livraison régulière (pari émergent, cluster F ⭐) | `/blog/tournee-livraison-reguliere/` | guide | P1 | ✅ publié (PR #3 mergée, gate opérateur) | ~2026-09-23 | ~2026-10-23 | ~2026-11-22 | | 1er article du site ; double PASS + re-passe visuels ; 2 schémas SVG first-party + cover stock ; bascule blog noindex→index à ce merge ; GSC : soumission dès la connexion |
+| 2026-08-28 | création | empotage conteneur (210) + dépotage conteneur (110/70), cluster A — guide national | `/blog/empotage-depotage-conteneur/` | guide | P2 | ✅ publié (PR #5 mergée `128399d`, gate opérateur sur preview) | ~2026-09-27 | ~2026-10-27 | ~2026-11-26 | | 2e article ; double PASS + re-contrôles ; 2 schémas SVG first-party + cover stock ; sitemap 23 URLs ✅ ; ErrorTip ×2 génériques conservés (décision gate : utilité lecteur, à renforcer en first-party au refresh post-J90 si vécu de quai livré) ; renvoi palettes (commentaire MDX) à câbler à la sortie de l'article 09/2026 ; ⚠️ indexation GSC à demander manuellement (propriété non connectée à Cuik) |
 
 ### Contenus en fenêtre de test (< 90 jours) <!-- ⛔ ne rien toucher -->
 
@@ -22,6 +23,7 @@
 |---|---|---|---|
 | ~fin 07/2026 (à confirmer) | tout le site (16 pages — `/`, hubs `/transport/` et `/stockage/`, 14 pages de service) | ~fin 10/2026 | Google re-teste tout après migration ; volatilité normale ; aucune action corrective avant J90 hors erreur factuelle/technique |
 | 2026-08-24 | `/blog/tournee-livraison-reguliere/` (1er article) | 2026-11-22 | ⛔ aucune retouche avant J90 (J30/J60 = observation) ; exceptions habituelles erreur factuelle/technique |
+| 2026-08-28 | `/blog/empotage-depotage-conteneur/` (2e article) | 2026-11-26 | ⛔ aucune retouche avant J90 ; exception prévue : remplacement du lien du renvoi palettes (commentaire MDX) à la publication de l'article 09/2026 (correction de maillage, pas de refonte) |
 
 ## 2. Historique des revues hebdo
 

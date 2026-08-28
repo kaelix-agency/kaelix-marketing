@@ -6,7 +6,7 @@
 | **Sujet du plan** | 08/2026 n°2 — cluster A (conteneurs) — persona **P2** (importateur/chargeur du port) |
 | **Typologie** | guide (evergreen) |
 | **Recherche faite le** | 2026-08-28 (`/research`, 2 `serp-analyst` en parallèle + Haloscan domaine) |
-| **Statut** | ✅ **GO opérateur 2026-08-28** → 📝 produit : PR #5 du repo site (double PASS), merge = gate. Arbitrages du gate : angle/plan validés ; doctrine cluster A actée (guide national / pilier local) ; anecdote : chiffres ~9 000 colis et 20h53 reconfirmés (brief §7) ; 2 schémas retenus (durées : points confirmés seulement, palettisé en qualitatif) |
+| **Statut** | 📝 **produit et publié le 2026-08-28** (PR #5 mergée `128399d`, gate validé sur preview ; ErrorTip génériques conservés sur décision opérateur ; suivi : `tracking.md`). Arbitrages du gate : angle/plan validés ; doctrine cluster A actée (guide national / pilier local) ; anecdote : chiffres ~9 000 colis et 20h53 reconfirmés (brief §7) ; 2 schémas retenus (durées : points confirmés seulement, palettisé en qualitatif) |
 | **Re-recherche** | oui : le brief de la session du ~24-27/08 n'avait pas été persisté (perdu) |
 
 ---
