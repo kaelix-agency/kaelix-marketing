@@ -47,7 +47,9 @@ const meta = (key) => {
 const client = meta("Client") || basename(dirname(dirname(mdPath)));
 const periode = meta("Période") || basename(mdPath).slice(0, 7);
 const statut = meta("Statut");
-const isDraft = !/✅|📤/.test(statut);
+// Fail-closed : seul un statut qui COMMENCE par ✅ (validé) ou 📤 (émis) produit un PDF
+// sans bandeau. Un ✅ ailleurs dans la cellule (ex. « mise en page ✅ validée ») ne suffit pas.
+const isDraft = !/^(✅|📤)/.test(statut);
 const generatedOn = new Date().toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" });
 
 marked.setOptions({ gfm: true, breaks: false });
