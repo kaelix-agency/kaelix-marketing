@@ -29,7 +29,7 @@
 
 | Semaine | Fichier | Diagnostic en une ligne | Décisions prises |
 |---|---|---|---|
-| S35 (24-28/08/2026) | [`reports/2026-08-28-revue-hebdo.md`](./reports/2026-08-28-revue-hebdo.md) — 🕓 brouillon | Août tenu 2/2 ; tout en fenêtre 90 j (site ~J+30, art. 1 J+4 avec 1er signal Haloscan pos. 35 sur « organiser sa tournée livraison », art. 2 J+0) ; ⚠️ GSC/Cuik différé, GBP/BrightLocal non fournis → métriques non mesurables | S36 : ① `/research` comparatif P1 ⭐ · ② question gerbage/calage à Martin via pulse (règle J-7 palettes) · ③ statut réel du lien d'avis · ④ points ouverts GBP/adresse/Cuik · ⑤ indexation manuelle GSC des 2 articles. Pulse client 🕓 brouillon en annexe |
+| S35 (24-28/08/2026) | [`reports/2026-08-28-revue-hebdo.md`](./reports/2026-08-28-revue-hebdo.md) — ✅ validée 28/08 | Août tenu 2/2 ; tout en fenêtre 90 j (site ~J+30, art. 1 J+4 avec 1er signal Haloscan pos. 35 sur « organiser sa tournée livraison », art. 2 J+0) ; ⚠️ GSC/Cuik différé, GBP/BrightLocal non fournis → métriques non mesurables | S36 approuvé : ① `/research` comparatif P1 ⭐ · ② question gerbage/calage à Martin par **WhatsApp opérateur** (règle J-7 palettes) · ③ lien d'avis **pas encore envoyé** → récupérer + transmettre · ④ points ouverts GBP/adresse/Cuik · ⑤ indexation manuelle GSC des 2 articles. Doctrine : revue = interne seulement, communication client = rapport mensuel (PDF) |
 
 ## 3. Paris émergents
 

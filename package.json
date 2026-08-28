@@ -1,0 +1,14 @@
+{
+  "name": "kaelix-marketing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cerveau marketing multi-clients — outillage (génération PDF des rapports client)",
+  "type": "module",
+  "scripts": {
+    "report:pdf": "node scripts/generate-report-pdf.mjs"
+  },
+  "devDependencies": {
+    "marked": "^15.0.0",
+    "playwright": "1.61.1"
+  }
+}

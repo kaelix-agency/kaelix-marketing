@@ -1,17 +1,20 @@
 ---
-description: Rapport mensuel client — mise en valeur du travail + résultats (gate avant envoi)
+description: Rapport mensuel client — livrable PDF prêt à l'envoi (markdown → gate → PDF → émission)
 argument-hint: <slug-client> <période ex: 2026-07>
 ---
-Rapport mensuel pour `$ARGUMENTS`. Utilise la skill `client-report` (structure, règles d'honnêteté, prudence d'attribution).
+Rapport mensuel pour `$ARGUMENTS`. Utilise la skill `client-report` (règles d'honnêteté, prudence d'attribution, historisation). **Le rapport mensuel est le seul artefact à destination du client** (`docs/rationnel-des-choix.md` §1.16-1.17) : il doit sortir **fini**, envoyable tel quel.
 
-1. **Travail réalisé** (depuis `tracking.md` + historique git du repo du site) : contenus publiés, refreshes, posts GBP, réponses d'avis, corrections techniques/citations.
-2. **Résultats** :
-   - Cuik MCP → deltas Search Console sur la période (impressions, clics, positions moyennes, pages en progression).
-   - Haloscan MCP → évolution des positions des mots-clés cibles.
-   - Si local → me demander le geo-grid/avis BrightLocal + insights GBP (appels, itinéraires, clics).
-   - Si PostHog → conversions attribuées au contenu (rappel : attribution première visite ; les IA renvoient vers la homepage, le blog est structurellement sous-attribué — l'expliquer).
-3. **Santé du trafic** : concentration (part des 3-4 premières pages dans le trafic SEO ; part du SEO dans le trafic total) + recommandation de diversification si seuils dépassés.
-4. **Contenus < 90 jours** : section « en période de test » — ni succès ni échec, position non stabilisée.
-5. **Narratif** : rédige le rapport dans la marque de l'agence, structure de la skill : essentiel en 3 points → ce qu'on a fait → ce que ça a produit → santé du trafic → le mois prochain. Chiffres réels, cadrage valorisant, zéro invention. Style lisible par un non-technicien.
-6. **Historisation** : sauvegarde dans `clients/<slug>/reports/<période>-rapport-client.md` (ex. `2026-07-rapport-client.md`) avec un bandeau **Statut : 🕓 brouillon** en tête, et ajoute la ligne dans l'index `clients/<slug>/reports/README.md` (à la première fois : créer le dossier en copiant `clients/_template/reports/README.md`).
-7. **Gate** : **je relis, j'ajuste, j'envoie moi-même.** Les ajustements pré-envoi se font dans le fichier (statut → ✅ validé). Après envoi, je mets le statut à **📤 envoyé le JJ/MM** : le fichier est alors **figé** (une période = un rapport figé, jamais recalculé) — toute correction post-envoi = un nouveau fichier daté (`<période>-correctif-JJMM.md`), jamais une réécriture.
+1. **Collecte** :
+   - Travail réalisé : `tracking.md` (contenus publiés, refreshes, posts GBP, réponses d'avis), `content-plan.md` (statuts), historique git du repo du site, `client-brief.md` (journal : GBP, GSC, citations, chantiers techniques).
+   - Résultats : Cuik MCP → Search Console (impressions, clics, positions, pages en progression, période vs période précédente) ; Haloscan MCP → positions des mots-clés cibles ; si local → me demander geo-grid/avis BrightLocal + insights GBP ; si PostHog → conversions attribuées (attribution première visite ; le blog est structurellement sous-attribué, l'expliquer).
+   - **Un outil indisponible ou non connecté = « données non disponibles ce mois » dans le rapport**, jamais une estimation.
+2. **Rédaction — structure client imposée, zéro jargon SEO**, en 2-3 pages :
+   - **① Ce qui a été fait ce mois** : contenus publiés (titres + liens), fiche Google, connexions et fondations techniques, corrections. Concret, daté, vérifiable.
+   - **② Ce que ça donne** : chiffres **uniquement s'ils sont consolidés** (période complète, outil de référence : Haloscan = positions, Search Console = clics/impressions, jamais mélangés). Sinon la phrase honnête : « période de fondations, premières données lisibles au mois 2-3 ». Contenus < 90 jours = « en période de test Google », ni succès ni échec. **Jamais une métrique gonflée** (invariant 9). Santé du trafic (concentration, dépendance) dès que mesurable.
+   - **③ Ce qui arrive le mois prochain** : 3-5 actions du plan éditorial et du hors-site, en langage client.
+   - **④ Ce dont on a besoin de votre côté** : first-party à fournir, validations, accès, avis à solliciter — chaque demande courte et actionnable.
+   - Titres H2 préfixés des numéros cerclés `①` à `④` (le script les stylise). Vocabulaire client : « votre position sur "…" est passée de 8 à 3 », pas « uplift du ranking ».
+3. **Fichier** : `clients/<slug>/reports/<période>-rapport-client.md` (gabarit : `clients/_template/reports/rapport-client.template.md`). En tête, un **bandeau interne** (table : Client, Période, Généré le, Statut, Sources, Points à confirmer) puis le marqueur `<!-- CLIENT -->` : **tout ce qui précède le marqueur n'est jamais rendu dans le PDF.** Statut initial : **🕓 brouillon**. Ajouter la ligne dans `clients/<slug>/reports/README.md` (à la première fois : créer le dossier en copiant `clients/_template/reports/README.md`).
+4. **Gate** : **je relis, j'ajuste, je valide.** Les ajustements se font dans le markdown ; les « points à confirmer » du bandeau doivent être levés (confirmés ou retirés du texte) avant validation. Statut → **✅ validé le JJ/MM**.
+5. **PDF** : après validation, `npm run report:pdf -- clients/<slug>/reports/<période>-rapport-client.md` (`scripts/generate-report-pdf.mjs`, Node + marked + Playwright/Chromium ; `npm install` une fois). Sortie : même nom en `.pdf`, en-tête KAELIX, pied de page paginé. Un markdown encore 🕓 brouillon produit un PDF marqué « BROUILLON, ne pas transmettre » (utile pour prévisualiser la mise en page, jamais pour envoyer). **Ouvrir le PDF et le regarder** avant de le déclarer prêt (2-3 pages, tableaux non coupés).
+6. **Émission** : **j'envoie moi-même.** Après envoi, statut → **📤 émis le JJ/MM** dans le bandeau et l'index ; markdown et PDF sont alors **figés** (une période = un rapport, jamais recalculé). Toute correction post-envoi = un nouveau fichier daté (`<période>-correctif-JJMM.md` + son PDF), jamais une réécriture.

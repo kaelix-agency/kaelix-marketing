@@ -7,7 +7,7 @@
 | **Période des données** | semaine du 24/08 au 28/08/2026 (positions Haloscan : scrapes du 02/08 au 28/08 ; le reste « OLDER_THAN_2_MONTHS » = ancien site) |
 | **Sources utilisées** | Haloscan (positions du domaine — **référence unique positions**) ; repo du site (état publié) ; `tracking.md`, `content-plan.md` |
 | **Sources empêchées** | ⚠️ **Search Console via Cuik : contrôle empêché, connexion Cuik différée** (décision opérateur 2026-08-28) → aucune donnée clics/impressions/CTR, aucune donnée inventée · ⚠️ **GBP insights / BrightLocal : exports non fournis** (BrightLocal planifié après la mise en conformité GBP) |
-| **Statut** | interne — 🕓 **brouillon**, validation opérateur en attente |
+| **Statut** | interne — ✅ **validée par l'opérateur le 2026-08-28** (plan S36 approuvé tel quel ; action ③ corrigée : lien d'avis **pas encore envoyé**). Annexe « pulse client » retirée le même jour sur décision doctrinale (la revue est uniquement interne ; communication client = rapport mensuel ; demandes ponctuelles = opérateur en direct, hors système) |
 
 ---
 
@@ -48,12 +48,14 @@ Non dû (première revue ; 2 guides de moins d'une semaine). Premier re-check à
 | # | Action | Command | Priorité | Prérequis / note |
 |---|---|---|---|---|
 | ① | **Recherche du comparatif P1 ⭐ de septembre** « Transport dédié, messagerie ou coursier ponctuel » (cluster F, pivot « transport dédié » 110) | `/research` | P1 | first-party **complet** (seuil hebdo, logique tarif à l'année ; coût/livraison refusé, non bloquant). Frontière : choix du modèle uniquement. Brief à persister dans `research/` avant présentation |
-| ② | **Combler le trou first-party de l'article palettes** (09/2026, P2) : 2-3 cas réels où le plan de chargement n'a pas tenu (gerbage, calage, poids) | pulse client (annexe) → `client-brief.md` §7 | P1 | règle J-7 : sans vécu de quai avant la production, le sujet **glisse** d'un mois. La question part dans le pulse de cette semaine |
-| ③ | **Collecte d'avis : statut réel** — le lien court « Demander des avis » (étape 8 de la checklist GBP) a-t-il été récupéré et transmis à Martin ? | manuel (GBP) | P1 | 1 seul avis à ce jour ; levier n°1 du plan. Sans certitude sur l'envoi, le pulse porte une relance douce |
+| ② | **Combler le trou first-party de l'article palettes** (09/2026, P2) : 2-3 cas réels où le plan de chargement n'a pas tenu (gerbage, calage, poids) | **WhatsApp opérateur → Martin** (hors système), réponses → `client-brief.md` §7 | P1 | règle J-7 : sans vécu de quai avant la production, le sujet **glisse** d'un mois |
+| ③ | **Collecte d'avis** — statut réel constaté le 28/08 : le lien court « Demander des avis » (étape 8 de la checklist GBP) **n'a pas encore été envoyé** → à récupérer sur la fiche et à transmettre à Martin | manuel (GBP + WhatsApp opérateur) | P1 | 1 seul avis à ce jour ; levier n°1 du plan |
 | ④ | **Points ouverts** : checklist GBP manuelle (8 champs), arbitrage adresse 49/51 (`nap.md` §1), Cuik ↔ GSC (différé, étapes manuelles listées le 28/08) | manuel | P2 | aucun ne bloque la production de septembre ; l'adresse bloque les citations NAP (étape 2 de l'architecture) |
 | ⑤ | **Indexation manuelle** des 2 articles dans la Search Console (inspection d'URL → demander l'indexation) | manuel (GSC) | P2 | remplace la soumission par outil tant que Cuik n'est pas connecté |
 
 Pas de `/refresh`, pas de `/gbp-post` cette semaine (fiche GBP en cours de mise en conformité ; les posts attendent la checklist).
+
+Prochaine échéance de communication client : **rapport mensuel d'août** (`/report`, PDF prêt à l'envoi), à finaliser début septembre.
 
 ## 8. Plan éditorial — écarts prévu / réalisé
 
@@ -63,14 +65,6 @@ Pas de `/refresh`, pas de `/gbp-post` cette semaine (fiche GBP en cours de mise 
 
 ---
 
-## Annexe — Pulse client (WhatsApp) — 🕓 brouillon, validation opérateur
+## Note de validation (2026-08-28)
 
-> Convention (décision opérateur 2026-08-28) : contact hebdo léger, 3-4 lignes, langage client, zéro jargon ; le rapport formel reste mensuel. Statut : 🕓 brouillon → ✅ validé → 📤 envoyé le JJ/MM.
-
-```
-Bonjour Martin, petit point de la semaine : les deux premiers articles du site sont en ligne. Le premier explique comment se met en place une tournée régulière (https://transportsansquer.fr/blog/tournee-livraison-reguliere/), le second comment se passent l'empotage et le dépotage d'un conteneur, avec vos durées réelles et l'histoire du conteneur de 9 000 colis (https://transportsansquer.fr/blog/empotage-depotage-conteneur/).
-Pour le prochain article sur les palettes en conteneur, j'aurais besoin de 2 ou 3 exemples vécus sur le quai : une fois où le plan de chargement n'a pas tenu, un souci de gerbage ou de calage, un poids mal réparti. Quelques phrases suffisent, quand vous avez un moment.
-Et si vous avez pu envoyer le lien pour les avis Google à un ou deux clients satisfaits, dites-moi ; sinon je vous le renvoie. Bonne fin de semaine.
-```
-
-Notes pour le gate : liens vérifiés en 200 le 28/08 ; « 9 000 colis » = chiffre reconfirmé par le client ; la relance avis est conditionnelle (« si vous avez pu… ») parce que le statut réel de l'envoi du lien n'est pas connu (action ③) — à ajuster si l'opérateur sait que le lien n'est pas encore parti.
+Revue validée telle quelle par l'opérateur. L'annexe « pulse client » initialement produite a été **retirée** : décision doctrinale du même jour — la revue hebdo est un document strictement interne (pilotage opérateur + repo) ; **le rapport mensuel est le seul artefact à destination du client** ; les demandes ponctuelles (first-party, avis) passent par l'opérateur en direct, hors système (`docs/rationnel-des-choix.md` §1.16).
