@@ -111,6 +111,9 @@ Second retour de gate (2026-08-24, preview du même article) — trois compléme
 
 ---
 
+### 1.16 Pourquoi un « pulse client » hebdo en annexe de la revue
+Décision opérateur du 2026-08-28 (transports-ansquer, première revue hebdo). Le rapport mensuel (`/report`) est LA communication formelle, mais un mois sans nouvelles est long pour un dirigeant de PME qui a confié son acquisition : il ne sait ni ce qui a été publié, ni ce qu'on attend de lui, et les demandes first-party arrivent trop tard (règle J-7 du plan). Le pulse est un **contact hebdo léger** : 3-4 lignes en langage client, zéro jargon, sur le canal du client (WhatsApp), qui dit ce qui est en ligne, pose les questions first-party concrètes de la semaine et relance doucement une action en attente. Il **ne remplace pas le rapport** et n'en reprend rien : aucun chiffre non consolidé, aucune position, aucune promesse — ce qui se mesure se dit une fois par mois avec le cadrage du rapport. Produit par `/weekly-review` (étape 11) en annexe du fichier de revue, statut brouillon → validé → envoyé : c'est l'opérateur qui envoie, jamais la session (gate humain, invariant 2). Si la semaine n'apporte ni nouveauté ni besoin, pas de pulse : un message qui meuble use l'attention du client.
+
 ## 2. Rationnel des skills
 
 Chaque skill est un **contrat qualité** : il encode la méthodologie pour que la qualité ne dépende pas de la mémoire de l'opérateur ni de l'humeur du modèle.

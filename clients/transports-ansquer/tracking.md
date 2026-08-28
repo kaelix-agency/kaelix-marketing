@@ -4,7 +4,7 @@
 |---|---|
 | **Client** | `transports-ansquer` |
 | **Ouvert le** | 2026-08-02 |
-| **Dernier relevé global** | — (première `/weekly-review` à programmer) |
+| **Dernier relevé global** | 2026-08-28 — 1re revue hebdo (Haloscan seul ; GSC/Cuik différé) |
 
 ---
 
@@ -29,13 +29,13 @@
 
 | Semaine | Fichier | Diagnostic en une ligne | Décisions prises |
 |---|---|---|---|
-| | | | |
+| S35 (24-28/08/2026) | [`reports/2026-08-28-revue-hebdo.md`](./reports/2026-08-28-revue-hebdo.md) — 🕓 brouillon | Août tenu 2/2 ; tout en fenêtre 90 j (site ~J+30, art. 1 J+4 avec 1er signal Haloscan pos. 35 sur « organiser sa tournée livraison », art. 2 J+0) ; ⚠️ GSC/Cuik différé, GBP/BrightLocal non fournis → métriques non mesurables | S36 : ① `/research` comparatif P1 ⭐ · ② question gerbage/calage à Martin via pulse (règle J-7 palettes) · ③ statut réel du lien d'avis · ④ points ouverts GBP/adresse/Cuik · ⑤ indexation manuelle GSC des 2 articles. Pulse client 🕓 brouillon en annexe |
 
 ## 3. Paris émergents
 
 | Mot-clé | Repéré le | Hypothèse (pourquoi ce pari) | Contenu publié | Volume à date | Verdict |
 |---|---|---|---|---|---|
-| tournée régulière transport (+ champ « transport régulier PME ») | 2026-08-02 | priorité business client (tournées VL IdF) ; terme de marché établi chez les concurrents (TopChrono, Cap Express) mais volumes Haloscan NA ; format guide vacant dans la SERP | — (prévu 08/2026, cluster F) | ~0 (NA) | en cours |
+| tournée régulière transport (+ champ « transport régulier PME ») | 2026-08-02 | priorité business client (tournées VL IdF) ; terme de marché établi chez les concurrents (TopChrono, Cap Express) mais volumes Haloscan NA ; format guide vacant dans la SERP | ✅ `/blog/tournee-livraison-reguliere/` (2026-08-24) | ~0 (NA) ; 1er signal Haloscan 28/08 : pos. 35 sur « organiser sa tournée livraison » (10) | en cours (verdict J90 ~22/11) |
 | combien coûte une tournée régulière externalisée | 2026-08-02 | requête de phase de décision ultra-qualifiée ; le voisin « tarif livraison au km » (142/mois) prouve la demande prix ; personne ne chiffre une tournée régulière (tout est au km one-shot, tout PL) | — (prévu 10/2026, cluster F) | ~0 (NA) | en cours |
 
 ## 4. Re-checks bimestriels
