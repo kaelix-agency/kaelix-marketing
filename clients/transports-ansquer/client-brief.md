@@ -178,7 +178,7 @@ Type `local` : pages service (×zone), fiche GBP, avis, citations. **Particulari
 |---|---|---|
 | Durée de dépotage d'un 40' | **confirmée (2026-08-06)** : entièrement dépendante du chargement — 2 voitures = moins d'1 h ; **en vrac avec colis 40×40, jusqu'à 3-4 heures pour un conteneur entier** | oui |
 | **Différenciateur opérationnel (first-party clé)** | **la force d'Ansquer : gonfler les effectifs par différents leviers (intérim, décalage de planning) pour traiter vite les missions lourdes** — c'est l'information gain des contenus conteneurs et manutention | oui |
-| Anecdote de quai | conteneur import (Chine) annoncé très chargé (colis en vrac + palettes) → renfort de main-d'œuvre anticipé, illustration du différenciateur ci-dessus | oui, sans chiffre non confirmé |
+| Anecdote de quai | conteneur import (Chine) annoncé très chargé (colis en vrac + palettes) → renfort de main-d'œuvre anticipé, illustration du différenciateur ci-dessus. **Chiffres reconfirmés au gate du 2026-08-28** (source : entretien client, reconfirmé par l'opérateur) : **~9 000 colis** ; **appels du client à 20h53, décalage horaire oblige** ; durée de traitement ≈ 3-4 h (cohérent avec la ligne « vrac colis ») | oui, **anonymisée** (jamais le nom du client) ; chiffres ~9 000 colis et 20h53 utilisables |
 | Grille tarifaire indicative dépotage | **refusée — refus tarifaire DÉFINITIF** (2026-08-06) | non |
 
 ### Entreprise / E-E-A-T (bloc auteur, page entreprise, refresh 11/2026)

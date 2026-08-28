@@ -97,6 +97,7 @@ clients/<slug>/
 ├── tracking.md       ← journal du RÉALISÉ (typologie, persona), checkpoints 30/60/90j, re-checks bimestriels, paris émergents
 ├── prompts/          ← prompts d'exécution vers le repo du site, 1 fichier daté + index
 ├── audits/           ← rapports /tech-audit datés + index
+├── research/         ← briefs de production /research datés + index (persistés avant le gate)
 └── reports/          ← revues hebdo (internes) + rapports mensuels /report + index
 ```
 

@@ -13,4 +13,4 @@ Livrables de la phase 0 (`/research`) : un **brief de production** par sujet, pe
 
 | Fichier | Sujet | Mot-clé principal | Statut |
 |---|---|---|---|
-| [`2026-08-28-guide-empotage-depotage-conteneur.md`](./2026-08-28-guide-empotage-depotage-conteneur.md) | Guide empotage + dépotage de conteneur (08/2026, cluster A, P2) | empotage conteneur + dépotage conteneur | 🕓 en attente de GO |
+| [`2026-08-28-guide-empotage-depotage-conteneur.md`](./2026-08-28-guide-empotage-depotage-conteneur.md) | Guide empotage + dépotage de conteneur (08/2026, cluster A, P2) | empotage conteneur + dépotage conteneur | ✅ GO opérateur 2026-08-28 (angle/plan validés ; doctrine cluster A actée ; anecdote chiffrée reconfirmée ; 2 schémas) → en production |

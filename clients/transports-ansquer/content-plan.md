@@ -38,7 +38,7 @@
 |---|---|
 | **Page pilier** | `/stockage/depotage-empotage-conteneurs/` |
 | **Statut du pilier** | existante (refresh épaississement à J90) |
-| **Objectif SEO** | top 3 sur « depotage conteneur » + « empotage conteneur » (cumul ~210/mois, difficulté quasi nulle) ; capter la traîne « combien de palettes » (~230/mois cumulés) |
+| **Objectif SEO** | **Doctrine actée au gate du 2026-08-28** : le **guide blog** (08/2026) vise les requêtes **nationales** « empotage conteneur » (210) + « dépotage conteneur » (110/70, Haloscan 28/08 — la SERP récompense le format guide, pas la page service) ; le **pilier** vise le **local + la conversion** : « dépotage conteneur gennevilliers / île-de-france », « transport container gennevilliers » (brief §5B) + devis. Maillage guide → pilier obligatoire, pilier → guide au refresh 12/2026. Traîne « combien de palettes » (~230/mois cumulés) → article 09/2026 |
 | **Mot-clé pilier** | dépotage / empotage conteneur (Gennevilliers) |
 | **Persona dominant** | P2 — importateur/chargeur du port |
 

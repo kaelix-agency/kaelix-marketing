@@ -23,14 +23,16 @@ marketing-repo/
 │   │   ├── content-plan.md    ← plan éditorial pluri-mois (clusters + sujets datés)
 │   │   ├── prompts/README.md  ← index des prompts
 │   │   ├── reports/README.md  ← index des livrables de suivi
-│   │   └── audits/README.md   ← index des audits techniques
+│   │   ├── audits/README.md   ← index des audits techniques
+│   │   └── research/README.md ← index des briefs de production
 │   └── <slug-client>/         ← un dossier par client (mêmes fichiers, remplis)
 │       ├── icp.md             ← profil d'ENTREPRISE cible (skill `icp`) — source de vérité, non dupliquée dans le brief
 │       ├── personas.md        ← les PERSONNES dans ces entreprises (skill `personas`) — idem
 │       ├── content-plan.md    ← carte du PRÉVU : clusters, sujets par mois, statuts. **Document vivant** (≠ figé) : jamais re-généré, aucune ligne effacée — un sujet abandonné change de statut
 │       ├── prompts/           ← prompts d'exécution pour le repo du site : 1 fichier daté par prompt (`YYYY-MM-DD-<slug>.md`) + index README ; jamais d'append à un prompt existant
 │       ├── reports/           ← livrables de suivi historisés : revues hebdo (`YYYY-MM-DD-revue-hebdo.md`, internes) + rapports mensuels client (`YYYY-MM-rapport-client.md`, statut brouillon→validé→envoyé ; figé après envoi) + index README
-│       └── audits/            ← rapports `/tech-audit` datés (`YYYY-MM-DD-tech-audit.md`) + index README
+│       ├── audits/            ← rapports `/tech-audit` datés (`YYYY-MM-DD-tech-audit.md`) + index README
+│       └── research/          ← briefs de production `/research` datés (`YYYY-MM-DD-<slug-sujet>.md`) + index README — **persistés et commités AVANT présentation au gate**
 └── docs/
     ├── methodologie-seo.md    ← méthodologie de référence (6 phases)
     ├── routines-operationnelles.md ← playbook : semaine type, déroulés, checklists
