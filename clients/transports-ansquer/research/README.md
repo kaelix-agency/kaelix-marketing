@@ -14,3 +14,4 @@ Livrables de la phase 0 (`/research`) : un **brief de production** par sujet, pe
 | Fichier | Sujet | Mot-clé principal | Statut |
 |---|---|---|---|
 | [`2026-08-28-guide-empotage-depotage-conteneur.md`](./2026-08-28-guide-empotage-depotage-conteneur.md) | Guide empotage + dépotage de conteneur (08/2026, cluster A, P2) | empotage conteneur + dépotage conteneur | 📝 produit — GO 2026-08-28, `/write` le jour même, double PASS, PR #5 mergée `128399d` → ✅ publié (`tracking.md`) |
+| [`2026-09-02-comparatif-transport-dedie-messagerie-coursier.md`](./2026-09-02-comparatif-transport-dedie-messagerie-coursier.md) | Comparatif dédié / messagerie / coursier (09/2026 n°1, cluster F ⭐, P1) | transport dédié (70) + traîne comparative vierge | 🕓 en attente de GO |
