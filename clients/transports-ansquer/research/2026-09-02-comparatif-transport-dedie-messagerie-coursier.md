@@ -17,7 +17,10 @@
 - **Pivot « transport dédié »** : **70/mois** (Haloscan, scrape 11/07 — en baisse vs 110 du relevé du 02/08 ; CPC 5,96 €, compét. 0,5). Intention **mixte info-commerciale B2B** : le n°1 est un **blog comparatif** (Chronofresh, dédié vs mutualisé) devant des pages prestataires (600-900 mots). ⚠️ Le terme n'est **pas capté par l'urgence** : l'exclusivité du véhicule domine, l'urgence n'est qu'un sous-cas.
 - **Traîne comparative** : **réellement vierge** (toutes variantes non scorées Haloscan — KEYWORD_UNKNOWN). La SERP observée est occupée par des binaires « affrètement vs messagerie » (Sigma, Solupal, Granger… 1 500-2 000 mots), **sans tableau, sans chiffre, sans seuil**.
 - **Signal clé** : groupe-blondel.com tient l'angle « dédié pour tournées récurrentes »… en **position 23**. L'angle existe, personne ne le tient dans le top 10.
-- **Scroll : ⚠️ non vérifiable par outil** (×2 instances) ; indices : CPC 5,96 € → pubs probables sur le pivot ; PAA présents ; pas de pack/shopping attendu. Conséquence : viser le **featured snippet / AI Overview** (définitions courtes + tableau).
+- **Scroll : ✅ VÉRIFIÉ le 2026-09-02 en navigation réelle** (scroll-check chrome, session principale — protocole §1.21 du rationnel, desktop 1536×738, mobile non testé : budget 2 requêtes atteint) :
+  - « transport dédié » : **0 pub, pas d'AI Overview, pas de pack local**, PAA présents, 1er organique à y≈608 px (~0,8 écran, transportexpress.fr) → **scroll OK** (les pubs « probables » au CPC 5,96 € ne se sont pas matérialisées) ;
+  - « transport dédié ou messagerie » : **0 pub, pas d'AIO, pas de pack**, PAA, 1er organique à y≈608 px → **scroll OK**.
+  - **Verdict GO inchangé et confirmé** ; SERPs très organiques — le tableau + définitions courtes visent le snippet (pas d'AIO à ce jour sur ces requêtes).
 
 ## 2. Anti-cannibalisation (3 fronts)
 
