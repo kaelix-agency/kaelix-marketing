@@ -24,7 +24,9 @@ Règle d'hygiène : **une session Claude Code = un client**. On ouvre la session
 
 C'est la routine pivot : tout le reste de la semaine en découle.
 
-1. Ouvrir Claude Code dans le repo → `/weekly-review <client>`.
+> **Régime de croisière (Planificateur Windows, depuis le 2026-09-02 — rationnel §1.22)** : la revue se **prépare seule** le lundi à 07:30 (`scripts/run-scheduled.ps1 -Mission weekly`, tâche « KAELIX - Weekly ») et le rapport mensuel le 1er à 08:00 (« KAELIX - Report mensuel »). Le lundi type de l'opérateur devient : **① lire l'issue GitHub** « 📋 Weekly S<n> prête à valider » (notification mobile) → **② lire le brouillon commité** dans `reports/`, l'amender si besoin → **③ valider** (les étapes 3-6 ci-dessous restent son gate) → **④ traiter sa `todo-operateur.md`** → **⑤ fermer l'issue**. Les tâches planifiées ne mergent jamais une PR, n'émettent jamais un rapport, ne publient rien — brouillons 🕓 + notification uniquement. Si la tâche n'a pas tourné (PC éteint au-delà du rattrapage, log absent dans `logs/`), la procédure manuelle ci-dessous s'applique telle quelle.
+
+1. Ouvrir Claude Code dans le repo → `/weekly-review <client>` *(en régime de croisière : déjà fait par la tâche planifiée — reprendre à l'étape 3)*.
 2. **Client local** : avant de laisser Claude conclure, coller le geo-grid + les nouveaux avis (BrightLocal) et les insights GBP de la semaine.
 3. Lire le tableau des verdicts. Rappels :
    - les contenus **< 90 jours** sont « en observation » — la volatilité est normale, on ne touche à rien ;
