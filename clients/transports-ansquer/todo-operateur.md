@@ -1,20 +1,27 @@
 # To-do opérateur — Transports Ansquer
 
-> Les actions qui attendent **l'opérateur** (pas le système). Maintenue à chaque `/weekly-review` et à chaque gate ; les demandes client de la section ④ du rapport mensuel s'y reflètent. Convention : `docs/rationnel-des-choix.md` §1.18.
+> Les actions qui attendent **l'opérateur** (pas le système). Maintenue à chaque `/weekly-review` et à chaque gate. ⛔ Invariant 14 (2026-09-02) : **aucune action « demander au client »** — le seul canal de demande est la ligne avis permanente du rapport mensuel. Convention : `docs/rationnel-des-choix.md` §1.18 et §1.20.
 >
 > **Statuts** : 🕓 à faire · 🔧 en cours · ✅ fait (date) · ⛔ bloqué (motif) · ↪️ reporté (nouvelle échéance)
 
 | # | Action | Origine | Échéance | Statut |
 |---|---|---|---|---|
-| 1 | **WhatsApp à Martin** : (a) 2-3 exemples vécus de quai pour l'article palettes (plan de chargement qui n'a pas tenu, gerbage, calage, poids mal réparti) ; (b) envoi du lien court « Demander des avis » — **récupérer le lien sur la fiche GBP d'abord** (étape 8 de la checklist) | revue S35 (actions ② ③) + rapport 08 §④ | **cette semaine** (≤ 04/09) — conditionne l'article palettes 09/2026 : règle J-7 ≈ **7 septembre**, sinon glissement | 🕓 à faire |
-| 2 | **Checklist GBP, 8 champs manuels** (relevés + décisions dans `nap.md` : téléphone 06 partout, horaires réels avec coupure, catégorie, description, logo seul, lien d'avis…) | mission GBP 20/08 + gate rapport 08 | **cette semaine** — conditionne la ligne « fiche Google conforme » du rapport d'août | 🕓 à faire |
-| 3 | **Arbitrage adresse 49 / 51 route principale du port** (`nap.md` §1) → puis correction `company.ts` côté site et alignement annuaires | mission GBP 20/08 + rapport 08 §④ | début septembre | 🕓 à faire |
-| 4 | **Finaliser le rapport d'août** : lever les points à confirmer du bandeau (GBP conforme, trace Bing, URL réelle de la fiche, réalisations du 29-31/08, date de mise en ligne du site) → ✅ validé → `npm run report:pdf` → envoi → 📤 émis | gate mise en page 28/08 | **1-3 septembre** | 🕓 à faire |
+| 2 | **Checklist GBP, champs manuels restants** (`nap.md` : tél 06 partout, horaires avec coupure, catégorie « Société de transport routier », description ; ⛔ adresse : ne pas toucher — elle est la référence) | mission GBP 20/08 + gate rapport 08 | **cette semaine** — conditionne la ligne « fiche Google » du rapport d'août | 🕓 à faire |
+| 4 | **Valider le rapport d'août** (points restants levés le 02/09 par la session : adresse ✅, lien avis ✅, Bing retiré, formulations prudentes GBP/GSC ; reste : rien à confirmer côté client) → ✅ → `npm run report:pdf` → envoi → 📤 émis | gate mise en page 28/08 + reprise 02/09 | **cette semaine** | 🕓 à faire |
 | 5 | **Planificateur Windows** : `/weekly-review` le lundi + `/report` le 1er du mois | décision 28/08 | quand l'opérateur donne le go | 🕓 à faire (en attente du go) |
 | 6 | Connexion **Cuik ↔ Search Console** (app.cuik.io, compte Google KAELIX ; étapes listées le 28/08) + indexation manuelle des 2 articles dans la GSC en attendant | mission Cuik 28/08 (différée) | différé — décision opérateur | ↪️ reporté (sans date) |
+| 7 | **GO / NO-GO sur la reco palettes** (ré-angle sans sollicitation vs glissement) + GO du `/research` comparatif P1 ⭐ | reprise 02/09 | avant le **07/09** (J-7 palettes) | 🕓 à faire |
+
+## Actions retirées / closes
+
+| # | Action | Sort |
+|---|---|---|
+| 1 | WhatsApp Martin (exemples de quai + lien d'avis) | ⛔ **retirée le 2026-09-02 — doctrine zéro sollicitation (invariant 14)** : le vécu de quai ne se demande plus (ré-angle ou glissement) ; les avis passent par la ligne permanente du rapport |
+| 3 | Arbitrage adresse 49/51 | ✅ **fait le 2026-09-02** : décision opérateur « aligner sur la fiche GBP » exécutée — relevé fiche = **51** (« Quai 8, 51 Rte Principale du Port Bât G1 ») ; `nap.md` à jour ; site déjà à 51 → aucune PR ; annuaires à aligner à la campagne citations |
 
 ## Journal
 
 | Date | Changement |
 |---|---|
 | 2026-08-28 | Création (gate mise en page du rapport) : 5 actions initialisées + Cuik différé reporté sans date |
+| 2026-09-02 | Doctrine zéro sollicitation : #1 retirée ; #3 close (arbitrage 51 exécuté, relevé fiche via Chrome) ; #4 allégée (points levés par la session) ; #7 ajoutée (GO palettes + GO /research comparatif) |

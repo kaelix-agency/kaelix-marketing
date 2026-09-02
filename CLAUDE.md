@@ -60,6 +60,7 @@ marketing-repo/
     - **Règle de véracité des composants incarnés** (extension de l'invariant 7) : une `ExpertQuote` n'est jamais inventée — elle vient du first-party du brief, ou elle est rédigée comme **proposition signalée dans la PR et validée par le client avant merge**. Un `Testimonial` est un avis **réel et sourcé**, jamais généré ni reformulé au point de trahir l'original. Chaque stat d'une `StatGrid` porte sa source.
 12. **Frontière des repos.** Ce repo écrit vers les repos clients uniquement via des PR de contenu (`content/blog/`, `content/zones/`) ; il ne lit les repos clients que pour le maillage/anti-cannibalisation ; les repos clients ne connaissent jamais ce repo. Détail : `docs/interactions-repos.md`.
 13. **Langue.** Contenus clients en français (marché FR), sauf indication contraire du brief.
+14. **⛔ Zéro sollicitation client en régime courant** (décision opérateur 2026-09-02). Le principe de la prestation : tout roule sans charge de travail pour le client. Le first-party se collecte **une fois à l'onboarding** (entretien + documents) puis vit sur son stock ; un sujet dont le first-party manque se **ré-angle ou glisse** (règle de dégradation du plan) — on ne sollicite pas le client. Aucune action « demander au client X » dans les revues, plans ou to-do. Deux exceptions : (a) l'onboarding d'un nouveau client reste un moment d'échange normal ; (b) la **ligne avis permanente** du rapport mensuel (§④ du `/report`) — informative, jamais de relance hors rapport. Détail : `docs/rationnel-des-choix.md` §1.20.
 
 ## Contexte de session
 

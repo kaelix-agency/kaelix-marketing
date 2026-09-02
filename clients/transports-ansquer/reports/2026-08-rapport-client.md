@@ -5,7 +5,7 @@
 | **Généré le** | 2026-08-28 (gabarit de mise en page — rapport réel à finaliser début 09/2026) |
 | **Statut** | 🕓 brouillon (mise en page ✅ validée au gate du 2026-08-28 — format standard KAELIX ; contenu à finaliser 1-3/09) |
 | **Sources** | tracking.md, content-plan.md, client-brief.md (journal), Haloscan (positions du 28/08) ; Search Console via Cuik : **non connectée** (différé) → aucune donnée clics/impressions ; GBP insights / BrightLocal : non fournis |
-| **Points à confirmer avant validation** | ⚠️ « fiche Google conforme » : la mise en conformité est **en cours, à finir manuellement** (checklist 8 champs, brief §6) — à confirmer ou reformuler · ⚠️ « Bing Webmaster connecté » : **aucune trace dans le repo** — à confirmer ou retirer · ⚠️ « Search Console connectée » : propriété **vérifiée** oui, connexion à l'outil de suivi non — formuler « propriété vérifiée » · ⚠️ date exacte de mise en ligne du site (fin juillet) · le mois n'est pas terminé au 28/08 : compléter avec les éventuelles réalisations du 29-31/08 · ⚠️ lien « fiche Google » : URL réelle de la fiche à renseigner (`nap.md`, champ à compléter), lien Maps générique en attendant |
+| **Points à confirmer avant validation** | **Levés le 2026-09-02 (session de reprise)** : ✅ fiche Google → reformulée « reprise en main, mise à jour en cours » (checklist manuelle non finie, `nap.md`) · ✅ Bing → **retiré** (aucune trace, jamais fait) · ✅ Search Console → reformulée « propriété vérifiée » · ✅ 29-31/08 → aucune réalisation (aucun commit ni déploiement sur la période, vérifié) · ✅ lien avis relevé sur la fiche (`g.page/r/CSTJAaXNYqRfEBM/review`) → section ④ · ✅ adresse arbitrée (51, alignée fiche GBP). **Reste : aucun point client.** ⚠️ interne : « fin juillet » pour la mise en ligne reste approximatif (date exacte inconnue, formulation inchangée) |
 
 <!-- CLIENT -->
 
@@ -23,9 +23,8 @@ Août a été le mois des fondations : le nouveau site est en place, les outils 
 | Horaires réels du dépôt affichés partout (plus de promesse « 24 h/24 ») | 6 août | [page contact](https://transportsansquer.fr/contact/) |
 | Article : **mettre en place une tournée de livraison régulière** (avec le schéma de votre tournée du mardi) | 24 août | [lire l'article](https://transportsansquer.fr/blog/tournee-livraison-reguliere/) |
 | Article : **empotage et dépotage de conteneur, le guide du chargeur** (vos durées réelles, le conteneur de 9 000 colis) | 28 août | [lire l'article](https://transportsansquer.fr/blog/empotage-depotage-conteneur/) |
-| Fiche Google Business : accès repris par KAELIX, mise en conformité (téléphone, horaires, catégorie, description) | 20-28 août | [fiche Google](https://www.google.com/maps) |
+| Fiche Google Business : accès repris par KAELIX, relevé complet et mise à jour engagée (téléphone, horaires, catégorie, description) | 20-28 août | [votre fiche Google](https://g.page/r/CSTJAaXNYqRfEBM) |
 | Google Search Console : propriété transportsansquer.fr vérifiée ; plan du site (23 pages) transmis à Google | août | outil de mesure (interne) |
-| Bing Webmaster Tools : site déclaré | août | outil de mesure (interne) |
 
 Chaque article repose sur des informations qui n'existent que chez vous : la tournée du mardi, le seuil « une fois par semaine », les durées de dépotage selon le contenu, l'anticipation de main-d'œuvre. C'est ce qui le rend impossible à copier par un concurrent.
 
@@ -43,11 +42,9 @@ Ce que nous pouvons déjà dire :
 
 - Un article pour vous aider à choisir entre **transport dédié, messagerie et coursier ponctuel** : c'est la question que se posent vos prospects avant de vous appeler.
 - Un article **« combien de palettes dans un conteneur »**, écrit avec vos cas réels de quai.
-- La suite de la fiche Google : description, photos (logo), et lancement de la collecte d'avis.
-- Le branchement complet des outils de mesure, pour que le rapport d'octobre contienne vos premiers chiffres.
+- La suite de la fiche Google : description, catégorie, horaires finalisés.
+- Le branchement complet des outils de mesure, pour que les prochains rapports contiennent vos premiers chiffres.
 
 ## ④ Ce dont nous avons besoin de votre côté
 
-- **Deux ou trois exemples vécus** pour l'article palettes : un plan de chargement qui n'a pas tenu, un souci de gerbage ou de calage, un poids mal réparti. Quelques phrases suffisent.
-- **Des avis Google** : nous vous transmettons un lien à envoyer à deux ou trois clients satisfaits. Un seul avis aujourd'hui ; chaque avis supplémentaire pèse directement sur votre visibilité locale.
-- **L'adresse à afficher** : 49 ou 51 route principale du port ? Nous alignons ensuite le site et les annuaires sur votre réponse.
+Votre lien pour recueillir des avis Google : **https://g.page/r/CSTJAaXNYqRfEBM/review** — à transmettre quand l'occasion se présente à un client satisfait. Chaque avis renforce directement votre visibilité locale. C'est tout : le reste roule sans vous.

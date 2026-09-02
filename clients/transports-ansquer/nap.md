@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Statut** | 🟠 téléphone canonique **confirmé** (06, client via opérateur 2026-08-20) ; ⚠️ **adresse canonique À ARBITRER** (écart 49/51, voir §1) ; fiche GBP relevée le 2026-08-20, mise en conformité **à finir manuellement** (blocage outil) |
+| **Statut** | 🟢 téléphone canonique **confirmé** (06, 2026-08-20) ; ✅ **adresse canonique ARBITRÉE le 2026-09-02** : **51** (alignée sur la fiche GBP, source la plus visible — relevé effectif du 2026-09-02) ; fiche GBP : mise en conformité **à finir manuellement** (blocage captures persistant) |
 | **Validé le** | — |
 | **Dernière vérification de cohérence** | 2026-08-02 (site = `src/lib/company.ts` du repo, cohérent avec ce fichier) |
 
@@ -13,7 +13,7 @@
 | Champ | Valeur canonique |
 |---|---|
 | **Nom (N)** | Transports Ansquer |
-| **Adresse (A)** | ⚠️ **à arbitrer — « 49 » ou « 51 » route principale du port** (voir encadré ci-dessous ; ce fichier disait « 51 » jusqu'au 2026-08-20) |
+| **Adresse (A)** | **51 route principale du port** — ✅ arbitré le 2026-09-02 (décision opérateur : alignement sur l'adresse affichée par la fiche GBP, relevée ce jour : « Quai 8, 51 Rte Principale du Port Bât G1, 92230 Gennevilliers ») |
 | Complément d'adresse | Bâtiment G1, quai 8 |
 | Code postal | 92230 |
 | Ville | Gennevilliers |
@@ -24,15 +24,14 @@
 | Site web (URL canonique) | https://transportsansquer.fr/ (sans www, avec slash final — convention `trailingSlash: true` du site) |
 | SIRET | **90069725100016** (SIREN 900 697 251 — cohérent avec la création 2021 ; reçu le 2026-08-06) |
 
-### ⚠️ Adresse — écart « 49 / 51 » constaté le 2026-08-20 (mission GBP)
+### ✅ Adresse — écart « 49 / 51 » ARBITRÉ le 2026-09-02
 
-> **Adresse canonique : à arbitrer — alignement site/annuaires à planifier** une fois l'arbitrage rendu. En attendant, **aucune propagation d'adresse** (citations en pause sur ce champ).
+> **Décision opérateur (2026-09-02) : tout s'aligne sur l'adresse affichée par la fiche GBP** (source la plus visible). **Relevé effectif du 2026-09-02** (panneau Google, via Chrome) : « **Quai 8, 51 Rte Principale du Port Bât G1, 92230 Gennevilliers** » → **canonique = 51**. Citations débloquées sur ce champ.
 
-- **Le client déclare** (via opérateur, 2026-08-20) : **49 route principale du port**.
-- **Fiche GBP** : valeur affichée **non relevée** (blocage technique des captures Chrome le 2026-08-20) — à relever manuellement. Décision opérateur : la fiche **n'est PAS modifiée sur l'adresse, quelle que soit sa valeur** (zéro risque de re-vérification Google).
-- **Ce fichier disait « 51 »** — origine : onboarding du 2026-08-02 depuis le site (`src/lib/company.ts`), qui affiche « 51 » (JSON-LD LocalBusiness + page /contact/, vérifié dans le code le 2026-08-20).
-- **Mappy et annuaire-entreprises (data.gouv)** : « 49 » ; la ligne INSEE exacte est « 49-51 / BATIMENT G1, 49 ROUTE PRINCIPALE DU PORT 92230 ».
-- **Societe.com** : siège légal **7 rue du Beauregard, 95590 Presles** — siège légal ≠ site d'exploitation, à documenter ; ne jamais utiliser comme adresse NAP.
+- **Site** (`src/lib/company.ts`, JSON-LD + /contact/) : affiche déjà « 51 » → **aucune correction site nécessaire** (vérifié 2026-08-20).
+- **Annuaires à aligner sur 51** lors de la campagne citations : Mappy affiche « 49 » (⚠️ écart, §5) ; la ligne INSEE « 49-51 / BATIMENT G1, 49 ROUTE PRINCIPALE DU PORT » explique la coexistence — le libellé publié reste « 51 route principale du port, Bâtiment G1, quai 8 ».
+- Le client avait déclaré « 49 » à l'oral (2026-08-20) — la décision d'alignement sur la fiche prime (tracée au journal) ; la fiche GBP elle-même **ne se modifie jamais sur l'adresse** (zéro risque de re-vérification).
+- **Societe.com** : siège légal **7 rue du Beauregard, 95590 Presles** — siège légal ≠ site d'exploitation ; ne jamais utiliser comme adresse NAP.
 
 ## 2. Horaires
 
@@ -94,7 +93,7 @@
 
 | Annuaire | URL de la fiche | Statut | Dernière vérif. | Écart constaté |
 |---|---|---|---|---|
-| Google Business Profile | à renseigner (fiche existante — 1 avis) | ⚠️ écart détecté | 2026-08-20 | tél **01 41 21 07 69** (≠ canonique 06) ; horaires sans coupure méridienne ; catégorie « Service logistique » ; description vide ; adresse non relevée (blocage outil) — corrections manuelles à faire, **sauf adresse (ne pas toucher)** |
+| Google Business Profile | fiche existante (1 avis) ; **lien court d'avis relevé le 2026-09-02 : `https://g.page/r/CSTJAaXNYqRfEBM/review`** (= ligne avis permanente du rapport mensuel) | ⚠️ écart détecté | 2026-09-02 | adresse ✅ **relevée : « Quai 8, 51 Rte Principale du Port Bât G1 »** (= canonique, ne pas toucher) ; restent (relevés 20/08) : tél **01 41 21 07 69** (≠ canonique 06) ; horaires sans coupure méridienne ; catégorie « Service logistique » ; description vide — corrections manuelles opérateur |
 | Pages Jaunes | | à faire | | |
 
 ### Priorité 2 — socle national
@@ -131,4 +130,5 @@
 | 2026-08-06 | Horaires réels reçus (entretien client) : 7h30-12h30 / 13h30-16h00, lun-ven supposé. Écart 24/7 du schema site documenté → chantier site en brouillon | schema site (chantier à émettre) → GBP (dès accès) → annuaires (aucune citation soumise encore) | |
 | 2026-08-06 (2) | Reconfirmation client : sam-dim fermés sauf demande exceptionnelle (formulation publique cadrée, jamais « astreinte ») + **SIRET 90069725100016** reçu. Chantier schema passé « prêt à émettre » | schema site (émission imminente) → GBP (dès accès) → annuaires | |
 | 2026-08-06 (3) | **Écart schema 24/7 résolu** : PR #2 du repo site mergée (`dbf5e14`) et déployée, JSON-LD + mention /contact/ vérifiés en ligne. Horaires canoniques de ce fichier = source appliquée au site | schema site ✅ → GBP (dès accès) → annuaires | 2026-08-06 |
+| 2026-09-02 | **Arbitrage adresse rendu** (décision opérateur : alignement sur la fiche GBP) : relevé effectif du panneau Google via Chrome = « Quai 8, **51** Rte Principale du Port Bât G1 » → canonique = **51**. Site déjà à 51 (aucune PR) ; annuaires à aligner à la campagne citations (Mappy = 49). **Lien court d'avis relevé** : `g.page/r/CSTJAaXNYqRfEBM/review` → intégré à la ligne avis permanente du rapport mensuel (doctrine zéro sollicitation, invariant 14) | citations débloquées sur l'adresse | 2026-09-02 |
 | 2026-08-20 | **Mission GBP (via Chrome, compte KAELIX gestionnaire — accès effectif constaté)** : relevés fiche (nom ✅ « Transports Ansquer » ; tél ⚠️ 01 41 21 07 69 ; horaires ⚠️ sans coupure ; catégorie « Service logistique » ; description vide). **Aucune modification appliquée** (blocage captures Chrome) → exécution manuelle listée. Décisions opérateur : tél canonique = 06 partout ; **adresse fiche GBP : ne jamais modifier** (éviter re-vérification) ; adresse canonique **à arbitrer** (client déclare 49 ; site affiche 51 ; annuaires 49) — encadré §1. Relevé code site : tél 06 partout ✅, adresse « 51 » (`company.ts`) | GBP (manuel, sauf adresse) → annuaires en pause (arbitrage adresse) | |

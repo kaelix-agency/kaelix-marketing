@@ -38,4 +38,7 @@ Chiffres consolidés uniquement (période complète, outil de référence). Sino
 
 ## ④ Ce dont nous avons besoin de votre côté
 
-- …
+Votre lien pour recueillir des avis Google : [lien court GBP — depuis nap.md]. Chaque avis renforce directement votre visibilité locale.
+
+<!-- Invariant 14 (zéro sollicitation) : cette section reste MINIMALE — la ligne avis, rien d'autre en régime courant. -->
+
