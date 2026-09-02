@@ -3,7 +3,7 @@
 | **Client** | Transports Ansquer |
 | **Période** | 2026-08 |
 | **Généré le** | 2026-08-28 (gabarit de mise en page — rapport réel à finaliser début 09/2026) |
-| **Statut** | 🕓 brouillon (mise en page ✅ validée au gate du 2026-08-28 — format standard KAELIX ; contenu à finaliser 1-3/09) |
+| **Statut** | ✅ validé le 2026-09-02 (gate opérateur — mise en page validée le 28/08, contenu validé le 02/09) ; envoi par l'opérateur → passage 📤 à confirmation |
 | **Sources** | tracking.md, content-plan.md, client-brief.md (journal), Haloscan (positions du 28/08) ; Search Console via Cuik : **non connectée** (différé) → aucune donnée clics/impressions ; GBP insights / BrightLocal : non fournis |
 | **Points à confirmer avant validation** | **Levés le 2026-09-02 (session de reprise)** : ✅ fiche Google → reformulée « reprise en main, mise à jour en cours » (checklist manuelle non finie, `nap.md`) · ✅ Bing → **retiré** (aucune trace, jamais fait) · ✅ Search Console → reformulée « propriété vérifiée » · ✅ 29-31/08 → aucune réalisation (aucun commit ni déploiement sur la période, vérifié) · ✅ lien avis relevé sur la fiche (`g.page/r/CSTJAaXNYqRfEBM/review`) → section ④ · ✅ adresse arbitrée (51, alignée fiche GBP). **Reste : aucun point client.** ⚠️ interne : « fin juillet » pour la mise en ligne reste approximatif (date exacte inconnue, formulation inchangée) |
 

@@ -7,10 +7,10 @@
 | # | Action | Origine | Échéance | Statut |
 |---|---|---|---|---|
 | 2 | **Checklist GBP, champs manuels restants** (`nap.md` : tél 06 partout, horaires avec coupure, catégorie « Société de transport routier », description ; ⛔ adresse : ne pas toucher — elle est la référence) | mission GBP 20/08 + gate rapport 08 | **cette semaine** — conditionne la ligne « fiche Google » du rapport d'août | 🕓 à faire |
-| 4 | **Valider le rapport d'août** (points restants levés le 02/09 par la session : adresse ✅, lien avis ✅, Bing retiré, formulations prudentes GBP/GSC ; reste : rien à confirmer côté client) → ✅ → `npm run report:pdf` → envoi → 📤 émis | gate mise en page 28/08 + reprise 02/09 | **cette semaine** | 🕓 à faire |
+| 4 | **Envoyer le rapport d'août à Martin** (✅ validé le 02/09, PDF final remis) puis dire « envoyé » → passage 📤 avec date | gate 02/09 | **cette semaine** | 🔧 en cours (envoi opérateur) |
 | 5 | **Planificateur Windows** : `/weekly-review` le lundi + `/report` le 1er du mois | décision 28/08 | quand l'opérateur donne le go | 🕓 à faire (en attente du go) |
 | 6 | Connexion **Cuik ↔ Search Console** (app.cuik.io, compte Google KAELIX ; étapes listées le 28/08) + indexation manuelle des 2 articles dans la GSC en attendant | mission Cuik 28/08 (différée) | différé — décision opérateur | ↪️ reporté (sans date) |
-| 7 | **GO / NO-GO sur la reco palettes** (ré-angle sans sollicitation vs glissement) + GO du `/research` comparatif P1 ⭐ | reprise 02/09 | avant le **07/09** (J-7 palettes) | 🕓 à faire |
+| 7 | ~~GO reco palettes + GO /research comparatif~~ | reprise 02/09 | — | ✅ fait (2026-09-02) : ré-angle palettes validé ; `/research` comparatif lancé |
 
 ## Actions retirées / closes
 
