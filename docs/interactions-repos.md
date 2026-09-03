@@ -36,7 +36,7 @@ Ce document explique **comment les deux mondes communiquent** : le repo marketin
 3. **Validation mécanique (repo du site)** : le build du site valide le frontmatter contre son schéma typé. Frontmatter invalide ou composant hors whitelist → build rouge → PR bloquée. Première ligne de défense, automatique.
 4. **Gate humain (toi)** : relecture de la PR — fond, voix, points « à confirmer » du fact-check, preview du rendu (le design du site s'applique ici). Merge.
 5. **Post-publication** : déploiement du site, vérif sitemap, soumission à l'indexation (Search Console).
-6. **Boucle retour dans le repo marketing** : ligne dans `tracking.md` (URL, date, typologie…). La performance reviendra ensuite par les MCP (Cuik/GSC, Haloscan) — le repo marketing observe les EFFETS sans jamais lire les repos clients.
+6. **Boucle retour dans le repo marketing** : ligne dans `tracking.md` (URL, date, typologie…). La performance reviendra ensuite par les MCP (gsc-fetch.mjs/GSC, Haloscan) — le repo marketing observe les EFFETS sans jamais lire les repos clients.
 
 ## 3. Qui doit connaître quoi
 
@@ -109,4 +109,4 @@ Techniquement plus simple, mais la PR **est** le gate : elle porte la validation
 - **Site hérité** (structure différente, pas de MDX) : le brief documente l'écart ; la publication peut être manuelle (copier le contenu rendu) le temps de la migration au standard. Le contrat reste l'objectif.
 - **Un composant manque sur un site** (article utilisant `<Quiz>` non implémenté) : comportement voulu = build rouge. Solutions : retirer le composant de l'article, ou l'implémenter côté site et incrémenter sa version de contrat dans le brief.
 - **Jamais de style dans le contenu** même « pour dépanner » : un besoin d'apparence = une évolution du template du site ou de la whitelist, pas un hack dans l'article.
-- **Le repo marketing ne lit pas les repos clients** pour son intelligence : la performance vient des MCP (GSC via Cuik, Haloscan), pas du code des sites. Seule exception : lister les contenus existants (`content/`) pour le maillage interne et l'anti-cannibalisation au moment de produire.
+- **Le repo marketing ne lit pas les repos clients** pour son intelligence : la performance vient des MCP (GSC via gsc-fetch.mjs, Haloscan), pas du code des sites. Seule exception : lister les contenus existants (`content/`) pour le maillage interne et l'anti-cannibalisation au moment de produire.
