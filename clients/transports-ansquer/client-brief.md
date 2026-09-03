@@ -197,7 +197,7 @@ Type `local` : pages service (×zone), fiche GBP, avis, citations. **Particulari
 
 | Outil | Connecté ? | Détail |
 |---|---|---|
-| Search Console (via Cuik MCP) | ✅ **propriété vérifiée** (TXT zone DNS OVH, début 08/2026 ; reconfirmée visuellement par l'opérateur le 2026-08-24) | propriété **Domaine** `transportsansquer.fr` sur le compte Google KAELIX. **Restent** : soumission du sitemap (**22 URLs** depuis la publication du 1er article le 2026-08-24) + surveillance 404 pendant 1 mois ; puis connexion OAuth à Cuik (vérifier avec `list_gsc_domains`) |
+| Search Console (**API directe**, `scripts/gsc-fetch.mjs` — remplace Cuik le 2026-09-03, rationnel §1.24) | ✅ propriété vérifiée (TXT OVH) ; 🕓 **compte de service GCP en cours de setup opérateur** (projet `kaelix-gsc`, clé hors repo, email du compte à ajouter en « Complet » sur la propriété) | propriété **Domaine** `transportsansquer.fr`. Dès la clé posée : baseline search analytics, `sitemaps`, `check404` (surveillance 404 du mois), inspection des 3 articles. Sitemap courant : 24 URLs |
 | Haloscan | ✅ requêtes à la demande | pas de projet suivi dédié pour l'instant (optionnel, côté interface Haloscan) |
 | PostHog | ❌ | non utilisé — ne pas invoquer |
 | GA4 / autre analytics | ❌ **décision : GSC seule** (2026-08-02) | site volontairement sans analytics ni cookies ; les conversions se comptent côté formulaire (emails Resend reçus). Réévaluation quand le trafic le justifiera |

@@ -60,6 +60,7 @@ $Allowed = @(
   "Bash(git status:*)", "Bash(git log:*)", "Bash(git diff:*)", "Bash(git add:*)",
   "Bash(git commit:*)", "Bash(git push:*)", "Bash(git pull:*)",
   "Bash(node scripts/generate-report-pdf.mjs:*)", "Bash(npm run report:pdf:*)",
+  "Bash(node scripts/gsc-fetch.mjs:*)",
   "Bash(curl:*)", "Bash(ls:*)", "Bash(cat:*)",
   "mcp__haloscan__*", "mcp__cuik__*"
 ) -join ","

@@ -13,11 +13,11 @@ Le cerveau marketing multi-clients de l'agence, piloté par Claude Code. Ce repo
 
 1. Clone ce repo, ouvre-le dans Claude Code.
 2. Copie `.env.example` → `.env` et renseigne les clés API.
-   ⚠️ **Vérifie les URLs des serveurs MCP dans `.mcp.json`** auprès de la documentation officielle de chaque outil (elles évoluent) : doc Haloscan, doc Cuik, doc PostHog. Ajuste `url`/`headers` selon leur méthode d'authentification (certains utilisent OAuth au lieu d'un Bearer token).
-3. **Serveurs configurés dans `.mcp.json` : Haloscan et Cuik** — les deux outils de référence, communs à tous les clients. **PostHog n'y est pas : il se configure au cas par cas**, uniquement pour les clients dont le `client-brief.md` §8 déclare une instance connectée (ajouter alors son entrée dans `.mcp.json` + la clé dans `.env`). Les commands n'invoquent PostHog que si le brief l'indique.
+   ⚠️ **Vérifie les URLs des serveurs MCP dans `.mcp.json`** auprès de la documentation officielle de chaque outil (elles évoluent) : doc Haloscan, doc PostHog. Ajuste `url`/`headers` selon leur méthode d'authentification (certains utilisent OAuth au lieu d'un Bearer token).
+3. **Serveur configuré dans `.mcp.json` : Haloscan** (référence positions). **La Search Console passe par l'API Google directe** : `scripts/gsc-fetch.mjs` + compte de service GCP (clé hors repo, §1.24 du rationnel). **PostHog n'y est pas : il se configure au cas par cas**, uniquement pour les clients dont le `client-brief.md` §8 déclare une instance connectée (ajouter alors son entrée dans `.mcp.json` + la clé dans `.env`). Les commands n'invoquent PostHog que si le brief l'indique.
 4. Lance `claude` dans le repo et vérifie que les MCP répondent (`/mcp`).
    ℹ️ Les clés doivent exister **avant** le lancement : un serveur MCP reçoit une copie figée de l'environnement au démarrage. Clés ajoutées en cours de session = redémarrer Claude Code, sinon les serveurs continuent avec une clé vide (erreurs 401/403).
-5. Prérequis côté comptes : accès Search Console des sites clients connecté dans Cuik ; projets créés dans Haloscan ; BrightLocal et fiches GBP gérés à part (ponts manuels).
+5. Prérequis côté comptes : email du compte de service GCP ajouté en « Complet » sur la propriété Search Console de chaque client ; projets créés dans Haloscan ; BrightLocal et fiches GBP gérés à part (ponts manuels).
 6. **Publication croisée** : `gh` (GitHub CLI) installé et authentifié — de préférence via un **fine-grained PAT restreint** aux seuls repos clients (`Contents: write` + `Pull requests: write`), exposé en `GH_TOKEN`. Détail et séquence type : `docs/interactions-repos.md` §5.
 
 ## 2. Onboarder un client
@@ -25,7 +25,7 @@ Le cerveau marketing multi-clients de l'agence, piloté par Claude Code. Ce repo
 ```
 /onboard-client mon-client local https://mon-client.fr
 ```
-La commande copie les gabarits, t'interroge (dont le statut **product-market fit** — pas de mission SEO sans PMF), déroule le **ciblage en 3 étapes** (mots-clés des concurrents → existant en positions 4-20 à pousser top 3 → nouveaux mots-clés par ordre de valeur), pose l'**architecture de contenu selon le type** (pour un SaaS : pages business avant le blog, free tools), fait la baseline technique (Cuik), formalise le NAP si local, et produit le `client-brief.md` + un plan des 5 premières actions.
+La commande copie les gabarits, t'interroge (dont le statut **product-market fit** — pas de mission SEO sans PMF), déroule le **ciblage en 3 étapes** (mots-clés des concurrents → existant en positions 4-20 à pousser top 3 → nouveaux mots-clés par ordre de valeur), pose l'**architecture de contenu selon le type** (pour un SaaS : pages business avant le blog, free tools), fait la baseline technique (état Search Console via `gsc-fetch.mjs` ; crawl à re-outiller), formalise le NAP si local, et produit le `client-brief.md` + un plan des 5 premières actions.
 
 **Le `client-brief.md` est l'actif le plus important du repo** : c'est lui qui donne la voix, les cibles, le ciblage et les données first-party à toutes les productions. Tiens-le à jour.
 
@@ -43,8 +43,8 @@ Enchaîne ensuite sur `/content-plan <client>` : l'onboarding donne les 5 premi�
 | Selon suivi | `/refresh <client> <url> <raison>` | correction ciblée — **refuse les contenus < 90 jours** (Google teste) ; même double PASS que `/write` |
 | Régulier (local) | `/gbp-post <client>` | brouillons de posts GBP, **tu publies** |
 | À chaque avis (local) | `/review-response <client>` | brouillon de réponse, **tu publies** (gate renforcé) |
-| **Hebdomadaire** | `/weekly-review <client>` | collecte (Cuik/Haloscan/PostHog + collages BrightLocal/GBP), diagnostic **hors fenêtre des 90 j**, équilibre du trafic, re-check bimestriel par typologie, plan d'action priorisé |
-| **Mensuel** | `/tech-audit <client>` | crawl complet, findings par sévérité, 3 priorités |
+| **Hebdomadaire** | `/weekly-review <client>` | collecte (gsc-fetch/Haloscan/PostHog + collages BrightLocal/GBP), diagnostic **hors fenêtre des 90 j**, équilibre du trafic, re-check bimestriel par typologie, plan d'action priorisé |
+| **Mensuel** | `/tech-audit <client>` | findings par sévérité, 3 priorités (⚠️ crawl complet à re-outiller depuis le retrait de Cuik — §1.24) |
 | **Mensuel** | `/report <client> <période>` | rapport de mise en valeur (travail + résultats + **santé du trafic**), **tu relis et envoies** |
 
 ## 4. Les skills (contrats qualité) et leur raison d'être
@@ -109,7 +109,7 @@ Les gabarits vides de tous ces fichiers vivent dans `clients/_template/` — `/o
 | Source | Accès | Utilisé par |
 |---|---|---|
 | Haloscan | MCP | research, onboard, weekly-review, report — **référence unique mots-clés/positions** |
-| Cuik (inclut données GSC) | MCP | onboard, tech-audit, weekly-review, report, refresh |
+| Search Console — API Google directe (`scripts/gsc-fetch.mjs`) | compte de service GCP (clé hors repo) | onboard, tech-audit, weekly-review, report, refresh — remplace Cuik (2026-09-03, §1.24) |
 | PostHog | MCP (si client équipé) | weekly-review, report |
 | BrightLocal (geo-grid, citations, avis) | **manuel** — tu colles l'export dans la session | weekly-review, report, nap.md |
 | Fiche GBP (posts, avis, insights) | **manuel** — tu publies/colles | gbp-post, review-response, report |
@@ -136,7 +136,7 @@ Ce repo est **isolé** des repos de sites. La publication traverse la frontière
 2. Claude Code dépose le fichier dans le repo du site client (`content/blog/` ou `content/zones/`, chemin dans le `client-brief.md`), branche `content/<slug>`, PR.
 3. Le **build du site valide le frontmatter** (schéma typé) : invalide = PR rouge (gate mécanique).
 4. **Tu merges** (gate humain) → le site rend l'article dans SON design : conteneur typographique (`prose`) pour les éléments Markdown (dont les **tables**), mapping MDX vers ses composants pour les blocs riches.
-5. Le suivi revient par les MCP (Cuik/GSC, Haloscan) — le repo marketing observe les effets sans lire les sites.
+5. Le suivi revient par l'API Search Console (`gsc-fetch.mjs`) et Haloscan — le repo marketing observe les effets sans lire les sites.
 
 Un nouveau site rejoint le standard en implémentant une fois le contrat (pipeline MDX + schéma + whitelist + JSON-LD) : voir `docs/interactions-repos.md` §4.
 

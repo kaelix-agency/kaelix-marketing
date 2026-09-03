@@ -6,7 +6,7 @@ Rapport mensuel pour `$ARGUMENTS`. Utilise la skill `client-report` (règles d'h
 
 1. **Collecte** :
    - Travail réalisé : `tracking.md` (contenus publiés, refreshes, posts GBP, réponses d'avis), `content-plan.md` (statuts), historique git du repo du site, `client-brief.md` (journal : GBP, GSC, citations, chantiers techniques).
-   - Résultats : Cuik MCP → Search Console (impressions, clics, positions, pages en progression, période vs période précédente) ; Haloscan MCP → positions des mots-clés cibles ; si local → me demander geo-grid/avis BrightLocal + insights GBP ; si PostHog → conversions attribuées (attribution première visite ; le blog est structurellement sous-attribué, l'expliquer).
+   - Résultats : **Search Console via `node scripts/gsc-fetch.mjs query`** (impressions, clics, positions, pages en progression — période vs période précédente : deux appels `--start/--end`) ; Haloscan MCP → positions des mots-clés cibles ; si local → me demander geo-grid/avis BrightLocal + insights GBP ; si PostHog → conversions attribuées (attribution première visite ; le blog est structurellement sous-attribué, l'expliquer).
    - **Un outil indisponible ou non connecté = « données non disponibles ce mois » dans le rapport**, jamais une estimation.
    - **Mode planifié** (session headless du Planificateur, §1.22 du rationnel) : produire le brouillon md + son PDF avec les **données disponibles**, tous les manques listés en « Points à confirmer » du bandeau — **jamais de blocage, jamais d'invention, jamais de question**. Le statut reste 🕓 brouillon ; validation, PDF final et émission appartiennent à l'opérateur (l'issue GitHub créée par le wrapper est sa notification).
 2. **Rédaction — structure client imposée, zéro jargon SEO**, en 2-3 pages :

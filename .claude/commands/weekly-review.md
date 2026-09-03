@@ -6,7 +6,7 @@ Revue hebdo pour `$ARGUMENTS`.
 
 1. Lis `clients/<slug>/client-brief.md`, `tracking.md` (le réalisé) et `content-plan.md` s'il existe (le prévu) — les sujets au statut **« prévu »** du mois en cours sont la matière première du plan d'action de l'étape 7. Si aucun plan éditorial n'existe encore, le signaler : la weekly exécute un plan, elle n'en tient pas lieu.
 2. **Collecte** :
-   - Cuik MCP → données Search Console : impressions, clics, CTR, position par URL/requête (7 et 28 derniers jours).
+   - **Search Console (API directe)** → `node scripts/gsc-fetch.mjs query --days 7` et `--days 28` (par page, puis `--dimension query` ; `--filter-page /blog/` pour isoler les articles) : impressions, clics, CTR, position. `node scripts/gsc-fetch.mjs sitemaps` + `check404` (surveillance 404). Clé absente ou API en erreur → « ⚠️ contrôle empêché » avec la raison, jamais d'invention.
    - Haloscan MCP → positions des mots-clés suivis, cannibalisations détectées.
    - Si le brief indique PostHog → PostHog MCP : sessions, conversions attribuées au contenu.
    - Si client local → demande-moi de coller le geo-grid/avis BrightLocal et les insights GBP avant de conclure.
@@ -15,7 +15,7 @@ Revue hebdo pour `$ARGUMENTS`.
    - fortes impressions + faible CTR → refresh title/meta ;
    - bloqué positions 4-20 → **gisement prioritaire** : approfondir/mailler pour viser le top 3 (hors top 3, très peu de trafic) ;
    - cannibalisation → fusion ;
-   - chute brutale → vérifier technique (Cuik) ;
+   - chute brutale → vérifier technique (`gsc-fetch.mjs check404` + `inspect` de l'URL ; crawl complet à re-outiller, §1.24) ;
    - contenu en érosion selon sa typologie → voir re-check ci-dessous.
 5. **Re-check bimestriel par typologie** : ~1 semaine sur 8, passe en revue les contenus publiés selon leur colonne `typologie` dans tracking.md — `actu` : l'actualité a-t-elle évolué ? `guide` : informations manquantes à compléter (nouveaux outils/pratiques sortis) ? `evergreen` : rien sauf érosion. ~80 % de l'article reste identique ; on complète, on ne réécrit pas.
 6. **Équilibre du trafic** : signale si 3-4 pages concentrent >60-70 % du trafic SEO (fragilité — une page qui tombe = trafic mort) ou si le SEO dépasse ~60 % du trafic total du client (dépendance à une source unique).
