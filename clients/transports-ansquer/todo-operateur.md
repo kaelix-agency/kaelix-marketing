@@ -9,7 +9,9 @@
 | 2 | **Checklist GBP, champs manuels restants** (`nap.md` : tél 06 partout, horaires avec coupure, catégorie « Société de transport routier », description ; ⛔ adresse : ne pas toucher — elle est la référence) | mission GBP 20/08 + gate rapport 08 | **cette semaine** — conditionne la ligne « fiche Google » du rapport d'août | 🕓 à faire |
 | 4 | **Envoyer le rapport d'août à Martin** (✅ validé le 02/09, PDF final remis) puis dire « envoyé » → passage 📤 avec date | gate 02/09 | **cette semaine** | 🔧 en cours (envoi opérateur) |
 | 5 | ~~Planificateur Windows~~ | décision 28/08 | — | ✅ **fait (2026-09-02)** : chantier exécuté — `scripts/run-scheduled.ps1`, tâches « KAELIX - Weekly » (lundi 07:30, 1er run 07/09) et « KAELIX - Report mensuel » (le 1er, 08:00), diagnostic test 7/7 PASS. Nouveau rôle opérateur : lire l'issue GitHub → valider → fermer |
-| 6 | ~~Connexion Cuik ↔ GSC~~ → **REMPLACÉ le 2026-09-03** (identifiants Cuik perdus, décision : API directe, §1.24) par : **setup GCP** (guide fourni par la session : projet `kaelix-gsc`, API Search Console activée, compte de service + clé JSON posée en `C:\Users\Axel\.kaelix\gsc-service-account.json`, email du compte ajouté « Complet » sur la propriété) → puis la session fait le test réel + l'inspection des 3 articles | chantier GSC directe 03/09 | **cette semaine** — conditionne les métriques de la weekly du 07/09 | 🕓 à faire (opérateur : setup navigateur) |
+| 6 | ~~Setup GSC directe~~ | chantier GSC 03/09 | — | ✅ **fait (2026-09-03)** : compte de service créé (gates opérateur ×3), clé sécurisée hors repo, accès « Complet », test réel OK — **la weekly du 07/09 aura des métriques GSC réelles** |
+| 8 | **Demander l'indexation des articles 2 et 3 par le bouton GSC** (inspection d'URL → « Demander l'indexation ») : `/blog/empotage-depotage-conteneur/` et `/blog/transport-dedie-messagerie-ou-coursier/` — inconnus de Google au 03/09 (J+6/J+1) et l'Indexing API refuse (403, propriété déléguée requise ; de toute façon réservée JobPosting). L'article 1 est déjà **indexé** | test GSC 03/09 | cette semaine (accélère ; sinon le sitemap soumis fera le travail) | 🕓 à faire |
+| 9 | **Décider du sort de l'ancien sitemap** `page-sitemap.xml` (WordPress 2022, 1 erreur, 0 indexé) : le retirer de GSC (`node scripts/gsc-fetch.mjs delete-sitemap https://transportsansquer.fr/page-sitemap.xml`) ou le laisser mourir | test GSC 03/09 | sans urgence | 🕓 à faire |
 | 7 | ~~GO reco palettes + GO /research comparatif~~ | reprise 02/09 | — | ✅ fait (2026-09-02) : ré-angle palettes validé ; `/research` comparatif lancé |
 
 ## Actions retirées / closes
@@ -25,3 +27,4 @@
 |---|---|
 | 2026-08-28 | Création (gate mise en page du rapport) : 5 actions initialisées + Cuik différé reporté sans date |
 | 2026-09-02 | Doctrine zéro sollicitation : #1 retirée ; #3 close (arbitrage 51 exécuté, relevé fiche via Chrome) ; #4 allégée (points levés par la session) ; #7 ajoutée (GO palettes + GO /research comparatif) |
+| 2026-09-03 | Chantier GSC directe execute : #6 fait, #8 (indexation bouton GSC art. 2-3) et #9 (sort ancien sitemap) ajoutees |

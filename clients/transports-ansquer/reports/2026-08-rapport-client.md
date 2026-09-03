@@ -3,7 +3,7 @@
 | **Client** | Transports Ansquer |
 | **Période** | 2026-08 |
 | **Généré le** | 2026-08-28 (gabarit de mise en page — rapport réel à finaliser début 09/2026) |
-| **Statut** | ✅ validé le 2026-09-02 (gate opérateur — mise en page validée le 28/08, contenu validé le 02/09) ; envoi par l'opérateur → passage 📤 à confirmation |
+| **Statut** | ✅ validé le 2026-09-02 (gate opérateur) ; **correction factuelle post-validation le 03/09, avant émission** : la ligne « plan du site transmis à Google » retirée — le branchement GSC direct a révélé que seul l'ancien sitemap WordPress (2022) était soumis ; le sitemap courant a été soumis le 03/09 (couvert par « branchement complet des outils » du §③). PDF regénéré ; envoi opérateur → 📤 à confirmation |
 | **Sources** | tracking.md, content-plan.md, client-brief.md (journal), Haloscan (positions du 28/08) ; Search Console via Cuik : **non connectée** (différé) → aucune donnée clics/impressions ; GBP insights / BrightLocal : non fournis |
 | **Points à confirmer avant validation** | **Levés le 2026-09-02 (session de reprise)** : ✅ fiche Google → reformulée « reprise en main, mise à jour en cours » (checklist manuelle non finie, `nap.md`) · ✅ Bing → **retiré** (aucune trace, jamais fait) · ✅ Search Console → reformulée « propriété vérifiée » · ✅ 29-31/08 → aucune réalisation (aucun commit ni déploiement sur la période, vérifié) · ✅ lien avis relevé sur la fiche (`g.page/r/CSTJAaXNYqRfEBM/review`) → section ④ · ✅ adresse arbitrée (51, alignée fiche GBP). **Reste : aucun point client.** ⚠️ interne : « fin juillet » pour la mise en ligne reste approximatif (date exacte inconnue, formulation inchangée) |
 
@@ -24,7 +24,7 @@ Août a été le mois des fondations : le nouveau site est en place, les outils 
 | Article : **mettre en place une tournée de livraison régulière** (avec le schéma de votre tournée du mardi) | 24 août | [lire l'article](https://transportsansquer.fr/blog/tournee-livraison-reguliere/) |
 | Article : **empotage et dépotage de conteneur, le guide du chargeur** (vos durées réelles, le conteneur de 9 000 colis) | 28 août | [lire l'article](https://transportsansquer.fr/blog/empotage-depotage-conteneur/) |
 | Fiche Google Business : accès repris par KAELIX, relevé complet et mise à jour engagée (téléphone, horaires, catégorie, description) | 20-28 août | [votre fiche Google](https://g.page/r/CSTJAaXNYqRfEBM) |
-| Google Search Console : propriété transportsansquer.fr vérifiée ; plan du site (23 pages) transmis à Google | août | outil de mesure (interne) |
+| Google Search Console : propriété transportsansquer.fr vérifiée auprès de Google | août | outil de mesure (interne) |
 
 Chaque article repose sur des informations qui n'existent que chez vous : la tournée du mardi, le seuil « une fois par semaine », les durées de dépotage selon le contenu, l'anticipation de main-d'œuvre. C'est ce qui le rend impossible à copier par un concurrent.
 

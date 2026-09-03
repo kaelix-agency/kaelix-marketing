@@ -23,7 +23,10 @@ import { createSign } from "node:crypto";
 import { homedir } from "node:os";
 import { join } from "node:path";
 
-const DEFAULT_SITE = "sc-domain:transportsansquer.fr";
+// Constat du 2026-09-03 (mission clé) : la propriété réellement vérifiée sur le compte
+// KAELIX est le PRÉFIXE D'URL https://transportsansquer.fr/ (le sc-domain: renvoie
+// « pas d'accès »). Le brief §8 est corrigé en conséquence.
+const DEFAULT_SITE = "https://transportsansquer.fr/";
 const args = process.argv.slice(2);
 const cmd = args[0];
 const opt = (name, dflt) => {
@@ -160,11 +163,20 @@ async function cmdCheck404() {
     sources = [...conf.matchAll(/from:\s*["'`]([^"'`]+)["'`]/g)].map((m) => m[1]).filter((s) => !s.includes(":") && !s.includes("*"));
   } catch { console.log("⚠️ next.config du repo site illisible — anciennes URLs non testées"); }
   console.log(`# check404 — ${sources.length} anciennes URLs (redirections WordPress du next.config)`);
+  // Convention du site : les URL WordPress historiques se terminent par un slash
+  // (next.config, trailingSlash: true) — on teste donc la forme AVEC slash, et on
+  // suit la chaîne jusqu'à 3 sauts (une chaîne > 1 saut est signalée en avertissement).
   for (const s of sources) {
-    const r = await head(base + s);
-    if (![301, 308].includes(r.status)) { anomalies.push(`ANCIENNE ${r.status} ${base + s} (attendu 308)`); continue; }
-    const r2 = await head(new URL(r.location, base).href);
-    if (r2.status !== 200) anomalies.push(`ANCIENNE ${base + s} -> ${r.location} répond ${r2.status} (chaîne cassée)`);
+    let url = base + s + "/";
+    let hops = 0, r;
+    while (hops < 4) {
+      r = await head(url);
+      if (![301, 302, 307, 308].includes(r.status)) break;
+      url = new URL(r.location, url).href;
+      hops++;
+    }
+    if (r.status !== 200) anomalies.push(`ANCIENNE ${base + s}/ -> ${r.status} après ${hops} saut(s) (chaîne cassée ou 404)`);
+    else if (hops > 1) anomalies.push(`AVERTISSEMENT chaîne ${base + s}/ -> ${hops} sauts avant 200 (dilue le signal)`);
   }
   if (!anomalies.length) console.log("✅ Aucune anomalie : sitemap 200 partout, anciennes URLs en 308 vers des 200.");
   else { console.log(`⚠️ ${anomalies.length} anomalie(s) :`); anomalies.forEach((a) => console.log("  " + a)); process.exitCode = 1; }
@@ -185,8 +197,27 @@ async function cmdRequestIndexing() {
   }
 }
 
+async function cmdSubmitSitemap() {
+  const sm = positionals.find((u) => u.startsWith("http")) || "https://transportsansquer.fr/sitemap.xml";
+  const { token } = await getToken(["https://www.googleapis.com/auth/webmasters"]);
+  const r = await fetch(`https://www.googleapis.com/webmasters/v3/sites/${enc(site)}/sitemaps/${enc(sm)}`, {
+    method: "PUT", headers: { authorization: `Bearer ${token}` },
+  });
+  console.log(`submit ${sm} -> HTTP ${r.status}${r.ok ? " (soumis)" : " " + (await r.text()).slice(0, 200)}`);
+}
+
+async function cmdDeleteSitemap() {
+  const sm = positionals.find((u) => u.startsWith("http"));
+  if (!sm) { console.error("Usage: delete-sitemap <url-du-sitemap>"); process.exit(1); }
+  const { token } = await getToken(["https://www.googleapis.com/auth/webmasters"]);
+  const r = await fetch(`https://www.googleapis.com/webmasters/v3/sites/${enc(site)}/sitemaps/${enc(sm)}`, {
+    method: "DELETE", headers: { authorization: `Bearer ${token}` },
+  });
+  console.log(`delete ${sm} -> HTTP ${r.status}${r.ok ? " (retiré de GSC — le fichier lui-même n'est pas touché)" : " " + (await r.text()).slice(0, 200)}`);
+}
+
 // ---------------------------------------------------------------- dispatch
-const table = { query: cmdQuery, inspect: cmdInspect, sitemaps: cmdSitemaps, check404: cmdCheck404, "request-indexing": cmdRequestIndexing };
+const table = { query: cmdQuery, inspect: cmdInspect, sitemaps: cmdSitemaps, check404: cmdCheck404, "request-indexing": cmdRequestIndexing, "submit-sitemap": cmdSubmitSitemap, "delete-sitemap": cmdDeleteSitemap };
 if (!table[cmd]) {
   console.error("Commandes : query · inspect · sitemaps · check404 · request-indexing (voir l'en-tête du fichier)");
   process.exit(1);
