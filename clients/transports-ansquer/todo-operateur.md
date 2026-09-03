@@ -7,7 +7,7 @@
 | # | Action | Origine | Échéance | Statut |
 |---|---|---|---|---|
 | 2 | **Checklist GBP, champs manuels restants** (`nap.md` : tél 06 partout, horaires avec coupure, catégorie « Société de transport routier », description ; ⛔ adresse : ne pas toucher — elle est la référence) | mission GBP 20/08 + gate rapport 08 | **cette semaine** — conditionne la ligne « fiche Google » du rapport d'août | 🕓 à faire |
-| 4 | **Envoyer le rapport d'août à Martin** (✅ validé le 02/09, PDF final remis) puis dire « envoyé » → passage 📤 avec date | gate 02/09 | **cette semaine** | 🔧 en cours (envoi opérateur) |
+| 4 | ~~Envoyer le rapport d'août~~ | gate 02/09 | — | ✅ **fait** : 📤 émis le 03/09 (PDF v2), fichier figé |
 | 5 | ~~Planificateur Windows~~ | décision 28/08 | — | ✅ **fait (2026-09-02)** : chantier exécuté — `scripts/run-scheduled.ps1`, tâches « KAELIX - Weekly » (lundi 07:30, 1er run 07/09) et « KAELIX - Report mensuel » (le 1er, 08:00), diagnostic test 7/7 PASS. Nouveau rôle opérateur : lire l'issue GitHub → valider → fermer |
 | 6 | ~~Setup GSC directe~~ | chantier GSC 03/09 | — | ✅ **fait (2026-09-03)** : compte de service créé (gates opérateur ×3), clé sécurisée hors repo, accès « Complet », test réel OK — **la weekly du 07/09 aura des métriques GSC réelles** |
 | 8 | **Demander l'indexation des articles 2 et 3 par le bouton GSC** (inspection d'URL → « Demander l'indexation ») : `/blog/empotage-depotage-conteneur/` et `/blog/transport-dedie-messagerie-ou-coursier/` — inconnus de Google au 03/09 (J+6/J+1) et l'Indexing API refuse (403, propriété déléguée requise ; de toute façon réservée JobPosting). L'article 1 est déjà **indexé** | test GSC 03/09 | cette semaine (accélère ; sinon le sitemap soumis fera le travail) | 🕓 à faire |

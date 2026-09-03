@@ -21,5 +21,5 @@ Deux types de livrables cohabitent ici, avec des régimes différents — **ne j
 | Fichier | Type | Période | Statut |
 |---|---|---|---|
 | [`2026-08-28-revue-hebdo.md`](./2026-08-28-revue-hebdo.md) | revue hebdo (1re du client) | semaine du 24/08 au 28/08/2026 | interne — ✅ validée le 28/08 |
-| [`2026-08-rapport-client.md`](./2026-08-rapport-client.md) · [PDF](./2026-08-rapport-client.pdf) | rapport client | 2026-08 | ✅ **validé le 02/09** (gate opérateur) — PDF final généré, remis à l'opérateur pour envoi ; passage 📤 à sa confirmation |
+| [`2026-08-rapport-client.md`](./2026-08-rapport-client.md) · [PDF](./2026-08-rapport-client.pdf) | rapport client | 2026-08 | 📤 **émis le 03/09** (v2 corrigée pré-émission : ligne sitemap) — **figé** |
 | [`2026-09-02-revue-hebdo.md`](./2026-09-02-revue-hebdo.md) | revue hebdo (manuelle — Planificateur non posé) | S36, 29/08-02/09 | interne — 🕓 brouillon |
