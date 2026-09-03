@@ -54,6 +54,14 @@
 - **Formulation publique du week-end** : « interventions exceptionnelles le week-end sur demande » — jamais présentée comme une astreinte ni un service permanent (interdit client du 28/07/2026). Côté schema : le week-end reste SANS `openingHoursSpecification` (fermé) ; la mention vit dans le texte, pas dans les horaires structurés.
 - **Fermetures exceptionnelles** : à renseigner.
 
+## 2 bis. Description GBP — texte de référence (✅ validé opérateur, 2026-09-03)
+
+> Texte canonique du champ « Description » de la fiche. Rédigé par la session le 2026-09-03 (aucun texte n'existait), **validé au gate avec un amendement** : « Réponse sous 24 heures » (et non « Devis sous 24 heures ») — alignement exact sur la promesse du site, cohérence NAP des engagements. Véracité : 300 m² / 2 quais = first-party tracé (brief §7), 2021 = l'entreprise / 23 ans = le dirigeant, registre **sans numéro**, zéro interdit (pas de flotte, pas de 24/7, pas de tarif, pas de cadratin). À coller tel quel ; toute modification repasse par un gate.
+
+```
+Transporteur et prestataire logistique implanté au cœur du port de Gennevilliers, Transports Ansquer accompagne les entreprises d'Île-de-France : livraisons en véhicules légers avec hayon, tournées régulières, courses urgentes, affrètement France et Europe, dépotage et empotage de conteneurs, stockage et préparation de commandes dans un entrepôt de 300 m² à deux quais. Fondée en 2021 par un professionnel comptant 23 ans de métier, l'entreprise est inscrite au registre des commissionnaires de transport. Réponse sous 24 heures.
+```
+
 ## 3. Catégories GBP
 
 ⚠️ Propositions à valider — relever d'abord les libellés EXACTS actuels de la fiche.
@@ -130,5 +138,6 @@
 | 2026-08-06 | Horaires réels reçus (entretien client) : 7h30-12h30 / 13h30-16h00, lun-ven supposé. Écart 24/7 du schema site documenté → chantier site en brouillon | schema site (chantier à émettre) → GBP (dès accès) → annuaires (aucune citation soumise encore) | |
 | 2026-08-06 (2) | Reconfirmation client : sam-dim fermés sauf demande exceptionnelle (formulation publique cadrée, jamais « astreinte ») + **SIRET 90069725100016** reçu. Chantier schema passé « prêt à émettre » | schema site (émission imminente) → GBP (dès accès) → annuaires | |
 | 2026-08-06 (3) | **Écart schema 24/7 résolu** : PR #2 du repo site mergée (`dbf5e14`) et déployée, JSON-LD + mention /contact/ vérifiés en ligne. Horaires canoniques de ce fichier = source appliquée au site | schema site ✅ → GBP (dès accès) → annuaires | 2026-08-06 |
+| 2026-09-03 | **Description GBP validée** (gate opérateur, amendement « Réponse sous 24 heures ») → §2 bis, texte de référence à coller tel quel lors de la checklist manuelle (#2b) | GBP (collage manuel opérateur) | |
 | 2026-09-02 | **Arbitrage adresse rendu** (décision opérateur : alignement sur la fiche GBP) : relevé effectif du panneau Google via Chrome = « Quai 8, **51** Rte Principale du Port Bât G1 » → canonique = **51**. Site déjà à 51 (aucune PR) ; annuaires à aligner à la campagne citations (Mappy = 49). **Lien court d'avis relevé** : `g.page/r/CSTJAaXNYqRfEBM/review` → intégré à la ligne avis permanente du rapport mensuel (doctrine zéro sollicitation, invariant 14) | citations débloquées sur l'adresse | 2026-09-02 |
 | 2026-08-20 | **Mission GBP (via Chrome, compte KAELIX gestionnaire — accès effectif constaté)** : relevés fiche (nom ✅ « Transports Ansquer » ; tél ⚠️ 01 41 21 07 69 ; horaires ⚠️ sans coupure ; catégorie « Service logistique » ; description vide). **Aucune modification appliquée** (blocage captures Chrome) → exécution manuelle listée. Décisions opérateur : tél canonique = 06 partout ; **adresse fiche GBP : ne jamais modifier** (éviter re-vérification) ; adresse canonique **à arbitrer** (client déclare 49 ; site affiche 51 ; annuaires 49) — encadré §1. Relevé code site : tél 06 partout ✅, adresse « 51 » (`company.ts`) | GBP (manuel, sauf adresse) → annuaires en pause (arbitrage adresse) | |
