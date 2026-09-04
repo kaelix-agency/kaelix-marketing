@@ -19,6 +19,7 @@ marketing-repo/
 │   ├── _template/             ← gabarits à copier pour chaque nouveau client
 │   │   ├── client-brief.md    ← stratégie marketing/commerciale + marque + ciblage SEO
 │   │   ├── nap.md             ← NAP source de vérité (clients locaux uniquement)
+│   │   ├── citations.md       ← campagne citations NAP (clients locaux) : plan, audits, blocs prêts-à-coller — soumissions = opérateur (§1.25)
 │   │   ├── tracking.md        ← suivi des contenus (typologie, checkpoints, re-checks)
 │   │   ├── content-plan.md    ← plan éditorial pluri-mois (clusters + sujets datés)
 │   │   ├── todo-operateur.md  ← actions qui attendent l'OPÉRATEUR (pas le système) — maintenue à chaque weekly et à chaque gate
@@ -30,6 +31,8 @@ marketing-repo/
 │       ├── icp.md             ← profil d'ENTREPRISE cible (skill `icp`) — source de vérité, non dupliquée dans le brief
 │       ├── personas.md        ← les PERSONNES dans ces entreprises (skill `personas`) — idem
 │       ├── content-plan.md    ← carte du PRÉVU : clusters, sujets par mois, statuts. **Document vivant** (≠ figé) : jamais re-généré, aucune ligne effacée — un sujet abandonné change de statut
+│       ├── citations.md       ← campagne citations NAP (local) ; contrôle mensuel au 1er lundi
+│       ├── avis.md            ← registre des avis (local) : base du circuit détection → brouillon → issue GitHub → gate → publication (jamais automatique)
 │       ├── todo-operateur.md  ← to-do de l'opérateur : [action | origine | échéance | statut] ; alimentée par `/weekly-review` (étape 11) et la section ④ du `/report`
 │       ├── prompts/           ← prompts d'exécution pour le repo du site : 1 fichier daté par prompt (`YYYY-MM-DD-<slug>.md`) + index README ; jamais d'append à un prompt existant
 │       ├── reports/           ← livrables de suivi historisés : revues hebdo (`YYYY-MM-DD-revue-hebdo.md`, internes) + rapports mensuels client (`YYYY-MM-rapport-client.md`, statut brouillon→validé→envoyé ; figé après envoi) + index README

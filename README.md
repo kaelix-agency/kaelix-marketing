@@ -93,6 +93,8 @@ clients/<slug>/
 ├── icp.md            ← profil d'ENTREPRISE cible (skill icp) — le brief pointe dessus, ne le duplique pas
 ├── personas.md       ← les PERSONNES dans ces entreprises (skill personas) — idem
 ├── nap.md            ← coordonnées canoniques (clients locaux)
+├── citations.md      ← campagne citations NAP (local) : plan + audits + blocs prêts-à-coller ; soumissions = opérateur
+├── avis.md           ← registre des avis (local) : détection auto, brouillons, publication toujours gatée
 ├── content-plan.md   ← plan éditorial pluri-mois : la carte du PRÉVU (document vivant, statuts par sujet)
 ├── tracking.md       ← journal du RÉALISÉ (typologie, persona), checkpoints 30/60/90j, re-checks bimestriels, paris émergents
 ├── todo-operateur.md ← actions qui attendent l'opérateur (contact client, validations, arbitrages), maintenue à chaque weekly et gate
