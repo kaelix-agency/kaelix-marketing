@@ -23,3 +23,4 @@ Deux types de livrables cohabitent ici, avec des régimes différents — **ne j
 | [`2026-08-28-revue-hebdo.md`](./2026-08-28-revue-hebdo.md) | revue hebdo (1re du client) | semaine du 24/08 au 28/08/2026 | interne — ✅ validée le 28/08 |
 | [`2026-08-rapport-client.md`](./2026-08-rapport-client.md) · [PDF](./2026-08-rapport-client.pdf) | rapport client | 2026-08 | 📤 **émis le 03/09** (v2 corrigée pré-émission : ligne sitemap) — **figé** |
 | [`2026-09-02-revue-hebdo.md`](./2026-09-02-revue-hebdo.md) | revue hebdo (manuelle — Planificateur non posé) | S36, 29/08-02/09 | interne — 🕓 brouillon |
+| [`2026-09-07-revue-hebdo.md`](./2026-09-07-revue-hebdo.md) | revue hebdo (**1re produite par le Planificateur** — GSC réelle 7 j / 28 j ; Haloscan 403 et fiche GBP empêchés) | S37, 31/08-06/09 | interne — 🕓 brouillon |
