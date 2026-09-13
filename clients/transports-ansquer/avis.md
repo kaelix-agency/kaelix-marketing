@@ -11,7 +11,7 @@
 
 | # | Date relevé | Auteur | Note | Texte (verbatim) | Publié ~ | Réponse | Statut |
 |---|---|---|---|---|---|---|---|
-| 1 | 2026-09-04 | gilles doucet (Local Guide) | 4/5 | « Bon accueil et chargement rapide » (visité en octobre 2025) | il y a ~10 mois (≈ 11/2025) | brouillon ci-dessous — **issue GitHub #3** : ✅ **GO opérateur le 2026-09-04** (issue fermée avec le commentaire « Publie ») | 🔧 validée, **publication en attente** — tentative Chrome du 2026-09-13 (ordre opérateur « publie l'avis gilles ») : **extension non connectée (2 échecs)** → texte final remis à l'opérateur pour collage ; passer à 📤 dès confirmation |
+| 1 | 2026-09-04 | gilles doucet (Local Guide) | 4/5 | « Bon accueil et chargement rapide » (visité en octobre 2025) | il y a ~10 mois (≈ 11/2025) | brouillon ci-dessous — **issue GitHub #3** : ✅ **GO opérateur le 2026-09-04** (issue fermée avec le commentaire « Publie ») | 🔧 validée, **publication en attente** — tentative Chrome du 2026-09-13 (ordre opérateur « publie l'avis gilles ») : **extension non connectée (2 échecs)**, puis 2e tentative extension active : panneau Search = iframe illisible, Maps = bouton « Répondre » cliquable mais formulaire dans une fenêtre hors de portée de l'extension → texte final remis à l'opérateur pour collage ; passer à 📤 dès confirmation |
 
 ## Brouillons de réponse
 
