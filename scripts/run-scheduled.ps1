@@ -43,6 +43,19 @@ Set-Location $Repo
 if (-not (Test-Path $LogDir)) { New-Item -ItemType Directory -Path $LogDir | Out-Null }
 Log "=== Mission '$Mission' - demarrage (repo: $Repo) ==="
 
+# --- Cle Haloscan : le bloc env de .claude/settings.local.json alimente les serveurs MCP
+#     en session interactive mais PAS en `claude -p` (constat 2026-09-13 : 403 Haloscan sur
+#     tous les appels a la weekly S37, compte pourtant sain). On exporte donc la cle nous-memes,
+#     depuis la meme source de verite (fichier gitignore ; jamais de copie de la cle ailleurs).
+if (-not $env:HALOSCAN_API_KEY) {
+  $settingsLocal = Join-Path $Repo ".claude\settings.local.json"
+  try {
+    $k = (Get-Content $settingsLocal -Raw -Encoding utf8 | ConvertFrom-Json).env.HALOSCAN_API_KEY
+    if ($k) { $env:HALOSCAN_API_KEY = ([string]$k).Trim(); Log "cle Haloscan: chargee depuis .claude/settings.local.json" }
+  } catch {}
+  if (-not $env:HALOSCAN_API_KEY) { Log "AVERTISSEMENT: cle Haloscan introuvable (bloc env de .claude/settings.local.json) - le MCP haloscan repondra 403" }
+}
+
 # --- Jeton GitHub : gestionnaire d'identifiants Git (gh n'est pas connecte sur ce poste)
 function Get-GhToken {
   $out = "protocol=https`nhost=github.com`n`n" | git credential fill 2>$null
@@ -62,7 +75,7 @@ $Allowed = @(
   "Bash(node scripts/generate-report-pdf.mjs:*)", "Bash(npm run report:pdf:*)",
   "Bash(node scripts/gsc-fetch.mjs:*)",
   "Bash(curl:*)", "Bash(ls:*)", "Bash(cat:*)",
-  "mcp__haloscan__*", "mcp__cuik__*"
+  "mcp__haloscan__*"   # (Cuik retire le 2026-09-03, rationnel 1.24)
 ) -join ","
 
 # --- Mission TEST : diagnostic PASS/FAIL, ne genere rien -------------------------------
@@ -78,7 +91,13 @@ if ($Mission -eq "test") {
   Check "claude CLI" ([bool]$cv) "$cv"
   $mcp = ""; try { $mcp = (& claude mcp list) 2>&1 | Out-String } catch {}
   Check "MCP haloscan" ($mcp -match "haloscan.*Connected") ".mcp.json + enabledMcpjsonServers"
-  Check "MCP cuik" ($mcp -match "cuik.*Connected") ".mcp.json + enabledMcpjsonServers"
+  # Un serveur MCP "Connected" sans cle passe le test precedent : on verifie la cle par un VRAI appel
+  # credit, par le meme chemin que les missions reelles (claude -p + liste blanche).
+  Check "cle Haloscan chargee" ([bool]$env:HALOSCAN_API_KEY) "bloc env de .claude/settings.local.json"
+  $hp = Start-Process -FilePath "claude" -ArgumentList @('-p', '"Appelle mcp__haloscan__get_user_credit et reponds uniquement par le nombre totalCredit.creditKeyword (sinon le message exact renvoye)"', '--allowedTools', '"mcp__haloscan__*"', '--max-turns', '3') -WorkingDirectory $Repo -NoNewWindow -PassThru -RedirectStandardOutput "$LogDir\test-haloscan.out" -RedirectStandardError "$LogDir\test-haloscan.err"
+  $hdone = $hp.WaitForExit(240000); if (-not $hdone) { $hp.Kill() }
+  $hout = ""; if (Test-Path "$LogDir\test-haloscan.out") { $hout = Get-Content "$LogDir\test-haloscan.out" -Raw }
+  Check "Haloscan appel credit headless" ($hdone -and ($hout -match "\d{2,}") -and ($hout -notmatch "403|[Ee]rror|erreur")) ("sortie: " + ($hout.Trim() -replace "`r?`n", " "))
   $tok = Get-GhToken
   $ghOk = $false; $login = ""
   if ($tok) { $env:GH_TOKEN = $tok; try { $login = (& gh api user -q .login) 2>&1; $ghOk = ($LASTEXITCODE -eq 0) } catch {}; Remove-Item Env:GH_TOKEN -ErrorAction SilentlyContinue }
