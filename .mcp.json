@@ -4,7 +4,7 @@
       "command": "npx",
       "args": [
         "-y",
-        "@occirank/haloscan-server",
+        "@occirank/haloscan-server@2.0.21",
         "start"
       ],
       "env": {

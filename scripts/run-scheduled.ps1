@@ -56,6 +56,12 @@ if (-not $env:HALOSCAN_API_KEY) {
   if (-not $env:HALOSCAN_API_KEY) { Log "AVERTISSEMENT: cle Haloscan introuvable (bloc env de .claude/settings.local.json) - le MCP haloscan repondra 403" }
 }
 
+# --- Delai de demarrage des serveurs MCP : 30 s par defaut, depasse par npx @occirank/haloscan-server
+#     au reveil du poste (weekly S38 du 2026-09-14 : timeout de connexion, cle pourtant chargee).
+#     Version du paquet epinglee dans .mcp.json (plus de resolution registry) + delai porte a 120 s.
+if (-not $env:MCP_TIMEOUT) { $env:MCP_TIMEOUT = "120000" }
+Log "MCP_TIMEOUT = $env:MCP_TIMEOUT ms"
+
 # --- Jeton GitHub : gestionnaire d'identifiants Git (gh n'est pas connecte sur ce poste)
 function Get-GhToken {
   $out = "protocol=https`nhost=github.com`n`n" | git credential fill 2>$null
@@ -111,7 +117,8 @@ if ($Mission -eq "test") {
 }
 
 # --- Missions reelles : une session claude -p par client -------------------------------
-$IsoWeek = [System.Globalization.ISOWeek]::GetWeekOfYear((Get-Date))
+# Semaine ISO 8601 (PowerShell 5.1 : ISOWeek n'existe pas et -UFormat %V est faux) : regle FirstFourDayWeek / lundi
+$IsoWeek = [System.Globalization.CultureInfo]::InvariantCulture.Calendar.GetWeekOfYear((Get-Date), [System.Globalization.CalendarWeekRule]::FirstFourDayWeek, [System.DayOfWeek]::Monday)
 $MonthLabel = (Get-Date).AddDays(-3).ToString("yyyy-MM")   # le 1er, le rapport couvre le mois qui vient de finir
 $tok = Get-GhToken
 if (-not $tok) { Log "AVERTISSEMENT: jeton GitHub introuvable - les notifications par issue echoueront" }
