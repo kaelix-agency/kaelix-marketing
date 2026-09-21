@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | **Source unique** | fiche Google (`g/11tc9_y7c9` · lien avis `g.page/r/CSTJAaXNYqRfEBM/review`) |
-| **Dernier relevé** | 2026-09-04 (Maps public via Chrome) — **1 avis**, note globale 4,0. ⚠️ Relevés des 2026-09-07 et **2026-09-14** (revues S37 et S38 planifiées) **empêchés** : WebFetch refusé et navigateur hors liste blanche de la session headless — à refaire en session interactive |
+| **Dernier relevé** | 2026-09-04 (Maps public via Chrome) — **1 avis**, note globale 4,0. ⚠️ Relevés des 2026-09-07, 2026-09-14 et **2026-09-21** (revues S37, S38, S39 planifiées) **empêchés** : WebFetch refusé et navigateur (Playwright) hors liste blanche de la session headless — à refaire en session interactive **avant le rapport de septembre (01/10)** |
 
 ## Avis
 
