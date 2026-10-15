@@ -5,7 +5,18 @@
 // Rationnel : la migration cloud du 2026-10-15 (to-do transports-ansquer #20).
 import { readFile, writeFile } from "node:fs/promises";
 import { resolve, dirname, basename } from "node:path";
+import { fileURLToPath } from "node:url";
 import { marked } from "marked";
+
+// Marque KAELIX (planche logo 2026-10-15) : logo d'en-tête + croix en filigrane de page.
+// Les deux sont embarqués en data URI pour que le HTML reste autoporteur.
+const assetsDir = resolve(dirname(fileURLToPath(import.meta.url)), "..", "assets");
+const dataURI = async (file, mime) => {
+  try { return `data:${mime};base64,` + (await readFile(resolve(assetsDir, file))).toString("base64"); }
+  catch { return ""; }
+};
+const logoURI = await dataURI("kaelix-logo.png", "image/png");
+const markURI = await dataURI("kaelix-croix-filigrane.svg", "image/svg+xml");
 
 const mdPath = resolve(process.argv[2]);
 const htmlPath = mdPath.replace(/\.md$/i, ".html");
@@ -32,6 +43,7 @@ const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&l
 const css = `
   @page {
     size: A4; margin: 16mm 18mm 18mm 18mm;
+    ${markURI ? `background: url("${markURI}") no-repeat 50% 52%; background-size: 88mm 88mm;` : ""}
     @bottom-left { content: "KAELIX · ${client} · ${periode}"; font-size: 7.5pt; color: #8a96a3; font-family: "DejaVu Sans", Arial, sans-serif; }
     @bottom-right { content: "page " counter(page) " / " counter(pages); font-size: 7.5pt; color: #8a96a3; font-family: "DejaVu Sans", Arial, sans-serif; }
   }
@@ -64,7 +76,7 @@ const css = `
 
 const styledHtml = html.replace(/<h2>([①-⑳])\s*/g, '<h2><span class="num">$1</span>');
 const page = `<!doctype html><html lang="fr"><head><meta charset="utf-8"><style>${css}</style></head><body>
-  <div class="brand"><div class="meta">Rapport mensuel · ${esc(client)} · ${esc(periode)}<br>Édité le ${generatedOn}</div><div class="name">KAELIX</div></div>
+  <div class="brand"><div class="meta">Rapport mensuel · ${esc(client)} · ${esc(periode)}<br>Édité le ${generatedOn}</div>${logoURI ? `<img class="name" src="${logoURI}" alt="KAELIX" style="height: 30px; width: auto; display: inline-block; vertical-align: baseline;">` : '<div class="name">KAELIX</div>'}</div>
   ${isDraft ? '<div class="draft">BROUILLON — document non validé, ne pas transmettre au client.</div>' : ""}
   ${styledHtml}
   <p class="closing">KAELIX · acquisition et visibilité en ligne · ce document est établi à partir des données réelles de la période ; les positions et le trafic des contenus de moins de 90 jours ne sont pas encore stabilisés.</p>

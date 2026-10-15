@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-33.25 -33.25 66.5 66.5">
+  <!-- Croix KAELIX en filigrane (teintes très claires pour fond de page A4 blanc).
+       Géométrie exacte de la planche logo (2026-10-15) : 2 rects 76×18 à ±45°,
+       moyeu r13, point central r5. Couleurs pleines #3D5BFF / #0A0B0E éclaircies. -->
+  <rect x="-38" y="-9" width="76" height="18" fill="#EDF1FF" transform="rotate(45)"/>
+  <rect x="-38" y="-9" width="76" height="18" fill="#EDF1FF" transform="rotate(-45)"/>
+  <circle r="13" fill="#F6F6F7"/>
+  <circle r="5" fill="#E4EAFF"/>
+</svg>
