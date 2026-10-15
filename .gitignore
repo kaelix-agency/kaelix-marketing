@@ -3,3 +3,6 @@
 .claude/settings.local.json
 node_modules/
 logs/
+
+# HTML intermediaire du pipeline rapport (report-to-html.mjs -> WeasyPrint) : regenerable, seul le PDF est versionne
+clients/*/reports/*.html
