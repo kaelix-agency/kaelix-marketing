@@ -43,6 +43,20 @@ Set-Location $Repo
 if (-not (Test-Path $LogDir)) { New-Item -ItemType Directory -Path $LogDir | Out-Null }
 Log "=== Mission '$Mission' - demarrage (repo: $Repo) ==="
 
+# --- Mission REPORT migree en cloud (2026-10-15) : le rapport mensuel est produit par la
+#     tache planifiee claude.ai "KAELIX - Rapport mensuel Transports Ansquer (cloud)"
+#     (le 1er du mois a 07:49, notification telephone+email, PDF brouillon livre a
+#     l'operateur ; la tache cloud ne commite rien et n'envoie rien au client).
+#     Garde-fou anti-doublon : cette mission ne genere plus rien localement.
+#     => l'operateur peut SUPPRIMER la tache Windows "KAELIX - Report mensuel" du
+#     Planificateur ; la weekly, elle, reste sur ce poste (cles locales).
+if ($Mission -eq "report") {
+  Log "Mission 'report' migree en cloud le 2026-10-15 : aucun rapport genere localement (anti-doublon)."
+  Log "La tache Windows 'KAELIX - Report mensuel' peut etre supprimee du Planificateur de taches."
+  Log "=== Mission 'report' terminee (no-op) ==="
+  exit 0
+}
+
 # --- Cle Haloscan : le bloc env de .claude/settings.local.json alimente les serveurs MCP
 #     en session interactive mais PAS en `claude -p` (constat 2026-09-13 : 403 Haloscan sur
 #     tous les appels a la weekly S37, compte pourtant sain). On exporte donc la cle nous-memes,

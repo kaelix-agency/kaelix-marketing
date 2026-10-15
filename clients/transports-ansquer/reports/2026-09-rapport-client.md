@@ -3,7 +3,7 @@
 | **Client** | Transports Ansquer |
 | **Période** | 2026-09 |
 | **Généré le** | 2026-10-15 (session interactive claude.ai — la tâche planifiée du 01/10 n'a pas tourné, cf. to-do #20 ; retard de 14 jours assumé et non reproduit : le circuit de production des rapports migre vers les tâches cloud) |
-| **Statut** | ✅ validé le 2026-10-15 (gate opérateur en session claude.ai : « vraiment bien » + ajout demandé et intégré — tableau « Là où vous êtes le mieux placé », 3 requêtes vérifiables de la fenêtre S41) — émission en attente du choix de canal |
+| **Statut** | ✅ validé le 2026-10-15 (gate opérateur en session claude.ai : « vraiment bien » + ajout demandé et intégré — tableau « Là où vous êtes le mieux placé », 3 requêtes vérifiables de la fenêtre S41 ; **graphique d'évolution ajouté le 15/10, pré-émission, sur demande opérateur** — 6 fenêtres GSC 28 j : rapport d'août + S37→S42) — **émission en cours** : brouillon Gmail prêt (axel@kaelix.fr → contact@transportsansquer.fr), PJ et envoi par l'opérateur |
 | **Sources** | Search Console API directe — fenêtres relevées aux revues S37→S42 (28 j « septembre » = 06/09→03/10, comparée à 28 j « août » = 05/08→01/09, même outil, invariant 8) ; Haloscan (positions, revues hebdo) ; tracking.md ; content-plan.md ; journal du brief |
 | **Points à confirmer avant validation** | Aucun côté client. ⚠️ interne : avis GBP **non relevés depuis le 04/09** (fiche hors de portée des outils — dernier relevé : 1 avis, gilles, 4/5) → la section ④ reste générique, aucune affirmation sur les avis ; la réponse à l'avis gilles (GO du 04/09) n'est toujours pas publiée (to-do #12) — le rapport n'en parle pas |
 
@@ -36,6 +36,10 @@ L'article « combien de palettes » publie la table de chargement que personne d
 |---|---|---|---|
 | Affichages de vos pages dans Google | 668 | 1 869 | **×2,8** |
 | Clics vers le site | 20 | 43 | **×2,2** |
+
+![Évolution sur les relevés hebdomadaires — fenêtres de 28 jours](2026-09-rapport-client-graph.png)
+
+<em>Chaque point est le total des 28 derniers jours à la date du relevé (mesure Google Search Console, relevé chaque lundi ; pas de relevé le 28/09).</em>
 
 ### Là où vous êtes le mieux placé
 
