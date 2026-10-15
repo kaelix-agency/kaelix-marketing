@@ -10,7 +10,10 @@
 #     sans action GBP, sans rien d'irreversible ;
 #   - les livrables sortent en statut brouillon ; le gate humain (lecture,
 #     validation, merge, emission) reste 100 % operateur ;
-#   - la notification est une issue GitHub, fermee par l'operateur apres gate.
+#   - weekly AUTONOME depuis le 2026-10-15 (decision operateur, migration cloud etape 2) :
+#     plus d'issue GitHub de validation - la revue est commitee et le systeme s'autoregule ;
+#     les actions qui attendent l'operateur vivent dans todo-operateur.md, relayees par
+#     les sessions claude.ai et le rapport mensuel cloud (notifications telephone).
 #
 # Usage : powershell -NoProfile -ExecutionPolicy Bypass -File scripts\run-scheduled.ps1 -Mission weekly|report|test
 # =============================================================================
@@ -134,8 +137,7 @@ if ($Mission -eq "test") {
 # Semaine ISO 8601 (PowerShell 5.1 : ISOWeek n'existe pas et -UFormat %V est faux) : regle FirstFourDayWeek / lundi
 $IsoWeek = [System.Globalization.CultureInfo]::InvariantCulture.Calendar.GetWeekOfYear((Get-Date), [System.Globalization.CalendarWeekRule]::FirstFourDayWeek, [System.DayOfWeek]::Monday)
 $MonthLabel = (Get-Date).AddDays(-3).ToString("yyyy-MM")   # le 1er, le rapport couvre le mois qui vient de finir
-$tok = Get-GhToken
-if (-not $tok) { Log "AVERTISSEMENT: jeton GitHub introuvable - les notifications par issue echoueront" }
+$tok = Get-GhToken   # conserve pour le push git ; plus d'issue de validation depuis le 2026-10-15
 
 $clients = Get-ChildItem -Path (Join-Path $Repo "clients") -Directory | Where-Object { $_.Name -ne "_template" }
 foreach ($c in $clients) {
@@ -165,20 +167,9 @@ foreach ($c in $clients) {
   $ahead = git rev-list --count origin/main..HEAD 2>$null
   Log "etat push: $ahead commit(s) local(aux) non pousses"
 
-  # Notification : issue GitHub = l'essentiel + lien fichier
-  if ($tok) {
-    $rel = $expect.Substring($Repo.Length + 1) -replace "\\", "/"
-    $link = "https://github.com/kaelix-agency/kaelix-marketing/blob/main/$rel"
-    $head = (Get-Content $expect -Encoding utf8 -TotalCount 40 | Where-Object { $_ -match "\S" } | Select-Object -First 14) -join "`n"
-    $nl = "`n"
-    $body = "Brouillon $EmClock genere automatiquement le $Today - **a lire, valider, puis fermer cette issue**.$nl$nl" +
-            "Fichier : $link$nl$nl---$nl$head$nl---$nl" +
-            "*Garde-fous : la tache planifiee ne merge rien, n'emet rien ; gate humain intact.*"
-    $env:GH_TOKEN = $tok
-    $bodyFile = Join-Path $LogDir "issue-body-$slug.md"
-    Set-Content -Path $bodyFile -Value $body -Encoding utf8
-    & gh issue create --repo kaelix-agency/kaelix-marketing --title $title --body-file $bodyFile 2>&1 | ForEach-Object { Log "gh issue: $_" }
-    Remove-Item Env:GH_TOKEN -ErrorAction SilentlyContinue
-  }
+  # Weekly autonome (2026-10-15) : plus d'issue GitHub de validation. La revue commitee
+  # suffit ; ce qui attend l'operateur est dans todo-operateur.md (relaye en session
+  # claude.ai). Garde-fous intacts : la tache ne merge rien, n'emet rien, ne publie rien.
+  Log "weekly autonome : revue commitee, pas d'issue de validation (decision operateur du 2026-10-15)"
 }
 Log "=== Mission '$Mission' terminee ==="
