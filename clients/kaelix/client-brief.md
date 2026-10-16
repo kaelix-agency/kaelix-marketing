@@ -120,7 +120,7 @@ Ordre imposé (modèle SaaS adapté à l'agence — les pages business avant le 
 
 | Outil | Connecté ? | Détail |
 |---|---|---|
-| Search Console (API directe) | ⚠️ à faire | propriété kaelix.fr à ajouter au compte de service GSC (geste PC) — puis `scripts/gsc-fetch.mjs` opérationnel |
+| Search Console (API directe) | 🔧 en cours (16/10) | compte de service : `gsc-fetch@kaelix-498715.iam.gserviceaccount.com` (relevé sur la propriété Ansquer) — à ajouter en accès Complet sur la propriété kaelix.fr, puis `scripts/gsc-fetch.mjs` opérationnel |
 | Haloscan | ⚠️ à faire | projet kaelix.fr à créer (session PC) |
 | PostHog | ⚠️ à faire | décision 16/10 : même setup sans cookie qu'Ansquer (PR #9), à poser sur web-agency |
 | GA4 | non | — |
