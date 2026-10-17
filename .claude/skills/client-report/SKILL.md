@@ -10,7 +10,7 @@ Le client ne « voit » pas le SEO : sans rapport qui relie l'effort au résulta
 ## Structure du rapport
 1. **L'essentiel en 3 points** (lisible en 20 secondes par un non-technicien).
 2. **Ce que nous avons fait** : contenus publiés (titres + liens), refreshes, posts GBP, réponses d'avis, corrections techniques/citations. Source : tracking.md + git.
-3. **Ce que ça a produit** : deltas chiffrés — impressions, clics, positions (mots-clés cibles avant/après), et selon client : geo-grid/appels/itinéraires (local) ou conversions (SaaS). Toujours la période vs période précédente.
+3. **Ce que ça a produit** : deltas chiffrés — impressions, clics, positions (mots-clés cibles avant/après), et selon client : geo-grid/appels/itinéraires (local) ou conversions (SaaS). Toujours la période vs période précédente. **Contacts mesurés (si PostHog actif, brief §8)** : clics téléphone, clics e-mail, formulaires envoyés, et les pages qui les ont produits (`scripts/posthog-fetch.mjs`, rationnel §1.26). Trois garde-fous : **PostHog = contacts, Search Console = trafic — jamais additionnés ni rapportés l'un à l'autre** ; **aucune attribution par source** (la mesure n'envoie pas de referrer) ; **sous 50 visites, des comptes bruts** — pas de taux, pas de tendance. Premier mois de mesure = « première photographie », sans évolution.
 4. **Santé du trafic** : indicateur de concentration — part du trafic SEO portée par les 3-4 premières pages (fragile au-delà de ~60-70 %), et part du SEO dans le trafic total (dépendance au-delà de ~60 %). *Pourquoi : une source ou une poignée de pages dominantes = un point de défaillance unique ; le signaler AVANT l'accident est le rôle du conseil.*
 5. **Le mois prochain** : 3-5 actions planifiées.
 

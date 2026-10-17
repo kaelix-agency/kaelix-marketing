@@ -7,6 +7,8 @@
  *
  * Usage :
  *   node scripts/gsc-fetch.mjs query   [--site sc-domain:transportsansquer.fr] [--days 28] [--start AAAA-MM-JJ --end AAAA-MM-JJ] [--dimension page|query|page,query|date] [--limit 25] [--filter-page <sous-chaîne>]
+ *   node scripts/gsc-fetch.mjs ctr-gap [--days 28] [--dimension page|page,query] [--min-imprs 30] [--limit 15]
+ *                                      → écarts CTR réel vs attendu à la position (piste 3) : pages/requêtes à title-meta
  *   node scripts/gsc-fetch.mjs inspect <url> [<url>...]
  *   node scripts/gsc-fetch.mjs sitemaps
  *   node scripts/gsc-fetch.mjs check404 [--site-repo D:\Users\Axel\KAELIX\transports-ansquer]
@@ -216,10 +218,51 @@ async function cmdDeleteSitemap() {
   console.log(`delete ${sm} -> HTTP ${r.status}${r.ok ? " (retiré de GSC — le fichier lui-même n'est pas touché)" : " " + (await r.text()).slice(0, 200)}`);
 }
 
+// ---------------------------------------------------------------- ctr-gap (piste 3, rationnel §1.27)
+// CTR attendu par position moyenne : courbe PRUDENTE (bas des fourchettes publiées pour des
+// SERP FR chargées — pubs, PAA, AI Overview). Elle ne sert qu'à CLASSER les écarts, jamais à
+// promettre des clics : un écart = une page à regarder (title/meta, snippet), pas un résultat.
+const CTR_ATTENDU = [[1, 0.22], [2, 0.12], [3, 0.08], [4, 0.06], [5, 0.045], [6, 0.035], [7, 0.03], [8, 0.025], [9, 0.02], [10, 0.018], [15, 0.01], [20, 0.006], [30, 0.003], [50, 0.001]];
+function ctrAttendu(pos) {
+  if (pos <= 1) return CTR_ATTENDU[0][1];
+  for (let i = 1; i < CTR_ATTENDU.length; i++) {
+    const [p0, c0] = CTR_ATTENDU[i - 1], [p1, c1] = CTR_ATTENDU[i];
+    if (pos <= p1) return c0 + (c1 - c0) * ((pos - p0) / (p1 - p0)); // interpolation linéaire
+  }
+  return 0.001;
+}
+
+async function cmdCtrGap() {
+  const days = parseInt(opt("days", "28"), 10);
+  const end = opt("end", day(new Date(Date.now() - 2 * 86400000)));
+  const start = opt("start", day(new Date(new Date(end).getTime() - (days - 1) * 86400000)));
+  const dims = opt("dimension", "page").split(",");
+  const limit = parseInt(opt("limit", "15"), 10);
+  const minImprs = parseInt(opt("min-imprs", "30"), 10);
+  const { token } = await getToken(["https://www.googleapis.com/auth/webmasters.readonly"]);
+  const body = { startDate: start, endDate: end, dimensions: dims, rowLimit: 500 };
+  const j = await api(token, `https://www.googleapis.com/webmasters/v3/sites/${enc(site)}/searchAnalytics/query`, body);
+  const rows = (j.rows || []).filter((r) => r.impressions >= minImprs && r.position <= 20)
+    .map((r) => {
+      const attendu = ctrAttendu(r.position);
+      const clicsAttendus = r.impressions * attendu;
+      return { ...r, attendu, clicsAttendus, manque: clicsAttendus - r.clicks };
+    })
+    .sort((a, b) => b.manque - a.manque)
+    .slice(0, limit);
+  console.log(`# Écarts CTR ${site} — ${start} → ${end} — ${dims.join("+")} en position ≤ 20 avec ≥ ${minImprs} impressions, triés par clics manquants`);
+  if (!rows.length) { console.log("(aucune ligne au seuil — baisser --min-imprs sur un site récent, ou attendre : moins de 30 impressions, le CTR n'est pas lisible)"); return; }
+  console.log(pad("imprs", 7) + pad("clics", 7) + pad("CTR%", 7) + pad("att.%", 7) + pad("pos", 6) + pad("manque", 8) + dims.join(" | "));
+  for (const r of rows)
+    console.log(pad(r.impressions, 7) + pad(r.clicks, 7) + pad(num(r.ctr * 100, 1), 7) + pad(num(r.attendu * 100, 1), 7) + pad(num(r.position, 1), 6) + pad(num(Math.max(0, r.manque), 0), 8) + r.keys.join(" | "));
+  console.log("« manque » = clics qu'une page à ce niveau de visibilité obtiendrait avec un CTR ordinaire pour sa position, moins les clics réels — un ordre de grandeur pour PRIORISER, pas une promesse.");
+  console.log("Lecture : gros écart en position ≤ 10 → title/meta à retravailler (raison de cliquer au-delà de la réponse affichée par Google), balisage FAQ ; vérifier d'abord si la SERP répond toute seule (snippet, PAA, AI Overview) — règle des 90 jours : pas de refresh avant J90.");
+}
+
 // ---------------------------------------------------------------- dispatch
-const table = { query: cmdQuery, inspect: cmdInspect, sitemaps: cmdSitemaps, check404: cmdCheck404, "request-indexing": cmdRequestIndexing, "submit-sitemap": cmdSubmitSitemap, "delete-sitemap": cmdDeleteSitemap };
+const table = { query: cmdQuery, inspect: cmdInspect, sitemaps: cmdSitemaps, check404: cmdCheck404, "request-indexing": cmdRequestIndexing, "submit-sitemap": cmdSubmitSitemap, "delete-sitemap": cmdDeleteSitemap, "ctr-gap": cmdCtrGap };
 if (!table[cmd]) {
-  console.error("Commandes : query · inspect · sitemaps · check404 · request-indexing (voir l'en-tête du fichier)");
+  console.error("Commandes : query · ctr-gap · inspect · sitemaps · check404 · request-indexing (voir l'en-tête du fichier)");
   process.exit(1);
 }
 await table[cmd]();

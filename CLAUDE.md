@@ -9,7 +9,7 @@ Ce dépôt est le **cerveau marketing** de l'agence : il stocke la connaissance 
 ```
 marketing-repo/
 ├── CLAUDE.md                  ← ce fichier (règles + architecture)
-├── .mcp.json                  ← serveurs MCP (Haloscan ; PostHog au cas par cas) — la Search Console passe par l'API directe (`scripts/gsc-fetch.mjs`, §1.24)
+├── .mcp.json                  ← serveurs MCP (Haloscan) — Search Console et PostHog passent par l'API directe (`scripts/gsc-fetch.mjs` §1.24, `scripts/posthog-fetch.mjs` §1.26)
 ├── README.md                  ← documentation d'utilisation
 ├── .claude/
 │   ├── commands/              ← les routines (slash commands)
@@ -68,7 +68,7 @@ marketing-repo/
 ## Contexte de session
 
 - Toujours commencer par lire le `client-brief.md` du client concerné (+ `nap.md` si local, + `tracking.md` pour l'historique).
-- Les outils disponibles : **Haloscan** (MCP — mots-clés FR, clustering, cannibalisation, positions), **Search Console en API directe** (`node scripts/gsc-fetch.mjs` : `query`, `inspect`, `sitemaps`, `check404`, `request-indexing` — remplace Cuik depuis le 2026-09-03, rationnel §1.24 ; clé de compte de service hors repo), **PostHog** (MCP, conversions — uniquement si le brief du client l'indique). ⚠️ Le crawl technique (`/tech-audit`) est à re-outiller depuis le retrait de Cuik : « contrôle empêché » d'ici là.
+- Les outils disponibles : **Haloscan** (MCP — mots-clés FR, clustering, cannibalisation, positions), **Search Console en API directe** (`node scripts/gsc-fetch.mjs` : `query`, `ctr-gap` (écarts CTR, §1.27), `inspect`, `sitemaps`, `check404`, `request-indexing` — remplace Cuik depuis le 2026-09-03, rationnel §1.24 ; clé de compte de service hors repo), **PostHog en API directe** (`node scripts/posthog-fetch.mjs` : `check`, `contacts`, `pages`, `events` — contacts tél / e-mail / formulaire, filtré par domaine `--site` ; rationnel §1.26 ; clé personnelle lecture seule hors repo — **uniquement si le brief §8 du client déclare PostHog actif** ; PostHog = contacts, GSC = trafic, jamais mélangés). ⚠️ Le crawl technique (`/tech-audit`) est à re-outiller depuis le retrait de Cuik : « contrôle empêché » d'ici là.
 - Données sans MCP (ponts manuels) : **BrightLocal** (geo-grid, citations, avis) et **fiche GBP** — l'opérateur colle les exports dans la session.
 
 ## Routines → commands
