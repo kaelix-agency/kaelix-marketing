@@ -15,6 +15,7 @@
 
 | Date | Changement |
 |---|---|
+| 2026-10-17 (5) | Passe E2E v6 verte sur le PC (55 tests, 8 fichiers ; 5 corrections de tests poussées sur main). Reste : Lighthouse /tarifs (CA-10), à faire avec l'audit SEO |
 | 2026-10-17 (4) | #4 clos : v6 en production (PR #28), base et Stripe test alignés. Reste côté PC : passe E2E complète + Lighthouse /tarifs (preuves CA-10) |
 | 2026-10-17 (3) | Offre v6 : #3 clos (199 € tranché), #4 ajouté (gates de la bascule v6 sur le site : spec PR #27, implémentation, migration de prix, seed Stripe) |
 | 2026-10-17 (2) | #1 ✅ : web-agency#26 mergée et en prod, réception PostHog vérifiée sur kaelix.fr (favicon X-viseur servi). Reste pour la mesure kaelix : rien — données contacts dès maintenant, GSC dès le 18/10 |
