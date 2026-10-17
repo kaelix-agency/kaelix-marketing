@@ -120,9 +120,9 @@ Ordre imposé (modèle SaaS adapté à l'agence — les pages business avant le 
 
 | Outil | Connecté ? | Détail |
 |---|---|---|
-| Search Console (API directe) | 🔧 en cours (16/10) | compte de service : `gsc-fetch@kaelix-498715.iam.gserviceaccount.com` (relevé sur la propriété Ansquer) — à ajouter en accès Complet sur la propriété kaelix.fr, puis `scripts/gsc-fetch.mjs` opérationnel |
-| Haloscan | ⚠️ à faire | projet kaelix.fr à créer (session PC) |
-| PostHog | ⚠️ à faire | décision 16/10 : même setup sans cookie qu'Ansquer (PR #9), à poser sur web-agency |
+| Search Console (API directe) | ✅ **CONNECTÉE le 2026-10-17** | propriété **préfixe d'URL `https://kaelix.fr/`** (compte axel@kaelix.fr propriétaire), compte de service `gsc-fetch@kaelix-498715.iam.gserviceaccount.com` en accès total → `node scripts/gsc-fetch.mjs query --site https://kaelix.fr/`. ⚠️ Propriété toute récente : **premières données à partir du 18/10**, baseline 28 j lisible vers la mi-novembre |
+| Haloscan | ✅ requêtes à la demande | comme Ansquer : pas de projet suivi (l'API s'interroge par domaine/mot-clé) — optionnel côté interface |
+| PostHog | 🔧 **en PR (web-agency#26, 17/10)** | même dispositif sans cookie qu'Ansquer, **même projet PostHog** (309342, plan gratuit = 1 projet ; lecture filtrée `--site https://kaelix.fr/`) ; 5 événements : `$pageview`, **`contact_rendez_vous`** (lien de réservation, action principale), `contact_telephone`, `contact_email`, `contact_formulaire` (`formulaire: contact|audit`) ; `$referrer` envoyé (attribution par source possible, contrairement à Ansquer). Clé `NEXT_PUBLIC_POSTHOG_KEY` posée dans Vercel (Production + Preview). Actif dès le merge |
 | GA4 | non | — |
 | BrightLocal (pont manuel) | non | — |
 
@@ -145,4 +145,5 @@ Ordre imposé (modèle SaaS adapté à l'agence — les pages business avant le 
 
 | Date | Ce qui a changé | Par |
 |---|---|---|
+| 2026-10-17 | §8 : GSC connectée (compte de service, données dès le 18/10), Haloscan sans projet, PostHog en PR web-agency#26 (clé Vercel posée). To-do dédiée créée (`todo-operateur.md` : mesure, fiche GBP, écart tarifs). Favicon : `favicon.ico` régénéré depuis le X-viseur dans la même PR | session 17/10 |
 | 2026-10-16 | Création — onboarding en session claude.ai (entretien Axel : type hybride, PMF validé, concurrents, zones, porte-parole, PostHog) + grille tarifaire v2 + lecture kaelix.fr. Ciblage §5 : contrôle empêché (Haloscan/GSC sur PC), à remplir avant `/content-plan` | session 16/10 |
