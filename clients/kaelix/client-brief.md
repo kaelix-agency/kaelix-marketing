@@ -18,6 +18,7 @@
 - **Concurrents** (entretien 16/10) : ① agences web locales sous WordPress (le 500-1 000 €/mois de la grille) ; ② plateformes self-service (Wix, SiteW, Solocal, Simplebo) ; ③ freelances/indépendants. Angle différenciant : sites codés from scratch nativement optimisés (Lighthouse 95+, pas de dette technique) qui rendent le SEO moins cher — « Crafted Code, Proven Performance ».
 - **Contact opérationnel** : Axel (co-fondateur, marketing/SEO — l'opérateur de ce repo).
 - **YMYL** : non.
+- **Cadence éditoriale et relecture (décision d'Axel, 17/10/2026)** : **2 contenus par mois**, capacité de relecture **2 par mois** → volume retenu du plan = **2/mois** (12 sur 6 mois). Ordre : refreshes « argent » d'abord (accueil, /tarifs, /services/site-vitrine, /audit-gratuit, Montpellier), puis la page Val-d'Oise, puis la page pivot comparaison et la page refonte ; le blog repart de zéro (articles d'origine retirés le 17/10).
 
 ## 2. Repo du site
 
