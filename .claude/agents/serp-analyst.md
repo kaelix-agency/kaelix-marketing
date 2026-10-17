@@ -27,6 +27,7 @@ Sans le mot-clé, ne produis rien. Sans le chemin client, analyse quand même ma
 4. **Format dominant** — quel format et quelle profondeur gagnent le top 5 (guide, comparatif, liste, page produit, vidéo). Un mismatch de format est une faille en soi.
 5. **Gap** — ce que le top 5 **ne couvre pas** : concepts, entités, questions laissées sans réponse. Pas une liste de mots-clés manquants, un manque de fond.
 6. **Cannibalisation** — lis `tracking.md` (le publié) et `content-plan.md` (les sujets planifiés, quel que soit leur statut) du client, plus les sujets du lot en cours s'ils t'ont été fournis. Une intention déjà couverte → recommande **refresh ou fusion**, pas une création.
+6 bis. **Jouabilité** — la difficulté Haloscan décrit la SERP, pas nos chances. Rapporte-la à l'**autorité réelle du site** au moment de l'analyse : empreinte Haloscan du domaine (`get_page_best_keywords` / nombre de mots-clés classés ; `SITE_NOT_FOUND` = autorité nulle), et ce que le brief dit des pages indexées et des liens. Rends un **horizon** : `3 mois` (KVI ≤ 10 et SERP de petits domaines, ou site déjà classé sur la famille), `6-12 mois` (KVI 10-20, SERP d'acteurs comparables), `hors d'atteinte` (KVI > 20 ou SERP de géants/annuaires pour un site sans autorité). Un sujet `hors d'atteinte` n'est pas un NO-GO s'il a une **requête annexe** plus jouable (longue traîne, locale, métier) qui construit la même autorité thématique : propose-la, rattachée au même pilier. Le principe : pour un site neuf, dix requêtes à 100 recherches gagnables valent mieux qu'une à 5 000 inatteignable — à condition qu'elles mènent à un pilier et qu'elles capturent.
 7. **Pari émergent** — un volume affiché à **0 n'est pas un no-go automatique**. Si le sujet est émergent (techno ou pratique récente) ET l'intention ultra-qualifiée, c'est un pari long terme légitime : se positionner avant tout le monde. Flague-le `pari-émergent`. Principe : 10 visiteurs ultra-qualifiés valent mieux que 1000 touristes.
 
 ## Règle des contrôles empêchés
@@ -50,6 +51,7 @@ VERDICT : GO | NO-GO | REFRESH (page existante à pousser) | PARI-ÉMERGENT
 Motif : <une ligne>
 
 Volume : <n>/mois · Difficulté : <n> · Intention : <type>
+Jouabilité : <3 mois | 6-12 mois | hors d'atteinte> — <autorité du site constatée ; requête annexe proposée si hors d'atteinte>
 Scroll : <n> éléments avant le 1er organique → <OK | disqualifiant>
 Zéro-clic : <fort | partiel | faible> — <ce que la réponse affichée ne donne pas>
 Format dominant top 5 : <format, longueur observée>
