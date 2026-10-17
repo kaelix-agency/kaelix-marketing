@@ -26,11 +26,11 @@
 | URL du repo | https://github.com/kaelix-agency/web-agency (confirmé entretien 16/10) |
 | Forge | `github` (`gh`) |
 | Chemin local convenu | à convenir à la première session de production |
-| Chemin des articles | ⚠️ à auditer (un blog existe sur kaelix.fr — pipeline et chemin à relever dans le repo avant tout `/write`) |
-| Chemin des pages locales | ⚠️ à auditer (idem) |
+| Chemin des articles | `src/content/blog/<slug>.mdx` (3 articles de février 2026, relevé à l'audit du 17/10) — route `src/app/(public)/blog/[slug]` ; **pipeline MDX (frontmatter, composants) à relever avant tout `/write`** |
+| Chemin des pages locales | ⚠️ pas de dossier de contenu : les 8 pages villes sont une **route dynamique** `src/app/(public)/agence-web/[ville]` (template TSX, pas MDX) — à requalifier (audit 17/10, C3) avant toute page locale |
 | **Version du contrat de contenu supportée** | ⚠️ **à auditer avant le premier `/write`** — champ critique, tout ou rien (v1/v2) |
-| Branche par défaut | à vérifier |
-| Rendu | SSR/SSG constaté de l'extérieur le 16/10 (contenu complet servi en HTML) — à confirmer dans le repo |
+| Branche par défaut | `main` (confirmé 17/10) |
+| Rendu | SSR/SSG confirmé le 17/10 (`X-Nextjs-Prerender: 1`, HTML complet sans JS) |
 
 ## 3. Marque & voix
 
@@ -205,6 +205,7 @@ Ordre imposé (modèle SaaS adapté à l'agence — les pages business avant le 
 
 | Date | Ce qui a changé | Par |
 |---|---|---|
+| 2026-10-17 (5) | **Premier `/tech-audit`** → [`audits/2026-10-17-tech-audit.md`](./audits/2026-10-17-tech-audit.md) (crawl Playwright 36 URLs, GSC inspect/sitemaps, Lighthouse ×6, Haloscan `SITE_NOT_FOUND`). Constats : **1 page indexée sur 36** (accueil crawlé le 23/09, pré-v6 ; 36 soumises / 0 indexées) ; **14 pages orphelines** ; **8 pages villes templatées dont 6 hors zones §9** (Lyon, Marseille, Toulouse, Bordeaux, Nantes, Lille) ; metas v5 résiduelles (« trois niveaux qui se cumulent » sur la page SEO) ; **CA-10 PASS desktop** (/tarifs 99/100/96, LCP 0,62 s, CLS 0,011), mobile 85 (LCP 3,73 s, H1 animé) sous la promesse de /garanties. Lexique v6 du texte rendu : propre (0 × 249/599/cumulatif/backlink). §2 complété : articles MDX dans `src/content/blog/`, branche `main`, SSR confirmé. To-do #5/#6/#7 | session 17/10 |
 | 2026-10-17 (2) | **§5 ciblage SEO rempli (A et C)** sur Haloscan (crédit vérifié ; 9 domaines concurrents sur les 3 catégories ; 15 mots-clés passés au serp-analyst en parallèle avec verdict zéro-clic). Bandeau « contrôle empêché » retiré. **B attend la GSC** (données dès le 18/10). Décisions : famille TPE/PME sur l'accueil (« création site internet TPE PME » inconnu de Haloscan), une page locale par zone (Montpellier, 95), une page comparaison catégorielle (jamais nominative), /audit-gratuit re-ciblé sur « audit site internet gratuit ». 9 sujets écartés et motivés. Contrôles empêchés : scroll non vérifiable par outil (chrome à dérouler en /research), content-plan.md absent | session 17/10 |
 | 2026-10-17 (4) | **v6 en prod** : PR web-agency#28 fusionnée et déployée, migrations `20261017000001`/`000002` poussées (accord explicite), Stripe test re-semé. Plus de souscription en ligne (appel systématique). Le refresh /tarifs (§5 prio 1) peut viser « dès 199 € » | session 17/10 |
 | 2026-10-17 (3) | **Offre v6** (décision Axel) : SEO sur deux axes dès 199 €, 5 formules, 3 mois, liens sur devis — §1 mis à jour ; spec PR web-agency#27 ; to-do #3 clos (l'écart 249/199 est tranché). Conséquence ciblage §5 : la priorité « prix site vitrine » (refresh /tarifs) attend la bascule v6 du site | session 17/10 |

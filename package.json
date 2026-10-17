@@ -9,6 +9,6 @@
   },
   "devDependencies": {
     "marked": "^15.0.0",
-    "playwright": "1.61.1"
+    "playwright": "^1.61.1"
   }
 }

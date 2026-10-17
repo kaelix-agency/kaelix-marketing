@@ -6,3 +6,6 @@ logs/
 
 # HTML intermediaire du pipeline rapport (report-to-html.mjs -> WeasyPrint) : regenerable, seul le PDF est versionne
 clients/*/reports/*.html
+
+# Sorties du crawl technique local (scripts/crawl-site.mjs) : regenerables
+.crawl/
