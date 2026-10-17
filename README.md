@@ -14,7 +14,7 @@ Le cerveau marketing multi-clients de l'agence, piloté par Claude Code. Ce repo
 1. Clone ce repo, ouvre-le dans Claude Code.
 2. Copie `.env.example` → `.env` et renseigne les clés API.
    ⚠️ **Vérifie les URLs des serveurs MCP dans `.mcp.json`** auprès de la documentation officielle de chaque outil (elles évoluent) : doc Haloscan, doc PostHog. Ajuste `url`/`headers` selon leur méthode d'authentification (certains utilisent OAuth au lieu d'un Bearer token).
-3. **Serveur configuré dans `.mcp.json` : Haloscan** (référence positions). **La Search Console passe par l'API Google directe** : `scripts/gsc-fetch.mjs` + compte de service GCP (clé hors repo, §1.24 du rationnel). **PostHog n'y est pas : il se configure au cas par cas**, uniquement pour les clients dont le `client-brief.md` §8 déclare une instance connectée (ajouter alors son entrée dans `.mcp.json` + la clé dans `.env`). Les commands n'invoquent PostHog que si le brief l'indique.
+3. **Serveur configuré dans `.mcp.json` : Haloscan** (référence positions). **La Search Console passe par l'API Google directe** : `scripts/gsc-fetch.mjs` + compte de service GCP (clé hors repo, §1.24 du rationnel). **PostHog passe aussi par l'API directe** : `scripts/posthog-fetch.mjs` + clé personnelle lecture seule hors repo (`~\.kaelix\posthog.json`, §1.26 du rationnel) — un seul projet PostHog, lecture filtrée par domaine (`--site`). Les commands n'invoquent PostHog que si le `client-brief.md` §8 du client le déclare actif.
 4. Lance `claude` dans le repo et vérifie que les MCP répondent (`/mcp`).
    ℹ️ Les clés doivent exister **avant** le lancement : un serveur MCP reçoit une copie figée de l'environnement au démarrage. Clés ajoutées en cours de session = redémarrer Claude Code, sinon les serveurs continuent avec une clé vide (erreurs 401/403).
 5. Prérequis côté comptes : email du compte de service GCP ajouté en « Complet » sur la propriété Search Console de chaque client ; projets créés dans Haloscan ; BrightLocal et fiches GBP gérés à part (ponts manuels).
@@ -112,7 +112,7 @@ Les gabarits vides de tous ces fichiers vivent dans `clients/_template/` — `/o
 |---|---|---|
 | Haloscan | MCP | research, onboard, weekly-review, report — **référence unique mots-clés/positions** |
 | Search Console — API Google directe (`scripts/gsc-fetch.mjs`) | compte de service GCP (clé hors repo) | onboard, tech-audit, weekly-review, report, refresh — remplace Cuik (2026-09-03, §1.24) |
-| PostHog | MCP (si client équipé) | weekly-review, report |
+| PostHog — API directe (`scripts/posthog-fetch.mjs`) | clé personnelle lecture seule (hors repo) — si le brief §8 du client déclare PostHog actif | weekly-review, report (section contacts : clics tél / e-mail, formulaires) — §1.26 |
 | BrightLocal (geo-grid, citations, avis) | **manuel** — tu colles l'export dans la session | weekly-review, report, nap.md |
 | Fiche GBP (posts, avis, insights) | **manuel** — tu publies/colles | gbp-post, review-response, report |
 
