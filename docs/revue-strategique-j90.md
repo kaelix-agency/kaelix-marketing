@@ -22,9 +22,9 @@
 
 1. **Bilan stable des positions** — toutes les pages + articles, fenêtres GSC étiquetées
    (invariant 8 : GSC = clics/impressions ; invariant 9 : chiffres réels uniquement).
-2. **Écarts CTR** — CTR réel vs CTR attendu à la position, par page ; pages à retravailler.
+2. **Écarts CTR** — `node scripts/gsc-fetch.mjs ctr-gap --days 90` (par page, puis `--dimension page,query`) : CTR réel vs CTR attendu à la position ; pages à retravailler, cause qualifiée pour chacune (SERP zéro-clic ou title/meta faible).
 3. **Ciblage** — requêtes en positions 4-20 à pousser vers le top 3 ; requêtes à
-   impressions sans page dédiée ; sujets écartés car la SERP y répond toute seule.
+   impressions sans page dédiée ; sujets écartés car la SERP y répond toute seule (verdict `zéro-clic` du `/research`, rationnel §1.27).
 4. **Verdicts J90 par contenu** (refresh / pousser / laisser) + calendrier des J90 à venir.
 5. **Résultats business** — dès que la mesure on-site est branchée : contacts (clic
    téléphone / email / formulaire) par page d'entrée. Tant qu'elle ne l'est pas : le dire
