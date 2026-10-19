@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Statut** | 🕓 à formaliser (v1 d'onboarding du 2026-10-16 — SIRET et arbitrage « zone desservie » à compléter) |
+| **Statut** | 🕓 à formaliser (v1 d'onboarding du 2026-10-16 — SIRET ✅ le 19/10 ; reste l'arbitrage horaires) |
 | **Validé le** | — |
 | **Dernière vérification de cohérence** | 2026-10-16 (source : kaelix.fr) |
 
@@ -24,7 +24,8 @@
 | Téléphone format international | +33 6 35 44 30 10 |
 | Email public | contact@kaelix.fr |
 | Site web (URL canonique) | https://kaelix.fr (sans www — relevé le 16/10, à confirmer avec la canonique du site) |
-| SIRET | 🕓 à renseigner (demandé par plusieurs annuaires) |
+| SIREN | 131 421 521 (fourni par l'opérateur le 2026-10-19) |
+| SIRET | 131 421 521 00017 (siège ; clé de Luhn vérifiée) |
 
 ## 2. Horaires
 
