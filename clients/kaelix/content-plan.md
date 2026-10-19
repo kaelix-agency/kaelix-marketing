@@ -59,7 +59,7 @@ Justification : docs/rationnel-des-choix.md §1.11.
 - [ ] 01/2027 — refresh /tarifs « ce que ça coûte vraiment sur 3 ans » (ligne 5)
 - [ ] 04/2027 — free tool simulateur prix site internet (ligne 11) → maille vers /tarifs
 - [ ] 04/2027 — guide blog « combien coûte un site internet » (ligne 12) → maille vers le simulateur, **jamais vers /tarifs** (mismatch de format info/transactionnel)
-- 301 `/agence-web-tpe-pme` → `/` (technique — décision du gate : PR web-agency immédiate, 17/10) — **PR web-agency#31 ouverte le 17/10, en attente de GO MERGE (revue 19/10)**
+- 301 `/agence-web-tpe-pme` → `/` (technique — PR web-agency#31 fusionnée et en prod le 19/10) — **PR web-agency#31 ouverte le 17/10, en attente de GO MERGE (revue 19/10)**
 
 ### Cluster B — Site vitrine & pages métier
 
@@ -74,7 +74,7 @@ Justification : docs/rationnel-des-choix.md §1.11.
 **Sujets rattachés** :
 - [ ] 12/2026 — refresh /services/site-vitrine (ligne 4)
 - [ ] 03/2027 — refresh /site-vitrine-artisan « création site internet artisan » (ligne 9) — la **seule** page métier du plan (pattern Simplébo « une page par métier » repris avec parcimonie, jamais industrialisé)
-- 301 `/developpement-site-sur-mesure` et `/site-web-restaurant` → pilier (technique — décision du gate : PR web-agency immédiate, 17/10) — **même PR #31, en attente de GO MERGE (revue 19/10)**
+- 301 `/developpement-site-sur-mesure` et `/site-web-restaurant` → pilier (technique — PR web-agency#31 fusionnée et en prod le 19/10) — **même PR #31, en attente de GO MERGE (revue 19/10)**
 
 ### Cluster C — Zones réelles (local)
 
