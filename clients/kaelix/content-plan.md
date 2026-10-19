@@ -59,7 +59,7 @@ Justification : docs/rationnel-des-choix.md §1.11.
 - [ ] 01/2027 — refresh /tarifs « ce que ça coûte vraiment sur 3 ans » (ligne 5)
 - [ ] 04/2027 — free tool simulateur prix site internet (ligne 11) → maille vers /tarifs
 - [ ] 04/2027 — guide blog « combien coûte un site internet » (ligne 12) → maille vers le simulateur, **jamais vers /tarifs** (mismatch de format info/transactionnel)
-- 301 `/agence-web-tpe-pme` → `/` (technique — décision du gate : PR web-agency immédiate, 17/10)
+- 301 `/agence-web-tpe-pme` → `/` (technique — décision du gate : PR web-agency immédiate, 17/10) — **PR web-agency#31 ouverte le 17/10, en attente de GO MERGE (revue 19/10)**
 
 ### Cluster B — Site vitrine & pages métier
 
@@ -74,7 +74,7 @@ Justification : docs/rationnel-des-choix.md §1.11.
 **Sujets rattachés** :
 - [ ] 12/2026 — refresh /services/site-vitrine (ligne 4)
 - [ ] 03/2027 — refresh /site-vitrine-artisan « création site internet artisan » (ligne 9) — la **seule** page métier du plan (pattern Simplébo « une page par métier » repris avec parcimonie, jamais industrialisé)
-- 301 `/developpement-site-sur-mesure` et `/site-web-restaurant` → pilier (technique — décision du gate : PR web-agency immédiate, 17/10)
+- 301 `/developpement-site-sur-mesure` et `/site-web-restaurant` → pilier (technique — décision du gate : PR web-agency immédiate, 17/10) — **même PR #31, en attente de GO MERGE (revue 19/10)**
 
 ### Cluster C — Zones réelles (local)
 
@@ -203,7 +203,7 @@ Justification : docs/rationnel-des-choix.md §1.11.
 
 | Sujet concerné | Élément demandé | Demandé le | Reçu le |
 |---|---|---|---|
-| ligne 2 (/audit-gratuit) | un extrait d'audit réel, anonymisé (ce que reçoit concrètement le prospect sous 72 h) | 2026-10-17 (plan) | |
+| ligne 2 (/audit-gratuit) | un extrait d'audit réel, anonymisé (ce que reçoit concrètement le prospect sous 72 h) | 2026-10-17 (plan) | 2026-10-19 (revue) — **levé par le stock** : [`audits/2026-10-17-tech-audit.md`](./audits/2026-10-17-tech-audit.md) (kaelix.fr, publiable) ou l'audit Ansquer anonymisé ; à confirmer au `/research` de la ligne 2 |
 | lignes 5, 11, 12 (/tarifs, simulateur, guide prix) | **un seul jeu de données sourcées** « ce que coûte un site WordPress sur 3 ans » (hébergement, thème/extensions, maintenance, refonte à 3-4 ans) — sources publiques ou un cas client chiffré (ce que payait Ansquer avant ?) | 2026-10-17 (plan) | |
 | ligne 6 (Val-d'Oise) | un client ou un chantier dans le 95 (sinon : présence d'Axel + Ansquer « à 20 minutes », angle assumé plus faible) | 2026-10-17 (plan) | |
 | ligne 7 (boutique en ligne) | **un client e-commerce livré** — c'est la cible commerciale prioritaire ; la page se ré-écrit au premier cas (avant/après ventes, qui gère quoi) | 2026-10-17 (plan) | |
@@ -216,5 +216,6 @@ Justification : docs/rationnel-des-choix.md §1.11.
 
 | Date | Ce qui a changé | Pourquoi | Statut du plan |
 |---|---|---|---|
+| 2026-10-19 (revue S43) | **Aucun changement de statut** (novembre : lignes 1 et 2 `prévu`, 0/2 produit à J+2 du gate). Annotation : les trois 301 « immédiates » sont en PR web-agency#31 **non mergée** ; la PR #25 (boutique sans engagement, pré-v6) peut modifier la ligne 7 (« 150 €/mois, 12 mois ») si elle est fusionnée. First-party ligne 2 : l'audit kaelix.fr du 17/10 (ou Ansquer anonymisé) vaut « extrait d'audit réel » → manque levé par le stock | revue hebdo [`reports/2026-10-19-revue-hebdo.md`](./reports/2026-10-19-revue-hebdo.md) | ✅ validé |
 | 2026-10-17 (gate) | **Validé par Axel** avec deux ajustements : lignes 3 et 6 inversées (Val-d'Oise en décembre, Montpellier en janvier — jouabilité : le gagnable d'abord pour un site neuf) ; les trois 301 (tpe-pme, sur-mesure, restaurant) passent en PR web-agency immédiate au lieu de novembre | jouabilité (KVI rapporté à l'autorité réelle du site, voir règle ajoutée au serp-analyst) ; structure cible visible de Google dès maintenant | ✅ validé |
 | 2026-10-17 | version initiale — 12 sujets (7 refreshes « à zéro », 5 créations) + 3 en réserve ; 8 nouveaux mots-clés qualifiés par serp-analyst (calculateur, restaurant, refonte seo, agence ou freelance, référencement local prix, refaire site internet, prix boutique, boutique artisan), 10 sujets repris du ciblage §5 du 17/10 sans ré-analyse | premier plan après onboarding (16/10), ciblage (17/10), offre v6 et audit (17/10) ; décisions opérateur : restaurant écarté, e-commerce prioritaire, blog reparti de zéro, zéro nom technique | 🕓 brouillon |
