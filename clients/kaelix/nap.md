@@ -2,8 +2,8 @@
 
 | | |
 |---|---|
-| **Statut** | 🕓 à formaliser (v1 d'onboarding du 2026-10-16 — SIRET ✅ le 19/10 ; reste l'arbitrage horaires) |
-| **Validé le** | — |
+| **Statut** | 🕓 à formaliser (v1 d'onboarding du 2026-10-16 — SIRET et horaires ✅ le 19/10 — complet, en attente de la création de la fiche) |
+| **Validé le** | 2026-10-19 (opérateur : SIRET + horaires) |
 | **Dernière vérification de cohérence** | 2026-10-16 (source : kaelix.fr) |
 
 ---
@@ -29,7 +29,14 @@
 
 ## 2. Horaires
 
-🕓 À trancher avant la création de la fiche Google (pas d'horaires publiés sur le site — proposer lun-ven 9:00-18:00 ou « sur rendez-vous »).
+Tranché par l'opérateur le 2026-10-19 (aucun horaire publié sur le site — la fiche Google est la seule source).
+
+| Jour | Horaires |
+|---|---|
+| Lundi – vendredi | 9:00 – 18:00 |
+| Samedi – dimanche | Fermé |
+
+Mêmes horaires sur toute citation qui en demande ; pas d'horaires spéciaux (fériés) déclarés.
 
 ## 3. Variantes
 
