@@ -56,9 +56,10 @@
 
 | Plateforme | URL | Nb d'avis | Note moyenne |
 |---|---|---|---|
-| ⚠️ aucune fiche Google KAELIX à ce jour | — | — | — |
+| Fiche Google « Kaelix Digital » (compte mickael@kaelix.fr) — **validation Google en cours depuis le 20/10** (≤ 5 j) | à relever à la validation | 0 | — |
 
-→ Action onboarding : créer la fiche Google Business « zone desservie » (sans adresse publique) — voir §9 et to-do.
+→ **État au 20/10/2026** : deux fiches coexistaient (une par fondateur, aucune validée) ; celle d'Axel a été **supprimée** le 20/10, celle de Mickael (« Kaelix Digital », catégorie « Entreprise de logiciels », 24h/24, tél 07 61 31 44 95, zone France) est **en validation**. **Ne rien modifier avant la validation** (une modification de nom/catégorie/téléphone remet la vérification à zéro) ; ensuite, mise au NAP (`nap.md` : nom KAELIX, Concepteur de sites Web, 06 35 44 30 10, lun-ven 9-18, zones Montpellier + Île-de-France, description §2 bis) puis rattachement au groupe de l'organisation.
+→ **Organisation Google Business « KAELIX »** créée le 20/10/2026 par axel@kaelix.fr (compte fondateur, propriétaire principal) — **ID `102345674276773821729`** (`business.google.com/organizations/102345674276773821729`) ; adresse interne Google (jamais publiée) : 18 avenue des Cévennes, 34920 Le Crès ; second propriétaire invité : mickael@kaelix.fr (il ne pourra accepter qu'une fois sa fiche transférée dans l'organisation — règle Google). Groupe d'établissements **« Clients KAELIX »** créé le même jour : destination de la fiche Ansquer (transfert à organiser) et de toute fiche cliente ; c'est aussi le compte de référence pour la demande d'accès API GBP (to-do Ansquer #21).
 
 ## 4. Cibles
 

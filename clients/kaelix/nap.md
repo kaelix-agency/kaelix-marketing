@@ -26,6 +26,7 @@
 | Site web (URL canonique) | https://kaelix.fr (sans www — relevé le 16/10, à confirmer avec la canonique du site) |
 | SIREN | 131 421 521 (fourni par l'opérateur le 2026-10-19) |
 | SIRET | 131 421 521 00017 (siège ; clé de Luhn vérifiée) |
+| Siège (usage interne Google / annuaires qui l'exigent sans publication) | 18 avenue des Cévennes, 34920 Le Crès — ⛔ jamais publié (fiche en zone desservie, adresse masquée) |
 
 ## 2. Horaires
 
