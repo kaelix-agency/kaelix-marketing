@@ -7,7 +7,7 @@
 | **Typologie** | evergreen — **page d'accueil** (page business, pas un article) |
 | **Page cible** | `/` (existante, créée le 25/04/2026 — libre de la règle des 90 j ; indexée en version v6 le 17/10) |
 | **Recherche faite le** | 2026-10-20 (`/research`, 6 `serp-analyst` en parallèle + scroll-check chrome en session principale) |
-| **Statut** | 🕓 **en attente de GO opérateur** — 🛑 aucun `/refresh` sans GO |
+| **Statut** | 🕓 **en attente de GO opérateur** — 🛑 aucun `/refresh` sans GO. *Mis à jour le 20/10 au rebase : PR #31 mergée le 19/10 et boutique « sans engagement » tranchée (PR #32) — décisions 3 et 4 levées, 4 restent.* |
 
 > ⚠️ **Analyse dégradée — à lire avant le verdict.** Le serveur MCP **Haloscan n'a pas pu se connecter** dans cette session (timeout). Tous les KPI mots-clés ci-dessous sont le **relevé Haloscan du 17/10/2026** (brief §5), jamais un chiffre d'un autre outil (invariant 8). Les deux variantes nouvelles (« agence web pme », « site internet petite entreprise ») n'ont **ni volume ni KVI** : leur verdict repose sur la lecture de la SERP seule. Les SERP des 6 mini-briefs ont été lues par proxy (WebSearch), **pas dans l'ordre Google** ; seules les deux têtes ont été relevées en navigation réelle (annexe G). À re-qualifier au retour de Haloscan si l'opérateur veut un chiffre sur les deux variantes — ce n'est pas bloquant pour le GO : aucune ne change la tête.
 
@@ -39,7 +39,7 @@
 | **Haloscan** (positions du domaine) | ⚠️ **non vérifiable** cette session (MCP indisponible) — et sans objet : `SITE_NOT_FOUND` le 17/10 et le 19/10 | aucune position connue, rien à cannibaliser |
 | **`tracking.md`** (publié par la mission) | lu | vide — aucun contenu publié |
 | **`content-plan.md`** (15 lignes) | lu, chaque ligne confrontée | **aucun conflit** : la ligne 1 est ce contenu ; ligne 4 (`/services/site-vitrine`, « création site vitrine ») = intention « site vitrine », pas « PME » → garde-fou : **« PME/TPE » reste hors du title de la ligne 4**, et **« création » reste hors du H1 de l'accueil** (title/H2 seulement) pour ne pas brouiller les deux pages ; ligne 15 (« agence seo pme ») = intention SEO, distincte ; lignes 3 et 6 (« agence web montpellier / 95 ») = intentions locales, SERP distinctes |
-| **Existant hors plan** | lu (audit 17/10 A3, revue 19/10) | **`/agence-web-tpe-pme` vise la même famille et répond encore 200** : la 301 vers `/` est dans la **PR web-agency#31, non mergée** (to-do #9). **Préalable au refresh** : mergée avant, ou embarquée dans la même PR — jamais deux pages vivantes sur la famille |
+| **Existant hors plan** | lu (audit 17/10 A3, revue 19/10, to-do au 20/10) | `/agence-web-tpe-pme` visait la même famille → **301 vers `/` en prod depuis le 19/10** (PR web-agency#31 mergée `b248aef`, E2E vertes le 20/10 — to-do #9 clos). Une seule page vivante sur la famille : rien à lever avant le refresh |
 
 Rappel du gisement 4-20 : vide par construction (étape B du brief §5 attend la baseline GSC de mi-novembre). Le refresh de l'accueil est un refresh « à zéro », conforme à la règle d'or du plan.
 
@@ -123,12 +123,12 @@ Information gain **acquis** : l'accueil mobilise au moins quatre éléments firs
 
 - **Capture** (invariant 10) : réservation 30 min (`contact_rendez_vous`, action principale, inchangée) ; **CTA secondaire « demander un audit gratuit »** conservé (→ /audit-gratuit, ligne 2 du même mois — les deux refreshes de novembre se renvoient l'un à l'autre).
 - **Maillage sortant** (contextuel, en plus du pied de page) : /tarifs (section coût), /services/site-vitrine (prestations), /services/seo-performance (phrase « on s'applique ce qu'on vend »), /realisations/transports-ansquer (preuve), /audit-gratuit (CTA), **/agence-web-montpellier et /agence-web-paris** (zones — l'audit C2 demandait des liens contextuels depuis l'accueil ; Paris devient Val-d'Oise en décembre : lien à mettre à jour dans la PR de la ligne 6).
-- **Maillage entrant** : 301 `/agence-web-tpe-pme` → `/` (PR #31).
+- **Maillage entrant** : 301 `/agence-web-tpe-pme` → `/` (en prod depuis le 19/10, PR #31).
 
 ### Garde-fous
 
 - ⛔ **Lexique v6** : seuls montants « dès 80 € HT/mois », « 150 € HT/mois », « dès 199 € HT/mois ». Aucune garantie de position. Aucun nom de concurrent ni de technologie.
-- ⚠️ **Boutique en ligne : incohérence à trancher avant le `/refresh`** — l'accueil en ligne affiche « **150 € HT / mois, sans engagement** » alors que le brief §1 dit « engagement 12 mois » et que la PR web-agency#25 « sans engagement » **n'est pas mergée** (to-do #10). Le refresh reprendra **la version tranchée par l'opérateur**, pas l'une ou l'autre par défaut.
+- ✅ **Boutique en ligne : « 150 € HT/mois, sans engagement »** — décision opérateur du 19/10 (to-do #10 : PR #25 fermée, refaite en PR web-agency#32 mergée le 20/10, migration poussée). L'accueil en ligne est déjà conforme ; brief §1 et plan ligne 7 alignés le 20/10. Le refresh garde cette formulation.
 - ⚠️ **« Paris »** dans la meta et le pied de page → « Île-de-France » (décision du 17/10 : la page Paris devient Val-d'Oise).
 - **Règle des 90 j** : la page date du 25/04 → libre. Après publication : J30 ≈ fin décembre (observation), **J90 ≈ fin février 2027** (verdict).
 - **Double PASS** `fact-checker` puis `contract-checker` avant la PR (le contract-checker contrôle ce qui s'applique : title/meta/H1, FAQ, maillage vers des cibles existantes, NAP, lexique — et marque « non vérifiable » la whitelist MDX, sans objet).
@@ -137,14 +137,16 @@ Information gain **acquis** : l'accueil mobilise au moins quatre éléments firs
 
 1. **GO / NO-GO** sur l'angle et le H1 famille (le slogan passe en surtitre ou sous-titre).
 2. **Title** : variante longue « Création de site internet pour TPE et PME, codé à la main | Kaelix » (porte « création », ≈ 62 car.) ou courte « Site internet pour TPE et PME, codé à la main | Kaelix » (52).
-3. **Boutique** : « engagement 12 mois » (brief) ou « sans engagement » (site + PR #25) → tranche aussi le to-do #10.
-4. **Ordre des PR** : merger #31 (301 tpe-pme) **avant** le refresh, ou l'embarquer dans la PR du refresh.
+3. ~~Boutique~~ — **déjà tranché le 19/10** : « sans engagement » (to-do #10, PR #32 en prod).
+4. ~~Ordre des PR~~ — **sans objet** : la PR #31 est en prod depuis le 19/10 (to-do #9 clos).
 5. **`ExpertQuote`** : verbatim réel d'Axel ou Mickael fourni au `/refresh`, proposition signalée dans la PR, ou aucune citation.
 6. **Re-qualification Haloscan** des deux variantes sans chiffre (« agence web pme », « site internet petite entreprise ») : utile mais non bloquante — aucune ne change la tête.
 
 ---
 
 ## Annexe — mini-briefs `serp-analyst` bruts (2026-10-20, Haloscan inaccessible)
+
+> Les mini-briefs ci-dessous citent la PR web-agency#31 comme « non mergée » : c'était l'état du repo marketing au moment de l'analyse (revue du 19/10). Elle est en prod depuis le 19/10 (constat au rebase du 20/10). Textes bruts conservés tels quels.
 
 ### A. « site internet pme »
 
@@ -284,4 +286,4 @@ Top 10 réel « site internet pme » (20/10, desktop) : OVHcloud · Jimdo · CMA
 ### H. Autres relevés de la session
 
 - **GSC** (`gsc-fetch.mjs query`, 7 j 12→18/10) : 1 clic, 1 impression, position 1 sur `/` — propriété du 17/10, aucune lecture possible ; étape B du brief §5 toujours vide.
-- **Page en ligne lue le 20/10** (curl) : title « Agence web sur mesure : sites codés à la main | Kaelix » ; meta « Agence web à Montpellier et Paris… » ; H1 « Faites votre métier, on s'occupe du reste. » ; ≈ 1 000 mots ; FAQ 5 paires ; prestation boutique affichée « 150 € HT / mois, sans engagement » (⚠️ voir garde-fous).
+- **Page en ligne lue le 20/10** (curl) : title « Agence web sur mesure : sites codés à la main | Kaelix » ; meta « Agence web à Montpellier et Paris… » ; H1 « Faites votre métier, on s'occupe du reste. » ; ≈ 1 000 mots ; FAQ 5 paires ; prestation boutique affichée « 150 € HT / mois, sans engagement » (conforme à la décision du 19/10).
