@@ -171,7 +171,7 @@ Ordre imposé (modèle SaaS adapté à l'agence — les pages business avant le 
 
 | Élément | Type | Utilisable publiquement ? | Déjà utilisé dans | Ajouté le |
 |---|---|---|---|---|
-| Cas Ansquer : impressions ×2,8 et clics ×2,2 en 1 mois (sept. 2026, GSC, fenêtres 28 j) | chiffre client sourcé | oui (référence publiée sur le site) | accueil kaelix.fr | 2026-10-16 |
+| Cas Ansquer : impressions ×2,8 et clics ×2,2 d'un mois sur l'autre, site + référencement (août → sept. 2026, GSC, fenêtres 28 j ; rapport client du 15/10) — ⚠️ **jamais « un mois après le site »** : août est déjà le nouveau site, la hausse est portée par le contenu SEO (fact-check 20/10) | chiffre client sourcé | oui (référence publiée) | **accueil + étude de cas Ansquer (PR web-agency#33, 20/10)** — corrigé le 20/10 : n'était sur aucune page avant | 2026-10-16 |
 | Refonte Ansquer : Lighthouse 100/100/100 (SEO, bonnes pratiques, accessibilité), perf mobile 78, 11→1 CSS, 12→9 scripts, zéro jQuery | chiffre technique | oui (affiché sur le site) | accueil kaelix.fr | 2026-10-16 |
 | Livraison d'un site vitrine en 3 à 5 semaines | méthode | oui | accueil | 2026-10-16 |
 | Deux cousins fondateurs : Axel (marketing, ex e-commerce, région parisienne) + Mickael (dev 10 ans, ex-salles de marché, Montpellier) | histoire | oui | /a-propos | 2026-10-16 |
