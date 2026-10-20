@@ -15,7 +15,7 @@
 
 ## Brouillons de réponse
 
-### Avis #1 — gilles doucet (4/5) — 🕓 à valider (issue GitHub du 2026-09-04)
+### Avis #1 — gilles doucet (4/5) — ✅ validé le 2026-09-04 (issue #3) — **publication par l'API GBP** dès l'accès accordé (décision opérateur du 2026-10-20 : pas de publication manuelle)
 
 ```
 Merci beaucoup pour votre retour. Le chargement rapide, c'est ce que nous cherchons à garantir sur notre quai du port de Gennevilliers : un créneau tenu et une équipe prête à votre arrivée. Au plaisir de vous accueillir à nouveau.
