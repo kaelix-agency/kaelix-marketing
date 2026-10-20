@@ -50,7 +50,7 @@
 | Rôle / titre | « Axel, co-fondateur de KAELIX » / « Mickael, co-fondateur et développeur de KAELIX » |
 | Photo | à relever dans le repo du site (section fondateurs de l'accueil) |
 | **Autorisation de citation** | ✅ oui pour les deux (entretien 16/10) — attribution selon le sujet |
-| Verbatims disponibles | §7 — à alimenter (les prises de position du site sont reprises telles quelles) |
+| Verbatims disponibles | **1 — Axel (validé le 20/10/2026, PR web-agency#33, accueil)** : « On ne vend pas un site, on en prend la charge. Un dirigeant de TPE n'a pas à devenir webmaster le soir. » · les prises de position du site sont reprises telles quelles |
 
 ### Source d'avis clients
 
