@@ -7,7 +7,7 @@
 | **Typologie** | evergreen — **page d'accueil** (page business, pas un article) |
 | **Page cible** | `/` (existante, créée le 25/04/2026 — libre de la règle des 90 j ; indexée en version v6 le 17/10) |
 | **Recherche faite le** | 2026-10-20 (`/research`, 6 `serp-analyst` en parallèle + scroll-check chrome en session principale) |
-| **Statut** | 🕓 **en attente de GO opérateur** — 🛑 aucun `/refresh` sans GO. *Mis à jour le 20/10 au rebase : PR #31 mergée le 19/10 et boutique « sans engagement » tranchée (PR #32) — décisions 3 et 4 levées, 4 restent.* |
+| **Statut** | ✅ **GO opérateur le 2026-10-20 (16 h 45, gate en conversation)** : angle et H1 famille **GO** · title **court** (« Site internet pour TPE et PME, codé à la main \| Kaelix ») · `ExpertQuote` = **proposition signalée dans la PR**, validée avant merge · boutique « sans engagement » (PR #32) · #31 en prod · re-qualification Haloscan non bloquante. → `/refresh` lancé en session cloud le 20/10. |
 
 > ⚠️ **Analyse dégradée — à lire avant le verdict.** Le serveur MCP **Haloscan n'a pas pu se connecter** dans cette session (timeout). Tous les KPI mots-clés ci-dessous sont le **relevé Haloscan du 17/10/2026** (brief §5), jamais un chiffre d'un autre outil (invariant 8). Les deux variantes nouvelles (« agence web pme », « site internet petite entreprise ») n'ont **ni volume ni KVI** : leur verdict repose sur la lecture de la SERP seule. Les SERP des 6 mini-briefs ont été lues par proxy (WebSearch), **pas dans l'ordre Google** ; seules les deux têtes ont été relevées en navigation réelle (annexe G). À re-qualifier au retour de Haloscan si l'opérateur veut un chiffre sur les deux variantes — ce n'est pas bloquant pour le GO : aucune ne change la tête.
 
@@ -135,11 +135,11 @@ Information gain **acquis** : l'accueil mobilise au moins quatre éléments firs
 
 ## 6. Décisions attendues au GO `/refresh`
 
-1. **GO / NO-GO** sur l'angle et le H1 famille (le slogan passe en surtitre ou sous-titre).
-2. **Title** : variante longue « Création de site internet pour TPE et PME, codé à la main | Kaelix » (porte « création », ≈ 62 car.) ou courte « Site internet pour TPE et PME, codé à la main | Kaelix » (52).
+1. ~~GO / NO-GO~~ — ✅ **GO le 20/10** : angle et H1 famille, slogan en surtitre/sous-titre.
+2. ~~Title~~ — ✅ **court** le 20/10 (« Site internet pour TPE et PME, codé à la main | Kaelix », 52 car.). Était : variante longue « Création de site internet pour TPE et PME, codé à la main | Kaelix » (porte « création », ≈ 62 car.) ou courte « Site internet pour TPE et PME, codé à la main | Kaelix » (52).
 3. ~~Boutique~~ — **déjà tranché le 19/10** : « sans engagement » (to-do #10, PR #32 en prod).
 4. ~~Ordre des PR~~ — **sans objet** : la PR #31 est en prod depuis le 19/10 (to-do #9 clos).
-5. **`ExpertQuote`** : verbatim réel d'Axel ou Mickael fourni au `/refresh`, proposition signalée dans la PR, ou aucune citation.
+5. ~~`ExpertQuote`~~ — ✅ **proposition signalée dans la PR** (20/10), validée ou réécrite par Axel avant merge. Était : verbatim réel d'Axel ou Mickael fourni au `/refresh`, proposition signalée dans la PR, ou aucune citation.
 6. **Re-qualification Haloscan** des deux variantes sans chiffre (« agence web pme », « site internet petite entreprise ») : utile mais non bloquante — aucune ne change la tête.
 
 ---
