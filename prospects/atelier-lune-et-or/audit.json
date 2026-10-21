@@ -1,0 +1,85 @@
+{
+  "prospect": {
+    "slug": "atelier-lune-et-or",
+    "nom": "Atelier Lune & Or",
+    "prenom_contact": "Sophie",
+    "site": "lune-et-or.fr",
+    "ville": "Montreuil",
+    "activite": "bijoux artisanaux",
+    "type": "ecommerce"
+  },
+  "audit": {
+    "date": "2026-10-21",
+    "auteur": "Axel",
+    "score": 46,
+    "verdict_titre": "Votre boutique est belle. Presque personne ne la trouve.",
+    "verdict_texte": "Nous avons regardé votre site comme une cliente qui cherche un bijou fait main en Île-de-France, puis comparé avec les deux boutiques qui passent devant vous sur Google. Trois points vous coûtent des ventes chaque semaine. Ils se corrigent.",
+    "perimetre": { "pages": 14, "recherches": 10, "concurrents": 2 }
+  },
+  "concurrents": [
+    { "nom": "Maison Oriane", "site": "maison-oriane.fr" },
+    { "nom": "Camille Rey Bijoux", "site": "camillerey-bijoux.fr" }
+  ],
+  "points": [
+    {
+      "titre": "Invisible sur Google",
+      "vu": "Sur 10 recherches comme « bijoux artisanaux faits main », vous n'apparaissez nulle part dans les 5 premières pages. Toutes vos fiches produit s'appellent « Produit ».",
+      "coute": "≈ 900 recherches par mois en Île-de-France dont vous ne recevez aucune visite",
+      "action": "une page par type de bijou et par occasion, des fiches réécrites avec les mots de vos clientes."
+    },
+    {
+      "titre": "9 secondes d'attente sur téléphone",
+      "vu": "Vos photos pèsent 4 à 6 Mo chacune et le menu masque le bouton « Ajouter au panier » sur les petits écrans.",
+      "coute": "1 visiteur sur 2 repart avant d'avoir vu un seul bijou",
+      "action": "photos allégées, page d'accueil plus légère, bouton d'achat toujours visible. Moins de 2 s à la livraison."
+    },
+    {
+      "titre": "Une fiche Google qui semble fermée",
+      "vu": "Pas d'horaires, 3 photos, 4 avis dont le dernier date de 11 mois, et un numéro différent de celui du site.",
+      "coute": "Absente de la carte Google à Montreuil, là où 3 concurrents apparaissent",
+      "action": "fiche complète et cohérente, 20 photos, demande d'avis après chaque commande."
+    }
+  ],
+  "graphiques": {
+    "visites": {
+      "titre": "Visites par mois",
+      "sous_titre": "Estimation sur les 3 derniers mois",
+      "unite": "visites",
+      "client": 420,
+      "concurrents": [3800, 1650],
+      "conclusion": "Maison Oriane reçoit <b>9 fois</b> plus de visites que vous, avec des bijoux 30 % plus chers."
+    },
+    "vitesse": {
+      "titre": "Temps d'affichage sur téléphone",
+      "sous_titre": "Page d'accueil, connexion 4G moyenne",
+      "unite": "s",
+      "client": 9.4,
+      "concurrents": [1.8, 2.6],
+      "conclusion": "Au-delà de 3 secondes, la moitié des visiteurs mobiles abandonnent. Vous êtes à <b>3 fois</b> cette limite."
+    },
+    "avis": {
+      "titre": "Avis Google",
+      "sous_titre": "Nombre d'avis et note moyenne",
+      "client": { "nb": 4, "note": 4.8 },
+      "concurrents": [ { "nb": 140, "note": 4.7 }, { "nb": 62, "note": 4.9 } ],
+      "conclusion": "Vos clientes sont contentes : 4,8. Elles ne le disent simplement pas sur Google. Votre dernier avis a <b>11 mois</b>."
+    }
+  },
+  "piliers": [
+    { "nom": "Site & vitesse", "score": 31, "constats": "9 s sur mobile · photos trop lourdes · cadenas de sécurité absent" },
+    { "nom": "Visibilité Google", "score": 22, "constats": "0 recherche sur 10 dans le top 50 · titres identiques · aucun article" },
+    { "nom": "Fiche Google", "score": 40, "constats": "4 avis · horaires absents · téléphone différent du site" },
+    { "nom": "Achat & contact", "score": 68, "constats": "Paiement rassurant · bouton d'achat masqué sur mobile · pas de relance panier" }
+  ],
+  "plan": [
+    { "periode": "Semaines 1 à 4", "titre": "Boutique rapide et sécurisée", "texte": "Nouveau site, vos produits repris, affichage en moins de 2 s, bouton d'achat visible partout." },
+    { "periode": "Dès la mise en ligne", "titre": "Fiche Google qui vit", "texte": "Fiche complète, avis demandés après chaque commande, présence sur la carte pour « bijoutier créateur » près de chez vous." },
+    { "periode": "Mois 2 à 6", "titre": "Trouvée sur Google", "texte": "Pages par type de bijou et par occasion, premières recherches en page 1, premières ventes venues de Google." }
+  ],
+  "cta": {
+    "rdv_url": "https://calendar.app.google/REMPLACER",
+    "telephone": "06 00 00 00 00",
+    "texte": "Visio Google Meet, sans engagement. On passe en revue le détail des 4 piliers et vous repartez avec un devis clair."
+  },
+  "methode": "Les visites des trois sites sont des estimations ; la vitesse est mesurée sur une connexion mobile 4G moyenne ; les volumes de recherche sont des moyennes mensuelles sur 12 mois en Île-de-France."
+}
