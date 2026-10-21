@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Audit gratuit — Cadres Concept · KAELIX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+<style>
+:root{--bg:#F7F5F0;--card:#FFFFFF;--line:#E6E2D9;--ink:#141413;--ink-2:#4A4945;--mute:#6B6963;--faint:#8C8A82;--accent:#3D5BFF;--track:#F0EDE6;--me:#E8893C;--me-ink:#B8601A;--other:#8C8A82}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#2A47E0}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+.top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;padding-top:32px}
+.logo{font-size:26px;font-weight:800;letter-spacing:-.02em}.logo b{color:var(--accent);font-weight:800}
+.meta{font-size:13px;color:var(--mute)}
+.hero{display:flex;flex-wrap:wrap;align-items:center;gap:40px;padding:56px 0 48px}
+.hero-txt{flex:1 1 440px;min-width:0}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+h1{margin:0 0 16px;font-size:clamp(30px,5vw,44px);line-height:1.08;font-weight:800;letter-spacing:-.025em}
+.lead{font-size:17px;line-height:1.55;color:var(--ink-2);max-width:560px}
+.ring{width:200px;height:200px;border-radius:50%;background:conic-gradient(var(--me) 0 51%,var(--line) 51% 100%);display:flex;align-items:center;justify-content:center;margin:0 auto}
+.ring-in{width:160px;height:160px;border-radius:50%;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center}
+.ring-n{font-size:64px;line-height:1;font-weight:800;letter-spacing:-.04em}.ring-s{font-size:13px;font-weight:600;color:var(--mute)}
+.ring-l{text-align:center;font-size:14px;font-weight:700;color:var(--me-ink);margin-top:12px}
+h2{margin:0 0 20px;font-size:clamp(22px,3.5vw,30px);font-weight:800;letter-spacing:-.025em}
+.sec{padding:0 0 56px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+@media(max-width:860px){.grid3,.grid4{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.grid3,.grid4{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px}
+.num{width:38px;height:38px;border-radius:11px;background:var(--accent);color:#fff;font-weight:800;font-size:16px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+h3{margin:0 0 10px;font-size:19px;line-height:1.25;font-weight:800}
+.vu{font-size:15px;line-height:1.5;color:var(--ink-2);margin-bottom:14px}
+.coute{padding:12px 14px;border-radius:12px;background:var(--bg);margin-bottom:14px}
+.coute small{display:block;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin-bottom:4px}
+.coute div{font-size:15px;font-weight:700;line-height:1.4}
+.act{font-size:14px;line-height:1.5}.act b{color:var(--accent)}
+.band{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:56px 0 64px}
+.band .sub{font-size:16px;color:var(--mute);margin:-10px 0 28px}
+.chart{border:1px solid var(--line);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:18px}
+.chart-title{font-size:16px;font-weight:800}.chart-sub{font-size:13px;color:var(--mute);margin-top:3px}
+.chart-rows{display:flex;flex-direction:column;gap:12px}
+.row-head{display:flex;justify-content:space-between;font-size:13px;color:var(--ink-2);margin-bottom:6px}
+.row-head .me{font-weight:700;color:var(--ink)}.me-val{font-weight:800;color:var(--me-ink)}.val{font-weight:700}
+.track{height:13px;border-radius:7px;background:var(--track);overflow:hidden}
+.fill{height:100%;border-radius:7px;background:var(--other)}.fill-me{background:var(--me)}
+.chart-foot{font-size:14px;line-height:1.5;padding-top:14px;border-top:1px solid var(--line)}
+.pil .nom{font-size:14px;font-weight:700;color:var(--mute);margin-bottom:10px}
+.pil .sc{font-size:42px;font-weight:800;letter-spacing:-.03em;line-height:1;margin-bottom:10px}
+.pil .bar{height:8px;border-radius:4px;background:var(--track);overflow:hidden;margin-bottom:12px}.pil .bar div{height:100%;border-radius:4px}
+.pil .ct{font-size:13px;line-height:1.5;color:var(--ink-2)}
+.hint{font-size:14px;color:var(--mute)}
+.plan{background:var(--ink);color:#ECEAE4;border-radius:24px;padding:40px}
+.plan h2{color:#ECEAE4}.plan .sub{color:#9C9A93;font-size:15px;margin:-10px 0 28px}
+.step small{display:block;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8FA0FF;margin-bottom:8px}
+.step b{display:block;font-size:18px;font-weight:800;margin-bottom:8px}.step p{margin:0;font-size:14px;line-height:1.5;color:#C9C7C0}
+.cta{display:flex;flex-wrap:wrap;align-items:center;gap:22px;padding-top:26px;margin-top:28px;border-top:1px solid #2A2A2E}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 30px;border-radius:14px;background:var(--accent);color:#fff;font-size:17px;font-weight:800;text-decoration:none}
+.cta p{margin:0;flex:1 1 260px;font-size:14px;line-height:1.5;color:#9C9A93}.cta a.tel{color:#ECEAE4;font-weight:700}
+.foot{font-size:12px;line-height:1.6;color:var(--faint);padding:20px 4px 60px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div class="logo">KÆLI<b>X</b></div>
+    <div class="meta">Audit gratuit · préparé par Axel pour [PRÉNOM] · 21 octobre 2026</div>
+  </div>
+
+  <div class="hero">
+    <div class="hero-txt">
+      <div class="eyebrow">Cadres Concept · cadresconcept.com</div>
+      <h1>Vos tableaux sont sur Google. En page 2, là où personne ne va.</h1>
+      <div class="lead">Nous avons testé votre site sur téléphone comme un client qui cherche un tableau en métal, puis comparé avec Eurodécor et avec les sites qui prennent la première page sur vos recherches. Votre marque est solide : 4,9 sur 35 avis. Trois points vous empêchent de transformer ça en ventes.</div>
+    </div>
+    <div>
+      <div class="ring"><div class="ring-in"><div class="ring-n">51</div><div class="ring-s">sur 100</div></div></div>
+      <div class="ring-l" style="color:#B8601A">Visibilité insuffisante</div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h2>Les 3 points qui vous coûtent le plus</h2>
+    <div class="grid3">
+      <div class="card">
+        <div class="num">1</div>
+        <h3>Votre site met 10 secondes à s'afficher sur téléphone</h3>
+        <div class="vu">Score de vitesse mobile Google : 34 sur 100. L'image principale apparaît au bout de 9,8 s (Eurodécor : 3,0 s). Google constate le problème chez vos vrais visiteurs : vos Core Web Vitals sont en « échec ».</div>
+        <div class="coute"><small>Ce que ça vous coûte</small><div>La moitié des visiteurs sur téléphone repartent avant d'avoir vu un seul tableau, et Google vous recule derrière les sites plus rapides</div></div>
+        <div class="act"><b>Ce qu'on ferait :</b> allègement des images et des scripts de la boutique, objectif moins de 2 s mesuré à la livraison.</div>
+      </div>
+      <div class="card">
+        <div class="num">2</div>
+        <h3>Présent sur 8 recherches sur 10, mais entre la 13e et la 23e place</h3>
+        <div class="vu">Sur « tableau métal mural », « tableau métal déco murale », « tableau métal animaux »… vous êtes en page 2. Un seul site prend la 1re place sur 7 recherches sur 10 : harmonie.design. Sur « horloge murale industrielle engrenages », vous n'apparaissez pas du tout.</div>
+        <div class="coute"><small>Ce que ça vous coûte</small><div>La page 2 de Google reçoit moins de 1 % des clics : vos ventes en ligne dépendent des salons et du bouche-à-oreille</div></div>
+        <div class="act"><b>Ce qu'on ferait :</b> une page de collection travaillée par thème et par pièce (salon, chambre, bureau), des guides d'achat, et une vraie page horloges.</div>
+      </div>
+      <div class="card">
+        <div class="num">3</div>
+        <h3>Votre fiche Google ne porte pas votre nom</h3>
+        <div class="vu">La fiche s'appelle « Cadre Concept » (sans s), catégorie « Tableau » au lieu de « Magasin de décoration ». Elle n'est pas reliée à vos 35 avis en photos ni à vos collections.</div>
+        <div class="coute"><small>Ce que ça vous coûte</small><div>Un client qui a vu vos tableaux à la foire de Montpellier et tape « Cadres Concept » peut douter que ce soit vous</div></div>
+        <div class="act"><b>Ce qu'on ferait :</b> fiche corrigée et complétée (nom, catégorie, photos des tableaux, produits), puis alimentée chaque semaine avec vos nouveautés et salons.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="band"><div class="wrap">
+  <h2>Face à Eurodécor Metal Art, votre concurrent direct</h2>
+  <div class="sub">Eurodécor (Tourcoing) : mêmes tableaux en métal, même clientèle en ligne. Sur Google, le vrai gagnant est un troisième site : harmonie.design.</div>
+  <div class="grid3">
+    <div class="chart">
+      <div class="chart-head"><div class="chart-title">Présence sur Google</div><div class="chart-sub">Recherches, sur 10 testées, où le site apparaît dans les 50 premiers</div></div>
+      <div class="chart-rows"><div class="row"><div class="row-head"><span class="me">Vous</span><span class="me-val">≈ 8</span></div><div class="track"><div class="fill fill-me" style="width:100%"></div></div></div><div class="row"><div class="row-head"><span class="">Eurodécor Metal Art</span><span class="val">≈ 5</span></div><div class="track"><div class="fill " style="width:63%"></div></div></div></div>
+      <div class="chart-foot">Vous êtes plus visible qu'Eurodécor. Mais sur ces 8 recherches, vous n'êtes jamais dans les 3 premiers : la place est prise par harmonie.design sur <b>7 recherches sur 10</b>.</div>
+    </div>
+    <div class="chart">
+      <div class="chart-head"><div class="chart-title">Temps d'affichage sur téléphone</div><div class="chart-sub">Page d'accueil, mesure Google (connexion 4G lente)</div></div>
+      <div class="chart-rows"><div class="row"><div class="row-head"><span class="me">Vous</span><span class="me-val">9,8 s</span></div><div class="track"><div class="fill fill-me" style="width:100%"></div></div></div><div class="row"><div class="row-head"><span class="">Eurodécor Metal Art</span><span class="val">3,0 s</span></div><div class="track"><div class="fill " style="width:31%"></div></div></div></div>
+      <div class="chart-foot">Score Google : <b>34</b> pour vous, <b>90</b> pour Eurodécor. C'est le seul point où votre concurrent est devant, et c'est le plus simple à corriger.</div>
+    </div>
+    <div class="chart">
+      <div class="chart-head"><div class="chart-title">Avis Google</div><div class="chart-sub">Nombre d'avis et note moyenne</div></div>
+      <div class="chart-rows"><div class="row"><div class="row-head"><span class="me">Vous</span><span class="me-val">35 avis · 4,9 ★</span></div><div class="track"><div class="fill fill-me" style="width:100%"></div></div></div><div class="row"><div class="row-head"><span class="">Eurodécor Metal Art</span><span class="val">5 avis · 5,0 ★</span></div><div class="track"><div class="fill " style="width:14%"></div></div></div></div>
+      <div class="chart-foot">Votre vrai atout. <b>35 avis à 4,9</b>, c'est une preuve que vos concurrents n'ont pas. Elle n'est pas encore exploitée sur Google ni sur vos pages produit.</div>
+    </div></div>
+</div></div>
+
+<div class="wrap">
+  <div class="sec" style="padding-top:56px">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px"><h2>Votre score, pilier par pilier</h2><div class="hint" style="margin-bottom:20px">Le détail de chaque pilier vous est présenté en rendez-vous.</div></div>
+    <div class="grid4">
+      <div class="card pil"><div class="nom">Site &amp; vitesse</div><div class="sc" style="color:#C2431F">35</div><div class="bar"><div style="width:35%;background:#C2431F"></div></div><div class="ct">34/100 sur mobile · 9,8 s d'affichage · Core Web Vitals en échec · site sécurisé, balises SEO correctes</div></div>
+      <div class="card pil"><div class="nom">Visibilité Google</div><div class="sc" style="color:#B8601A">45</div><div class="bar"><div style="width:45%;background:#E8893C"></div></div><div class="ct">8 recherches sur 10 en page 2 · jamais dans le top 3 · horloges absentes · aucun guide ni article</div></div>
+      <div class="card pil"><div class="nom">Fiche Google</div><div class="sc" style="color:#1F7A4D">65</div><div class="bar"><div style="width:65%;background:#2E9A64"></div></div><div class="ct">35 avis à 4,9 · nom erroné « Cadre Concept » · catégorie « Tableau » · horaires présents</div></div>
+      <div class="card pil"><div class="nom">Achat &amp; contact</div><div class="sc" style="color:#1F7A4D">70</div><div class="bar"><div style="width:70%;background:#2E9A64"></div></div><div class="ct">Boutique claire, livraison offerte, avis affichés · promotion visible · pas de relance panier constatée</div></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="plan">
+      <h2>Par où on commencerait</h2>
+      <div class="sub">Dans l'ordre, avec ce que ça change pour vous.</div>
+      <div class="grid3"><div class="step"><small>Semaines 1 à 5</small><b>Boutique rapide</b><p>Même catalogue, même paiement, mais une boutique qui s'affiche en moins de 2 s sur téléphone et met vos 35 avis en avant sur chaque tableau.</p></div><div class="step"><small>Dès la mise en ligne</small><b>Fiche Google à votre nom</b><p>Nom, catégorie, photos et produits corrigés ; nouveautés et dates de salons publiées chaque semaine.</p></div><div class="step"><small>Mois 2 à 6</small><b>De la page 2 à la page 1</b><p>Pages par thème et par pièce, guides d'achat, page horloges : viser le top 3 sur les recherches où vous êtes déjà 13e à 23e.</p></div></div>
+      <div class="cta">
+        <a class="btn" href="https://calendar.app.google/REMPLACER">Réserver 30 min avec Axel</a>
+        <p>Visio Google Meet, sans engagement. On passe en revue le détail des 4 piliers et vous repartez avec un devis clair. Ou par téléphone : <a class="tel" href="tel:0600000000">06 00 00 00 00</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">
+    Mesures réalisées le 21 octobre 2026 sur cadresconcept.com et la fiche Google « Cadres Concept ». Vitesse : outil PageSpeed Insights de Google, mobile, le 21 octobre 2026. Positions Google : relevé manuel en France sur 10 recherches, 50 premiers résultats. Fiches Google : relevé du même jour. Aucune donnée de trafic n'a été utilisée.<br>
+    KAELIX · agence web &amp; SEO pour artisans et PME · kaelix.fr · Document personnel et confidentiel.
+  </div>
+</div>
+</body>
+</html>

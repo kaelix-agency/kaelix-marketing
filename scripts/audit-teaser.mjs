@@ -149,8 +149,8 @@ h3{margin:0 0 10px;font-size:19px;line-height:1.25;font-weight:800}
 </div>
 
 ${charts ? `<div class="band"><div class="wrap">
-  <h2>Face aux ${d.concurrents.length === 1 ? "boutiques qui passent" : "deux boutiques qui passent"} devant vous</h2>
-  <div class="sub">${d.concurrents.map(c => esc(c.nom)).join(" et ")} : même activité, même zone, mêmes clientes.</div>
+  <h2>${d.concurrents.length === 1 ? `Face à ${esc(d.concurrents[0].nom)}, votre concurrent direct` : "Face aux deux boutiques qui passent devant vous"}</h2>
+  <div class="sub">${esc(d.graphiques_sous_titre ?? (d.concurrents.map(c => c.nom).join(" et ") + " : même activité, même zone, mêmes clients."))}</div>
   <div class="grid3">${charts}</div>
 </div></div>` : ""}
 

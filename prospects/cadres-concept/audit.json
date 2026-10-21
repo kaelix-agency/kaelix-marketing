@@ -1,0 +1,83 @@
+{
+  "prospect": {
+    "slug": "cadres-concept",
+    "nom": "Cadres Concept",
+    "prenom_contact": "[PRÉNOM]",
+    "site": "cadresconcept.com",
+    "ville": "Narbonne",
+    "activite": "tableaux en métal et bois, horloges industrielles (vente en ligne, entreprise familiale)",
+    "type": "ecommerce"
+  },
+  "audit": {
+    "date": "2026-10-21",
+    "auteur": "Axel",
+    "score": 51,
+    "verdict_titre": "Vos tableaux sont sur Google. En page 2, là où personne ne va.",
+    "verdict_texte": "Nous avons testé votre site sur téléphone comme un client qui cherche un tableau en métal, puis comparé avec Eurodécor et avec les sites qui prennent la première page sur vos recherches. Votre marque est solide : 4,9 sur 35 avis. Trois points vous empêchent de transformer ça en ventes.",
+    "perimetre": { "pages": 4, "recherches": 10, "concurrents": 1 }
+  },
+  "concurrents": [
+    { "nom": "Eurodécor Metal Art", "site": "eurodecor-metal-art.com" }
+  ],
+  "graphiques_sous_titre": "Eurodécor (Tourcoing) : mêmes tableaux en métal, même clientèle en ligne. Sur Google, le vrai gagnant est un troisième site : harmonie.design.",
+  "points": [
+    {
+      "titre": "Votre site met 10 secondes à s'afficher sur téléphone",
+      "vu": "Score de vitesse mobile Google : 34 sur 100. L'image principale apparaît au bout de 9,8 s (Eurodécor : 3,0 s). Google constate le problème chez vos vrais visiteurs : vos Core Web Vitals sont en « échec ».",
+      "coute": "La moitié des visiteurs sur téléphone repartent avant d'avoir vu un seul tableau, et Google vous recule derrière les sites plus rapides",
+      "action": "allègement des images et des scripts de la boutique, objectif moins de 2 s mesuré à la livraison."
+    },
+    {
+      "titre": "Présent sur 8 recherches sur 10, mais entre la 13e et la 23e place",
+      "vu": "Sur « tableau métal mural », « tableau métal déco murale », « tableau métal animaux »… vous êtes en page 2. Un seul site prend la 1re place sur 7 recherches sur 10 : harmonie.design. Sur « horloge murale industrielle engrenages », vous n'apparaissez pas du tout.",
+      "coute": "La page 2 de Google reçoit moins de 1 % des clics : vos ventes en ligne dépendent des salons et du bouche-à-oreille",
+      "action": "une page de collection travaillée par thème et par pièce (salon, chambre, bureau), des guides d'achat, et une vraie page horloges."
+    },
+    {
+      "titre": "Votre fiche Google ne porte pas votre nom",
+      "vu": "La fiche s'appelle « Cadre Concept » (sans s), catégorie « Tableau » au lieu de « Magasin de décoration ». Elle n'est pas reliée à vos 35 avis en photos ni à vos collections.",
+      "coute": "Un client qui a vu vos tableaux à la foire de Montpellier et tape « Cadres Concept » peut douter que ce soit vous",
+      "action": "fiche corrigée et complétée (nom, catégorie, photos des tableaux, produits), puis alimentée chaque semaine avec vos nouveautés et salons."
+    }
+  ],
+  "graphiques": {
+    "visites": {
+      "titre": "Présence sur Google",
+      "sous_titre": "Recherches, sur 10 testées, où le site apparaît dans les 50 premiers",
+      "client": 8,
+      "concurrents": [5],
+      "conclusion": "Vous êtes plus visible qu'Eurodécor. Mais sur ces 8 recherches, vous n'êtes jamais dans les 3 premiers : la place est prise par harmonie.design sur <b>7 recherches sur 10</b>."
+    },
+    "vitesse": {
+      "titre": "Temps d'affichage sur téléphone",
+      "sous_titre": "Page d'accueil, mesure Google (connexion 4G lente)",
+      "client": 9.8,
+      "concurrents": [3.0],
+      "conclusion": "Score Google : <b>34</b> pour vous, <b>90</b> pour Eurodécor. C'est le seul point où votre concurrent est devant, et c'est le plus simple à corriger."
+    },
+    "avis": {
+      "titre": "Avis Google",
+      "sous_titre": "Nombre d'avis et note moyenne",
+      "client": { "nb": 35, "note": 4.9 },
+      "concurrents": [ { "nb": 5, "note": 5.0 } ],
+      "conclusion": "Votre vrai atout. <b>35 avis à 4,9</b>, c'est une preuve que vos concurrents n'ont pas. Elle n'est pas encore exploitée sur Google ni sur vos pages produit."
+    }
+  },
+  "piliers": [
+    { "nom": "Site & vitesse", "score": 35, "constats": "34/100 sur mobile · 9,8 s d'affichage · Core Web Vitals en échec · site sécurisé, balises SEO correctes" },
+    { "nom": "Visibilité Google", "score": 45, "constats": "8 recherches sur 10 en page 2 · jamais dans le top 3 · horloges absentes · aucun guide ni article" },
+    { "nom": "Fiche Google", "score": 65, "constats": "35 avis à 4,9 · nom erroné « Cadre Concept » · catégorie « Tableau » · horaires présents" },
+    { "nom": "Achat & contact", "score": 70, "constats": "Boutique claire, livraison offerte, avis affichés · promotion visible · pas de relance panier constatée" }
+  ],
+  "plan": [
+    { "periode": "Semaines 1 à 5", "titre": "Boutique rapide", "texte": "Même catalogue, même paiement, mais une boutique qui s'affiche en moins de 2 s sur téléphone et met vos 35 avis en avant sur chaque tableau." },
+    { "periode": "Dès la mise en ligne", "titre": "Fiche Google à votre nom", "texte": "Nom, catégorie, photos et produits corrigés ; nouveautés et dates de salons publiées chaque semaine." },
+    { "periode": "Mois 2 à 6", "titre": "De la page 2 à la page 1", "texte": "Pages par thème et par pièce, guides d'achat, page horloges : viser le top 3 sur les recherches où vous êtes déjà 13e à 23e." }
+  ],
+  "cta": {
+    "rdv_url": "https://calendar.app.google/REMPLACER",
+    "telephone": "06 00 00 00 00",
+    "texte": "Visio Google Meet, sans engagement. On passe en revue le détail des 4 piliers et vous repartez avec un devis clair."
+  },
+  "methode": "Vitesse : outil PageSpeed Insights de Google, mobile, le 21 octobre 2026. Positions Google : relevé manuel en France sur 10 recherches, 50 premiers résultats. Fiches Google : relevé du même jour. Aucune donnée de trafic n'a été utilisée."
+}
