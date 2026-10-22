@@ -1,0 +1,12 @@
+{
+  "_mode_d_emploi": "Copier ce fichier en prospects/<slug>/lecture-manuelle.json. Une clé = un numéro de critère de docs/grille-audit-gratuit.md, la valeur = 100, 50 ou 0. Ne renseigner que ce qui a été lu à la main ; une clé absente laisse le critère « non vérifiable » dans audit-score.mjs. Les critères 10, 19, 20, 25 ne se mesurent jamais automatiquement ; 11, 14, 17, 21 peuvent être forcés quand la collecte ne tranche pas.",
+  "10": 0,
+  "11": 50,
+  "14": 50,
+  "17": 100,
+  "19": 0,
+  "20": 50,
+  "21": 50,
+  "25": 0,
+  "note": "lu le AAAA-MM-JJ sur téléphone, par Axel"
+}
