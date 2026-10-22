@@ -1,0 +1,14 @@
+{
+  "nom": "Cadres Concept",
+  "site": "https://cadresconcept.com",
+  "ville": "Narbonne",
+  "activite": "tableaux en métal et bois, horloges industrielles (vente en ligne, entreprise familiale)",
+  "type": "ecommerce",
+  "concurrents": [
+    {
+      "nom": "Eurodécor Metal Art",
+      "site": "https://eurodecor-metal-art.com"
+    }
+  ],
+  "slug": "cadres-concept"
+}

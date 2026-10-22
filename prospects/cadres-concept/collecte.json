@@ -1,0 +1,88 @@
+{
+  "slug": "cadres-concept",
+  "date": "2026-10-22",
+  "prospect": {
+    "nom": "Cadres Concept",
+    "site": "https://cadresconcept.com",
+    "ville": "Narbonne",
+    "activite": "tableaux en métal et bois, horloges industrielles (vente en ligne, entreprise familiale)",
+    "type": "ecommerce",
+    "concurrents": [
+      {
+        "nom": "Eurodécor Metal Art",
+        "site": "https://eurodecor-metal-art.com"
+      }
+    ],
+    "slug": "cadres-concept"
+  },
+  "piliers": {
+    "1_site_vitesse": {
+      "prospect": {
+        "statut": "non vérifiable",
+        "raison": "PSI_API_KEY absente (.env)"
+      },
+      "concurrents": [
+        {
+          "site": "https://eurodecor-metal-art.com",
+          "statut": "non vérifiable",
+          "raison": "PSI_API_KEY absente (.env)"
+        }
+      ],
+      "https_site": {
+        "statut": "non vérifiable",
+        "raison": "site non lu"
+      }
+    },
+    "2_visibilite_google": {
+      "requetes": {
+        "liste": [],
+        "origine": {
+          "statut": "non vérifiable",
+          "raison": "HALOSCAN_API_KEY absente et aucune --requetes"
+        },
+        "volumes": null
+      },
+      "serps": {
+        "statut": "non vérifiable",
+        "raison": "HALOSCAN_API_KEY absente et aucune --requetes"
+      },
+      "synthese": null,
+      "catalogue_et_contenus": {
+        "statut": "non vérifiable",
+        "raison": "site non lu"
+      },
+      "shopping": {
+        "statut": "non vérifiable",
+        "raison": "onglet Google Shopping : relevé à la main"
+      }
+    },
+    "3_fiche_google": {
+      "prospect": {
+        "statut": "non vérifiable",
+        "raison": "GOOGLE_PLACES_API_KEY absente (.env)"
+      },
+      "concurrents": [
+        {
+          "statut": "non vérifiable",
+          "raison": "GOOGLE_PLACES_API_KEY absente (.env)"
+        }
+      ]
+    },
+    "4_parcours": {
+      "statut": "non vérifiable",
+      "raison": "accueil injoignable (fetch failed)"
+    }
+  },
+  "lecture_site": {
+    "statut": "non vérifiable",
+    "raison": "accueil injoignable (fetch failed)"
+  },
+  "a_lire_a_la_main": [
+    "critère 10 (Shopping)",
+    "critère 19 (publications/produits sur la fiche)",
+    "critère 20 (tri du catalogue)",
+    "critère 25 (relance panier)",
+    "critère 26 (délais : comparer `delais_cites`)",
+    "incohérences de téléphone : comparer `telephones`"
+  ]
+}

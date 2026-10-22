@@ -28,7 +28,7 @@ Un dossier par prospect (`prospects/<slug>/`), **avant** qu'il devienne un clien
 
 ## À venir
 
-1. Scripts de collecte qui remplissent `audit.json` : PageSpeed Insights (vitesse, poids, https), Haloscan (10 requêtes, volumes, positions, trafic estimé), API Google Places (fiches), `crawl-site.mjs` (titres, mobile).
+1. ✅ **Brique 1 (22/10/2026)** : `node scripts/audit-collect.mjs <slug> [--site … --nom … --ville … --activite … --concurrent … --requetes 'a|b']` → `prospects/<slug>/prospect.json` (les 4 entrées) + `prospects/<slug>/collecte.json` (une section par pilier, chaque mesure datée et sourcée, « non vérifiable » avec sa raison quand une source manque). Sources : PageSpeed Insights mobile (`PSI_API_KEY`), Places API (New) (`GOOGLE_PLACES_API_KEY`), Haloscan (SERP des 10 recherches via `overview/serp`, volumes via `bulk`), lecture du site par `fetch` (paiement, retours, téléphones, délais, menu, blog). Six critères restent à lire à la main (Shopping, publications de la fiche, tri du catalogue, relance panier, cohérence des délais et des téléphones — listés dans `a_lire_a_la_main`). Clés dans `.env` à la racine. Premier test réel à faire sur le poste (le conteneur n'a pas le réseau).
 2. Grille de calcul des 4 scores.
 3. Command `/audit-gratuit <slug>` qui enchaîne collecte → scores → rédaction des 3 points → génération → fiche CRM « Audit envoyé ».
 4. Audit complet (diapos + page longue) à partir du même JSON enrichi des chiffres client.
