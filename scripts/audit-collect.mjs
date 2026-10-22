@@ -2,7 +2,7 @@
 /**
  * KAELIX — audit gratuit, brique 1 : COLLECTE des données d'un prospect.
  *   node scripts/audit-collect.mjs <slug> [--site https://… --nom "…" --ville "…" --activite "…" --type ecommerce|local|saas]
- *                                         [--concurrent https://… --concurrent https://…] [--requetes "a|b|c"] [--json]
+ *                                         [--concurrent https://… --concurrent https://…] [--requetes "a|b|c"] [--mot-cle "tableau métal"] [--json]
  *
  * Entrées : prospects/<slug>/prospect.json (créé ou complété par les options ci-dessus). Quatre informations
  *   suffisent (doctrine du teaser, prospects/README.md) : site, activité, ville, concurrents (0 à 2, facultatifs).
@@ -57,6 +57,9 @@ const KEYS = { psi: process.env.PSI_API_KEY, places: process.env.GOOGLE_PLACES_A
 // ---- prospect.json ------------------------------------------------------------------------------------------------
 const dir = resolve(root, "prospects", slug);
 await mkdir(dir, { recursive: true });
+// The previous run, when there is one: a failed measure never erases a good one.
+let previous = null;
+try { previous = JSON.parse(await readFile(resolve(dir, "collecte.json"), "utf8")); } catch { /* première collecte */ }
 const pFile = resolve(dir, "prospect.json");
 let prospect = existsSync(pFile) ? JSON.parse(await readFile(pFile, "utf8")) : {};
 if (!existsSync(pFile) && existsSync(resolve(dir, "audit.json"))) {
@@ -98,9 +101,10 @@ async function getHtml(url, timeoutMs = 30_000) {
 }
 const strip = (html) => html.replace(/<script[\s\S]*?<\/script>/gi, " ").replace(/<style[\s\S]*?<\/style>/gi, " ").replace(/<[^>]+>/g, " ").replace(/&nbsp;/g, " ").replace(/&amp;/g, "&").replace(/\s+/g, " ");
 const uniq = (a) => [...new Set(a)];
+const numOrNull = (v) => (v === null || v === undefined || v === "NA" || v === "" || Number.isNaN(Number(v)) ? null : Number(v));
 
 // ---- 1. Site & vitesse : PageSpeed Insights (mobile) ------------------------------------------------------------------
-async function pagespeed(url) {
+async function pagespeed(url, attempt = 1) {
   if (!KEYS.psi) return blocked("PSI_API_KEY absente (.env)");
   try {
     const q = new URLSearchParams({ url, strategy: "mobile", key: KEYS.psi });
@@ -121,7 +125,15 @@ async function pagespeed(url) {
       terrain: field ? { statut: "mesuré", verdict: field.overall_category, lcp_ms_p75: field.metrics?.LARGEST_CONTENTFUL_PAINT_MS?.percentile ?? null }
                      : { statut: "absent", note: "Google n'a pas assez de visiteurs pour mesurer ce site : c'est une donnée (trafic relatif faible)" },
     };
-  } catch (e) { return blocked(`PageSpeed : ${e.message}`); }
+  } catch (e) {
+    // PageSpeed abandonne au bout de ~60 s sur un site lent : un second essai, puis la mesure précédente si elle existe
+    // (leçon du 22/10 : un timeout avait écrasé le 34/100 du premier passage).
+    if (attempt < 2 && /abort|timeout|504|500/i.test(e.message)) return pagespeed(url, attempt + 1);
+    const prev = previous?.piliers?.["1_site_vitesse"];
+    const old = prev && (prev.prospect?.url_finale === url || prev.prospect?.url_finale?.startsWith(url) ? prev.prospect : (prev.concurrents ?? []).find((c) => c.site === url));
+    if (old && !old.statut) return { ...old, reprise: `mesure précédente du ${old.date?.slice(0, 10)} conservée — PageSpeed a échoué le ${today} (${e.message})` };
+    return blocked(`PageSpeed : ${e.message}`);
+  }
 }
 
 // ---- 3. Fiche Google : Places API (New) --------------------------------------------------------------------------------
@@ -157,11 +169,27 @@ async function pickQueries(activite) {
   if (prospect.requetes?.length) return { requetes: prospect.requetes.slice(0, 10), origine: "prospect.json / --requetes" };
   if (!KEYS.haloscan) return { requetes: [], origine: blocked("HALOSCAN_API_KEY absente et aucune --requetes") };
   if (!activite) return { requetes: [], origine: blocked("aucune --requetes et aucune activité pour interroger Haloscan") };
+  // Haloscan `match` cherche une expression : une phrase d'activité entière ne matche rien. On interroge le mot-clé court
+  // (`mot_cle` de prospect.json ou --mot-cle), sinon les deux premiers mots de l'activité (leçon du 22/10 : pilier 2 vide).
+  const motCle = prospect.mot_cle || flags["mot-cle"] || activite.split(/[,;(]/)[0].trim().split(/\s+/).slice(0, 2).join(" ");
   try {
-    const d = await halo("/keywords/match", { keyword: activite, lang: "fr", lineCount: 40 });
+    const d = await halo("/keywords/match", { keyword: motCle, lang: "fr", lineCount: 40 });
     const rows = rowsOf(d).filter((r) => r.keyword && (r.volume ?? 0) > 0).sort((a, b) => (b.volume ?? 0) - (a.volume ?? 0));
-    return { requetes: rows.slice(0, 10).map((r) => r.keyword), origine: `Haloscan match « ${activite} », 10 plus gros volumes (à relire : retirer les marques)` };
+    return { requetes: rows.slice(0, 10).map((r) => r.keyword), origine: `Haloscan match « ${motCle} », 10 plus gros volumes (à relire : retirer les marques)` };
   } catch (e) { return { requetes: [], origine: blocked(`Haloscan match : ${e.message}`) }; }
+}
+/** Picks a date-like field next to the SERP (Haloscan re-scrapes on its own schedule: the date matters more than the rank). */
+function serpDate(d) {
+  let best = null;
+  const walk = (x, depth) => {
+    if (!x || depth > 5 || typeof x !== "object") return;
+    for (const [k, v] of Object.entries(x)) {
+      if (/date|updated?|scrap|crawl/i.test(k) && typeof v === "string" && /^\d{4}-\d{2}-\d{2}/.test(v)) best ??= v.slice(0, 10);
+      else if (typeof v === "object") walk(v, depth + 1);
+    }
+  };
+  walk(d, 0);
+  return best;
 }
 /** Finds, in whatever shape the overview answers, the ranked results (objects carrying a url and a position). */
 function serpRows(d) {
@@ -179,10 +207,13 @@ async function serp(keyword, domains) {
     const d = await halo("/keywords/overview", { keyword, lang: "fr", requested_data: ["metrics", "serp"] });
     const rows = serpRows(d);
     const metrics = d.metrics ?? d.data?.metrics ?? d.results?.metrics ?? {};
-    const volume = metrics.volume ?? d.volume ?? null;
-    if (!rows.length) return { requete: keyword, volume, statut: "non vérifiable", raison: "forme de la SERP Haloscan non reconnue (overview/serp) — à relever à la main", echantillon: JSON.stringify(d).slice(0, 300) };
+    const volume = numOrNull(metrics.volume ?? d.volume);
+    const inconnu = volume == null && (metrics.volume === "NA" || d.volume === "NA" || !rows.length);
+    if (!rows.length) return { requete: keyword, volume, statut: "non vérifiable", raison: inconnu ? "recherche inconnue de l'index Haloscan (longue traîne) — à relever à la main sur Google, téléphone" : "forme de la SERP Haloscan non reconnue (overview/serp) — à relever à la main", echantillon: JSON.stringify(d).slice(0, 300) };
     const posOf = (dom) => { const r = rows.find((x) => host(x.url ?? x.domain ?? "") === dom || host(x.url ?? x.domain ?? "").endsWith("." + dom)); return r ? Number(r.position ?? r.pos ?? r.rank) : null; };
-    return { requete: keyword, volume, positions: Object.fromEntries(domains.map((dm) => [dm, posOf(dm)])), premier: host(rows[0]?.url ?? rows[0]?.domain ?? ""), top3: rows.slice(0, 3).map((x) => host(x.url ?? x.domain ?? "")), nb_resultats_lus: rows.length };
+    const dateSerp = serpDate(d);
+    return { requete: keyword, volume, positions: Object.fromEntries(domains.map((dm) => [dm, posOf(dm)])), premier: host(rows[0]?.url ?? rows[0]?.domain ?? ""), top3: rows.slice(0, 3).map((x) => host(x.url ?? x.domain ?? "")), nb_resultats_lus: rows.length,
+      date_serp: dateSerp, source: "Haloscan overview/serp — SERP Google FR ordinateur, à la date de son dernier relevé (pas un relevé du jour, pas sur téléphone)" };
   } catch (e) { return { requete: keyword, statut: "non vérifiable", raison: `Haloscan overview : ${e.message}` }; }
 }
 
@@ -253,7 +284,7 @@ const { requetes, origine } = await pickQueries(prospect.activite);
 let serps = [];
 if (requetes.length && KEYS.haloscan) { for (const q of requetes) serps.push(await serp(q, domains)); log(`Haloscan : ${serps.length} recherches`); }
 let volumes = null;
-if (requetes.length && KEYS.haloscan) { try { volumes = rowsOf(await halo("/keywords/bulk", { keywords: requetes, lang: "fr", lineCount: requetes.length })).map((r) => ({ requete: r.keyword, volume: r.volume ?? null, kvi: r.kvi ?? null })); } catch (e) { volumes = blocked(`Haloscan bulk : ${e.message}`); } }
+if (requetes.length && KEYS.haloscan) { try { volumes = rowsOf(await halo("/keywords/bulk", { keywords: requetes, lang: "fr", lineCount: requetes.length })).map((r) => ({ requete: r.keyword, volume: numOrNull(r.volume), kvi: numOrNull(r.kvi), inconnu_haloscan: r.volume === "NA" || r.volume == null })); } catch (e) { volumes = blocked(`Haloscan bulk : ${e.message}`); } }
 const fiches = { prospect: await placeOf([prospect.nom, prospect.ville].filter(Boolean).join(" ") || host(prospect.site)), concurrents: [] };
 for (const c of prospect.concurrents) fiches.concurrents.push(await placeOf([c.nom, c.ville].filter(Boolean).join(" ") || host(c.site)));
 log("Places : fait");
