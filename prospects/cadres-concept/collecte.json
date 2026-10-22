@@ -13,43 +13,263 @@
         "site": "https://eurodecor-metal-art.com"
       }
     ],
-    "slug": "cadres-concept"
+    "slug": "cadres-concept",
+    "requetes": [
+      "tableau métal mural",
+      "tableau métal déco murale",
+      "tableau métal animaux",
+      "horloge murale industrielle engrenages",
+      "tableau métal industriel",
+      "tableau métal déco",
+      "tableau métal",
+      "tableau métal et bois",
+      "horloge industrielle",
+      "horloge industrielle bois et métal"
+    ]
   },
   "piliers": {
     "1_site_vitesse": {
       "prospect": {
-        "statut": "non vérifiable",
-        "raison": "PSI_API_KEY absente (.env)"
+        "source": "PageSpeed Insights API, mobile",
+        "date": "2026-10-22T20:05:16.697Z",
+        "url_finale": "https://www.cadresconcept.com/",
+        "note_performance": 50,
+        "note_seo": 100,
+        "lcp_s": 10.4,
+        "ttfb_s": 0.02,
+        "requetes": 182,
+        "poids_ko": 3384,
+        "https": true,
+        "terrain": {
+          "statut": "mesuré",
+          "verdict": "AVERAGE",
+          "lcp_ms_p75": 2931
+        }
       },
       "concurrents": [
         {
           "site": "https://eurodecor-metal-art.com",
-          "statut": "non vérifiable",
-          "raison": "PSI_API_KEY absente (.env)"
+          "source": "PageSpeed Insights API, mobile",
+          "date": "2026-10-22T20:05:15.575Z",
+          "url_finale": "https://eurodecor-metal-art.com/",
+          "note_performance": 85,
+          "note_seo": 100,
+          "lcp_s": 3.2,
+          "ttfb_s": 0,
+          "requetes": 66,
+          "poids_ko": 1385,
+          "https": true,
+          "terrain": {
+            "statut": "absent",
+            "note": "Google n'a pas assez de visiteurs pour mesurer ce site : c'est une donnée (trafic relatif faible)"
+          }
         }
       ],
-      "https_site": {
-        "statut": "non vérifiable",
-        "raison": "site non lu"
-      }
+      "https_site": true
     },
     "2_visibilite_google": {
       "requetes": {
-        "liste": [],
-        "origine": {
+        "liste": [
+          "tableau métal mural",
+          "tableau métal déco murale",
+          "tableau métal animaux",
+          "horloge murale industrielle engrenages",
+          "tableau métal industriel",
+          "tableau métal déco",
+          "tableau métal",
+          "tableau métal et bois",
+          "horloge industrielle",
+          "horloge industrielle bois et métal"
+        ],
+        "origine": "prospect.json / --requetes",
+        "volumes": [
+          {
+            "requete": "tableau métal mural",
+            "volume": "NA",
+            "kvi": "NA"
+          },
+          {
+            "requete": "tableau métal déco murale",
+            "volume": "NA",
+            "kvi": "NA"
+          },
+          {
+            "requete": "tableau métal animaux",
+            "volume": "NA",
+            "kvi": "NA"
+          },
+          {
+            "requete": "horloge murale industrielle engrenages",
+            "volume": "NA",
+            "kvi": "NA"
+          },
+          {
+            "requete": "tableau métal industriel",
+            "volume": 320,
+            "kvi": 29
+          },
+          {
+            "requete": "tableau métal déco",
+            "volume": 260,
+            "kvi": 29
+          },
+          {
+            "requete": "tableau métal",
+            "volume": 173,
+            "kvi": 30
+          },
+          {
+            "requete": "tableau métal et bois",
+            "volume": 50,
+            "kvi": 29
+          },
+          {
+            "requete": "horloge industrielle",
+            "volume": 700,
+            "kvi": 20
+          },
+          {
+            "requete": "horloge industrielle bois et métal",
+            "volume": 210,
+            "kvi": 25
+          }
+        ]
+      },
+      "serps": [
+        {
+          "requete": "tableau métal mural",
+          "volume": null,
           "statut": "non vérifiable",
-          "raison": "HALOSCAN_API_KEY absente et aucune --requetes"
+          "raison": "forme de la SERP Haloscan non reconnue (overview/serp) — à relever à la main",
+          "echantillon": "{\"keyword\":\"tableau métal mural\",\"errors\":[],\"serp\":{\"response_time\":\"1.162 secs\",\"keyword\":\"tableau métal mural\",\"response_code\":null,\"failure_reason\":null,\"result_count\":0,\"aio_link_count\":0,\"results\":{\"serp_date\":[],\"serp\":[],\"aio_links\":[]}},\"seo_metrics\":{\"google_indexed\":\"NA\",\"allintitle_count"
         },
-        "volumes": null
+        {
+          "requete": "tableau métal déco murale",
+          "volume": null,
+          "statut": "non vérifiable",
+          "raison": "forme de la SERP Haloscan non reconnue (overview/serp) — à relever à la main",
+          "echantillon": "{\"keyword\":\"tableau métal déco murale\",\"errors\":[{\"requested_data\":\"serp\",\"errorCode\":\"KEYWORD_UNKNOWN\"},{\"requested_data\":\"metrics\",\"errorCode\":\"KEYWORD_UNKNOWN\"}],\"serp\":{\"errorCode\":\"KEYWORD_UNKNOWN\",\"results\":[],\"filtered_result_count\":0,\"total_result_count\":0}}"
+        },
+        {
+          "requete": "tableau métal animaux",
+          "volume": null,
+          "statut": "non vérifiable",
+          "raison": "forme de la SERP Haloscan non reconnue (overview/serp) — à relever à la main",
+          "echantillon": "{\"keyword\":\"tableau métal animaux\",\"errors\":[{\"requested_data\":\"serp\",\"errorCode\":\"KEYWORD_UNKNOWN\"},{\"requested_data\":\"metrics\",\"errorCode\":\"KEYWORD_UNKNOWN\"}],\"serp\":{\"errorCode\":\"KEYWORD_UNKNOWN\",\"results\":[],\"filtered_result_count\":0,\"total_result_count\":0}}"
+        },
+        {
+          "requete": "horloge murale industrielle engrenages",
+          "volume": null,
+          "statut": "non vérifiable",
+          "raison": "forme de la SERP Haloscan non reconnue (overview/serp) — à relever à la main",
+          "echantillon": "{\"keyword\":\"horloge murale industrielle engrenages\",\"errors\":[{\"requested_data\":\"serp\",\"errorCode\":\"KEYWORD_UNKNOWN\"},{\"requested_data\":\"metrics\",\"errorCode\":\"KEYWORD_UNKNOWN\"}],\"serp\":{\"errorCode\":\"KEYWORD_UNKNOWN\",\"results\":[],\"filtered_result_count\":0,\"total_result_count\":0}}"
+        },
+        {
+          "requete": "tableau métal industriel",
+          "volume": null,
+          "positions": {
+            "cadresconcept.com": null,
+            "eurodecor-metal-art.com": 5
+          },
+          "premier": "izoa.fr",
+          "top3": [
+            "izoa.fr",
+            "kunstloft.fr",
+            "amazon.fr"
+          ],
+          "nb_resultats_lus": 47
+        },
+        {
+          "requete": "tableau métal déco",
+          "volume": null,
+          "positions": {
+            "cadresconcept.com": 2,
+            "eurodecor-metal-art.com": 6
+          },
+          "premier": "amazon.fr",
+          "top3": [
+            "amazon.fr",
+            "cadresconcept.com",
+            "kunstloft.fr"
+          ],
+          "nb_resultats_lus": 37
+        },
+        {
+          "requete": "tableau métal",
+          "volume": null,
+          "positions": {
+            "cadresconcept.com": 2,
+            "eurodecor-metal-art.com": 4
+          },
+          "premier": "kunstloft.fr",
+          "top3": [
+            "kunstloft.fr",
+            "cadresconcept.com",
+            "amazon.fr"
+          ],
+          "nb_resultats_lus": 48
+        },
+        {
+          "requete": "tableau métal et bois",
+          "volume": null,
+          "positions": {
+            "cadresconcept.com": 1,
+            "eurodecor-metal-art.com": 3
+          },
+          "premier": "cadresconcept.com",
+          "top3": [
+            "cadresconcept.com",
+            "cocktail-scandinave.fr",
+            "eurodecor-metal-art.com"
+          ],
+          "nb_resultats_lus": 34
+        },
+        {
+          "requete": "horloge industrielle",
+          "volume": null,
+          "positions": {
+            "cadresconcept.com": null,
+            "eurodecor-metal-art.com": null
+          },
+          "premier": "leroymerlin.fr",
+          "top3": [
+            "leroymerlin.fr",
+            "horloge-mania.com",
+            "leboncoin.fr"
+          ],
+          "nb_resultats_lus": 13
+        },
+        {
+          "requete": "horloge industrielle bois et métal",
+          "volume": null,
+          "positions": {
+            "cadresconcept.com": null,
+            "eurodecor-metal-art.com": null
+          },
+          "premier": "cdiscount.com",
+          "top3": [
+            "cdiscount.com",
+            "ambiancecadres.fr",
+            "horloge-univers.com"
+          ],
+          "nb_resultats_lus": 35
+        }
+      ],
+      "synthese": {
+        "recherches_testees": 10,
+        "dans_les_3_premiers": 3,
+        "dans_les_50_premiers": 3,
+        "absent": 3,
+        "premier_le_plus_frequent": [
+          "izoa.fr",
+          1
+        ]
       },
-      "serps": {
-        "statut": "non vérifiable",
-        "raison": "HALOSCAN_API_KEY absente et aucune --requetes"
-      },
-      "synthese": null,
       "catalogue_et_contenus": {
-        "statut": "non vérifiable",
-        "raison": "site non lu"
+        "entrees_menu": 22,
+        "blog": {
+          "present": false
+        }
       },
       "shopping": {
         "statut": "non vérifiable",
@@ -58,24 +278,184 @@
     },
     "3_fiche_google": {
       "prospect": {
-        "statut": "non vérifiable",
-        "raison": "GOOGLE_PLACES_API_KEY absente (.env)"
+        "source": "Places API (New), searchText",
+        "date": "2026-10-22T20:06:01.770Z",
+        "requete": "Cadres Concept Narbonne",
+        "candidats": 1,
+        "nom": "Cadre Concept",
+        "categorie": null,
+        "note": 4.9,
+        "nb_avis": 35,
+        "telephone": "07 45 05 08 60",
+        "site": "https://www.cadresconcept.com/",
+        "horaires": true,
+        "nb_photos": 10,
+        "adresse": "20 Av. du Champ de Mars, 11100 Narbonne",
+        "maps": "https://maps.google.com/?cid=3042319689384628030&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "limites": "nb_photos = photos renvoyées par l'API (10 max) ; publications et produits de la fiche non exposés par Places → critère 19 à lire à la main"
       },
       "concurrents": [
         {
-          "statut": "non vérifiable",
-          "raison": "GOOGLE_PLACES_API_KEY absente (.env)"
+          "source": "Places API (New), searchText",
+          "date": "2026-10-22T20:06:01.946Z",
+          "requete": "Eurodécor Metal Art",
+          "candidats": 1,
+          "nom": "Eurodécor METAL ART",
+          "categorie": "Magasin d'ameublement et de décoration",
+          "note": 5,
+          "nb_avis": 5,
+          "telephone": "03 61 97 23 44",
+          "site": "http://www.eurodecor-metal-art.com/",
+          "horaires": true,
+          "nb_photos": 3,
+          "adresse": "79 Rue Claude Bernard, 59200 Tourcoing",
+          "maps": "https://maps.google.com/?cid=15598382152840880620&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "limites": "nb_photos = photos renvoyées par l'API (10 max) ; publications et produits de la fiche non exposés par Places → critère 19 à lire à la main"
         }
       ]
     },
     "4_parcours": {
-      "statut": "non vérifiable",
-      "raison": "accueil injoignable (fetch failed)"
+      "paiement": {
+        "avant_panier": false,
+        "mentions": [
+          "carte bancaire"
+        ],
+        "plusieurs_fois": false
+      },
+      "retours": {
+        "annonces": false,
+        "dans_cgv_seulement": true
+      },
+      "telephones": {
+        "0745050860": [
+          "accueil",
+          "cgv",
+          "faq",
+          "contact",
+          "mentions"
+        ],
+        "0698235753": [
+          "faq"
+        ]
+      },
+      "telephones_distincts": 2,
+      "delais_cites": [
+        "sous 3 jours"
+      ],
+      "avis_sur_pages": true,
+      "relance_panier": {
+        "statut": "non vérifiable",
+        "raison": "non constatable sans parcours d'achat réel (critère 25 : lecture à la main)"
+      },
+      "tri_catalogue": {
+        "statut": "non vérifiable",
+        "raison": "filtres du catalogue non lisibles sans navigateur (critère 20 : lecture à la main, ou crawl-site.mjs)"
+      }
     }
   },
   "lecture_site": {
-    "statut": "non vérifiable",
-    "raison": "accueil injoignable (fetch failed)"
+    "source": "lecture du site (fetch, sans navigateur — ce qu'un client voit dans la page, pas ce que JavaScript ajoute)",
+    "date": "2026-10-22T20:06:09.861Z",
+    "pages_lues": {
+      "accueil": {
+        "url": "https://www.cadresconcept.com/",
+        "statut": 200,
+        "ms": 2790
+      },
+      "cgv": {
+        "url": "https://www.cadresconcept.com/conditions-generales-de-vente",
+        "statut": 200,
+        "ms": 1154
+      },
+      "faq": {
+        "url": "https://www.cadresconcept.com/faq-cadres-concept",
+        "statut": 200,
+        "ms": 1507
+      },
+      "contact": {
+        "url": "https://www.cadresconcept.com/contact",
+        "statut": 200,
+        "ms": 1361
+      },
+      "mentions": {
+        "url": "https://www.cadresconcept.com/mention-legales",
+        "statut": 200,
+        "ms": 841
+      }
+    },
+    "https": true,
+    "redirige_vers": "https://www.cadresconcept.com/",
+    "temps_reponse_s": 2.79,
+    "title": "Tableaux métal et bois pour votre déco murale par Cadres Concept",
+    "h1": "Des tableaux en art m&eacute;tal et relief pour sublimer votre d&eacute;coration int&eacute;rieure.",
+    "entrees_menu": 22,
+    "menu": [
+      "boutique",
+      "nouveautés",
+      "tableau métal",
+      "horloges engrenages tournants",
+      "carte cadeau",
+      "meilleures ventes",
+      "animaux",
+      "musique",
+      "personnages",
+      "sport",
+      "véhicules",
+      "voitures",
+      "motos",
+      "avion et tramway",
+      "maritime",
+      "villes du monde",
+      "gastronomie",
+      "horloge métal industrielle",
+      "qui sommes-nous ?",
+      "fabrication",
+      "avis clients",
+      "contact"
+    ],
+    "blog": {
+      "present": false
+    },
+    "paiement": {
+      "avant_panier": false,
+      "mentions": [
+        "carte bancaire"
+      ],
+      "plusieurs_fois": false
+    },
+    "retours": {
+      "annonces": false,
+      "dans_cgv_seulement": true
+    },
+    "telephones": {
+      "0745050860": [
+        "accueil",
+        "cgv",
+        "faq",
+        "contact",
+        "mentions"
+      ],
+      "0698235753": [
+        "faq"
+      ]
+    },
+    "telephones_distincts": 2,
+    "delais_cites": [
+      "sous 3 jours"
+    ],
+    "avis_sur_pages": true,
+    "relance_panier": {
+      "statut": "non vérifiable",
+      "raison": "non constatable sans parcours d'achat réel (critère 25 : lecture à la main)"
+    },
+    "tri_catalogue": {
+      "statut": "non vérifiable",
+      "raison": "filtres du catalogue non lisibles sans navigateur (critère 20 : lecture à la main, ou crawl-site.mjs)"
+    },
+    "shopping": {
+      "statut": "non vérifiable",
+      "raison": "présence dans l'onglet Google Shopping : recherche Google à la main (critère 10)"
+    }
   },
   "a_lire_a_la_main": [
     "critère 10 (Shopping)",
