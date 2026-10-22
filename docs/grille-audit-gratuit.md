@@ -70,4 +70,7 @@ Source : parcours fait à la main sur téléphone, plus lecture de la FAQ et des
 
 **La grille est nettement plus sévère que le jugement à la main**, surtout sur le parcours d'achat. Avant de l'appliquer au prochain prospect, trancher : soit on assume des scores autour de 30 pour une boutique qui marche (alarmant, mais comparable), soit on relève les seuils. Dans tous les cas, ne pas mélanger : un audit noté à la main et un audit noté à la grille ne se comparent pas.
 
-Décision en attente côté opérateur.
+**Décision d'Axel du 22 octobre 2026 : la grille sévère est gardée telle quelle.** Les seuils ne bougent pas ; une boutique qui marche peut sortir autour de 30/100 et c'est assumé : la note sert à comparer deux prospects et à prioriser, pas à flatter. Conséquences :
+- la brique de notation (`scripts/audit-score.mjs`) applique la grille sans correction ;
+- l'audit Cadres Concept du 21/10 (51, noté à la main) reste un audit « pré-grille » : ne pas le comparer aux suivants ;
+- dans le teaser et en présentation, l'échelle s'explique en une phrase (« une note de 30 n'est pas un site cassé : c'est un site qui laisse la moitié de ses ventes sur la table ») — à intégrer au gabarit du teaser lors de la brique 3.
