@@ -7,7 +7,7 @@
 | **Typologie** | evergreen — **page business de capture** (formulaire), pas un article |
 | **Page cible** | `/audit-gratuit` (existante, créée le 25/04/2026 — libre de la règle des 90 j ; indexée le 17/10) |
 | **Recherche faite le** | 2026-10-22 (`/research`, 5 `serp-analyst` en parallèle + scroll-check chrome ×2 en session principale + KPI Haloscan par API directe) |
-| **Statut** | 🕓 **en attente de GO opérateur** — 🛑 aucun `/refresh` sans GO |
+| **Statut** | ✅ **GO opérateur le 2026-10-22 (10 h 35, gate en conversation)** : ré-angle **GO** (zéro clic GSC assumé, KPI = contacts PostHog + maillage) · extrait = **teaser Cadres Concept anonymisé, publié maintenant** (anonymisation stricte : aucun nom, aucune URL, aucun visuel identifiable) · formulaire **URL + e-mail + prénom optionnel** (téléphone retiré) · title **A** « Audit gratuit de votre site internet, lu par un fondateur » · grille publique **4 piliers + un exemple chacun** · **aucune citation**. → `/refresh` à lancer. |
 
 > ⚠️ **Conditions de l'analyse.** Le serveur MCP Haloscan n'a pas chargé (timeout, comme le 20/10) : les 5 `serp-analyst` ont tourné **sans KPI du jour** (relevé du 17/10) et ont lu les SERP **par procuration** (WebSearch, Bing, DuckDuckGo — Google renvoie un mur de consentement). Deux compléments en session principale corrigent le tir : (1) **KPI datés du 22/10 par `scripts/haloscan-fetch.mjs bulk`** (API directe, §1.29 — le champ `kvi` du bulk est bien celui du MCP, contrôle du 22/10 sur 7 mots-clés) ; (2) **deux SERP Google réelles relevées en Chrome** (annexe G). Le verdict ci-dessous repose sur ces deux relevés directs ; les mini-briefs servent pour l'intention, le format et le gap.
 
@@ -138,12 +138,12 @@ Information gain **acquis** : grille maison + extrait réel + processus + périm
 
 ## 6. Décisions attendues au GO `/refresh`
 
-1. **GO / NO-GO** sur le ré-angle « page de capture, trafic organique résiduel assumé » — c'est une acceptation explicite que la ligne 2 ne rapportera pas de clics GSC mesurables.
-2. **Extrait** : teaser **Cadres Concept anonymisé** (choix exprimé le 22/10 — ⚠️ prospect en discussion : publier maintenant, ou après sa réponse ?) ou **audit kaelix.fr du 17/10** (publiable sans réserve, « on s'applique ce qu'on vend »).
-3. **Formulaire** : URL + e-mail strictement, ou URL + e-mail + prénom (optionnel). Le téléphone disparaît du formulaire (il revient à la prise de rendez-vous).
-4. **Title** : A (« lu par un fondateur ») ou B (« rapport sous 72 h »).
-5. **Grille publique** : 4 piliers et quelques critères en exemple (recommandé), ou liste complète des 26 critères (déconseillé : doctrine du teaser, calibrage non tranché #17).
-6. **`ExpertQuote`** : nouvelle citation en proposition signalée (thème « ce qu'un outil ne voit pas »), ou aucune.
+1. ✅ **GO (22/10)** — ~~GO / NO-GO~~ sur le ré-angle « page de capture, trafic organique résiduel assumé » — c'est une acceptation explicite que la ligne 2 ne rapportera pas de clics GSC mesurables.
+2. ✅ **Cadres Concept anonymisé, maintenant (22/10)** — ~~Extrait~~ : teaser **Cadres Concept anonymisé** (choix exprimé le 22/10 — ⚠️ prospect en discussion : publier maintenant, ou après sa réponse ?) ou **audit kaelix.fr du 17/10** (publiable sans réserve, « on s'applique ce qu'on vend »).
+3. ✅ **URL + e-mail + prénom optionnel (22/10)** — ~~Formulaire~~ : URL + e-mail strictement, ou URL + e-mail + prénom (optionnel). Le téléphone disparaît du formulaire (il revient à la prise de rendez-vous).
+4. ✅ **A (22/10)** — ~~Title~~ : A (« lu par un fondateur ») ou B (« rapport sous 72 h »).
+5. ✅ **4 piliers (22/10)** — ~~Grille publique~~ : 4 piliers et quelques critères en exemple (recommandé), ou liste complète des 26 critères (déconseillé : doctrine du teaser, calibrage non tranché #17).
+6. ✅ **aucune (22/10)** — ~~`ExpertQuote`~~ : nouvelle citation en proposition signalée (thème « ce qu'un outil ne voit pas »), ou aucune.
 
 ---
 
