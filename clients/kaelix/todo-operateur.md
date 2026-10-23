@@ -30,6 +30,7 @@
 
 | Date | Changement |
 |---|---|
+| 2026-10-23 | **Correctif de l'extrait /audit-gratuit** : relevé direct des 10 recherches en Chrome (a47) → l'audit Cadres Concept du 21/10 se trompait sur les positions ; décision Axel : rien vers le client, extrait public corrigé → PR web-agency#67 (double PASS), gate go merge. Doctrine teaser « super light » + leçon positions écrites dans `prospects/README.md`. Chantier audit : briques 1 et 2 livrées le 22/10 |
 | 2026-10-22 | **PR web-agency#36 mergée** (`d591740`, 13 h 25, go d'Axel) : `/audit-gratuit` refreshée en production. #19 clos ; `tracking.md` ✅ publié, J90 = 20/01/2027 (verdict contacts PostHog). CLAUDE.md du site documenté (règle des 90 j) |
 | 2026-10-22 | **GO du brief /audit-gratuit** (10 h 35 : ré-angle, extrait Cadres Concept anonymisé maintenant, URL + e-mail + prénom optionnel, title A, 4 piliers, aucune citation) puis **`/refresh kaelix audit-gratuit`** en session cloud → PR web-agency#36 (double PASS : fact-checker 2 passes 0 🔴, contract-checker PASS ; 25 E2E verts en conteneur, le cas Supabase à rejouer sur le poste). #19 → relecture de la PR. `tracking.md` : ligne `/audit-gratuit` 🕓 PR |
 | 2026-10-22 | **`/research kaelix audit-gratuit`** (ligne 2) → brief persisté dans `research/`, #19 ajouté (gate a28 mis à jour). Haloscan MCP en timeout → KPI du jour par `haloscan-fetch.mjs bulk` ; scroll-check Chrome ×2 : SERP d'outils, 4 pubs + AIO → ré-angle page de capture. Constat page en ligne : formulaire 8 champs dont téléphone obligatoire (contredit « sans démarchage ») |
