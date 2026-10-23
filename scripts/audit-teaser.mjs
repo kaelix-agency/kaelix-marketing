@@ -1,5 +1,8 @@
 // Génère la page HTML de l'audit gratuit (teaser) d'un prospect à partir de son audit.json.
-//   node scripts/audit-teaser.mjs <slug-prospect>
+//   node scripts/audit-teaser.mjs <slug-prospect> [--light]
+//   --light : version « super light » envoyée au prospect (décision d'Axel du 23/10/2026) — score, verdict et les 3 points
+//             (vu → ce que ça coûte), SANS « ce qu'on ferait », sans graphiques, sans piliers, sans plan : tout ça se
+//             développe au rendez-vous. Sans --light : la version complète (la page longue de l'audit complet).
 // Entrée  : prospects/<slug>/audit.json   (schéma : prospects/README.md)
 // Sortie  : prospects/<slug>/audit-teaser.html  (page autoporteuse, à publier en lien privé)
 // Rendu validé sur maquette le 2026-10-21 (canvas « Audit gratuit KAELIX — maquette »).
@@ -8,8 +11,9 @@ import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const slug = process.argv[2];
-if (!slug) { console.error("usage : node scripts/audit-teaser.mjs <slug-prospect>"); process.exit(1); }
+const slug = process.argv.slice(2).find((a) => !a.startsWith("--"));
+const light = process.argv.includes("--light");
+if (!slug) { console.error("usage : node scripts/audit-teaser.mjs <slug-prospect> [--light]"); process.exit(1); }
 const dir = resolve(root, "prospects", slug);
 const d = JSON.parse(await readFile(resolve(dir, "audit.json"), "utf8"));
 
@@ -142,31 +146,31 @@ h3{margin:0 0 10px;font-size:19px;line-height:1.25;font-weight:800}
         <h3>${esc(p.titre)}</h3>
         <div class="vu">${esc(p.vu)}</div>
         <div class="coute"><small>Ce que ça vous coûte</small><div>${esc(p.coute)}</div></div>
-        <div class="act"><b>Ce qu'on ferait :</b> ${esc(p.action)}</div>
+        ${light ? "" : `<div class="act"><b>Ce qu'on ferait :</b> ${esc(p.action)}</div>`}
       </div>`).join("")}
     </div>
   </div>
 </div>
 
-${charts ? `<div class="band"><div class="wrap">
+${charts && !light ? `<div class="band"><div class="wrap">
   <h2>${d.concurrents.length === 1 ? `Face à ${esc(d.concurrents[0].nom)}, votre concurrent direct` : "Face aux deux boutiques qui passent devant vous"}</h2>
   <div class="sub">${esc(d.graphiques_sous_titre ?? (d.concurrents.map(c => c.nom).join(" et ") + " : même activité, même zone, mêmes clients."))}</div>
   <div class="grid3">${charts}</div>
 </div></div>` : ""}
 
 <div class="wrap">
-  <div class="sec" style="padding-top:56px">
+  ${light ? "" : `<div class="sec" style="padding-top:56px">
     <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px"><h2>Votre score, pilier par pilier</h2><div class="hint" style="margin-bottom:20px">Le détail de chaque pilier vous est présenté en rendez-vous.</div></div>
     <div class="grid4">${d.piliers.map(p => { const t = tone(p.score); return `
       <div class="card pil"><div class="nom">${esc(p.nom)}</div><div class="sc" style="color:${t.fg}">${p.score}</div><div class="bar"><div style="width:${p.score}%;background:${t.bar}"></div></div><div class="ct">${esc(p.constats)}</div></div>`; }).join("")}
     </div>
-  </div>
+  </div>`}
 
   <div class="sec">
     <div class="plan">
-      <h2>Par où on commencerait</h2>
-      <div class="sub">Dans l'ordre, avec ce que ça change pour vous.</div>
-      <div class="grid3">${d.plan.map(s => `<div class="step"><small>${esc(s.periode)}</small><b>${esc(s.titre)}</b><p>${esc(s.texte)}</p></div>`).join("")}</div>
+      <h2>${light ? "Le détail, et par où on commencerait" : "Par où on commencerait"}</h2>
+      <div class="sub">${light ? "Les quatre piliers, ce qu'on ferait contre chaque point et dans quel ordre : on vous le présente en 30 minutes, à l'écran." : "Dans l'ordre, avec ce que ça change pour vous."}</div>
+      ${light ? "" : `<div class="grid3">${d.plan.map(s => `<div class="step"><small>${esc(s.periode)}</small><b>${esc(s.titre)}</b><p>${esc(s.texte)}</p></div>`).join("")}</div>`}
       <div class="cta">
         <a class="btn" href="${esc(d.cta.rdv_url)}">Réserver 30 min avec ${esc(d.audit.auteur)}</a>
         <p>${esc(d.cta.texte)} Ou par téléphone : <a class="tel" href="tel:${esc(d.cta.telephone.replace(/\s/g, ""))}">${esc(d.cta.telephone)}</a></p>
@@ -182,6 +186,6 @@ ${charts ? `<div class="band"><div class="wrap">
 </body>
 </html>`;
 
-const out = resolve(dir, "audit-teaser.html");
+const out = resolve(dir, light ? "audit-teaser.html" : "audit-complet.html");
 await writeFile(out, html, "utf8");
-console.log("écrit :", out, `(${(html.length / 1024).toFixed(0)} Ko)`);
+console.log(light ? "teaser (super light) écrit :" : "page complète écrite :", out, `(${(html.length / 1024).toFixed(0)} Ko)`);
