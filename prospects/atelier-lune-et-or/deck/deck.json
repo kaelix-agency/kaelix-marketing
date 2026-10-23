@@ -1,0 +1,40 @@
+{
+  "v": 4,
+  "createdOnFiles": {
+    "v": 1,
+    "at": "2026-10-23T09:15:31.894Z"
+  },
+  "lists": "css",
+  "title": "Audit complet KAELIX — Atelier Lune & Or",
+  "order": [
+    "cover",
+    "forces",
+    "frictions",
+    "ecart",
+    "prestations",
+    "offre",
+    "bilan",
+    "suite"
+  ],
+  "sections": {
+    "s1": {
+      "description": "Ce qui est solide chez Atelier Lune & Or, puis ce qui lui coûte des ventes",
+      "start": "cover"
+    },
+    "s2": {
+      "description": "Ce que la comparaison avec Maison Oriane et Camille Rey Bijoux révèle",
+      "start": "ecart"
+    },
+    "s3": {
+      "description": "Ce qu'on met en place, ce que ça coûte, et comment il le jugera au 4e mois",
+      "start": "prestations"
+    }
+  },
+  "faces": {
+    "manrope": {
+      "family": "Manrope",
+      "href": "https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&display=swap"
+    }
+  },
+  "designSystems": []
+}

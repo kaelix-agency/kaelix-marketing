@@ -1,0 +1,232 @@
+{
+  "_mode_d_emploi": "Pré-rempli depuis audit.json. Remplacer chaque « [À RÉDIGER] », relire les notes d'orateur (aside), puis relancer scripts/audit-deck.mjs. Un fait n'apparaît qu'une fois : les frictions (diapo 3) parlent du site seul, l'écart (diapo 4) seulement de ce que montre la comparaison. Pas de vocabulaire technique.",
+  "date_presentation": "2026-10-23",
+  "cover": {
+    "titre": "Votre boutique est belle. Presque personne ne la trouve.",
+    "sous_titre": "Ce qui est solide chez vous, ce qui vous coûte des ventes, ce que font Maison Oriane et Camille Rey Bijoux — et ce qu'on fait contre, point par point.",
+    "criteres": 26,
+    "aside": "Le 46 sur 100 est celui de l'audit envoyé : ne pas en changer. [À RÉDIGER] le fil de la présentation."
+  },
+  "forces": {
+    "titre": "Ce qui est solide chez vous",
+    "cartes": [
+      {
+        "chiffre": "4,8",
+        "titre": "sur 4 avis Google",
+        "texte": "[À RÉDIGER] comparer : Maison Oriane 140, Camille Rey Bijoux 62."
+      },
+      {
+        "chiffre": "[À RÉDIGER]",
+        "titre": "[À RÉDIGER]",
+        "texte": "[À RÉDIGER] une force mesurée (trafic relatif, vitesse chez les vrais visiteurs, livraison…)"
+      },
+      {
+        "chiffre": "[À RÉDIGER]",
+        "titre": "[À RÉDIGER]",
+        "texte": "[À RÉDIGER] ce que les concurrents n'ont pas (histoire, atelier, fabrication)"
+      },
+      {
+        "chiffre": "[À RÉDIGER]",
+        "titre": "[À RÉDIGER]",
+        "texte": "[À RÉDIGER] la base saine (site sécurisé, pages renseignées…)"
+      }
+    ],
+    "conclusion": "Vous avez déjà le plus difficile : <b>un produit qui plaît et des clients qui le disent.</b> Le reste — être vraiment trouvé, et ne plus perdre ceux qui arrivent — se répare.",
+    "aside": "Commencer par là, et le dire sans flatterie : ce sont des chiffres, pas des compliments."
+  },
+  "frictions": {
+    "titre": "Invisible sur Google",
+    "sous_titre": "Sur 10 recherches comme « bijoux artisanaux faits main », vous n'apparaissez nulle part dans les 5 premières pages. Toutes vos fiches produit s'appellent « Produit ».",
+    "lignes": [
+      {
+        "etape": "arrive",
+        "bloque": "Sur 10 recherches comme « bijoux artisanaux faits main », vous n'apparaissez nulle part dans les 5 premières pages. Toutes vos fiches produit s'appellent « Produit ».",
+        "fait": "une page par type de bijou et par occasion, des fiches réécrites avec les mots de vos clientes."
+      },
+      {
+        "etape": "cherche",
+        "bloque": "[À RÉDIGER]",
+        "fait": "[À RÉDIGER]"
+      },
+      {
+        "etape": "compare",
+        "bloque": "[À RÉDIGER]",
+        "fait": "[À RÉDIGER]"
+      },
+      {
+        "etape": "hésite",
+        "bloque": "[À RÉDIGER]",
+        "fait": "[À RÉDIGER]"
+      },
+      {
+        "etape": "s'en va",
+        "bloque": "[À RÉDIGER]",
+        "fait": "[À RÉDIGER]"
+      }
+    ],
+    "pied": "Relevé du 21 octobre 2026 · Vitesse mesurée avec l'outil de Google, sur téléphone",
+    "aside": "Une ligne à la fois. Ne pas promettre de pourcentages : on n'a pas encore de mesure sur son site, c'est ce qu'on installe."
+  },
+  "ecart": {
+    "titre": "Ce qu'ils ont et que vous n'avez pas",
+    "lignes": [
+      {
+        "sujet": "Le prix d'appel",
+        "ecart": "[À RÉDIGER]",
+        "fait": "À trancher ensemble : aligner un prix d'appel, ou rendre visible ce qui justifie l'écart"
+      },
+      {
+        "sujet": "L'onglet Shopping de Google",
+        "ecart": "[À RÉDIGER]",
+        "fait": "Vos produits envoyés dans Shopping, avec vos avis"
+      },
+      {
+        "sujet": "Les conseils",
+        "ecart": "[À RÉDIGER]",
+        "fait": "Deux contenus par mois"
+      },
+      {
+        "sujet": "La place sur Google",
+        "ecart": "Vos photos pèsent 4 à 6 Mo chacune et le menu masque le bouton « Ajouter au panier » sur les petits écrans.",
+        "fait": "photos allégées, page d'accueil plus légère, bouton d'achat toujours visible. Moins de 2 s à la livraison."
+      },
+      {
+        "sujet": "Les langues",
+        "ecart": "[À RÉDIGER]",
+        "fait": "On en reparle au bilan, si les ventes suivent"
+      }
+    ],
+    "pied": "Relevé du 21 octobre 2026 : sites, fiches Google et onglet Shopping des enseignes comparées",
+    "aside": "Le prix : poser la question, ne pas y répondre à sa place. Ne pas revenir sur ce qui était dans la diapositive d'avant."
+  },
+  "prestations": {
+    "titre": "Ce qu'on met en place chez vous",
+    "colonnes": [
+      {
+        "periode": "Semaines 1 à 4",
+        "titre": "Boutique rapide et sécurisée",
+        "puces": [
+          "Nouveau site, vos produits repris, affichage en moins de 2 s, bouton d'achat visible partout.",
+          "[À RÉDIGER]",
+          "[À RÉDIGER]"
+        ]
+      },
+      {
+        "periode": "Dès la mise en ligne",
+        "titre": "Fiche Google qui vit",
+        "puces": [
+          "Fiche complète, avis demandés après chaque commande, présence sur la carte pour « bijoutier créateur » près de chez vous.",
+          "[À RÉDIGER]",
+          "[À RÉDIGER]"
+        ]
+      },
+      {
+        "periode": "Mois 2 à 6",
+        "titre": "Trouvée sur Google",
+        "puces": [
+          "Pages par type de bijou et par occasion, premières recherches en page 1, premières ventes venues de Google.",
+          "[À RÉDIGER]",
+          "[À RÉDIGER]"
+        ]
+      }
+    ],
+    "aside": "La seule diapositive où l'on parle de nous. Dire les trois temps et s'arrêter."
+  },
+  "offre": {
+    "titre": "Vous payez la boutique. Le reste est offert 4 mois.",
+    "boutique": 150,
+    "options_total": 220,
+    "visibilite": 199,
+    "total_plein": 569,
+    "mois_offerts": 4,
+    "options": [
+      {
+        "nom": "Relance des paniers",
+        "bilan": "Paniers récupérés × panier moyen = chiffre d'affaires sauvé"
+      },
+      {
+        "nom": "Produits sur Google Shopping",
+        "bilan": "Visiteurs venus de Shopping, commandes, chiffre d'affaires"
+      },
+      {
+        "nom": "Cartes cadeaux",
+        "bilan": "Cartes vendues, montant encaissé"
+      },
+      {
+        "nom": "Demande d'avis Google",
+        "bilan": "Avis gagnés, note, effet sur votre fiche"
+      },
+      {
+        "nom": "Suivi des ventes",
+        "bilan": "C'est l'outil qui produit ce tableau"
+      },
+      {
+        "nom": "Mesure de fréquentation",
+        "bilan": "D'où viennent vos visiteurs, où ils s'arrêtent"
+      },
+      {
+        "nom": "Sauvegarde renforcée",
+        "bilan": "Ne se mesure pas en euros : c'est une assurance"
+      }
+    ],
+    "aside": "Un seul chiffre à faire entendre : 569 € de prestations pour 150 €, sans engagement."
+  },
+  "bilan": {
+    "titre": "Vous décidez avec les chiffres",
+    "sous_titre": "D'abord ceux que votre site ne vous donne pas aujourd'hui : combien de visiteurs, d'où ils viennent, combien de commandes, votre panier moyen, et à quel moment les autres s'en vont.",
+    "options": [
+      {
+        "nom": "Relance des paniers",
+        "bilan": "Paniers récupérés × panier moyen = chiffre d'affaires sauvé"
+      },
+      {
+        "nom": "Produits sur Google Shopping",
+        "bilan": "Visiteurs venus de Shopping, commandes, chiffre d'affaires"
+      },
+      {
+        "nom": "Cartes cadeaux",
+        "bilan": "Cartes vendues, montant encaissé"
+      },
+      {
+        "nom": "Demande d'avis Google",
+        "bilan": "Avis gagnés, note, effet sur votre fiche"
+      },
+      {
+        "nom": "Suivi des ventes",
+        "bilan": "C'est l'outil qui produit ce tableau"
+      },
+      {
+        "nom": "Mesure de fréquentation",
+        "bilan": "D'où viennent vos visiteurs, où ils s'arrêtent"
+      },
+      {
+        "nom": "Sauvegarde renforcée",
+        "bilan": "Ne se mesure pas en euros : c'est une assurance"
+      }
+    ],
+    "conclusion": "Chaque ligne se décide séparément : vous gardez ce qui se paie tout seul, vous coupez le reste. <b>Et si les ventes suivent, on ouvre une langue.</b>",
+    "aside": "C'est la diapositive qui fait signer : un essai qui se juge sur pièces, ligne par ligne. Si on demande le prix d'une langue : 60 € par mois."
+  },
+  "suite": {
+    "titre": "[À RÉDIGER] (une date : « Si on démarre cette semaine, la boutique est en ligne avant… »)",
+    "etapes": [
+      {
+        "quand": "Aujourd'hui",
+        "titre": "Vous recevez le lien pour démarrer votre projet",
+        "texte": "Vous vérifiez, vous validez. Rien n'est débité avant le démarrage des travaux."
+      },
+      {
+        "quand": "Semaine 1",
+        "titre": "Une heure ensemble",
+        "texte": "Vos produits, vos photos, votre fiche Google, et vos prochaines dates."
+      },
+      {
+        "quand": "Semaines 3 à 5",
+        "titre": "Mise en ligne, vitesse vérifiée devant vous",
+        "texte": "Puis un point de 15 minutes chaque mois, et le bilan au 4e mois."
+      }
+    ],
+    "contact": "Axel · 06 35 44 30 10 · axel@kaelix.fr · kaelix.fr",
+    "aside": "Terminer par une date, pas par « réfléchissez »."
+  }
+}
