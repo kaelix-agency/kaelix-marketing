@@ -7,7 +7,12 @@ Un dossier par prospect (`prospects/<slug>/`), **avant** qu'il devienne un clien
 | `audit.json` | Les données de l'audit gratuit (teaser). Source unique : tout ce qui s'affiche vient de là. |
 | `audit-teaser.html` | La page envoyée au prospect sous 72 h ouvrées, générée par `node scripts/audit-teaser.mjs <slug>`. Autoporteuse, `noindex`, à publier en lien privé. |
 
-## Principe du teaser (décisions du 2026-10-21)
+## Principe du teaser (décisions du 2026-10-21, précisées le 2026-10-23)
+
+**Décision d'Axel du 23/10/2026 : l'audit envoyé au prospect est une version « super light »** — elle montre **plusieurs problèmes** (le score et les 3 points qui coûtent le plus, chacun en une phrase : vu → ce que ça coûte), **sans développer** ni les solutions ni le détail des piliers. Tout le développement (diapos, piliers, plan chiffré) se fait **au rendez-vous**. Le teaser crée le besoin de l'appel, il ne le remplace pas.
+
+**Leçon du 23/10/2026 (positions)** : un relevé manuel de positions se fait **sur ordinateur et sur téléphone, en navigation privée**, et se **confronte à Haloscan** avant d'entrer dans un audit — l'audit Cadres Concept du 21/10 annonçait « jamais dans le top 3 » là où deux sources placent la boutique dans le top 3 sur 6 recherches sur 10 (`prospects/cadres-concept/2026-10-23-releve-serp-chrome.md`). L'audit du client n'est pas corrigé (décision d'Axel : on ne revient pas vers un client signé) ; l'extrait public de kaelix.fr l'est.
+
 
 - **Objectif unique : obtenir le rendez-vous de 30 min.** Score + 3 points qui coûtent le plus + plan en 3 étapes + bouton RDV. Le détail des piliers et les prix sont réservés à l'audit complet (après l'appel).
 - **Aucune donnée fournie par le prospect** n'est nécessaire : le teaser se produit à partir de 4 entrées (site, activité, ville, 2 concurrents facultatifs). Les chiffres client (panier moyen, commandes, paniers abandonnés) ne servent qu'à l'audit complet.
