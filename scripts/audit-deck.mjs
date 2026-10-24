@@ -42,10 +42,44 @@ const concList = concNames.length ? concNames.join(" et ") : "vos concurrents";
 const TODO = "[À RÉDIGER]";
 
 // ---- 1. deck-content.json : pré-remplissage depuis audit.json ------------------------------------------------------------
-/** Standard KAELIX offer for an online shop (October 2026): the shop, the seven options, the National visibility. */
-const OFFRE = {
-  boutique: 150, options_total: 220, visibilite: 199, total_plein: 569, mois_offerts: 4,
-  options: [
+/**
+ * Standard KAELIX offer (October 2026, kaelix.fr/tarifs), at full price — a launch discount is a per-prospect decision
+ * written into deck-content.json, never a default (Axel, 24/10/2026: the "4 months free" of Cadres Concept was a gesture).
+ * Two variants: an online shop, and a local business (artisan, shop) — site vitrine + the Local plan, judged in calls.
+ */
+const LOCAL = (a.prospect?.type ?? "") === "local";
+const OFFRE = LOCAL ? {
+  mois_bilan: 4,
+  titre: "Un site qui appelle, une fiche qui travaille. Deux lignes, chacune se juge.",
+  lignes: [
+    { kicker: "Le site vitrine", prix: 80, sous: "hors taxes, par mois", texte: "Sans frais de création. Sans engagement. Création, hébergement, maintenance et mises à jour compris.", couleur: "#3D5BFF" },
+    { kicker: "La formule Local", prix: 199, sous: "hors taxes, par mois", texte: "La fiche Google est comprise : fiche gérée et publiée, coordonnées cohérentes dans les annuaires, réponse aux avis, pages ville, suivi mensuel de la position sur la carte. Engagement 3 mois, puis mensuel.", couleur: "#2E9A64" },
+  ],
+  total: 279,
+  bandeau: { gauche: "279 € hors taxes par mois, les deux lignes", droite: "Rien n'est débité avant le démarrage, le code du site vous appartient si vous partez, et le site seul reste possible à 80 €." },
+  aside: "Deux chiffres, pas plus : 80 et 199. Si on demande National : 199 € aussi, ou Local + National à 349 €.",
+  bilan: [
+    { nom: "Le site", bilan: "Appels et demandes de devis depuis le site, vitesse mesurée chez vos vrais visiteurs" },
+    { nom: "La fiche Google", bilan: "Appels et itinéraires depuis la fiche, avis gagnés, publications parues" },
+    { nom: "La place sur la carte", bilan: "Sur les 10 recherches : dans les 3 premiers de la carte, ou non, ville par ville" },
+    { nom: "Les pages ville et service", bilan: "Recherches où vous êtes en première page, et ce qu'elles apportent" },
+    { nom: "Les annuaires", bilan: "Coordonnées identiques partout, fiches créées ou corrigées" },
+  ],
+  bilan_sous_titre: "D'abord ceux que votre site ne vous donne pas aujourd'hui : combien de visiteurs, d'où ils viennent, combien appellent ou demandent un devis, et à quel moment les autres s'en vont.",
+  bilan_conclusion: "Chaque ligne se décide séparément : vous gardez ce qui vous apporte des appels, vous coupez le reste. <b>Et si la carte est gagnée, on regarde National.</b>",
+  bilan_aside: "C'est la diapositive qui fait signer : un essai qui se juge sur pièces, en appels et en devis. Si on demande le prix de National : 199 € par mois.",
+} : {
+  mois_bilan: 4,
+  titre: "Vous payez la boutique. Chaque outil se juge au bilan.",
+  lignes: [
+    { kicker: "La boutique", prix: 150, sous: "hors taxes, par mois", texte: "Sans frais de création. Sans engagement. Création, hébergement et maintenance compris.", couleur: "#3D5BFF" },
+    { kicker: "Les sept outils", prix: 220, sous: "hors taxes, par mois, les sept", texte: "À la carte, sans engagement : vous ne gardez que ceux qui se paient tout seuls.", couleur: "#2E9A64" },
+    { kicker: "La visibilité National", prix: 199, sous: "hors taxes, par mois", texte: "Deux contenus par mois, pages d'expertise, suivi des positions. Engagement 3 mois, puis mensuel.", couleur: "#2E9A64" },
+  ],
+  total: 569,
+  bandeau: { gauche: "569 € hors taxes par mois, tout activé", droite: "Rien n'est débité avant le démarrage, et le code du site vous appartient si vous partez. Une remise de lancement, si on en fait une, se décide prospect par prospect." },
+  aside: "Un seul chiffre à faire entendre : 150 € la boutique, le reste se juge ligne par ligne.",
+  bilan: [
     { nom: "Relance des paniers", bilan: "Paniers récupérés × panier moyen = chiffre d'affaires sauvé" },
     { nom: "Produits sur Google Shopping", bilan: "Visiteurs venus de Shopping, commandes, chiffre d'affaires" },
     { nom: "Cartes cadeaux", bilan: "Cartes vendues, montant encaissé" },
@@ -54,20 +88,37 @@ const OFFRE = {
     { nom: "Mesure de fréquentation", bilan: "D'où viennent vos visiteurs, où ils s'arrêtent" },
     { nom: "Sauvegarde renforcée", bilan: "Ne se mesure pas en euros : c'est une assurance" },
   ],
+  bilan_sous_titre: "D'abord ceux que votre site ne vous donne pas aujourd'hui : combien de visiteurs, d'où ils viennent, combien de commandes, votre panier moyen, et à quel moment les autres s'en vont.",
+  bilan_conclusion: "Chaque ligne se décide séparément : vous gardez ce qui se paie tout seul, vous coupez le reste. <b>Et si les ventes suivent, on ouvre une langue.</b>",
+  bilan_aside: "C'est la diapositive qui fait signer : un essai qui se juge sur pièces, ligne par ligne. Si on demande le prix d'une langue : 60 € par mois.",
 };
+const ECART = LOCAL ? [
+  { sujet: "La place sur la carte", ecart: TODO, fait: "Fiche publiée chaque semaine, avis demandés après chaque intervention, catégories et services complets" },
+  { sujet: "Les avis sur le site", ecart: TODO, fait: "Vos avis Google affichés sur chaque page, au premier écran" },
+  { sujet: "Les pages par ville et par service", ecart: TODO, fait: "Une page par ville servie, une par service" },
+  { sujet: "La place sur Google", ecart: "__POINT1__", fait: "__ACTION1__" },
+  { sujet: "Les publications", ecart: TODO, fait: "Chantiers et conseils publiés sur la fiche et sur le site" },
+] : [
+  { sujet: "Le prix d'appel", ecart: TODO, fait: "À trancher ensemble : aligner un prix d'appel, ou rendre visible ce qui justifie l'écart" },
+  { sujet: "L'onglet Shopping de Google", ecart: TODO, fait: "Vos produits envoyés dans Shopping, avec vos avis" },
+  { sujet: "Les conseils", ecart: TODO, fait: "Deux contenus par mois" },
+  { sujet: "La place sur Google", ecart: "__POINT1__", fait: "__ACTION1__" },
+  { sujet: "Les langues", ecart: TODO, fait: "On en reparle au bilan, si les ventes suivent" },
+];
+const COUTE = LOCAL ? "des appels" : "des ventes";
 function prefill() {
   const avis = a.graphiques?.avis;
   const forces = [];
   if (avis?.client?.note) forces.push({ chiffre: fr(avis.client.note, 1), titre: `sur ${fr(avis.client.nb)} avis Google`, texte: avis.concurrents?.length ? `${TODO} comparer : ${concNames.map((n, i) => `${n} ${fr(avis.concurrents[i]?.nb ?? 0)}`).join(", ")}.` : TODO });
   forces.push({ chiffre: TODO, titre: TODO, texte: `${TODO} une force mesurée (trafic relatif, vitesse chez les vrais visiteurs, livraison…)` });
-  forces.push({ chiffre: TODO, titre: TODO, texte: `${TODO} ce que les concurrents n'ont pas (histoire, atelier, fabrication)` });
+  forces.push({ chiffre: TODO, titre: TODO, texte: `${TODO} ce que les concurrents n'ont pas (${LOCAL ? "spécialité, zone, délai, garanties" : "histoire, atelier, fabrication"})` });
   forces.push({ chiffre: TODO, titre: TODO, texte: `${TODO} la base saine (site sécurisé, pages renseignées…)` });
   const points = a.points ?? [];
   return {
     _mode_d_emploi: "Pré-rempli depuis audit.json. Remplacer chaque « [À RÉDIGER] », relire les notes d'orateur (aside), puis relancer scripts/audit-deck.mjs. Un fait n'apparaît qu'une fois : les frictions (diapo 3) parlent du site seul, l'écart (diapo 4) seulement de ce que montre la comparaison. Pas de vocabulaire technique.",
     date_presentation: today,
-    cover: { titre: a.audit?.verdict_titre ?? TODO, sous_titre: `Ce qui est solide chez vous, ce qui vous coûte des ventes, ce que font ${concList} — et ce qu'on fait contre, point par point.`, criteres: 26, aside: `Le ${a.audit?.score ?? "?"} sur 100 est celui de l'audit envoyé : ne pas en changer. ${TODO} le fil de la présentation.` },
-    forces: { titre: "Ce qui est solide chez vous", cartes: forces, conclusion: "Vous avez déjà le plus difficile : <b>un produit qui plaît et des clients qui le disent.</b> Le reste — être vraiment trouvé, et ne plus perdre ceux qui arrivent — se répare.", aside: "Commencer par là, et le dire sans flatterie : ce sont des chiffres, pas des compliments." },
+    cover: { titre: a.audit?.verdict_titre ?? TODO, sous_titre: `Ce qui est solide chez vous, ce qui vous coûte ${COUTE}, ce que font ${concList} — et ce qu'on fait contre, point par point.`, criteres: 26, aside: `Le ${a.audit?.score ?? "?"} sur 100 est celui de l'audit envoyé : ne pas en changer. ${TODO} le fil de la présentation.` },
+    forces: { titre: "Ce qui est solide chez vous", cartes: forces, conclusion: `Vous avez déjà le plus difficile : <b>${LOCAL ? "un métier bien fait et des clients qui le disent" : "un produit qui plaît et des clients qui le disent"}.</b> Le reste — être vraiment trouvé, et ne plus perdre ceux qui arrivent — se répare.`, aside: "Commencer par là, et le dire sans flatterie : ce sont des chiffres, pas des compliments." },
     frictions: { titre: points[0]?.titre ?? TODO, sous_titre: points[0]?.vu ?? TODO,
       lignes: [
         { etape: "arrive", bloque: points[0]?.vu ?? TODO, fait: points[0]?.action ?? TODO },
@@ -75,21 +126,16 @@ function prefill() {
       ],
       pied: `Relevé du ${a.audit?.date ? dateFR(a.audit.date) : TODO} · Vitesse mesurée avec l'outil de Google, sur téléphone`, aside: "Une ligne à la fois. Ne pas promettre de pourcentages : on n'a pas encore de mesure sur son site, c'est ce qu'on installe." },
     ecart: { titre: "Ce qu'ils ont et que vous n'avez pas",
-      lignes: [
-        { sujet: "Le prix d'appel", ecart: TODO, fait: "À trancher ensemble : aligner un prix d'appel, ou rendre visible ce qui justifie l'écart" },
-        { sujet: "L'onglet Shopping de Google", ecart: TODO, fait: "Vos produits envoyés dans Shopping, avec vos avis" },
-        { sujet: "Les conseils", ecart: TODO, fait: "Deux contenus par mois" },
-        { sujet: "La place sur Google", ecart: points[1]?.vu ?? TODO, fait: points[1]?.action ?? TODO },
-        { sujet: "Les langues", ecart: TODO, fait: "On en reparle au bilan, si les ventes suivent" },
-      ],
-      pied: `Relevé du ${a.audit?.date ? dateFR(a.audit.date) : TODO} : sites, fiches Google et onglet Shopping des enseignes comparées`, aside: "Le prix : poser la question, ne pas y répondre à sa place. Ne pas revenir sur ce qui était dans la diapositive d'avant." },
+      lignes: ECART.map((l) => ({ ...l, ecart: l.ecart === "__POINT1__" ? (points[1]?.vu ?? TODO) : l.ecart, fait: l.fait === "__ACTION1__" ? (points[1]?.action ?? TODO) : l.fait })),
+      pied: `Relevé du ${a.audit?.date ? dateFR(a.audit.date) : TODO} : sites, fiches Google${LOCAL ? " et carte" : " et onglet Shopping"} des enseignes comparées`, aside: "Le prix : poser la question, ne pas y répondre à sa place. Ne pas revenir sur ce qui était dans la diapositive d'avant." },
     prestations: { titre: "Ce qu'on met en place chez vous", colonnes: (a.plan ?? []).map((p) => ({ periode: p.periode, titre: p.titre, puces: [p.texte, TODO, TODO] })), aside: "La seule diapositive où l'on parle de nous. Dire les trois temps et s'arrêter." },
-    offre: { titre: `Vous payez la boutique. Le reste est offert ${OFFRE.mois_offerts} mois.`, ...OFFRE, aside: `Un seul chiffre à faire entendre : ${OFFRE.total_plein} € de prestations pour ${OFFRE.boutique} €, sans engagement.` },
-    bilan: { titre: "Vous décidez avec les chiffres", sous_titre: "D'abord ceux que votre site ne vous donne pas aujourd'hui : combien de visiteurs, d'où ils viennent, combien de commandes, votre panier moyen, et à quel moment les autres s'en vont.", options: OFFRE.options, conclusion: "Chaque ligne se décide séparément : vous gardez ce qui se paie tout seul, vous coupez le reste. <b>Et si les ventes suivent, on ouvre une langue.</b>", aside: "C'est la diapositive qui fait signer : un essai qui se juge sur pièces, ligne par ligne. Si on demande le prix d'une langue : 60 € par mois." },
-    suite: { titre: TODO + " (une date : « Si on démarre cette semaine, la boutique est en ligne avant… »)", etapes: [
+    offre: { titre: OFFRE.titre, mois_bilan: OFFRE.mois_bilan, lignes: OFFRE.lignes, total: OFFRE.total, bandeau: OFFRE.bandeau, aside: OFFRE.aside,
+      _remise: "Une remise de lancement (ex. « offert 4 mois ») se décide ici, prospect par prospect : modifier prix / sous / texte des lignes et le bandeau. Jamais par défaut." },
+    bilan: { titre: "Vous décidez avec les chiffres", sous_titre: OFFRE.bilan_sous_titre, options: OFFRE.bilan, conclusion: OFFRE.bilan_conclusion, aside: OFFRE.bilan_aside },
+    suite: { titre: TODO + ` (une date : « Si on démarre cette semaine, ${LOCAL ? "le site" : "la boutique"} est en ligne avant… »)`, etapes: [
       { quand: "Aujourd'hui", titre: "Vous recevez le lien pour démarrer votre projet", texte: "Vous vérifiez, vous validez. Rien n'est débité avant le démarrage des travaux." },
-      { quand: "Semaine 1", titre: "Une heure ensemble", texte: "Vos produits, vos photos, votre fiche Google, et vos prochaines dates." },
-      { quand: "Semaines 3 à 5", titre: "Mise en ligne, vitesse vérifiée devant vous", texte: `Puis un point de 15 minutes chaque mois, et le bilan au ${OFFRE.mois_offerts}e mois.` },
+      { quand: "Semaine 1", titre: "Une heure ensemble", texte: LOCAL ? "Vos chantiers, vos photos, votre fiche Google, et les villes où vous intervenez." : "Vos produits, vos photos, votre fiche Google, et vos prochaines dates." },
+      { quand: "Semaines 3 à 5", titre: "Mise en ligne, vitesse vérifiée devant vous", texte: `Puis un point de 15 minutes chaque mois, et le bilan au ${OFFRE.mois_bilan}e mois.` },
     ], contact: "Axel · 06 35 44 30 10 · axel@kaelix.fr · kaelix.fr", aside: "Terminer par une date, pas par « réfléchissez »." },
   };
 }
@@ -99,7 +145,7 @@ if (!existsSync(cFile)) {
   process.exit(0);
 }
 const c = JSON.parse(await readFile(cFile, "utf8"));
-const todos = (JSON.stringify(c).match(/\[À RÉDIGER\]/g) ?? []).length;
+const todos = (JSON.stringify({ ...c, _mode_d_emploi: undefined }).match(/\[À RÉDIGER\]/g) ?? []).length;
 if (todos) console.error(`⚠️ ${todos} « ${TODO} » restent dans deck-content.json — le deck est généré, mais il n'est pas présentable.`);
 
 // ---- 2. gabarits ----------------------------------------------------------------------------------------------------------
@@ -168,31 +214,33 @@ ${(col.puces ?? []).map((x) => `<li>${esc(x)}</li>`).join("\n")}
 </ul>`, "#E6E2D9", "#FFFFFF", 36)).join("\n")}
 </div>
 ${aside(c.prestations.aside)}`, 44);
-// 6. offre
+// 6. offre — `offre.lignes` (cartes : kicker, prix, prix_barre?, sous, texte, couleur) ; un deck-content.json antérieur
+// (Cadres Concept, offre « boutique + outils offerts + visibilité offerte ») est converti à la volée.
 const o = c.offre;
+const legacyLignes = () => [
+  { kicker: "La boutique", prix: o.boutique, sous: "hors taxes, par mois", texte: "Sans frais de création. Sans engagement. Création, hébergement et maintenance compris.", couleur: "#3D5BFF" },
+  { kicker: `Les ${o.options?.length === 7 ? "sept" : o.options?.length} outils`, prix: 0, prix_barre: o.options_total, sous: `au lieu de ${fr(o.options_total)} € par mois`, texte: `Tous activés, offerts ${o.mois_offerts} mois. Vous ne gardez ensuite que ceux qui se paient tout seuls.`, couleur: "#2E9A64" },
+  { kicker: "La visibilité", prix: 0, prix_barre: o.visibilite, sous: `au lieu de ${fr(o.visibilite)} € par mois`, texte: `Offerte ${o.mois_offerts} mois. La décision se prend au bilan, les résultats sous les yeux.`, couleur: "#2E9A64" },
+];
+const lignes = o.lignes ?? legacyLignes();
+const bandeau = o.bandeau ?? { gauche: `Pendant ${o.mois_offerts} mois : ${fr(o.boutique)} € hors taxes par mois, tout compris`, droite: `${fr(o.total_plein)} € de prestations pour ${fr(o.boutique)} €. Rien n'est débité avant le démarrage, et le code du site vous appartient si vous partez.` };
+const moisBilan = o.mois_bilan ?? o.mois_offerts ?? 4;
+const prixColor = (l) => l.prix === 0 ? "#6FD6A8" : "#ECEAE4";
 slides.offre = dark("offre", `${head("L'offre", o.titre, "#8FA0FF")}
-<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px">
-${card(`<p style="font-size:26px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#8FA0FF">La boutique</p>
-<p style="font-size:72px;font-weight:800;line-height:1;letter-spacing:-2px;color:#ECEAE4">${fr(o.boutique)} €</p>
-<p style="font-size:28px;color:#9C9A93">hors taxes, par mois</p>
-<p style="font-size:26px;line-height:1.5;color:#C9C7C0">Sans frais de création. Sans engagement. Création, hébergement et maintenance compris.</p>`, "#3D5BFF", "#1F1F25", 40)}
-${card(`<p style="font-size:26px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#6FD6A8">Les ${o.options.length === 7 ? "sept" : o.options.length} outils</p>
-<p style="font-size:72px;font-weight:800;line-height:1;letter-spacing:-2px;color:#6FD6A8">0 €</p>
-<p style="font-size:28px;color:#9C9A93">au lieu de ${fr(o.options_total)} € par mois</p>
-<p style="font-size:26px;line-height:1.5;color:#C9C7C0">Tous activés, offerts ${o.mois_offerts} mois. Vous ne gardez ensuite que ceux qui se paient tout seuls.</p>`, "#2E9A64", "#1F1F25", 40)}
-${card(`<p style="font-size:26px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#6FD6A8">La visibilité</p>
-<p style="font-size:72px;font-weight:800;line-height:1;letter-spacing:-2px;color:#6FD6A8">0 €</p>
-<p style="font-size:28px;color:#9C9A93">au lieu de ${fr(o.visibilite)} € par mois</p>
-<p style="font-size:26px;line-height:1.5;color:#C9C7C0">Offerte ${o.mois_offerts} mois. La décision se prend au bilan, les résultats sous les yeux.</p>`, "#2E9A64", "#1F1F25", 40)}
+<div style="display:grid;grid-template-columns:${lignes.map(() => "1fr").join(" ")};gap:28px">
+${lignes.map((l) => card(`<p style="font-size:26px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:${l.couleur === "#3D5BFF" ? "#8FA0FF" : "#6FD6A8"}">${esc(l.kicker)}</p>
+<p style="font-size:72px;font-weight:800;line-height:1;letter-spacing:-2px;color:${prixColor(l)}">${fr(l.prix)} €</p>
+<p style="font-size:28px;color:#9C9A93">${esc(l.sous)}</p>
+<p style="font-size:26px;line-height:1.5;color:#C9C7C0">${esc(l.texte)}</p>`, l.couleur ?? "#2E9A64", "#1F1F25", 40)).join("\n")}
 </div>
 <div style="display:flex;flex-direction:row;gap:48px;align-items:center;border-top:2px solid #2A2A2E;padding:32px 0 0 0">
-<p style="font-size:36px;font-weight:800;color:#ECEAE4">Pendant ${o.mois_offerts} mois : <span style="color:#8FA0FF">${fr(o.boutique)} € hors taxes par mois</span>, tout compris</p>
-<p style="font-size:26px;line-height:1.4;color:#9C9A93;width:600px">${fr(o.total_plein)} € de prestations pour ${fr(o.boutique)} €. Rien n'est débité avant le démarrage, et le code du site vous appartient si vous partez.</p>
+<p style="font-size:36px;font-weight:800;color:#ECEAE4;flex:1">${esc(bandeau.gauche)}</p>
+<p style="font-size:26px;line-height:1.4;color:#9C9A93;width:600px">${esc(bandeau.droite)}</p>
 </div>
 ${foot("Tarifs KAELIX d'octobre 2026 · Prix hors taxes, TVA 20 % en sus", "#6F6E68")}
 ${aside(o.aside)}`);
 // 7. bilan
-slides.bilan = light("bilan", `${head(`Au ${c.offre.mois_offerts}e mois`, c.bilan.titre, "#3D5BFF", 64, c.bilan.sous_titre)}
+slides.bilan = light("bilan", `${head(`Au ${moisBilan}e mois`, c.bilan.titre, "#3D5BFF", 64, c.bilan.sous_titre)}
 ${table([{ t: "Ce qu'on a activé", w: "32%" }, { t: "Ce qu'on vous montre au bilan", w: "48%" }, { t: "On garde ?", w: "20%", align: "center" }], c.bilan.options.map((x) => [x.nom, x.bilan, ""]), 24)}
 <p style="font-size:30px;line-height:1.35;color:#141413;width:1600px">${c.bilan.conclusion}</p>
 ${aside(c.bilan.aside)}`, 32);
@@ -219,7 +267,7 @@ await mkdir(out, { recursive: true });
 for (const id of order) await writeFile(resolve(out, `${id}.html`), slides[id]);
 await writeFile(resolve(out, "deck.json"), JSON.stringify({
   v: 4, createdOnFiles: { v: 1, at: new Date().toISOString() }, lists: "css", title: `Audit complet KAELIX — ${p.nom ?? slug}`, order,
-  sections: { s1: { description: `Ce qui est solide chez ${p.nom ?? "lui"}, puis ce qui lui coûte des ventes`, start: "cover" }, s2: { description: `Ce que la comparaison avec ${concList} révèle`, start: "ecart" }, s3: { description: `Ce qu'on met en place, ce que ça coûte, et comment il le jugera au ${c.offre.mois_offerts}e mois`, start: "prestations" } },
+  sections: { s1: { description: `Ce qui est solide chez ${p.nom ?? "lui"}, puis ce qui lui coûte ${COUTE}`, start: "cover" }, s2: { description: `Ce que la comparaison avec ${concList} révèle`, start: "ecart" }, s3: { description: `Ce qu'on met en place, ce que ça coûte, et comment il le jugera au ${moisBilan}e mois`, start: "prestations" } },
   faces: { manrope: { family: "Manrope", href: "https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&display=swap" } }, designSystems: [],
 }, null, 2) + "\n");
 console.log(`Deck écrit : prospects/${slug}/deck/ (8 diapositives + deck.json)${todos ? ` — ⚠️ ${todos} « ${TODO} » à remplacer dans deck-content.json` : ""}`);

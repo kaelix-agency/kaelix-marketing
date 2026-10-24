@@ -1,0 +1,40 @@
+{
+  "v": 4,
+  "createdOnFiles": {
+    "v": 1,
+    "at": "2026-10-24T18:32:25.657Z"
+  },
+  "lists": "css",
+  "title": "Audit complet KAELIX — Dutel Plomberie Services",
+  "order": [
+    "cover",
+    "forces",
+    "frictions",
+    "ecart",
+    "prestations",
+    "offre",
+    "bilan",
+    "suite"
+  ],
+  "sections": {
+    "s1": {
+      "description": "Ce qui est solide chez Dutel Plomberie Services, puis ce qui lui coûte des appels",
+      "start": "cover"
+    },
+    "s2": {
+      "description": "Ce que la comparaison avec Le Plombier du Crès et Guillaume Camassel révèle",
+      "start": "ecart"
+    },
+    "s3": {
+      "description": "Ce qu'on met en place, ce que ça coûte, et comment il le jugera au 4e mois",
+      "start": "prestations"
+    }
+  },
+  "faces": {
+    "manrope": {
+      "family": "Manrope",
+      "href": "https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&display=swap"
+    }
+  },
+  "designSystems": []
+}

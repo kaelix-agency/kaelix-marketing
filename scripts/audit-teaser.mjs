@@ -144,7 +144,7 @@ h3{margin:0 0 10px;font-size:19px;line-height:1.25;font-weight:800}
       <div class="card">
         <div class="num">${i + 1}</div>
         <h3>${esc(p.titre)}</h3>
-        <div class="vu">${esc(p.vu)}</div>
+        <div class="vu">${esc(light && p.vu_court ? p.vu_court : p.vu)}</div>
         <div class="coute"><small>Ce que ça vous coûte</small><div>${esc(p.coute)}</div></div>
         ${light ? "" : `<div class="act"><b>Ce qu'on ferait :</b> ${esc(p.action)}</div>`}
       </div>`).join("")}

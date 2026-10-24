@@ -26,7 +26,7 @@ Audit gratuit pour `$ARGUMENTS`. Objectif unique du livrable envoyé : **obtenir
 
 Je crée `prospects/<slug>/audit.json` (schéma dans `prospects/README.md`) depuis `prospect.json`, `collecte.json`, `scores.json`, le relevé SERP et la lecture manuelle :
 - `verdict_titre` : une phrase, le fait qui coûte le plus, dans les mots du client. `verdict_texte` : 3 phrases max, **commence par ce qui est solide chez lui** (chiffré), puis « trois points vous empêchent de… ».
-- `points` : 3, un par pilier faible, dans l'ordre d'impact. `vu` = la mesure (chiffre, date, comparaison concurrent), `coute` = la conséquence business en une phrase, `action` = ce qu'on ferait (ne s'affiche pas dans le teaser light, sert au deck et à la page complète). Chaque point pointe sans le dire vers une formule (site → Local → National / Shopping).
+- `points` : 3, un par pilier faible, dans l'ordre d'impact. `vu` = la mesure (chiffre, date, comparaison concurrent), `coute` = la conséquence business en une phrase, `action` = ce qu'on ferait (ne s'affiche pas dans le teaser light, sert au deck et à la page complète) ; **`vu_court` = deux phrases max, la version du teaser light** quand `vu` dépasse trois phrases (essai Dutel : un `vu` de six phrases faisait du teaser une page longue). Chaque point pointe sans le dire vers une formule (site → Local → National / Shopping).
 - `plan` 3 étapes sans prix, `piliers` 4 constats, `graphiques` seulement ce qui est mesuré (jamais de trafic estimé), `concurrents`, `cta` (`rdv_url` = `siteConfig.bookingUrl` de kaelix.fr, téléphone d'Axel), `methode` (date, outils, appareil du relevé, mention « sans aucun chiffre du commerçant »).
 - Puis `node scripts/audit-score.mjs <slug> --write-audit` pour reporter les scores (le score affiché est **toujours** celui de la grille, jamais arrondi à la main).
 
@@ -37,7 +37,7 @@ Je crée `prospects/<slug>/audit.json` (schéma dans `prospects/README.md`) depu
 ## 5. Teaser super light + deck (brique 3)
 
 - `node scripts/audit-teaser.mjs <slug> --light` → `audit-teaser.html` (score, verdict, 3 points vu → coûte, CTA ; sans action, sans graphiques, sans piliers, sans plan). C'est **le seul fichier envoyé** au prospect.
-- `node scripts/audit-deck.mjs <slug>` → `deck-content.json` pré-rempli ; je rédige les « [À RÉDIGER] » (forces chiffrées en premier, frictions = le site seul, écart = seulement ce que montre la comparaison, notes d'orateur, suite datée) ; je relance `node scripts/audit-deck.mjs <slug>` → `deck/` 8 diapositives. Sans « [À RÉDIGER] » restant. Le deck sert **au rendez-vous**, il ne part pas avec le teaser.
+- `node scripts/audit-deck.mjs <slug>` → `deck-content.json` pré-rempli (offre au plein tarif selon le type : boutique 150 + 7 outils 220 + National 199, ou site vitrine 80 + Local 199 ; une remise de lancement se décide ici, jamais par défaut) ; je rédige les « [À RÉDIGER] » (forces chiffrées en premier, frictions = le site seul, écart = seulement ce que montre la comparaison, notes d'orateur, suite datée) ; je relance `node scripts/audit-deck.mjs <slug>` → `deck/` 8 diapositives. Sans « [À RÉDIGER] » restant. Le deck sert **au rendez-vous**, il ne part pas avec le teaser.
 - Facultatif, pour l'après-rendez-vous : `node scripts/audit-teaser.mjs <slug>` (sans `--light`) → `audit-complet.html`, la page longue.
 
 ## 6. Gate avant envoi

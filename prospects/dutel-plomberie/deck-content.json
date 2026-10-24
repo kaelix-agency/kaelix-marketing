@@ -3,30 +3,35 @@
   "date_presentation": "2026-10-24",
   "cover": {
     "titre": "Vos 54 avis à 5 étoiles ne travaillent pas pour vous : votre site ne les montre pas, et hors de Castelnau, Google ne vous montre pas en première page.",
-    "sous_titre": "Ce qui est solide chez vous, ce qui vous coûte des ventes, ce que font Le Plombier du Crès et Guillaume Camassel — et ce qu'on fait contre, point par point.",
+    "sous_titre": "Ce qui est solide chez vous, ce qui vous coûte des appels, ce que font Le Plombier du Crès et Guillaume Camassel — et ce qu'on fait contre, point par point.",
     "criteres": 26,
-    "aside": "Le 55 sur 100 est celui de l'audit envoyé : ne pas en changer. [À RÉDIGER] le fil de la présentation."
+    "aside": "Le 55 sur 100 est celui de l'audit envoyé : ne pas en changer. Fil : la fiche est votre force, le site la gaspille, la carte s'arrête à Castelnau ; on répare dans cet ordre."
   },
   "forces": {
     "titre": "Ce qui est solide chez vous",
     "cartes": [
       {
-        "chiffre": "[À RÉDIGER]",
-        "titre": "[À RÉDIGER]",
-        "texte": "[À RÉDIGER] une force mesurée (trafic relatif, vitesse chez les vrais visiteurs, livraison…)"
+        "chiffre": "5,0",
+        "titre": "sur 54 avis Google",
+        "texte": "La meilleure des fiches trouvées : Camassel en a 22, David Goussaud 53 à 4,9. Nom exact, horaires 7 jours sur 7, téléphone identique au site."
       },
       {
-        "chiffre": "[À RÉDIGER]",
-        "titre": "[À RÉDIGER]",
-        "texte": "[À RÉDIGER] ce que les concurrents n'ont pas (histoire, atelier, fabrication)"
+        "chiffre": "1er",
+        "titre": "sur la carte, « dépannage plomberie castelnau-le-lez »",
+        "texte": "Votre fiche est dans les 3 premières de la carte sur deux recherches de Castelnau, devant Le Plombier du Crès et Camassel."
       },
       {
-        "chiffre": "[À RÉDIGER]",
-        "titre": "[À RÉDIGER]",
-        "texte": "[À RÉDIGER] la base saine (site sécurisé, pages renseignées…)"
+        "chiffre": "30 km",
+        "titre": "zone, délai et garanties annoncés",
+        "texte": "Rayon de 30 km, intervention sous 24 heures, garanties écrites : les trois réponses qu'un client cherche avant d'appeler sont sur votre site."
+      },
+      {
+        "chiffre": "92",
+        "titre": "de qualité technique pour Google",
+        "texte": "Site sécurisé, titres et descriptions corrects, serveur qui répond en moins de 0,1 s : la base est saine, c'est le poids des pages qui la freine."
       }
     ],
-    "conclusion": "Vous avez déjà le plus difficile : <b>un produit qui plaît et des clients qui le disent.</b> Le reste — être vraiment trouvé, et ne plus perdre ceux qui arrivent — se répare.",
+    "conclusion": "Vous avez déjà le plus difficile : <b>un métier bien fait et des clients qui le disent.</b> Le reste — être vraiment trouvé, et ne plus perdre ceux qui arrivent — se répare.",
     "aside": "Commencer par là, et le dire sans flatterie : ce sont des chiffres, pas des compliments."
   },
   "frictions": {
@@ -35,28 +40,28 @@
     "lignes": [
       {
         "etape": "arrive",
-        "bloque": "Note de vitesse mobile Google : 38 sur 100. L'image principale apparaît au bout de 13,7 s, contre 7,7 s chez Le Plombier du Crès et 9,2 s chez Camassel. Google n'a pas assez de visiteurs sur votre site pour mesurer ce que vivent vos vrais clients.",
+        "bloque": "Le site met 13,7 s à afficher son image principale sur téléphone (38 sur 100), contre 7,7 s chez Le Plombier du Crès.",
         "fait": "un site qui s'affiche en moins de 2 s sur téléphone, avec le numéro cliquable et vos avis Google dès le premier écran."
       },
       {
         "etape": "cherche",
-        "bloque": "[À RÉDIGER]",
-        "fait": "[À RÉDIGER]"
+        "bloque": "Le numéro de téléphone n'est pas au premier écran : il faut descendre jusqu'au pied de page pour appeler.",
+        "fait": "Bouton d'appel visible dès le premier écran, sur chaque page."
       },
       {
         "etape": "compare",
-        "bloque": "[À RÉDIGER]",
-        "fait": "[À RÉDIGER]"
+        "bloque": "Aucun avis sur l'accueil ni sur la page contact : vos 54 avis à 5,0 restent sur Google, le visiteur du site ne les voit pas.",
+        "fait": "Vos avis Google affichés sur chaque page, mis à jour automatiquement."
       },
       {
         "etape": "hésite",
-        "bloque": "[À RÉDIGER]",
-        "fait": "[À RÉDIGER]"
+        "bloque": "Pas de formulaire sur l'accueil : « Faire une demande » renvoie vers une autre page, une étape de plus pour un client qui hésite.",
+        "fait": "Demande de devis en un écran, depuis l'accueil, avec rappel sous 24 h."
       },
       {
         "etape": "s'en va",
-        "bloque": "[À RÉDIGER]",
-        "fait": "[À RÉDIGER]"
+        "bloque": "Google n'a pas assez de visiteurs sur votre site pour mesurer ce qu'ils vivent : on ne sait ni combien viennent, ni où ils s'en vont.",
+        "fait": "Mesure de fréquentation posée dès la mise en ligne : vous saurez d'où viennent les appels."
       }
     ],
     "pied": "Relevé du 24 octobre 2026 · Vitesse mesurée avec l'outil de Google, sur téléphone",
@@ -66,19 +71,19 @@
     "titre": "Ce qu'ils ont et que vous n'avez pas",
     "lignes": [
       {
-        "sujet": "Le prix d'appel",
-        "ecart": "[À RÉDIGER]",
-        "fait": "À trancher ensemble : aligner un prix d'appel, ou rendre visible ce qui justifie l'écart"
+        "sujet": "La place sur la carte",
+        "ecart": "David Goussaud est 1er sur la carte et en première page sur 3 recherches de Castelnau ; votre fiche est 3e ou 1re sur deux d'entre elles, absente sur « rénovation salle de bain castelnau-le-lez ».",
+        "fait": "Fiche publiée chaque semaine, avis demandés après chaque intervention, catégories et services complets"
       },
       {
-        "sujet": "L'onglet Shopping de Google",
-        "ecart": "[À RÉDIGER]",
-        "fait": "Vos produits envoyés dans Shopping, avec vos avis"
+        "sujet": "Les avis sur le site",
+        "ecart": "Aucun des trois sites n'affiche ses avis Google : la première fiche qui les montre prend l'avantage.",
+        "fait": "Vos avis Google affichés sur chaque page, au premier écran"
       },
       {
-        "sujet": "Les conseils",
-        "ecart": "[À RÉDIGER]",
-        "fait": "Deux contenus par mois"
+        "sujet": "Les pages par ville et par service",
+        "ecart": "Le Plombier du Crès est 1er sur « plombier le crès » et 2e sur « plombier castelnau-le-lez » avec des pages par ville ; vous n'en avez aucune, et aucune page « salle de bains PMR » dédiée.",
+        "fait": "Une page par ville servie, une par service"
       },
       {
         "sujet": "La place sur Google",
@@ -86,12 +91,12 @@
         "fait": "une page par ville que vous servez et une vraie page salle de bains PMR, pour entrer sur la carte et en première page là où vous intervenez déjà."
       },
       {
-        "sujet": "Les langues",
-        "ecart": "[À RÉDIGER]",
-        "fait": "On en reparle au bilan, si les ventes suivent"
+        "sujet": "Les publications",
+        "ecart": "Aucune publication sur votre fiche ni sur votre site ; vos chantiers de salle de bains PMR, votre spécialité, ne se voient nulle part.",
+        "fait": "Chantiers et conseils publiés sur la fiche et sur le site"
       }
     ],
-    "pied": "Relevé du 24 octobre 2026 : sites, fiches Google et onglet Shopping des enseignes comparées",
+    "pied": "Relevé du 24 octobre 2026 : sites, fiches Google et carte des enseignes comparées",
     "aside": "Le prix : poser la question, ne pas y répondre à sa place. Ne pas revenir sur ce qui était dans la diapositive d'avant."
   },
   "prestations": {
@@ -102,8 +107,8 @@
         "titre": "Site rapide, qui appelle",
         "puces": [
           "Mêmes services, même numéro, mais un site qui s'affiche en moins de 2 s sur téléphone, avec le bouton d'appel et vos 54 avis au premier écran.",
-          "[À RÉDIGER]",
-          "[À RÉDIGER]"
+          "Formulaire de devis en un écran, bouton d'appel sur chaque page, mesure de fréquentation posée.",
+          "Même adresse, mêmes pages, rien à réapprendre : vous validez la maquette, on bascule."
         ]
       },
       {
@@ -111,8 +116,8 @@
         "titre": "Fiche Google qui parle",
         "puces": [
           "Publication chaque semaine (chantiers, salle de bains PMR, aides), avis demandés après chaque intervention, spécialité PMR visible sur la fiche.",
-          "[À RÉDIGER]",
-          "[À RÉDIGER]"
+          "Catégories et services complétés (salle de bains PMR, dépannage, recherche de fuite), photos de chantiers.",
+          "Coordonnées vérifiées et identiques dans les annuaires où Google vous cherche."
         ]
       },
       {
@@ -120,90 +125,70 @@
         "titre": "Sur la carte, dans vos 30 km",
         "puces": [
           "Une page par ville servie et une page salle de bains PMR : viser les 3 premiers de la carte et la première page sur Montpellier, Le Crès et la salle de bains.",
-          "[À RÉDIGER]",
-          "[À RÉDIGER]"
+          "Une page par ville (Montpellier, Le Crès, Castelnau…) et une page salle de bains PMR avec les aides à l'adaptation du logement.",
+          "Suivi mensuel de la position sur la carte, recherche par recherche, dans le rapport du mois."
         ]
       }
     ],
     "aside": "La seule diapositive où l'on parle de nous. Dire les trois temps et s'arrêter."
   },
   "offre": {
-    "titre": "Vous payez la boutique. Le reste est offert 4 mois.",
-    "boutique": 150,
-    "options_total": 220,
-    "visibilite": 199,
-    "total_plein": 569,
-    "mois_offerts": 4,
-    "options": [
+    "titre": "Un site qui appelle, une fiche qui travaille. Deux lignes, chacune se juge.",
+    "mois_bilan": 4,
+    "lignes": [
       {
-        "nom": "Relance des paniers",
-        "bilan": "Paniers récupérés × panier moyen = chiffre d'affaires sauvé"
+        "kicker": "Le site vitrine",
+        "prix": 80,
+        "sous": "hors taxes, par mois",
+        "texte": "Sans frais de création. Sans engagement. Création, hébergement, maintenance et mises à jour compris.",
+        "couleur": "#3D5BFF"
       },
       {
-        "nom": "Produits sur Google Shopping",
-        "bilan": "Visiteurs venus de Shopping, commandes, chiffre d'affaires"
-      },
-      {
-        "nom": "Cartes cadeaux",
-        "bilan": "Cartes vendues, montant encaissé"
-      },
-      {
-        "nom": "Demande d'avis Google",
-        "bilan": "Avis gagnés, note, effet sur votre fiche"
-      },
-      {
-        "nom": "Suivi des ventes",
-        "bilan": "C'est l'outil qui produit ce tableau"
-      },
-      {
-        "nom": "Mesure de fréquentation",
-        "bilan": "D'où viennent vos visiteurs, où ils s'arrêtent"
-      },
-      {
-        "nom": "Sauvegarde renforcée",
-        "bilan": "Ne se mesure pas en euros : c'est une assurance"
+        "kicker": "La formule Local",
+        "prix": 199,
+        "sous": "hors taxes, par mois",
+        "texte": "La fiche Google est comprise : fiche gérée et publiée, coordonnées cohérentes dans les annuaires, réponse aux avis, pages ville, suivi mensuel de la position sur la carte. Engagement 3 mois, puis mensuel.",
+        "couleur": "#2E9A64"
       }
     ],
-    "aside": "Un seul chiffre à faire entendre : 569 € de prestations pour 150 €, sans engagement."
+    "total": 279,
+    "bandeau": {
+      "gauche": "279 € hors taxes par mois, les deux lignes",
+      "droite": "Rien n'est débité avant le démarrage, le code du site vous appartient si vous partez, et le site seul reste possible à 80 €."
+    },
+    "aside": "Deux chiffres, pas plus : 80 et 199. Si on demande National : 199 € aussi, ou Local + National à 349 €.",
+    "_remise": "Une remise de lancement (ex. « offert 4 mois ») se décide ici, prospect par prospect : modifier prix / sous / texte des lignes et le bandeau. Jamais par défaut."
   },
   "bilan": {
     "titre": "Vous décidez avec les chiffres",
-    "sous_titre": "D'abord ceux que votre site ne vous donne pas aujourd'hui : combien de visiteurs, d'où ils viennent, combien de commandes, votre panier moyen, et à quel moment les autres s'en vont.",
+    "sous_titre": "D'abord ceux que votre site ne vous donne pas aujourd'hui : combien de visiteurs, d'où ils viennent, combien appellent ou demandent un devis, et à quel moment les autres s'en vont.",
     "options": [
       {
-        "nom": "Relance des paniers",
-        "bilan": "Paniers récupérés × panier moyen = chiffre d'affaires sauvé"
+        "nom": "Le site",
+        "bilan": "Appels et demandes de devis depuis le site, vitesse mesurée chez vos vrais visiteurs"
       },
       {
-        "nom": "Produits sur Google Shopping",
-        "bilan": "Visiteurs venus de Shopping, commandes, chiffre d'affaires"
+        "nom": "La fiche Google",
+        "bilan": "Appels et itinéraires depuis la fiche, avis gagnés, publications parues"
       },
       {
-        "nom": "Cartes cadeaux",
-        "bilan": "Cartes vendues, montant encaissé"
+        "nom": "La place sur la carte",
+        "bilan": "Sur les 10 recherches : dans les 3 premiers de la carte, ou non, ville par ville"
       },
       {
-        "nom": "Demande d'avis Google",
-        "bilan": "Avis gagnés, note, effet sur votre fiche"
+        "nom": "Les pages ville et service",
+        "bilan": "Recherches où vous êtes en première page, et ce qu'elles apportent"
       },
       {
-        "nom": "Suivi des ventes",
-        "bilan": "C'est l'outil qui produit ce tableau"
-      },
-      {
-        "nom": "Mesure de fréquentation",
-        "bilan": "D'où viennent vos visiteurs, où ils s'arrêtent"
-      },
-      {
-        "nom": "Sauvegarde renforcée",
-        "bilan": "Ne se mesure pas en euros : c'est une assurance"
+        "nom": "Les annuaires",
+        "bilan": "Coordonnées identiques partout, fiches créées ou corrigées"
       }
     ],
-    "conclusion": "Chaque ligne se décide séparément : vous gardez ce qui se paie tout seul, vous coupez le reste. <b>Et si les ventes suivent, on ouvre une langue.</b>",
-    "aside": "C'est la diapositive qui fait signer : un essai qui se juge sur pièces, ligne par ligne. Si on demande le prix d'une langue : 60 € par mois."
+    "conclusion": "Chaque ligne se décide séparément : vous gardez ce qui vous apporte des appels, vous coupez le reste. <b>Et si la carte est gagnée, on regarde National.</b>",
+    "aside": "C'est la diapositive qui fait signer : un essai qui se juge sur pièces, en appels et en devis. Si on demande le prix de National : 199 € par mois."
   },
   "suite": {
-    "titre": "[À RÉDIGER] (une date : « Si on démarre cette semaine, la boutique est en ligne avant… »)",
+    "titre": "Si on démarre cette semaine, le site est en ligne avant fin novembre.",
     "etapes": [
       {
         "quand": "Aujourd'hui",
@@ -213,7 +198,7 @@
       {
         "quand": "Semaine 1",
         "titre": "Une heure ensemble",
-        "texte": "Vos produits, vos photos, votre fiche Google, et vos prochaines dates."
+        "texte": "Vos chantiers, vos photos, votre fiche Google, et les villes où vous intervenez."
       },
       {
         "quand": "Semaines 3 à 5",
