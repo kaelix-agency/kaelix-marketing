@@ -1,0 +1,25 @@
+{
+  "site": "https://www.dutelplomberie.fr",
+  "nom": "Dutel Plomberie Services",
+  "ville": "Castelnau-le-Lez",
+  "activite": "plombier, rénovation de salle de bains PMR, dépannage",
+  "type": "local",
+  "concurrents": [
+    {
+      "nom": "Le Plombier du Crès",
+      "ville": "Le Crès",
+      "site": "https://leplombierducres.fr"
+    },
+    {
+      "nom": "Camassel Guillaume artisan plombier",
+      "ville": "Montpellier",
+      "site": "https://camassel-plombier-montpellier.fr"
+    }
+  ],
+  "requetes": [
+    "plombier castelnau-le-lez",
+    "plombier montpellier",
+    "salle de bain pmr montpellier"
+  ],
+  "slug": "dutel-plomberie"
+}

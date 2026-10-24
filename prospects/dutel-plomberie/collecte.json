@@ -1,0 +1,341 @@
+{
+  "slug": "dutel-plomberie",
+  "date": "2026-10-24",
+  "prospect": {
+    "site": "https://www.dutelplomberie.fr",
+    "nom": "Dutel Plomberie Services",
+    "ville": "Castelnau-le-Lez",
+    "activite": "plombier, rénovation de salle de bains PMR, dépannage",
+    "type": "local",
+    "concurrents": [
+      {
+        "nom": "Le Plombier du Crès",
+        "ville": "Le Crès",
+        "site": "https://leplombierducres.fr"
+      },
+      {
+        "nom": "Camassel Guillaume artisan plombier",
+        "ville": "Montpellier",
+        "site": "https://camassel-plombier-montpellier.fr"
+      }
+    ],
+    "requetes": [
+      "plombier castelnau-le-lez",
+      "plombier montpellier",
+      "salle de bain pmr montpellier"
+    ],
+    "slug": "dutel-plomberie"
+  },
+  "piliers": {
+    "1_site_vitesse": {
+      "prospect": {
+        "source": "PageSpeed Insights API, mobile",
+        "date": "2026-10-24T17:58:45.877Z",
+        "url_finale": "https://www.dutelplomberie.fr/",
+        "note_performance": 44,
+        "note_seo": 92,
+        "lcp_s": 9.7,
+        "ttfb_s": 0.04,
+        "requetes": 68,
+        "poids_ko": 2968,
+        "https": true,
+        "terrain": {
+          "statut": "absent",
+          "note": "Google n'a pas assez de visiteurs pour mesurer ce site : c'est une donnée (trafic relatif faible)"
+        }
+      },
+      "concurrents": [
+        {
+          "site": "https://leplombierducres.fr",
+          "source": "PageSpeed Insights API, mobile",
+          "date": "2026-10-24T17:58:45.788Z",
+          "url_finale": "https://leplombierducres.fr/",
+          "note_performance": 54,
+          "note_seo": 100,
+          "lcp_s": 7.7,
+          "ttfb_s": 0.02,
+          "requetes": 95,
+          "poids_ko": 2060,
+          "https": true,
+          "terrain": {
+            "statut": "absent",
+            "note": "Google n'a pas assez de visiteurs pour mesurer ce site : c'est une donnée (trafic relatif faible)"
+          }
+        },
+        {
+          "site": "https://camassel-plombier-montpellier.fr",
+          "source": "PageSpeed Insights API, mobile",
+          "date": "2026-10-24T17:58:51.158Z",
+          "url_finale": "https://www.camassel-plombier-montpellier.fr/",
+          "note_performance": 59,
+          "note_seo": 92,
+          "lcp_s": 9,
+          "ttfb_s": 0,
+          "requetes": 79,
+          "poids_ko": 2413,
+          "https": true,
+          "terrain": {
+            "statut": "absent",
+            "note": "Google n'a pas assez de visiteurs pour mesurer ce site : c'est une donnée (trafic relatif faible)"
+          }
+        }
+      ],
+      "https_site": true
+    },
+    "2_visibilite_google": {
+      "requetes": {
+        "liste": [
+          "plombier castelnau-le-lez",
+          "plombier montpellier",
+          "salle de bain pmr montpellier"
+        ],
+        "origine": "prospect.json / --requetes",
+        "volumes": [
+          {
+            "requete": "plombier castelnau le lez",
+            "volume": 291,
+            "kvi": 7,
+            "inconnu_haloscan": false
+          },
+          {
+            "requete": "plombier montpellier",
+            "volume": 400,
+            "kvi": 20,
+            "inconnu_haloscan": false
+          },
+          {
+            "requete": "salle de bain pmr montpellier",
+            "volume": null,
+            "kvi": 1,
+            "inconnu_haloscan": true
+          }
+        ]
+      },
+      "serps": [
+        {
+          "requete": "plombier castelnau-le-lez",
+          "volume": null,
+          "positions": {
+            "dutelplomberie.fr": 15,
+            "leplombierducres.fr": 2,
+            "camassel-plombier-montpellier.fr": 8
+          },
+          "premier": "plomberiedavidgoussaud.com",
+          "top3": [
+            "plomberiedavidgoussaud.com",
+            "leplombierducres.fr",
+            "pagesjaunes.fr"
+          ],
+          "nb_resultats_lus": 57,
+          "date_serp": "2026-10-22",
+          "source": "Haloscan overview/serp — SERP Google FR ordinateur, à la date de son dernier relevé (pas un relevé du jour, pas sur téléphone)"
+        },
+        {
+          "requete": "plombier montpellier",
+          "volume": null,
+          "positions": {
+            "dutelplomberie.fr": null,
+            "leplombierducres.fr": null,
+            "camassel-plombier-montpellier.fr": 40
+          },
+          "premier": "travaux.com",
+          "top3": [
+            "travaux.com",
+            "lesbonsartisans.fr",
+            "homeserve.fr"
+          ],
+          "nb_resultats_lus": 48,
+          "date_serp": "2026-10-22",
+          "source": "Haloscan overview/serp — SERP Google FR ordinateur, à la date de son dernier relevé (pas un relevé du jour, pas sur téléphone)"
+        },
+        {
+          "requete": "salle de bain pmr montpellier",
+          "volume": null,
+          "positions": {
+            "dutelplomberie.fr": 13,
+            "leplombierducres.fr": null,
+            "camassel-plombier-montpellier.fr": null
+          },
+          "premier": "prh2s.fr",
+          "top3": [
+            "prh2s.fr",
+            "widapconcept.fr",
+            "douches-lapierre.fr"
+          ],
+          "nb_resultats_lus": 58,
+          "date_serp": "2026-08-13",
+          "source": "Haloscan overview/serp — SERP Google FR ordinateur, à la date de son dernier relevé (pas un relevé du jour, pas sur téléphone)"
+        }
+      ],
+      "synthese": {
+        "recherches_testees": 3,
+        "dans_les_3_premiers": 0,
+        "dans_les_50_premiers": 2,
+        "absent": 1,
+        "premier_le_plus_frequent": [
+          "plomberiedavidgoussaud.com",
+          1
+        ]
+      },
+      "catalogue_et_contenus": {
+        "entrees_menu": 7,
+        "blog": {
+          "present": false
+        }
+      },
+      "shopping": {
+        "statut": "non vérifiable",
+        "raison": "onglet Google Shopping : relevé à la main"
+      }
+    },
+    "3_fiche_google": {
+      "prospect": {
+        "source": "Places API (New), searchText",
+        "date": "2026-10-24T17:59:08.221Z",
+        "requete": "Dutel Plomberie Services Castelnau-le-Lez",
+        "candidats": 1,
+        "nom": "Dutel Plomberie Services",
+        "categorie": "Plombier",
+        "note": 5,
+        "nb_avis": 54,
+        "telephone": "06 80 23 94 22",
+        "site": "https://www.dutelplomberie.fr/",
+        "horaires": true,
+        "nb_photos": 10,
+        "adresse": "4 Rue de Savoie, 34170 Castelnau-le-Lez",
+        "maps": "https://maps.google.com/?cid=10202102527002740380&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "limites": "nb_photos = photos renvoyées par l'API (10 max) ; publications et produits de la fiche non exposés par Places → critère 19 à lire à la main"
+      },
+      "concurrents": [
+        {
+          "statut": "aucune fiche trouvée",
+          "requete": "Le Plombier du Crès (leplombierducres.fr, tél. 04 67 87 23 31)",
+          "source": "Places API (New), searchText — 6 requêtes le 2026-10-24 (nom, nom+domaine, téléphone, nom+Le Crès, nom+Castelnau-le-Lez, biais 15 km autour du Crès)",
+          "date": "2026-10-24T17:59:58.502Z",
+          "raison": "aucune fiche Google ne porte ce nom, ce site ni ce téléphone ; la recherche par domaine renvoyait un plombier parisien (écartée). À confirmer à la main sur Maps."
+        },
+        {
+          "source": "Places API (New), searchText",
+          "date": "2026-10-24T17:59:08.642Z",
+          "requete": "Camassel Guillaume artisan plombier Montpellier",
+          "candidats": 2,
+          "nom": "Camassel Guillaume artisan plombier",
+          "categorie": "Plombier",
+          "note": 5,
+          "nb_avis": 22,
+          "telephone": "06 07 09 17 62",
+          "site": "http://www.camassel-plombier-montpellier.fr/",
+          "horaires": true,
+          "nb_photos": 7,
+          "adresse": "665 Chem. de Parreloup, 34430 Saint-Jean-de-Védas",
+          "maps": "https://maps.google.com/?cid=6081891229762527636&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+          "limites": "nb_photos = photos renvoyées par l'API (10 max) ; publications et produits de la fiche non exposés par Places → critère 19 à lire à la main"
+        }
+      ]
+    },
+    "4_parcours": {
+      "paiement": {
+        "avant_panier": false,
+        "mentions": [],
+        "plusieurs_fois": false
+      },
+      "retours": {
+        "annonces": false,
+        "dans_cgv_seulement": false
+      },
+      "telephones": {
+        "0680239422": [
+          "accueil",
+          "contact"
+        ]
+      },
+      "telephones_distincts": 1,
+      "delais_cites": [
+        "sous 24 heures"
+      ],
+      "avis_sur_pages": false,
+      "relance_panier": {
+        "statut": "non vérifiable",
+        "raison": "non constatable sans parcours d'achat réel (critère 25 : lecture à la main)"
+      },
+      "tri_catalogue": {
+        "statut": "non vérifiable",
+        "raison": "filtres du catalogue non lisibles sans navigateur (critère 20 : lecture à la main, ou crawl-site.mjs)"
+      }
+    }
+  },
+  "lecture_site": {
+    "source": "lecture du site (fetch, sans navigateur — ce qu'un client voit dans la page, pas ce que JavaScript ajoute)",
+    "date": "2026-10-24T17:59:11.119Z",
+    "pages_lues": {
+      "accueil": {
+        "url": "https://www.dutelplomberie.fr/",
+        "statut": 200,
+        "ms": 44
+      },
+      "contact": {
+        "url": "https://www.dutelplomberie.fr/contact/",
+        "statut": 200,
+        "ms": 2360
+      }
+    },
+    "https": true,
+    "redirige_vers": "https://www.dutelplomberie.fr/",
+    "temps_reponse_s": 0.04,
+    "title": "Entreprise de plomberie et de rénovation à Castelnau-le-Lez - Le Coteau",
+    "h1": "Entreprise de plomberie et de rénovation à Castelnau-le-Lez",
+    "entrees_menu": 7,
+    "menu": [
+      "accueil",
+      "salle de bains pmr",
+      "rénovation de salle de bains",
+      "plomberie générale",
+      "dépannage et fuite",
+      "réalisations",
+      "contact"
+    ],
+    "blog": {
+      "present": false
+    },
+    "paiement": {
+      "avant_panier": false,
+      "mentions": [],
+      "plusieurs_fois": false
+    },
+    "retours": {
+      "annonces": false,
+      "dans_cgv_seulement": false
+    },
+    "telephones": {
+      "0680239422": [
+        "accueil",
+        "contact"
+      ]
+    },
+    "telephones_distincts": 1,
+    "delais_cites": [
+      "sous 24 heures"
+    ],
+    "avis_sur_pages": false,
+    "relance_panier": {
+      "statut": "non vérifiable",
+      "raison": "non constatable sans parcours d'achat réel (critère 25 : lecture à la main)"
+    },
+    "tri_catalogue": {
+      "statut": "non vérifiable",
+      "raison": "filtres du catalogue non lisibles sans navigateur (critère 20 : lecture à la main, ou crawl-site.mjs)"
+    },
+    "shopping": {
+      "statut": "non vérifiable",
+      "raison": "présence dans l'onglet Google Shopping : recherche Google à la main (critère 10)"
+    }
+  },
+  "a_lire_a_la_main": [
+    "critère 10 (Shopping)",
+    "critère 19 (publications/produits sur la fiche)",
+    "critère 20 (tri du catalogue)",
+    "critère 25 (relance panier)",
+    "critère 26 (délais : comparer `delais_cites`)",
+    "incohérences de téléphone : comparer `telephones`"
+  ]
+}
