@@ -1,0 +1,113 @@
+{
+  "prospect": {
+    "slug": "dutel-plomberie",
+    "nom": "Dutel Plomberie Services",
+    "prenom_contact": "[PRÉNOM]",
+    "site": "dutelplomberie.fr",
+    "ville": "Castelnau-le-Lez",
+    "activite": "plombier, rénovation de salle de bains PMR, dépannage",
+    "type": "local"
+  },
+  "audit": {
+    "date": "2026-10-24",
+    "auteur": "Axel",
+    "score": 55,
+    "verdict_titre": "Vos 54 avis à 5 étoiles ne travaillent pas pour vous : votre site ne les montre pas, et hors de Castelnau, Google ne vous montre pas en première page.",
+    "verdict_texte": "Nous avons testé votre site sur téléphone comme un client qui cherche un plombier, puis comparé avec Le Plombier du Crès et Guillaume Camassel, et avec les sites qui prennent la première page sur 10 recherches. Votre fiche Google est la meilleure des fiches trouvées : 5,0 sur 54 avis, dans les 3 premières de la carte sur deux recherches de Castelnau. Trois points vous empêchent d'en faire des appels.",
+    "perimetre": {
+      "pages": 2,
+      "recherches": 10,
+      "concurrents": 2
+    },
+    "echelle": "Une note de 55 n'est pas un site cassé : c'est un site qui laisse une partie de ses appels à d'autres. La note sert à comparer et à prioriser.",
+    "notation": "grille KAELIX du 21/10/2026, calculée le 2026-10-24 (25/26 critères vérifiés)"
+  },
+  "concurrents": [
+    {
+      "nom": "Le Plombier du Crès",
+      "site": "leplombierducres.fr"
+    },
+    {
+      "nom": "Guillaume Camassel",
+      "site": "camassel-plombier-montpellier.fr"
+    }
+  ],
+  "graphiques_sous_titre": "Deux plombiers voisins, mêmes recherches. Sur Google, le premier sur Castelnau est un troisième : David Goussaud.",
+  "points": [
+    {
+      "titre": "Votre site met 14 secondes à s'afficher sur téléphone",
+      "vu": "Note de vitesse mobile Google : 38 sur 100. L'image principale apparaît au bout de 13,7 s, contre 7,7 s chez Le Plombier du Crès et 9,2 s chez Camassel. Google n'a pas assez de visiteurs sur votre site pour mesurer ce que vivent vos vrais clients.",
+      "coute": "Un client qui a une fuite n'attend pas 14 secondes : il revient à Google et appelle le suivant.",
+      "action": "un site qui s'affiche en moins de 2 s sur téléphone, avec le numéro cliquable et vos avis Google dès le premier écran."
+    },
+    {
+      "titre": "Hors de la première page sur les 10 recherches testées",
+      "vu": "Sur « plombier castelnau-le-lez » (291 recherches par mois), votre site est 15e ; sur « plombier montpellier » (400 par mois), absent de la liste lue (près de 50 résultats) ; sur « salle de bain pmr montpellier », votre spécialité, hors de la première page. Votre fiche Google vous sauve sur Castelnau : 3 recherches sur 10 la montrent sur la carte, dont 2 dans les 3 premières, 1re sur « dépannage plomberie castelnau-le-lez ». Sur Montpellier, Le Crès et la salle de bains, ni le site ni la fiche n'apparaissent en première page.",
+      "coute": "Vous êtes trouvé sur Castelnau ; les 30 km que vous annoncez, Google ne les connaît pas.",
+      "action": "une page par ville que vous servez et une vraie page salle de bains PMR, pour entrer sur la carte et en première page là où vous intervenez déjà."
+    },
+    {
+      "titre": "Une fiche Google excellente, mais muette sur votre spécialité",
+      "vu": "Nom exact, catégorie « Plombier », horaires 7 jours sur 7, téléphone identique au site, 54 avis à 5,0 : la fiche est propre. Mais elle ne publie rien, « salle de bains PMR » n'apparaît ni dans ses prestations ni dans ses publications, et vos 54 avis ne sont ni sur l'accueil ni sur la page contact de votre site.",
+      "coute": "Un client qui compare deux plombiers choisit celui dont il voit les avis et les chantiers récents ; les vôtres existent, mais ailleurs.",
+      "action": "fiche alimentée chaque semaine (chantiers, salle de bains PMR, aides à l'adaptation du logement), avis affichés sur chaque page du site, demande d'avis après chaque intervention."
+    }
+  ],
+  "graphiques": {
+    "vitesse": {
+      "titre": "Temps d'affichage sur téléphone",
+      "sous_titre": "Page d'accueil, mesure Google (connexion 4G lente)",
+      "client": 13.7,
+      "concurrents": [
+        7.7,
+        9.2
+      ],
+      "conclusion": "Score Google : <b>38</b> pour vous, <b>54</b> et <b>60</b> pour vos deux voisins. Aucun des trois n'a assez de visiteurs pour que Google mesure les vrais clients : le premier qui passe sous 3 s prend l'avantage."
+    }
+  },
+  "piliers": [
+    {
+      "nom": "Site & vitesse",
+      "score": 54,
+      "constats": "38/100 sur mobile · 13,7 s d'affichage · pas de mesure terrain · site sécurisé, balises correctes"
+    },
+    {
+      "nom": "Visibilité Google",
+      "score": 21,
+      "constats": "hors page 1 sur 10 recherches · fiche dans la carte sur 3 · aucune page par ville · aucun guide"
+    },
+    {
+      "nom": "Fiche Google",
+      "score": 92,
+      "constats": "54 avis à 5,0 · nom, catégorie, horaires, téléphone corrects · aucune publication"
+    },
+    {
+      "nom": "Achat & contact",
+      "score": 71,
+      "constats": "zone 30 km et délai annoncés · garanties citées · téléphone bas dans la page d'accueil · aucun avis sur l'accueil ni la page contact"
+    }
+  ],
+  "plan": [
+    {
+      "periode": "Semaines 1 à 5",
+      "titre": "Site rapide, qui appelle",
+      "texte": "Mêmes services, même numéro, mais un site qui s'affiche en moins de 2 s sur téléphone, avec le bouton d'appel et vos 54 avis au premier écran."
+    },
+    {
+      "periode": "Dès la mise en ligne",
+      "titre": "Fiche Google qui parle",
+      "texte": "Publication chaque semaine (chantiers, salle de bains PMR, aides), avis demandés après chaque intervention, spécialité PMR visible sur la fiche."
+    },
+    {
+      "periode": "Mois 2 à 6",
+      "titre": "Sur la carte, dans vos 30 km",
+      "texte": "Une page par ville servie et une page salle de bains PMR : viser les 3 premiers de la carte et la première page sur Montpellier, Le Crès et la salle de bains."
+    }
+  ],
+  "cta": {
+    "rdv_url": "https://calendar.google.com/calendar/appointments/schedules/AcZssZ0b7XxxhsgnC20SAT-i8jAAZH40WpqlmYFN_jgX_eOoyPQ-HV_uD7yjtjhDB0zdkjI2GRUADRwx",
+    "telephone": "06 35 44 30 10",
+    "texte": "Visio Google Meet, 30 minutes, sans engagement. On passe en revue le détail des 4 piliers et ce qu'on ferait, dans l'ordre."
+  },
+  "methode": "Vitesse : outil de mesure de Google, sur téléphone, le 24 octobre 2026, pour les trois sites. Positions : relevé en France sur 10 recherches, sur ordinateur, le 24 octobre 2026, confronté à un outil de positions ; relevé sur téléphone non fait. Fiches Google : lecture du 24 octobre. Aucune donnée de trafic ni aucun chiffre de l'entreprise n'a été utilisé."
+}
