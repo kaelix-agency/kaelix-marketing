@@ -22,7 +22,14 @@
     "requetes": [
       "plombier castelnau-le-lez",
       "plombier montpellier",
-      "salle de bain pmr montpellier"
+      "salle de bain pmr montpellier",
+      "rénovation salle de bain castelnau-le-lez",
+      "dépannage plomberie castelnau-le-lez",
+      "recherche de fuite montpellier",
+      "plombier le crès",
+      "douche italienne montpellier",
+      "chauffe-eau montpellier",
+      "plombier urgence castelnau-le-lez"
     ],
     "slug": "dutel-plomberie"
   },
@@ -30,14 +37,14 @@
     "1_site_vitesse": {
       "prospect": {
         "source": "PageSpeed Insights API, mobile",
-        "date": "2026-10-24T17:58:45.877Z",
+        "date": "2026-10-24T18:13:15.191Z",
         "url_finale": "https://www.dutelplomberie.fr/",
-        "note_performance": 44,
+        "note_performance": 38,
         "note_seo": 92,
-        "lcp_s": 9.7,
-        "ttfb_s": 0.04,
+        "lcp_s": 13.7,
+        "ttfb_s": 0.03,
         "requetes": 68,
-        "poids_ko": 2968,
+        "poids_ko": 2966,
         "https": true,
         "terrain": {
           "statut": "absent",
@@ -48,12 +55,12 @@
         {
           "site": "https://leplombierducres.fr",
           "source": "PageSpeed Insights API, mobile",
-          "date": "2026-10-24T17:58:45.788Z",
+          "date": "2026-10-24T18:13:05.715Z",
           "url_finale": "https://leplombierducres.fr/",
           "note_performance": 54,
           "note_seo": 100,
           "lcp_s": 7.7,
-          "ttfb_s": 0.02,
+          "ttfb_s": 0.01,
           "requetes": 95,
           "poids_ko": 2060,
           "https": true,
@@ -65,14 +72,14 @@
         {
           "site": "https://camassel-plombier-montpellier.fr",
           "source": "PageSpeed Insights API, mobile",
-          "date": "2026-10-24T17:58:51.158Z",
+          "date": "2026-10-24T18:13:07.599Z",
           "url_finale": "https://www.camassel-plombier-montpellier.fr/",
-          "note_performance": 59,
+          "note_performance": 60,
           "note_seo": 92,
-          "lcp_s": 9,
+          "lcp_s": 9.2,
           "ttfb_s": 0,
           "requetes": 79,
-          "poids_ko": 2413,
+          "poids_ko": 2415,
           "https": true,
           "terrain": {
             "statut": "absent",
@@ -87,7 +94,14 @@
         "liste": [
           "plombier castelnau-le-lez",
           "plombier montpellier",
-          "salle de bain pmr montpellier"
+          "salle de bain pmr montpellier",
+          "rénovation salle de bain castelnau-le-lez",
+          "dépannage plomberie castelnau-le-lez",
+          "recherche de fuite montpellier",
+          "plombier le crès",
+          "douche italienne montpellier",
+          "chauffe-eau montpellier",
+          "plombier urgence castelnau-le-lez"
         ],
         "origine": "prospect.json / --requetes",
         "volumes": [
@@ -107,6 +121,48 @@
             "requete": "salle de bain pmr montpellier",
             "volume": null,
             "kvi": 1,
+            "inconnu_haloscan": true
+          },
+          {
+            "requete": "rénovation salle de bain castelnau le lez",
+            "volume": null,
+            "kvi": 1,
+            "inconnu_haloscan": true
+          },
+          {
+            "requete": "dépannage plomberie castelnau le lez",
+            "volume": null,
+            "kvi": null,
+            "inconnu_haloscan": true
+          },
+          {
+            "requete": "recherche de fuite montpellier",
+            "volume": 110,
+            "kvi": 7,
+            "inconnu_haloscan": false
+          },
+          {
+            "requete": "plombier le crès",
+            "volume": null,
+            "kvi": 1,
+            "inconnu_haloscan": true
+          },
+          {
+            "requete": "douche italienne montpellier",
+            "volume": null,
+            "kvi": 7,
+            "inconnu_haloscan": true
+          },
+          {
+            "requete": "chauffe eau montpellier",
+            "volume": 10,
+            "kvi": 10,
+            "inconnu_haloscan": false
+          },
+          {
+            "requete": "plombier urgence castelnau le lez",
+            "volume": null,
+            "kvi": null,
             "inconnu_haloscan": true
           }
         ]
@@ -165,16 +221,120 @@
           "nb_resultats_lus": 58,
           "date_serp": "2026-08-13",
           "source": "Haloscan overview/serp — SERP Google FR ordinateur, à la date de son dernier relevé (pas un relevé du jour, pas sur téléphone)"
+        },
+        {
+          "requete": "rénovation salle de bain castelnau-le-lez",
+          "volume": null,
+          "positions": {
+            "dutelplomberie.fr": null,
+            "leplombierducres.fr": 10,
+            "camassel-plombier-montpellier.fr": null
+          },
+          "premier": "plomberiedavidgoussaud.com",
+          "top3": [
+            "plomberiedavidgoussaud.com",
+            "illico-travaux.com",
+            "pagesjaunes.fr"
+          ],
+          "nb_resultats_lus": 43,
+          "date_serp": "2026-08-13",
+          "source": "Haloscan overview/serp — SERP Google FR ordinateur, à la date de son dernier relevé (pas un relevé du jour, pas sur téléphone)"
+        },
+        {
+          "requete": "dépannage plomberie castelnau-le-lez",
+          "volume": null,
+          "statut": "non vérifiable",
+          "raison": "recherche inconnue de l'index Haloscan (longue traîne) — à relever à la main sur Google, téléphone",
+          "echantillon": "{\"keyword\":\"dépannage plomberie castelnau-le-lez\",\"errors\":[{\"requested_data\":\"serp\",\"errorCode\":\"KEYWORD_UNKNOWN\"},{\"requested_data\":\"metrics\",\"errorCode\":\"KEYWORD_UNKNOWN\"}],\"serp\":{\"errorCode\":\"KEYWORD_UNKNOWN\",\"results\":[],\"filtered_result_count\":0,\"total_result_count\":0}}"
+        },
+        {
+          "requete": "recherche de fuite montpellier",
+          "volume": null,
+          "positions": {
+            "dutelplomberie.fr": null,
+            "leplombierducres.fr": null,
+            "camassel-plombier-montpellier.fr": null
+          },
+          "premier": "lr-intervention.fr",
+          "top3": [
+            "lr-intervention.fr",
+            "sabaca.fr",
+            "promotions-exceptionnelles.com"
+          ],
+          "nb_resultats_lus": 37,
+          "date_serp": "2026-09-17",
+          "source": "Haloscan overview/serp — SERP Google FR ordinateur, à la date de son dernier relevé (pas un relevé du jour, pas sur téléphone)"
+        },
+        {
+          "requete": "plombier le crès",
+          "volume": null,
+          "positions": {
+            "dutelplomberie.fr": null,
+            "leplombierducres.fr": 1,
+            "camassel-plombier-montpellier.fr": null
+          },
+          "premier": "leplombierducres.fr",
+          "top3": [
+            "leplombierducres.fr",
+            "travaux.com",
+            "ags-plomberie-chauffage.fr"
+          ],
+          "nb_resultats_lus": 23,
+          "date_serp": "2026-05-21",
+          "source": "Haloscan overview/serp — SERP Google FR ordinateur, à la date de son dernier relevé (pas un relevé du jour, pas sur téléphone)"
+        },
+        {
+          "requete": "douche italienne montpellier",
+          "volume": null,
+          "positions": {
+            "dutelplomberie.fr": null,
+            "leplombierducres.fr": null,
+            "camassel-plombier-montpellier.fr": 46
+          },
+          "premier": "bulledebains.fr",
+          "top3": [
+            "bulledebains.fr",
+            "widapconcept.fr",
+            "occitravaux.fr"
+          ],
+          "nb_resultats_lus": 49,
+          "date_serp": "2026-08-13",
+          "source": "Haloscan overview/serp — SERP Google FR ordinateur, à la date de son dernier relevé (pas un relevé du jour, pas sur téléphone)"
+        },
+        {
+          "requete": "chauffe-eau montpellier",
+          "volume": null,
+          "positions": {
+            "dutelplomberie.fr": null,
+            "leplombierducres.fr": null,
+            "camassel-plombier-montpellier.fr": null
+          },
+          "premier": "leroymerlin.fr",
+          "top3": [
+            "leroymerlin.fr",
+            "leplombierducentre.fr",
+            "fr.mappy.com"
+          ],
+          "nb_resultats_lus": 74,
+          "date_serp": "2026-05-12",
+          "source": "Haloscan overview/serp — SERP Google FR ordinateur, à la date de son dernier relevé (pas un relevé du jour, pas sur téléphone)"
+        },
+        {
+          "requete": "plombier urgence castelnau-le-lez",
+          "volume": null,
+          "statut": "non vérifiable",
+          "raison": "recherche inconnue de l'index Haloscan (longue traîne) — à relever à la main sur Google, téléphone",
+          "echantillon": "{\"keyword\":\"plombier urgence castelnau-le-lez\",\"errors\":[{\"requested_data\":\"serp\",\"errorCode\":\"KEYWORD_UNKNOWN\"},{\"requested_data\":\"metrics\",\"errorCode\":\"KEYWORD_UNKNOWN\"}],\"serp\":{\"errorCode\":\"KEYWORD_UNKNOWN\",\"results\":[],\"filtered_result_count\":0,\"total_result_count\":0}}"
         }
       ],
       "synthese": {
-        "recherches_testees": 3,
+        "recherches_testees": 10,
         "dans_les_3_premiers": 0,
         "dans_les_50_premiers": 2,
-        "absent": 1,
+        "absent": 6,
         "premier_le_plus_frequent": [
           "plomberiedavidgoussaud.com",
-          1
+          2
         ]
       },
       "catalogue_et_contenus": {
@@ -191,7 +351,7 @@
     "3_fiche_google": {
       "prospect": {
         "source": "Places API (New), searchText",
-        "date": "2026-10-24T17:59:08.221Z",
+        "date": "2026-10-24T18:14:06.957Z",
         "requete": "Dutel Plomberie Services Castelnau-le-Lez",
         "candidats": 1,
         "nom": "Dutel Plomberie Services",
@@ -211,12 +371,12 @@
           "statut": "aucune fiche trouvée",
           "requete": "Le Plombier du Crès (leplombierducres.fr, tél. 04 67 87 23 31)",
           "source": "Places API (New), searchText — 6 requêtes le 2026-10-24 (nom, nom+domaine, téléphone, nom+Le Crès, nom+Castelnau-le-Lez, biais 15 km autour du Crès)",
-          "date": "2026-10-24T17:59:58.502Z",
-          "raison": "aucune fiche Google ne porte ce nom, ce site ni ce téléphone ; la recherche par domaine renvoyait un plombier parisien (écartée). À confirmer à la main sur Maps."
+          "date": "2026-10-24T18:14:10.081Z",
+          "raison": "aucune fiche Google ne porte ce nom, ce site ni ce téléphone ; les recherches par domaine/ville renvoient d autres plombiers (écartés). À confirmer à la main sur Maps."
         },
         {
           "source": "Places API (New), searchText",
-          "date": "2026-10-24T17:59:08.642Z",
+          "date": "2026-10-24T18:14:07.494Z",
           "requete": "Camassel Guillaume artisan plombier Montpellier",
           "candidats": 2,
           "nom": "Camassel Guillaume artisan plombier",
@@ -261,22 +421,43 @@
       "tri_catalogue": {
         "statut": "non vérifiable",
         "raison": "filtres du catalogue non lisibles sans navigateur (critère 20 : lecture à la main, ou crawl-site.mjs)"
+      },
+      "contact": {
+        "tel_cliquable_accueil": true,
+        "tel_premier_ecran": false,
+        "lien_devis_ou_contact_accueil": true,
+        "formulaire_accueil": false,
+        "zone_intervention": [
+          "rayon de 30 km",
+          "nous intervenons à castenau-le-lez et dans un rayon de 30 km autour"
+        ],
+        "delai_intervention": [
+          "intervention immédiate",
+          "sous 24 heures"
+        ],
+        "preuves_confiance": [
+          "assure",
+          "certifié",
+          "garanties",
+          "garantie",
+          "décennale"
+        ]
       }
     }
   },
   "lecture_site": {
     "source": "lecture du site (fetch, sans navigateur — ce qu'un client voit dans la page, pas ce que JavaScript ajoute)",
-    "date": "2026-10-24T17:59:11.119Z",
+    "date": "2026-10-24T18:14:10.002Z",
     "pages_lues": {
       "accueil": {
         "url": "https://www.dutelplomberie.fr/",
         "statut": 200,
-        "ms": 44
+        "ms": 40
       },
       "contact": {
         "url": "https://www.dutelplomberie.fr/contact/",
         "statut": 200,
-        "ms": 2360
+        "ms": 2381
       }
     },
     "https": true,
@@ -317,6 +498,27 @@
       "sous 24 heures"
     ],
     "avis_sur_pages": false,
+    "contact": {
+      "tel_cliquable_accueil": true,
+      "tel_premier_ecran": false,
+      "lien_devis_ou_contact_accueil": true,
+      "formulaire_accueil": false,
+      "zone_intervention": [
+        "rayon de 30 km",
+        "nous intervenons à castenau-le-lez et dans un rayon de 30 km autour"
+      ],
+      "delai_intervention": [
+        "intervention immédiate",
+        "sous 24 heures"
+      ],
+      "preuves_confiance": [
+        "assure",
+        "certifié",
+        "garanties",
+        "garantie",
+        "décennale"
+      ]
+    },
     "relance_panier": {
       "statut": "non vérifiable",
       "raison": "non constatable sans parcours d'achat réel (critère 25 : lecture à la main)"
@@ -331,10 +533,10 @@
     }
   },
   "a_lire_a_la_main": [
-    "critère 10 (Shopping)",
+    "critère 10 (présence dans le pack local Maps : relevé direct des recherches)",
+    "critère 11 (pages service / zone : juger le menu)",
     "critère 19 (publications/produits sur la fiche)",
-    "critère 20 (tri du catalogue)",
-    "critère 25 (relance panier)",
+    "critère 20 (téléphone au premier écran sur téléphone : confirmer)",
     "critère 26 (délais : comparer `delais_cites`)",
     "incohérences de téléphone : comparer `telephones`"
   ]
