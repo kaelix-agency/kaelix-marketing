@@ -38,6 +38,8 @@ const site = P["1_site_vitesse"] ?? {}; const psi = site.prospect ?? {};
 const goog = P["2_visibilite_google"] ?? {}; const syn = goog.synthese; const cat = goog.catalogue_et_contenus ?? {};
 const fiche = (P["3_fiche_google"] ?? {}).prospect ?? {}; const ficheConc = (P["3_fiche_google"] ?? {}).concurrents ?? [];
 const parc = P["4_parcours"] ?? {};
+const LOCAL = c.prospect?.type === "local";
+const ct = parc.contact ?? null;
 const isBlocked = (x) => !x || x.statut === "non vérifiable" || x.statut === "aucune fiche trouvée";
 const nv = (raison) => ({ score: null, raison });
 const ok = (score, preuve) => ({ score, preuve });
@@ -57,8 +59,13 @@ const CRITERIA = [
   // ---- Pilier 2 — Visibilité Google ----------------------------------------------------------------------------------
   { n: 8, p: 2, label: "Part des recherches dans les 3 premiers", f: () => !syn || !syn.recherches_testees ? nv("aucune SERP Haloscan") : verifiedSerps() === 0 ? nv("toutes les recherches sont inconnues de Haloscan") : ok(Math.round(100 * syn.dans_les_3_premiers / verifiedSerps()), `${syn.dans_les_3_premiers}/${verifiedSerps()} vérifiées (sur ${syn.recherches_testees} testées ; SERP Haloscan ordinateur)`) },
   { n: 9, p: 2, label: "Part des recherches dans les 50 premiers", f: () => !syn || !syn.recherches_testees ? nv("aucune SERP Haloscan") : verifiedSerps() === 0 ? nv("toutes les recherches sont inconnues de Haloscan") : ok(Math.round(100 * syn.dans_les_50_premiers / verifiedSerps()), `${syn.dans_les_50_premiers}/${verifiedSerps()} vérifiées`) },
-  { n: 10, p: 2, label: "Présence dans l'onglet Shopping", f: () => man(10, "recherche Google à la main") },
-  { n: 11, p: 2, label: "Entrées de catalogue vs meilleur concurrent", f: () => man(11, null) ?? (cat.entrees_menu == null ? nv("menu non lu") : nv(`menu lu : ${cat.entrees_menu} entrées, mais pas celui des concurrents — à trancher à la main (lecture-manuelle.json « 11 »)`)) },
+  ...(LOCAL ? [
+    { n: 10, p: 2, label: "Présence dans le pack local Maps sur les recherches testées (part, relevé direct)", f: () => man(10, "relevé direct des recherches (pack Maps) — lecture-manuelle.json « 10 » : part en %") },
+    { n: 11, p: 2, label: "Pages service / zone dédiées (une page par service et par ville visée)", f: () => man(11, null) ?? (cat.entrees_menu == null ? nv("menu non lu") : nv(`menu lu : ${cat.entrees_menu} entrées — juger à la main si chaque service et chaque ville visée a sa page (lecture-manuelle.json « 11 »)`)) },
+  ] : [
+    { n: 10, p: 2, label: "Présence dans l'onglet Shopping", f: () => man(10, "recherche Google à la main") },
+    { n: 11, p: 2, label: "Entrées de catalogue vs meilleur concurrent", f: () => man(11, null) ?? (cat.entrees_menu == null ? nv("menu non lu") : nv(`menu lu : ${cat.entrees_menu} entrées, mais pas celui des concurrents — à trancher à la main (lecture-manuelle.json « 11 »)`)) },
+  ]),
   { n: 12, p: 2, label: "Contenus publiés (guides, articles)", f: () => man(12, null) ?? (cat.blog == null ? nv("site non lu") : cat.blog.present ? ok(50, `un blog existe (${cat.blog.url}) — régularité à juger à la main pour 100`) : ok(0, "aucun blog ni guide trouvé au menu")) },
   // ---- Pilier 3 — Fiche Google ---------------------------------------------------------------------------------------
   { n: 13, p: 3, label: "Nom de la fiche = enseigne", f: () => isBlocked(fiche) ? nv(fiche.raison ?? fiche.statut ?? "fiche absente") : ok(sameName(fiche.nom, c.prospect?.nom) ? 100 : 0, `fiche « ${fiche.nom} » vs enseigne « ${c.prospect?.nom} »`) },
@@ -69,16 +76,35 @@ const CRITERIA = [
   { n: 18, p: 3, label: "Avis vs les deux concurrents", f: () => { if (isBlocked(fiche)) return nv("fiche absente"); const cv = compVals(ficheConc, (x) => x.nb_avis); if (!cv.length) return nv("aucune fiche concurrente lue"); const me = fiche.nb_avis ?? 0; const above = cv.filter((v) => me > v).length; return ok(above === cv.length ? 100 : above > 0 ? 50 : 0, `${me} avis vs ${cv.join(" / ")}`); } },
   { n: 19, p: 3, label: "Produits ou publications sur la fiche", f: () => man(19, "non exposé par Places — lire la fiche") },
   // ---- Pilier 4 — Parcours d'achat / de contact ----------------------------------------------------------------------
+  ...(LOCAL ? [
+    { n: 20, p: 4, label: "Téléphone cliquable au premier écran", f: () => man(20, null) ?? (!ct ? nv("site non lu") : ok(ct.tel_premier_ecran ? 100 : ct.tel_cliquable_accueil ? 50 : 0, ct.tel_premier_ecran ? "lien tel: en haut de l'accueil" : ct.tel_cliquable_accueil ? "lien tel: présent, mais bas dans la page" : "aucun lien tel: sur l'accueil")) },
+    { n: 21, p: 4, label: "Avis affichés sur le site", f: () => man(21, null) ?? (parc.avis_sur_pages == null ? nv("site non lu") : parc.avis_sur_pages ? ok(100, "avis visibles sur l'accueil") : ok(0, "aucun avis lu sur l'accueil")) },
+    { n: 22, p: 4, label: "Demande de devis ou de contact dès l'accueil (lien ou formulaire)", f: () => !ct ? nv("site non lu") : ok(ct.formulaire_accueil && ct.lien_devis_ou_contact_accueil ? 100 : ct.formulaire_accueil || ct.lien_devis_ou_contact_accueil ? 50 : 0, `formulaire sur l'accueil : ${ct.formulaire_accueil ? "oui" : "non"} · lien devis/contact : ${ct.lien_devis_ou_contact_accueil ? "oui" : "non"}`) },
+    { n: 23, p: 4, label: "Zone d'intervention annoncée", f: () => !ct ? nv("site non lu") : ok(ct.zone_intervention?.length ? 100 : 0, ct.zone_intervention?.length ? ct.zone_intervention.slice(0, 3).join(" | ") : "aucune zone lue") },
+    { n: 24, p: 4, label: "Délai d'intervention ou disponibilité annoncés", f: () => !ct ? nv("site non lu") : ok(ct.delai_intervention?.length ? 100 : 0, ct.delai_intervention?.length ? ct.delai_intervention.slice(0, 3).join(" | ") : "aucun délai lu") },
+    { n: 25, p: 4, label: "Preuves de confiance (assurance, garanties, certifications)", f: () => !ct ? nv("site non lu") : ok(ct.preuves_confiance?.length >= 2 ? 100 : ct.preuves_confiance?.length ? 50 : 0, ct.preuves_confiance?.length ? ct.preuves_confiance.slice(0, 4).join(", ") : "aucune mention") },
+  ] : [
   { n: 20, p: 4, label: "Tri du catalogue (pièce, format, prix)", f: () => man(20, "filtres non lisibles sans navigateur") },
-  { n: 21, p: 4, label: "Avis affichés sur les fiches produit", f: () => man(21, null) ?? (parc.avis_sur_pages == null ? nv("site non lu") : parc.avis_sur_pages ? ok(50, "avis visibles sur l'accueil — sur les fiches produit : à confirmer à la main pour 100") : ok(0, "aucun avis lu sur l'accueil")) },
-  { n: 22, p: 4, label: "Moyens de paiement annoncés avant le panier", f: () => !parc.paiement ? nv("site non lu") : ok(parc.paiement.avant_panier ? 100 : parc.paiement.mentions?.length ? 50 : 0, parc.paiement.avant_panier ? `annoncés : ${parc.paiement.mentions.join(", ")}` : parc.paiement.mentions?.length ? `mention vague ou tardive : ${parc.paiement.mentions.join(", ")}` : "aucune mention") },
-  { n: 23, p: 4, label: "Conditions de retour annoncées", f: () => !parc.retours ? nv("site non lu") : ok(parc.retours.annonces ? 100 : parc.retours.dans_cgv_seulement ? 50 : 0, parc.retours.annonces ? "visibles" : parc.retours.dans_cgv_seulement ? "dans les CGV seulement" : "nulle part") },
-  { n: 24, p: 4, label: "Paiement en plusieurs fois", f: () => !parc.paiement ? nv("site non lu") : ok(parc.paiement.plusieurs_fois ? 100 : 0, parc.paiement.plusieurs_fois ? "proposé" : "non proposé") },
-  { n: 25, p: 4, label: "Relance des paniers abandonnés", f: () => man(25, "non constatable sans parcours réel") },
+    { n: 21, p: 4, label: "Avis affichés sur les fiches produit", f: () => man(21, null) ?? (parc.avis_sur_pages == null ? nv("site non lu") : parc.avis_sur_pages ? ok(50, "avis visibles sur l'accueil — sur les fiches produit : à confirmer à la main pour 100") : ok(0, "aucun avis lu sur l'accueil")) },
+    { n: 22, p: 4, label: "Moyens de paiement annoncés avant le panier", f: () => !parc.paiement ? nv("site non lu") : ok(parc.paiement.avant_panier ? 100 : parc.paiement.mentions?.length ? 50 : 0, parc.paiement.avant_panier ? `annoncés : ${parc.paiement.mentions.join(", ")}` : parc.paiement.mentions?.length ? `mention vague ou tardive : ${parc.paiement.mentions.join(", ")}` : "aucune mention") },
+    { n: 23, p: 4, label: "Conditions de retour annoncées", f: () => !parc.retours ? nv("site non lu") : ok(parc.retours.annonces ? 100 : parc.retours.dans_cgv_seulement ? 50 : 0, parc.retours.annonces ? "visibles" : parc.retours.dans_cgv_seulement ? "dans les CGV seulement" : "nulle part") },
+    { n: 24, p: 4, label: "Paiement en plusieurs fois", f: () => !parc.paiement ? nv("site non lu") : ok(parc.paiement.plusieurs_fois ? 100 : 0, parc.paiement.plusieurs_fois ? "proposé" : "non proposé") },
+    { n: 25, p: 4, label: "Relance des paniers abandonnés", f: () => man(25, "non constatable sans parcours réel") },
+]),
   { n: 26, p: 4, label: "Cohérence des informations entre les pages", f: () => { if (parc.telephones_distincts == null) return nv("site non lu"); const tel = parc.telephones_distincts; const delaisN = (parc.delais_cites ?? []).length; const incoh = (tel > 1 ? 1 : 0) + (delaisN > 1 ? 1 : 0); return ok(incoh === 0 ? 100 : incoh === 1 ? 50 : 0, `${tel} téléphone(s) · délais cités : ${delaisN ? parc.delais_cites.join(" | ") : "aucun"} — relire les délais à la main : deux formulations ne sont pas forcément deux délais`); } },
 ];
 function verifiedSerps() { return (goog.serps ?? []).filter((s) => s && !s.statut).length; }
-function man(n, raisonSiAbsent) { const v = manual[String(n)]; if (v === 0 || v === 50 || v === 100) return ok(v, `lecture manuelle (lecture-manuelle.json)${manual.note ? " — " + manual.note : ""}`); return raisonSiAbsent == null ? null : nv(`${raisonSiAbsent} (lecture-manuelle.json « ${n} »)`); }
+// Une lecture manuelle vaut 0 / 50 / 100 — ou, pour les critères « en part » (8, 9, 10 local), n'importe quel entier de 0 à 100.
+// La preuve reprend la note entière du fichier si elle est courte, sinon la phrase qui cite le numéro du critère.
+function man(n, raisonSiAbsent) {
+  const v = manual[String(n)];
+  if (Number.isInteger(v) && v >= 0 && v <= 100) {
+    const note = String(manual.note ?? "");
+    const phrase = note.length <= 160 ? note : (note.split(/(?<=\.)\s+/).find((ph) => new RegExp(`(^|\\D)${n}\\s*:`).test(ph)) ?? "");
+    return ok(v, `lecture manuelle${phrase ? " — " + phrase.trim() : ""}`);
+  }
+  return raisonSiAbsent == null ? null : nv(`${raisonSiAbsent} (lecture-manuelle.json « ${n} »)`);
+}
 function sameName(a, b) { const z = (s) => String(s ?? "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]/g, ""); return a && b && z(a) === z(b); }
 
 const PILLARS = { 1: { nom: "Site & vitesse", poids: 0.3 }, 2: { nom: "Visibilité Google", poids: 0.3 }, 3: { nom: "Fiche Google", poids: 0.2 }, 4: { nom: "Achat & contact", poids: 0.2 } };

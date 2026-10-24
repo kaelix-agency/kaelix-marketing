@@ -13,6 +13,8 @@ Un dossier par prospect (`prospects/<slug>/`), **avant** qu'il devienne un clien
 
 **Décision d'Axel du 23/10/2026 : l'audit envoyé au prospect est une version « super light »** — elle montre **plusieurs problèmes** (le score et les 3 points qui coûtent le plus, chacun en une phrase : vu → ce que ça coûte), **sans développer** ni les solutions ni le détail des piliers. Tout le développement (diapos, piliers, plan chiffré) se fait **au rendez-vous**. Le teaser crée le besoin de l'appel, il ne le remplace pas.
 
+**Essai à blanc du 24/10/2026 (Dutel Plomberie, Castelnau-le-Lez — rien n'a été envoyé)** : la chaîne tourne de bout en bout ; trois corrections en sont sorties — **variante locale de la grille** (piliers 2 et 4, `docs/grille-audit-gratuit.md`, décision d'Axel), **`prospects/<slug>/requetes.txt`** (une recherche par ligne : la ligne `--requetes` de 10 recherches s'est tronquée au collage, 3 reçues sur 10), et le **relevé téléphone** qui reste un geste de l'opérateur (la session n'a qu'un Chrome de bureau).
+
 **Leçon du 23/10/2026 (positions)** : un relevé manuel de positions se fait **sur ordinateur et sur téléphone, en navigation privée**, et se **confronte à Haloscan** avant d'entrer dans un audit — l'audit Cadres Concept du 21/10 annonçait « jamais dans le top 3 » là où deux sources placent la boutique dans le top 3 sur 6 recherches sur 10 (`prospects/cadres-concept/2026-10-23-releve-serp-chrome.md`). L'audit du client n'est pas corrigé (décision d'Axel : on ne revient pas vers un client signé) ; l'extrait public de kaelix.fr l'est.
 
 

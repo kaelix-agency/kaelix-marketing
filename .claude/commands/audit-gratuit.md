@@ -8,9 +8,11 @@ Audit gratuit pour `$ARGUMENTS`. Objectif unique du livrable envoyé : **obtenir
 
 ## 1. Collecte (brique 1)
 
-`node scripts/audit-collect.mjs <slug> [options]` → `prospect.json` + `collecte.json`. Au premier passage, les 4 entrées (site, activité, ville, type) sont obligatoires ; 1 à 2 concurrents facultatifs (sinon : les 2 premiers sur la requête principale). Les 10 recherches : proposées depuis l'activité (Haloscan `match`/`related` sur un **mot-clé court**, jamais la phrase d'activité), validées par moi en une question à choix si elles ne vont pas de soi.
+`node scripts/audit-collect.mjs <slug> [options]` → `prospect.json` + `collecte.json`. Au premier passage, les 4 entrées (site, activité, ville, type) sont obligatoires ; 1 à 2 concurrents facultatifs (sinon : les 2 premiers sur la requête principale). Les 10 recherches s'écrivent dans **`prospects/<slug>/requetes.txt`** (une par ligne, depuis la session — jamais une longue ligne `--requetes` à coller, elle se tronque) : proposées depuis l'activité (Haloscan `match`/`related` sur un **mot-clé court**, jamais la phrase d'activité), validées par moi en une question à choix si elles ne vont pas de soi.
 
 **Positions — règle du 23/10/2026 (leçon Cadres Concept)** : la SERP Haloscan ne suffit pas. Avant de rédiger, **relevé direct des 10 recherches** sur google.fr en navigation privée, **ordinateur et téléphone** (claude-in-chrome si disponible dans la session ; sinon je le fais et je colle le tableau), consigné dans `prospects/<slug>/<date>-releve-serp.md` (tableau recherche × position du prospect / des concurrents / 1er organique / ce qui précède le premier organique : Shopping, Aperçu IA, annonces). Les deux sources se confrontent ; en cas d'écart, **le relevé direct fait foi sur les positions, Haloscan sur les volumes**. Un relevé impossible = « non vérifiable » dans le point concerné, jamais une position affirmée.
+
+**Type `local`** : la grille bascule sur sa variante locale (`docs/grille-audit-gratuit.md`) — critère 10 = part des recherches où la fiche est dans le pack Maps (depuis le relevé direct, dans `lecture-manuelle.json`), 11 = pages service / ville, pilier 4 = parcours de contact (téléphone au premier écran, devis, zone, délai, preuves de confiance).
 
 ## 2. Lectures à la main
 

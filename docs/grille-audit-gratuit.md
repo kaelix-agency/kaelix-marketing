@@ -58,6 +58,23 @@ Source : API Google Places, ou lecture de la fiche depuis une recherche Google.
 
 Source : parcours fait à la main sur téléphone, plus lecture de la FAQ et des CGV. **Aucune API ne donne ces critères** : c'est de la lecture.
 
+## Variante locale (artisans et commerces, `type: local`) — décision d'Axel du 24 octobre 2026
+
+L'essai à blanc sur un plombier (Dutel Plomberie Services, Castelnau-le-Lez, 24/10/2026) a montré que la grille note **une boutique** : un artisan sortait à 20/100 sur le pilier 4 faute de « conditions de retour » et de « paiement en plusieurs fois », et le pack Maps, là où il se joue, n'était pas compté. Pour un prospect `local`, les critères 10, 11 et 20 à 25 changent de contenu ; **même sévérité, mêmes seuils 100 / 50 / 0, mêmes poids**. Un local se compare à un local, une boutique à une boutique — jamais l'un à l'autre. `scripts/audit-score.mjs` bascule sur `prospect.type`.
+
+| # | Critère (local) | 100 | 50 | 0 | Source |
+|---|---|---|---|---|---|
+| 10 | Présence de la fiche dans le pack Maps | part des 10 recherches testées, en % | | | relevé direct (ordinateur **et** téléphone, navigation privée) → `lecture-manuelle.json` |
+| 11 | Pages service / zone dédiées | une page par service **et** par ville visée | l'un des deux | ni l'un ni l'autre | menu du site, jugé à la main |
+| 20 | Téléphone cliquable au premier écran | lien `tel:` en haut de l'accueil | présent mais bas dans la page | aucun | lecture du site (à confirmer sur téléphone) |
+| 21 | Avis affichés sur le site | visibles sur l'accueil | | nulle part | lecture du site |
+| 22 | Demande de devis ou de contact dès l'accueil | formulaire **et** lien devis/contact | l'un des deux | aucun | lecture du site |
+| 23 | Zone d'intervention annoncée | oui (« rayon de 30 km », villes…) | | non | lecture du site |
+| 24 | Délai d'intervention ou disponibilité annoncés | oui (« sous 24 h », « 7 j/7 ») | | non | lecture du site |
+| 25 | Preuves de confiance (assurance, garanties, certifications) | deux mentions ou plus | une | aucune | lecture du site |
+
+Les critères 8, 9, 12 à 19 et 26 sont inchangés. Calibrage de l'essai : Dutel **58/100** (25/26 vérifiés) — site 55, Google 29, fiche 92, contact 71 : une fiche excellente, un site lent et absent de la page 1, un parcours de contact correct.
+
 ## Calibrage — ce que la grille donne sur Cadres Concept
 
 | Pilier | Score de la grille | Score envoyé au client le 21/10 |

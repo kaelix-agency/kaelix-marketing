@@ -1,5 +1,7 @@
 {
+  "10": 30,
+  "11": 50,
   "14": 100,
   "19": 50,
-  "note": "lu le 2026-10-24 sur ordinateur (panneau Google de la fiche), par la session — 14 : catégorie « Plombier » adaptée ; 19 : section Produits (Aquabion) mais aucune publication. Critères 10, 11, 20, 21, 22, 23, 24, 25 : pensés pour une boutique en ligne, NON APPLICABLES à un artisan — laissés absents (non vérifiables) en attendant la variante locale de la grille."
+  "note": "lu le 2026-10-24 sur ordinateur, par la session (relevé 2026-10-24-releve-serp-chrome.md + panneau Google de la fiche). 10 : fiche dans le pack Maps sur 3 recherches sur 10 → 30. 11 : une page par service (PMR, rénovation, plomberie générale, dépannage) mais aucune page par ville visée → 50. 14 : catégorie « Plombier » adaptée. 19 : section Produits (Aquabion), aucune publication → 50. À confirmer sur téléphone par Axel : 20 (téléphone au premier écran)."
 }

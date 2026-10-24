@@ -3,6 +3,8 @@
  * KAELIX — audit gratuit, brique 1 : COLLECTE des données d'un prospect.
  *   node scripts/audit-collect.mjs <slug> [--site https://… --nom "…" --ville "…" --activite "…" --type ecommerce|local|saas]
  *                                         [--concurrent https://… --concurrent https://…] [--requetes "a|b|c"] [--mot-cle "tableau métal"] [--json]
+ *   Les recherches se posent de préférence dans prospects/<slug>/requetes.txt (une par ligne) — une longue ligne --requetes
+ *   se tronque au collage.
  *
  * Entrées : prospects/<slug>/prospect.json (créé ou complété par les options ci-dessus). Quatre informations
  *   suffisent (doctrine du teaser, prospects/README.md) : site, activité, ville, concurrents (0 à 2, facultatifs).
@@ -74,6 +76,13 @@ prospect.site = norm(prospect.site);
 prospect.concurrents = (prospect.concurrents ?? []).map((c) => ({ ...c, site: norm(c.site) }));
 for (const c of multi.concurrent) if (!prospect.concurrents.some((x) => x.site === norm(c))) prospect.concurrents.push({ site: norm(c) });
 if (flags.requetes) prospect.requetes = String(flags.requetes).split("|").map((s) => s.trim()).filter(Boolean);
+// prospects/<slug>/requetes.txt (une recherche par ligne, # = commentaire) prime sur --requetes : une ligne de 10 recherches
+// se tronque au collage dans un terminal (essai Dutel du 24/10/2026 : 3 reçues sur 10) ; un fichier, non.
+const rFile = resolve(dir, "requetes.txt");
+if (existsSync(rFile)) {
+  const lines = (await readFile(rFile, "utf8")).split(/\r?\n/).map((l) => l.trim()).filter((l) => l && !l.startsWith("#"));
+  if (lines.length) prospect.requetes = lines.slice(0, 10);
+}
 prospect.slug = slug;
 if (!prospect.site) { console.error("Le site du prospect est obligatoire (--site https://…)."); process.exit(1); }
 await writeFile(pFile, JSON.stringify(prospect, null, 2) + "\n");
@@ -267,6 +276,16 @@ async function readSite(site) {
     telephones: Object.fromEntries(Object.entries(phones).map(([n, s]) => [n, [...s]])), telephones_distincts: Object.keys(phones).length,
     delais_cites: delais,
     avis_sur_pages: flag(/avis (?:clients?|v[ée]rifi[ée]s)|trustpilot|google avis|\b\d[,.]\d\s?\/\s?5\b|★|étoiles/i, homeText),
+    // Parcours de contact (variante locale de la grille, 24/10/2026) : ce qu'un client pressé trouve sur l'accueil.
+    contact: {
+      tel_cliquable_accueil: /href=["']tel:/i.test(home.html),
+      tel_premier_ecran: /href=["']tel:/i.test(home.html.slice(0, 25_000)),
+      lien_devis_ou_contact_accueil: links.some((l) => /devis|contact|rappel|rendez-vous|demande/i.test(l.text)),
+      formulaire_accueil: /<form[\s>]/i.test(home.html),
+      zone_intervention: found(/rayon de \d{1,3} ?km|zone d'intervention|secteur d'intervention|nous intervenons (?:à|sur|dans)[^.]{0,60}|intervient (?:à|sur|dans)[^.]{0,60}/gi),
+      delai_intervention: found(/sous (?:24|48) ?h(?:eures)?|dans l'heure|en moins d['e] ?\d{1,2} ?(?:h|heures|minutes?)|intervention (?:rapide|immédiate|express|sous \d{1,2} ?h)|24 ?h\/24|7 ?j\/7/gi),
+      preuves_confiance: found(/d[ée]cennale|garantie[s]?\b|assur[ée]e?s?\b|qualibat|\brge\b|qualipac|certifi[ée]e?s?|handibat|silverbat|artisan (?:agréé|certifié)/gi),
+    },
     relance_panier: blocked("non constatable sans parcours d'achat réel (critère 25 : lecture à la main)"),
     tri_catalogue: blocked("filtres du catalogue non lisibles sans navigateur (critère 20 : lecture à la main, ou crawl-site.mjs)"),
     shopping: blocked("présence dans l'onglet Google Shopping : recherche Google à la main (critère 10)"),
@@ -305,10 +324,12 @@ const collecte = {
       shopping: blocked("onglet Google Shopping : relevé à la main"),
     },
     "3_fiche_google": fiches,
-    "4_parcours": typeof lecture === "object" && lecture.paiement ? { paiement: lecture.paiement, retours: lecture.retours, telephones: lecture.telephones, telephones_distincts: lecture.telephones_distincts, delais_cites: lecture.delais_cites, avis_sur_pages: lecture.avis_sur_pages, relance_panier: lecture.relance_panier, tri_catalogue: lecture.tri_catalogue } : lecture,
+    "4_parcours": typeof lecture === "object" && lecture.paiement ? { paiement: lecture.paiement, retours: lecture.retours, telephones: lecture.telephones, telephones_distincts: lecture.telephones_distincts, delais_cites: lecture.delais_cites, avis_sur_pages: lecture.avis_sur_pages, relance_panier: lecture.relance_panier, tri_catalogue: lecture.tri_catalogue, contact: lecture.contact } : lecture,
   },
   lecture_site: lecture,
-  a_lire_a_la_main: ["critère 10 (Shopping)", "critère 19 (publications/produits sur la fiche)", "critère 20 (tri du catalogue)", "critère 25 (relance panier)", "critère 26 (délais : comparer `delais_cites`)", "incohérences de téléphone : comparer `telephones`"],
+  a_lire_a_la_main: prospect.type === "local"
+    ? ["critère 10 (présence dans le pack local Maps : relevé direct des recherches)", "critère 11 (pages service / zone : juger le menu)", "critère 19 (publications/produits sur la fiche)", "critère 20 (téléphone au premier écran sur téléphone : confirmer)", "critère 26 (délais : comparer `delais_cites`)", "incohérences de téléphone : comparer `telephones`"]
+    : ["critère 10 (Shopping)", "critère 19 (publications/produits sur la fiche)", "critère 20 (tri du catalogue)", "critère 25 (relance panier)", "critère 26 (délais : comparer `delais_cites`)", "incohérences de téléphone : comparer `telephones`"],
 };
 await writeFile(resolve(dir, "collecte.json"), JSON.stringify(collecte, null, 2) + "\n");
 if (flags.json) console.log(JSON.stringify(collecte, null, 2));
