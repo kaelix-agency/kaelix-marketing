@@ -1,0 +1,265 @@
+{
+  "slug": "dutel-plomberie",
+  "date": "2026-10-24",
+  "grille": "docs/grille-audit-gratuit.md (21/10/2026, calibrage sévère gardé le 22/10/2026)",
+  "collecte_du": "2026-10-24",
+  "score_global": 46,
+  "avertissement": null,
+  "piliers": [
+    {
+      "pilier": 1,
+      "nom": "Site & vitesse",
+      "poids": 0.3,
+      "score": 55,
+      "criteres_verifies": 7,
+      "criteres_total": 7,
+      "non_verifiables": []
+    },
+    {
+      "pilier": 2,
+      "nom": "Visibilité Google",
+      "poids": 0.3,
+      "score": 22,
+      "criteres_verifies": 3,
+      "criteres_total": 5,
+      "non_verifiables": [
+        "10 Présence dans l'onglet Shopping — recherche Google à la main (lecture-manuelle.json « 10 »)",
+        "11 Entrées de catalogue vs meilleur concurrent — menu lu : 7 entrées, mais pas celui des concurrents — à trancher à la main (lecture-manuelle.json « 11 »)"
+      ]
+    },
+    {
+      "pilier": 3,
+      "nom": "Fiche Google",
+      "poids": 0.2,
+      "score": 92,
+      "criteres_verifies": 6,
+      "criteres_total": 7,
+      "non_verifiables": [
+        "17 Photos ≥ 20 / 5-19 / < 5 — Places renvoie 10 photos au plus (10) — compter sur la fiche pour trancher 50/100 (lecture-manuelle.json « 17 »)"
+      ]
+    },
+    {
+      "pilier": 4,
+      "nom": "Achat & contact",
+      "poids": 0.2,
+      "score": 20,
+      "criteres_verifies": 5,
+      "criteres_total": 7,
+      "non_verifiables": [
+        "20 Tri du catalogue (pièce, format, prix) — filtres non lisibles sans navigateur (lecture-manuelle.json « 20 »)",
+        "25 Relance des paniers abandonnés — non constatable sans parcours réel (lecture-manuelle.json « 25 »)"
+      ]
+    }
+  ],
+  "criteres": [
+    {
+      "n": 1,
+      "pilier": 1,
+      "critere": "Note de vitesse mobile (note Google reprise)",
+      "score": 44,
+      "preuve": "44/100 (PageSpeed mobile, 2026-10-24)",
+      "raison": null
+    },
+    {
+      "n": 2,
+      "pilier": 1,
+      "critere": "Affichage de l'image principale (LCP) < 2,5 s / < 4 s",
+      "score": 0,
+      "preuve": "9.7 s",
+      "raison": null
+    },
+    {
+      "n": 3,
+      "pilier": 1,
+      "critere": "Mesure terrain Google (vrais visiteurs) réussie",
+      "score": 0,
+      "preuve": "pas assez de visiteurs pour que Google mesure (absence = donnée)",
+      "raison": null
+    },
+    {
+      "n": 4,
+      "pilier": 1,
+      "critere": "Réponse du serveur < 0,5 s / < 1,5 s",
+      "score": 100,
+      "preuve": "0.04 s (PageSpeed, 1 mesure — la grille en veut 5 : valeur indicative)",
+      "raison": null
+    },
+    {
+      "n": 5,
+      "pilier": 1,
+      "critere": "Fichiers chargés < 50 / < 100",
+      "score": 50,
+      "preuve": "68 fichiers",
+      "raison": null
+    },
+    {
+      "n": 6,
+      "pilier": 1,
+      "critere": "Site sécurisé (https)",
+      "score": 100,
+      "preuve": "https",
+      "raison": null
+    },
+    {
+      "n": 7,
+      "pilier": 1,
+      "critere": "Qualité des balises (note SEO Google reprise)",
+      "score": 92,
+      "preuve": "92/100",
+      "raison": null
+    },
+    {
+      "n": 8,
+      "pilier": 2,
+      "critere": "Part des recherches dans les 3 premiers",
+      "score": 0,
+      "preuve": "0/3 vérifiées (sur 3 testées ; SERP Haloscan ordinateur)",
+      "raison": null
+    },
+    {
+      "n": 9,
+      "pilier": 2,
+      "critere": "Part des recherches dans les 50 premiers",
+      "score": 67,
+      "preuve": "2/3 vérifiées",
+      "raison": null
+    },
+    {
+      "n": 10,
+      "pilier": 2,
+      "critere": "Présence dans l'onglet Shopping",
+      "score": null,
+      "preuve": null,
+      "raison": "recherche Google à la main (lecture-manuelle.json « 10 »)"
+    },
+    {
+      "n": 11,
+      "pilier": 2,
+      "critere": "Entrées de catalogue vs meilleur concurrent",
+      "score": null,
+      "preuve": null,
+      "raison": "menu lu : 7 entrées, mais pas celui des concurrents — à trancher à la main (lecture-manuelle.json « 11 »)"
+    },
+    {
+      "n": 12,
+      "pilier": 2,
+      "critere": "Contenus publiés (guides, articles)",
+      "score": 0,
+      "preuve": "aucun blog ni guide trouvé au menu",
+      "raison": null
+    },
+    {
+      "n": 13,
+      "pilier": 3,
+      "critere": "Nom de la fiche = enseigne",
+      "score": 100,
+      "preuve": "fiche « Dutel Plomberie Services » vs enseigne « Dutel Plomberie Services »",
+      "raison": null
+    },
+    {
+      "n": 14,
+      "pilier": 3,
+      "critere": "Catégorie principale adaptée",
+      "score": 100,
+      "preuve": "lecture manuelle (lecture-manuelle.json) — lu le 2026-10-24 sur ordinateur (panneau Google de la fiche), par la session — 14 : catégorie « Plombier » adaptée ; 19 : section Produits (Aquabion) mais aucune publication. Critères 10, 11, 20, 21, 22, 23, 24, 25 : pensés pour une boutique en ligne, NON APPLICABLES à un artisan — laissés absents (non vérifiables) en attendant la variante locale de la grille.",
+      "raison": null
+    },
+    {
+      "n": 15,
+      "pilier": 3,
+      "critere": "Horaires présents",
+      "score": 100,
+      "preuve": "horaires présents",
+      "raison": null
+    },
+    {
+      "n": 16,
+      "pilier": 3,
+      "critere": "Téléphone de la fiche = téléphone du site",
+      "score": 100,
+      "preuve": "fiche 06 80 23 94 22 · site 0680239422",
+      "raison": null
+    },
+    {
+      "n": 17,
+      "pilier": 3,
+      "critere": "Photos ≥ 20 / 5-19 / < 5",
+      "score": null,
+      "preuve": null,
+      "raison": "Places renvoie 10 photos au plus (10) — compter sur la fiche pour trancher 50/100 (lecture-manuelle.json « 17 »)"
+    },
+    {
+      "n": 18,
+      "pilier": 3,
+      "critere": "Avis vs les deux concurrents",
+      "score": 100,
+      "preuve": "54 avis vs 22",
+      "raison": null
+    },
+    {
+      "n": 19,
+      "pilier": 3,
+      "critere": "Produits ou publications sur la fiche",
+      "score": 50,
+      "preuve": "lecture manuelle (lecture-manuelle.json) — lu le 2026-10-24 sur ordinateur (panneau Google de la fiche), par la session — 14 : catégorie « Plombier » adaptée ; 19 : section Produits (Aquabion) mais aucune publication. Critères 10, 11, 20, 21, 22, 23, 24, 25 : pensés pour une boutique en ligne, NON APPLICABLES à un artisan — laissés absents (non vérifiables) en attendant la variante locale de la grille.",
+      "raison": null
+    },
+    {
+      "n": 20,
+      "pilier": 4,
+      "critere": "Tri du catalogue (pièce, format, prix)",
+      "score": null,
+      "preuve": null,
+      "raison": "filtres non lisibles sans navigateur (lecture-manuelle.json « 20 »)"
+    },
+    {
+      "n": 21,
+      "pilier": 4,
+      "critere": "Avis affichés sur les fiches produit",
+      "score": 0,
+      "preuve": "aucun avis lu sur l'accueil",
+      "raison": null
+    },
+    {
+      "n": 22,
+      "pilier": 4,
+      "critere": "Moyens de paiement annoncés avant le panier",
+      "score": 0,
+      "preuve": "aucune mention",
+      "raison": null
+    },
+    {
+      "n": 23,
+      "pilier": 4,
+      "critere": "Conditions de retour annoncées",
+      "score": 0,
+      "preuve": "nulle part",
+      "raison": null
+    },
+    {
+      "n": 24,
+      "pilier": 4,
+      "critere": "Paiement en plusieurs fois",
+      "score": 0,
+      "preuve": "non proposé",
+      "raison": null
+    },
+    {
+      "n": 25,
+      "pilier": 4,
+      "critere": "Relance des paniers abandonnés",
+      "score": null,
+      "preuve": null,
+      "raison": "non constatable sans parcours réel (lecture-manuelle.json « 25 »)"
+    },
+    {
+      "n": 26,
+      "pilier": 4,
+      "critere": "Cohérence des informations entre les pages",
+      "score": 100,
+      "preuve": "1 téléphone(s) · délais cités : sous 24 heures — relire les délais à la main : deux formulations ne sont pas forcément deux délais",
+      "raison": null
+    }
+  ],
+  "note": "Un critère non vérifiable est retiré de la moyenne de son pilier, jamais compté 0. Les scores à la grille ne se comparent pas aux audits notés à la main."
+}
