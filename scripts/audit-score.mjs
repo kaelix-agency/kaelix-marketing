@@ -40,7 +40,7 @@ const fiche = (P["3_fiche_google"] ?? {}).prospect ?? {}; const ficheConc = (P["
 const parc = P["4_parcours"] ?? {};
 const LOCAL = c.prospect?.type === "local";
 const ct = parc.contact ?? null;
-const isBlocked = (x) => !x || x.statut === "non vérifiable" || x.statut === "aucune fiche trouvée";
+const isBlocked = (x) => !x || x.statut === "non vérifiable" || x.statut === "aucune fiche trouvée" || x.statut === "fiche douteuse";
 const nv = (raison) => ({ score: null, raison });
 const ok = (score, preuve) => ({ score, preuve });
 const tiers = (v, good, mid, { higherIsBetter = false } = {}) => v == null ? null : higherIsBetter ? (v >= good ? 100 : v >= mid ? 50 : 0) : (v < good ? 100 : v < mid ? 50 : 0);

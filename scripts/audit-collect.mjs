@@ -146,7 +146,21 @@ async function pagespeed(url, attempt = 1) {
 }
 
 // ---- 3. Fiche Google : Places API (New) --------------------------------------------------------------------------------
-async function placeOf(query) {
+// Une fiche n'est retenue que si elle correspond au prospect : même site, ou même téléphone, ou même ville dans l'adresse.
+// Sinon « fiche douteuse » (jamais la fiche d'un homonyme à l'autre bout de la France — essai Dutel du 24/10 : la recherche
+// par domaine du Plombier du Crès renvoyait un plombier parisien).
+const zz = (x) => String(x ?? "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+function matchesExpected(p, expected = {}) {
+  const reasons = [];
+  const site = p.websiteUri ? zz(p.websiteUri).replace(/^https?:\/\/(www\.)?/, "").replace(/\/.*$/, "") : null;
+  const exp = expected.site ? zz(expected.site).replace(/^https?:\/\/(www\.)?/, "").replace(/\/.*$/, "") : null;
+  if (site && exp && site === exp) reasons.push("même site");
+  const tel = (p.nationalPhoneNumber ?? "").replace(/\D/g, "");
+  if (tel && expected.telephones?.some((t) => t.replace(/\D/g, "") === tel)) reasons.push("même téléphone");
+  if (expected.ville && zz(p.formattedAddress).includes(zz(expected.ville))) reasons.push("même ville");
+  return reasons;
+}
+async function placeOf(query, expected = {}) {
   if (!KEYS.places) return blocked("GOOGLE_PLACES_API_KEY absente (.env)");
   try {
     const d = await getJson("https://places.googleapis.com/v1/places:searchText", {
@@ -155,9 +169,16 @@ async function placeOf(query) {
         "X-Goog-FieldMask": "places.id,places.displayName,places.primaryTypeDisplayName,places.primaryType,places.rating,places.userRatingCount,places.nationalPhoneNumber,places.internationalPhoneNumber,places.websiteUri,places.regularOpeningHours,places.photos,places.formattedAddress,places.googleMapsUri" },
       body: JSON.stringify({ textQuery: query, languageCode: "fr", regionCode: "FR", maxResultCount: 3 }),
     }, 30_000);
-    const p = (d.places ?? [])[0];
-    if (!p) return { statut: "aucune fiche trouvée", requete: query, source: "Places API (New), searchText", date: now() };
+    const cands = d.places ?? [];
+    if (!cands.length) return { statut: "aucune fiche trouvée", requete: query, source: "Places API (New), searchText", date: now() };
+    const hasExp = expected.site || expected.ville || expected.telephones?.length;
+    const p = hasExp ? cands.find((x) => matchesExpected(x, expected).length) : cands[0];
+    if (!p) return { statut: "fiche douteuse", requete: query, source: "Places API (New), searchText", date: now(),
+      raison: `${cands.length} candidat(s) renvoyé(s), aucun ne porte le site, le téléphone ou la ville attendus — à confirmer à la main sur Maps`,
+      candidats_ecartes: cands.map((x) => ({ nom: x.displayName?.text ?? null, adresse: x.formattedAddress ?? null, site: x.websiteUri ?? null })) };
+    const preuve = matchesExpected(p, expected);
     return {
+      correspondance: preuve.length ? preuve.join(", ") : "non contrôlée (aucune attente fournie)",
       source: "Places API (New), searchText", date: now(), requete: query, candidats: (d.places ?? []).length,
       nom: p.displayName?.text ?? null, categorie: p.primaryTypeDisplayName?.text ?? p.primaryType ?? null,
       note: p.rating ?? null, nb_avis: p.userRatingCount ?? 0, telephone: p.nationalPhoneNumber ?? null,
@@ -304,11 +325,11 @@ let serps = [];
 if (requetes.length && KEYS.haloscan) { for (const q of requetes) serps.push(await serp(q, domains)); log(`Haloscan : ${serps.length} recherches`); }
 let volumes = null;
 if (requetes.length && KEYS.haloscan) { try { volumes = rowsOf(await halo("/keywords/bulk", { keywords: requetes, lang: "fr", lineCount: requetes.length })).map((r) => ({ requete: r.keyword, volume: numOrNull(r.volume), kvi: numOrNull(r.kvi), inconnu_haloscan: r.volume === "NA" || r.volume == null })); } catch (e) { volumes = blocked(`Haloscan bulk : ${e.message}`); } }
-const fiches = { prospect: await placeOf([prospect.nom, prospect.ville].filter(Boolean).join(" ") || host(prospect.site)), concurrents: [] };
-for (const c of prospect.concurrents) fiches.concurrents.push(await placeOf([c.nom, c.ville].filter(Boolean).join(" ") || host(c.site)));
-log("Places : fait");
 const lecture = await readSite(prospect.site);
 log("Lecture du site : fait");
+const fiches = { prospect: await placeOf([prospect.nom, prospect.ville].filter(Boolean).join(" ") || host(prospect.site), { site: prospect.site, ville: prospect.ville, telephones: typeof lecture === "object" ? Object.keys(lecture.telephones ?? {}) : [] }), concurrents: [] };
+for (const c of prospect.concurrents) fiches.concurrents.push(await placeOf([c.nom, c.ville].filter(Boolean).join(" ") || host(c.site), { site: c.site, ville: c.ville }));
+log("Places : fait");
 
 const topCount = (n) => serps.filter((s) => s.positions && s.positions[domains[0]] != null && s.positions[domains[0]] <= n).length;
 const collecte = {
