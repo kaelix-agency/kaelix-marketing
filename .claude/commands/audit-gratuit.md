@@ -4,7 +4,9 @@ argument-hint: <slug-prospect> [--site <url> --nom "…" --ville "…" --activit
 ---
 Audit gratuit pour `$ARGUMENTS`. Objectif unique du livrable envoyé : **obtenir le rendez-vous de 30 min**. Doctrine (`prospects/README.md`) : le prospect reçoit la version **super light** (score + verdict + 3 points « vu → ce que ça coûte »), tout le développement (piliers, solutions, plan, offre) se fait **au rendez-vous**, avec le deck. Rien ne part sans gate.
 
-**Prérequis** : `.env` avec `PSI_API_KEY`, `GOOGLE_PLACES_API_KEY`, la clé Haloscan ; réseau (le conteneur ne l'a pas → les scripts tournent sur le poste, ou je donne la commande à coller). Un dossier `prospects/<slug>/` existant avec un `audit.json` déjà envoyé **ne se régénère pas** (on ne revient pas sur un audit envoyé) : dans ce cas, dis-le et arrête-toi.
+**Prérequis** : `.env` avec `PSI_API_KEY`, `GOOGLE_PLACES_API_KEY`, la clé Haloscan (copie du `.env` du PC, jamais commité). Un dossier `prospects/<slug>/` existant avec un `audit.json` déjà envoyé **ne se régénère pas** (on ne revient pas sur un audit envoyé) : dans ce cas, dis-le et arrête-toi.
+
+**Dossier déjà créé par la tâche planifiée « Demandes d'audit gratuit »** (`prospects/<slug>/collecte.json` et `scores.json` présents, `prospect.json.demande` renseigné) : saute la collecte, vérifie les déductions de la tâche (type, ville, concurrents, `requetes.txt`) et reprends à l'étape 1 bis (relevé direct). **Réseau** : depuis le 25/10/2026 le conteneur sort sur Internet — les scripts tournent ici (`set -a && . ./.env && set +a && export NODE_USE_ENV_PROXY=1`), plus besoin de coller la commande sur le PC.
 
 ## 1. Collecte (brique 1)
 

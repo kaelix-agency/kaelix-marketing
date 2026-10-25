@@ -9,6 +9,10 @@ Un dossier par prospect (`prospects/<slug>/`), **avant** qu'il devienne un clien
 | `audit-complet.html` | La page longue (points avec « ce qu'on ferait », graphiques, piliers, plan), `node scripts/audit-teaser.mjs <slug>` sans option — pour l'après-rendez-vous, jamais envoyée avant. |
 | `deck/` | Les 8 diapositives du rendez-vous (`scripts/audit-deck.mjs`). |
 
+## Demandes entrantes (tâche planifiée « Demandes d'audit gratuit », depuis le 25/10/2026)
+
+Le formulaire kaelix.fr/audit-gratuit écrit la demande dans `contact_requests` et envoie un mail « Demande d'audit gratuit : <site> — <demandeur> » à contact@kaelix.fr (reçu dans la boîte axel@kaelix.fr). Une **tâche planifiée** (lundi-vendredi, 7 h 13 et 13 h 13, Paris, en cloud) lit ces mails, et pour chaque nouvelle demande : lit le site, déduit nom / ville / activité / type / concurrents, écrit `requetes.txt`, lance **collecte + notation** (le réseau du conteneur est ouvert depuis le 25/10 ; clés dans `.env` à la racine ; Node passe par le proxy avec `NODE_USE_ENV_PROXY=1`), commite `prospects/<slug>/`, pose un **gate** `ag-<slug>` dans le tableau de bord et une fiche « Audit demandé » dans le CRM. Registre anti-doublon : `prospects/demandes.json` (id du mail → slug, statut). La tâche **ne rédige pas, ne génère ni teaser ni deck, n'écrit jamais au prospect** : Axel lance `/audit-gratuit <slug>` (la collecte est déjà faite) et envoie lui-même.
+
 ## Principe du teaser (décisions du 2026-10-21, précisées le 2026-10-23)
 
 **Décision d'Axel du 23/10/2026 : l'audit envoyé au prospect est une version « super light »** — elle montre **plusieurs problèmes** (le score et les 3 points qui coûtent le plus, chacun en une phrase : vu → ce que ça coûte), **sans développer** ni les solutions ni le détail des piliers. Tout le développement (diapos, piliers, plan chiffré) se fait **au rendez-vous**. Le teaser crée le besoin de l'appel, il ne le remplace pas.
