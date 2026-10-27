@@ -1,0 +1,261 @@
+{
+  "slug": "prostage",
+  "date": "2026-10-27",
+  "grille": "docs/grille-audit-gratuit.md (21/10/2026, calibrage sévère gardé le 22/10/2026)",
+  "collecte_du": "2026-10-27",
+  "score_global": 58,
+  "avertissement": null,
+  "piliers": [
+    {
+      "pilier": 1,
+      "nom": "Site & vitesse",
+      "poids": 0.3,
+      "score": 56,
+      "criteres_verifies": 7,
+      "criteres_total": 7,
+      "non_verifiables": []
+    },
+    {
+      "pilier": 2,
+      "nom": "Visibilité Google",
+      "poids": 0.3,
+      "score": 42,
+      "criteres_verifies": 5,
+      "criteres_total": 5,
+      "non_verifiables": []
+    },
+    {
+      "pilier": 3,
+      "nom": "Fiche Google",
+      "poids": 0.2,
+      "score": 88,
+      "criteres_verifies": 4,
+      "criteres_total": 7,
+      "non_verifiables": [
+        "17 Photos ≥ 20 / 5-19 / < 5 — Places renvoie 10 photos au plus (10) — compter sur la fiche pour trancher 50/100 (lecture-manuelle.json « 17 »)",
+        "18 Avis vs les deux concurrents — aucune fiche concurrente lue",
+        "19 Produits ou publications sur la fiche — non exposé par Places — lire la fiche (lecture-manuelle.json « 19 »)"
+      ]
+    },
+    {
+      "pilier": 4,
+      "nom": "Achat & contact",
+      "poids": 0.2,
+      "score": 57,
+      "criteres_verifies": 7,
+      "criteres_total": 7,
+      "non_verifiables": []
+    }
+  ],
+  "criteres": [
+    {
+      "n": 1,
+      "pilier": 1,
+      "critere": "Note de vitesse mobile (note Google reprise)",
+      "score": 52,
+      "preuve": "52/100 (PageSpeed mobile, 2026-10-27)",
+      "raison": null
+    },
+    {
+      "n": 2,
+      "pilier": 1,
+      "critere": "Affichage de l'image principale (LCP) < 2,5 s / < 4 s",
+      "score": 0,
+      "preuve": "6.3 s",
+      "raison": null
+    },
+    {
+      "n": 3,
+      "pilier": 1,
+      "critere": "Mesure terrain Google (vrais visiteurs) réussie",
+      "score": 0,
+      "preuve": "pas assez de visiteurs pour que Google mesure (absence = donnée)",
+      "raison": null
+    },
+    {
+      "n": 4,
+      "pilier": 1,
+      "critere": "Réponse du serveur < 0,5 s / < 1,5 s",
+      "score": 100,
+      "preuve": "0.11 s (PageSpeed, 1 mesure — la grille en veut 5 : valeur indicative)",
+      "raison": null
+    },
+    {
+      "n": 5,
+      "pilier": 1,
+      "critere": "Fichiers chargés < 50 / < 100",
+      "score": 50,
+      "preuve": "76 fichiers",
+      "raison": null
+    },
+    {
+      "n": 6,
+      "pilier": 1,
+      "critere": "Site sécurisé (https)",
+      "score": 100,
+      "preuve": "https",
+      "raison": null
+    },
+    {
+      "n": 7,
+      "pilier": 1,
+      "critere": "Qualité des balises (note SEO Google reprise)",
+      "score": 92,
+      "preuve": "92/100",
+      "raison": null
+    },
+    {
+      "n": 8,
+      "pilier": 2,
+      "critere": "Part des recherches dans les 3 premiers",
+      "score": 40,
+      "preuve": "lecture manuelle — 8 : top 3 sur 4 recherches sur 10 → 40.",
+      "raison": null
+    },
+    {
+      "n": 9,
+      "pilier": 2,
+      "critere": "Part des recherches dans les 50 premiers",
+      "score": 70,
+      "preuve": "lecture manuelle — 9 : page 1 sur 7 sur 10 → 70 (lecture arrêtée à la page 1).",
+      "raison": null
+    },
+    {
+      "n": 10,
+      "pilier": 2,
+      "critere": "Présence dans le pack local Maps sur les recherches testées (part, relevé direct)",
+      "score": 0,
+      "preuve": "lecture manuelle — 10 : fiche jamais dans la carte sur les 10 recherches (MX School 17, MX Arena y sont) → 0.",
+      "raison": null
+    },
+    {
+      "n": 11,
+      "pilier": 2,
+      "critere": "Pages service / zone dédiées (une page par service et par ville visée)",
+      "score": 50,
+      "preuve": "lecture manuelle — 11 : une page par service et par formation, aucune page par ville ou département visé → 50.",
+      "raison": null
+    },
+    {
+      "n": 12,
+      "pilier": 2,
+      "critere": "Contenus publiés (guides, articles)",
+      "score": 50,
+      "preuve": "lecture manuelle — 12 : un blog « Actualités » avec 3 billets (2022-2023, dont un billet casino injecté) → 50.",
+      "raison": null
+    },
+    {
+      "n": 13,
+      "pilier": 3,
+      "critere": "Nom de la fiche = enseigne",
+      "score": 100,
+      "preuve": "fiche « Pro Stage » vs enseigne « Pro-Stage »",
+      "raison": null
+    },
+    {
+      "n": 14,
+      "pilier": 3,
+      "critere": "Catégorie principale adaptée",
+      "score": 50,
+      "preuve": "lecture manuelle — 14 : catégorie « Club de sport » renseignée mais inadaptée (école de pilotage / centre de formation) → 50.",
+      "raison": null
+    },
+    {
+      "n": 15,
+      "pilier": 3,
+      "critere": "Horaires présents",
+      "score": 100,
+      "preuve": "horaires présents",
+      "raison": null
+    },
+    {
+      "n": 16,
+      "pilier": 3,
+      "critere": "Téléphone de la fiche = téléphone du site",
+      "score": 100,
+      "preuve": "lecture manuelle — 16 : 06 15 46 14 27 sur la fiche et en pied de page du site → 100.",
+      "raison": null
+    },
+    {
+      "n": 17,
+      "pilier": 3,
+      "critere": "Photos ≥ 20 / 5-19 / < 5",
+      "score": null,
+      "preuve": null,
+      "raison": "Places renvoie 10 photos au plus (10) — compter sur la fiche pour trancher 50/100 (lecture-manuelle.json « 17 »)"
+    },
+    {
+      "n": 18,
+      "pilier": 3,
+      "critere": "Avis vs les deux concurrents",
+      "score": null,
+      "preuve": null,
+      "raison": "aucune fiche concurrente lue"
+    },
+    {
+      "n": 19,
+      "pilier": 3,
+      "critere": "Produits ou publications sur la fiche",
+      "score": null,
+      "preuve": null,
+      "raison": "non exposé par Places — lire la fiche (lecture-manuelle.json « 19 »)"
+    },
+    {
+      "n": 20,
+      "pilier": 4,
+      "critere": "Téléphone cliquable au premier écran",
+      "score": 0,
+      "preuve": "lecture manuelle — 20 : aucun lien tel: sur l'accueil → 0.",
+      "raison": null
+    },
+    {
+      "n": 21,
+      "pilier": 4,
+      "critere": "Avis affichés sur le site",
+      "score": 50,
+      "preuve": "lecture manuelle — 21 : trois témoignages de stagiaires sur l'accueil, pas les avis Google → 50.",
+      "raison": null
+    },
+    {
+      "n": 22,
+      "pilier": 4,
+      "critere": "Demande de devis ou de contact dès l'accueil (lien ou formulaire)",
+      "score": 50,
+      "preuve": "lecture manuelle — 22 : lien Contactez-nous sur l'accueil, pas de formulaire → 50.",
+      "raison": null
+    },
+    {
+      "n": 23,
+      "pilier": 4,
+      "critere": "Zone d'intervention annoncée",
+      "score": 0,
+      "preuve": "lecture manuelle — 23 : aucune zone d'intervention annoncée (adresse seule) → 0.",
+      "raison": null
+    },
+    {
+      "n": 24,
+      "pilier": 4,
+      "critere": "Délai d'intervention ou disponibilité annoncés",
+      "score": 100,
+      "preuve": "lecture manuelle — 24 : calendrier des stages et horaires téléphoniques annoncés → 100.",
+      "raison": null
+    },
+    {
+      "n": 25,
+      "pilier": 4,
+      "critere": "Preuves de confiance (assurance, garanties, certifications)",
+      "score": 100,
+      "preuve": "lecture manuelle — 25 : éducateurs diplômés, 20 ans d'expérience, activité réglementée → 100.",
+      "raison": null
+    },
+    {
+      "n": 26,
+      "pilier": 4,
+      "critere": "Cohérence des informations entre les pages",
+      "score": 100,
+      "preuve": "lecture manuelle — 26 : un numéro par responsable, cohérent entre contact et pied de page → 100.",
+      "raison": null
+    }
+  ],
+  "note": "Un critère non vérifiable est retiré de la moyenne de son pilier, jamais compté 0. Les scores à la grille ne se comparent pas aux audits notés à la main."
+}

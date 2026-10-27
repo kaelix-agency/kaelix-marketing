@@ -1,0 +1,21 @@
+{
+  "site": "https://www.prostage.fr",
+  "nom": "Pro-Stage",
+  "ville": "Assevillers",
+  "activite": "école de pilotage motocross, stages et formations d'encadrants (BFA, BFM, CQP, DEJEPS)",
+  "type": "local",
+  "concurrents": [],
+  "requetes": [
+    "stage motocross somme",
+    "stage moto cross picardie",
+    "école de pilotage motocross",
+    "initiation motocross amiens",
+    "stage motocross hauts-de-france",
+    "formation dejeps motocross",
+    "cqp initiateur guide moto",
+    "brevet fédéral moniteur motocross",
+    "stage motocross enfant somme",
+    "stage motocross assevillers"
+  ],
+  "slug": "prostage"
+}

@@ -1,0 +1,274 @@
+{
+  "slug": "prostage",
+  "date": "2026-10-27",
+  "prospect": {
+    "site": "https://www.prostage.fr",
+    "nom": "Pro-Stage",
+    "ville": "Assevillers",
+    "activite": "école de pilotage motocross, stages et formations d'encadrants (BFA, BFM, CQP, DEJEPS)",
+    "type": "local",
+    "concurrents": [],
+    "requetes": [
+      "stage motocross somme",
+      "stage moto cross picardie",
+      "école de pilotage motocross",
+      "initiation motocross amiens",
+      "stage motocross hauts-de-france",
+      "formation dejeps motocross",
+      "cqp initiateur guide moto",
+      "brevet fédéral moniteur motocross",
+      "stage motocross enfant somme",
+      "stage motocross assevillers"
+    ],
+    "slug": "prostage"
+  },
+  "piliers": {
+    "1_site_vitesse": {
+      "prospect": {
+        "source": "PageSpeed Insights API, mobile",
+        "date": "2026-10-27T21:22:37.856Z",
+        "url_finale": "https://www.prostage.fr/",
+        "note_performance": 52,
+        "note_seo": 92,
+        "lcp_s": 6.3,
+        "ttfb_s": 0.11,
+        "requetes": 76,
+        "poids_ko": 14319,
+        "https": true,
+        "terrain": {
+          "statut": "absent",
+          "note": "Google n'a pas assez de visiteurs pour mesurer ce site : c'est une donnée (trafic relatif faible)"
+        }
+      },
+      "concurrents": [],
+      "https_site": {
+        "statut": "non vérifiable",
+        "raison": "site non lu"
+      }
+    },
+    "2_visibilite_google": {
+      "requetes": {
+        "liste": [
+          "stage motocross somme",
+          "stage moto cross picardie",
+          "école de pilotage motocross",
+          "initiation motocross amiens",
+          "stage motocross hauts-de-france",
+          "formation dejeps motocross",
+          "cqp initiateur guide moto",
+          "brevet fédéral moniteur motocross",
+          "stage motocross enfant somme",
+          "stage motocross assevillers"
+        ],
+        "origine": "prospect.json / --requetes",
+        "volumes": [
+          {
+            "requete": "stage motocross somme",
+            "volume": null,
+            "kvi": null,
+            "inconnu_haloscan": true
+          },
+          {
+            "requete": "stage moto cross picardie",
+            "volume": 30,
+            "kvi": 15,
+            "inconnu_haloscan": false
+          },
+          {
+            "requete": "école de pilotage motocross",
+            "volume": 170,
+            "kvi": 7,
+            "inconnu_haloscan": false
+          },
+          {
+            "requete": "initiation motocross amiens",
+            "volume": null,
+            "kvi": null,
+            "inconnu_haloscan": true
+          },
+          {
+            "requete": "stage motocross hauts de france",
+            "volume": null,
+            "kvi": null,
+            "inconnu_haloscan": true
+          },
+          {
+            "requete": "formation dejeps motocross",
+            "volume": null,
+            "kvi": null,
+            "inconnu_haloscan": true
+          },
+          {
+            "requete": "cqp initiateur guide moto",
+            "volume": null,
+            "kvi": null,
+            "inconnu_haloscan": true
+          },
+          {
+            "requete": "brevet fédéral moniteur motocross",
+            "volume": null,
+            "kvi": null,
+            "inconnu_haloscan": true
+          },
+          {
+            "requete": "stage motocross enfant somme",
+            "volume": null,
+            "kvi": null,
+            "inconnu_haloscan": true
+          },
+          {
+            "requete": "stage motocross assevillers",
+            "volume": null,
+            "kvi": null,
+            "inconnu_haloscan": true
+          }
+        ]
+      },
+      "serps": [
+        {
+          "requete": "stage motocross somme",
+          "volume": null,
+          "statut": "non vérifiable",
+          "raison": "recherche inconnue de l'index Haloscan (longue traîne) — à relever à la main sur Google, téléphone",
+          "echantillon": "{\"keyword\":\"stage motocross somme\",\"errors\":[{\"requested_data\":\"serp\",\"errorCode\":\"KEYWORD_UNKNOWN\"},{\"requested_data\":\"metrics\",\"errorCode\":\"KEYWORD_UNKNOWN\"}],\"serp\":{\"errorCode\":\"KEYWORD_UNKNOWN\",\"results\":[],\"filtered_result_count\":0,\"total_result_count\":0}}"
+        },
+        {
+          "requete": "stage moto cross picardie",
+          "volume": null,
+          "positions": {
+            "prostage.fr": 2
+          },
+          "premier": "sport-decouverte.com",
+          "top3": [
+            "sport-decouverte.com",
+            "prostage.fr",
+            "adrenactive.com"
+          ],
+          "nb_resultats_lus": 52,
+          "date_serp": "2026-10-11",
+          "source": "Haloscan overview/serp — SERP Google FR ordinateur, à la date de son dernier relevé (pas un relevé du jour, pas sur téléphone)"
+        },
+        {
+          "requete": "école de pilotage motocross",
+          "volume": null,
+          "positions": {
+            "prostage.fr": null
+          },
+          "premier": "ecole-francaise-motocyclisme.com",
+          "top3": [
+            "ecole-francaise-motocyclisme.com",
+            "adrenactive.com",
+            "pratiquer.ffmoto.org"
+          ],
+          "nb_resultats_lus": 45,
+          "date_serp": "2026-06-10",
+          "source": "Haloscan overview/serp — SERP Google FR ordinateur, à la date de son dernier relevé (pas un relevé du jour, pas sur téléphone)"
+        },
+        {
+          "requete": "initiation motocross amiens",
+          "volume": null,
+          "statut": "non vérifiable",
+          "raison": "recherche inconnue de l'index Haloscan (longue traîne) — à relever à la main sur Google, téléphone",
+          "echantillon": "{\"keyword\":\"initiation motocross amiens\",\"errors\":[],\"serp\":{\"response_time\":\"1.25 secs\",\"keyword\":\"initiation motocross amiens\",\"response_code\":null,\"failure_reason\":null,\"result_count\":0,\"aio_link_count\":0,\"results\":{\"serp_date\":[],\"serp\":[],\"aio_links\":[]}},\"seo_metrics\":{\"google_indexed\":\"NA\",\"a"
+        },
+        {
+          "requete": "stage motocross hauts-de-france",
+          "volume": null,
+          "statut": "non vérifiable",
+          "raison": "recherche inconnue de l'index Haloscan (longue traîne) — à relever à la main sur Google, téléphone",
+          "echantillon": "{\"keyword\":\"stage motocross hauts-de-france\",\"errors\":[{\"requested_data\":\"serp\",\"errorCode\":\"KEYWORD_UNKNOWN\"},{\"requested_data\":\"metrics\",\"errorCode\":\"KEYWORD_UNKNOWN\"}],\"serp\":{\"errorCode\":\"KEYWORD_UNKNOWN\",\"results\":[],\"filtered_result_count\":0,\"total_result_count\":0}}"
+        },
+        {
+          "requete": "formation dejeps motocross",
+          "volume": null,
+          "statut": "non vérifiable",
+          "raison": "recherche inconnue de l'index Haloscan (longue traîne) — à relever à la main sur Google, téléphone",
+          "echantillon": "{\"keyword\":\"formation dejeps motocross\",\"errors\":[{\"requested_data\":\"serp\",\"errorCode\":\"KEYWORD_UNKNOWN\"},{\"requested_data\":\"metrics\",\"errorCode\":\"KEYWORD_UNKNOWN\"}],\"serp\":{\"errorCode\":\"KEYWORD_UNKNOWN\",\"results\":[],\"filtered_result_count\":0,\"total_result_count\":0}}"
+        },
+        {
+          "requete": "cqp initiateur guide moto",
+          "volume": null,
+          "statut": "non vérifiable",
+          "raison": "recherche inconnue de l'index Haloscan (longue traîne) — à relever à la main sur Google, téléphone",
+          "echantillon": "{\"keyword\":\"cqp initiateur guide moto\",\"errors\":[{\"requested_data\":\"serp\",\"errorCode\":\"KEYWORD_UNKNOWN\"},{\"requested_data\":\"metrics\",\"errorCode\":\"KEYWORD_UNKNOWN\"}],\"serp\":{\"errorCode\":\"KEYWORD_UNKNOWN\",\"results\":[],\"filtered_result_count\":0,\"total_result_count\":0}}"
+        },
+        {
+          "requete": "brevet fédéral moniteur motocross",
+          "volume": null,
+          "statut": "non vérifiable",
+          "raison": "recherche inconnue de l'index Haloscan (longue traîne) — à relever à la main sur Google, téléphone",
+          "echantillon": "{\"keyword\":\"brevet fédéral moniteur motocross\",\"errors\":[{\"requested_data\":\"serp\",\"errorCode\":\"KEYWORD_UNKNOWN\"},{\"requested_data\":\"metrics\",\"errorCode\":\"KEYWORD_UNKNOWN\"}],\"serp\":{\"errorCode\":\"KEYWORD_UNKNOWN\",\"results\":[],\"filtered_result_count\":0,\"total_result_count\":0}}"
+        },
+        {
+          "requete": "stage motocross enfant somme",
+          "volume": null,
+          "statut": "non vérifiable",
+          "raison": "recherche inconnue de l'index Haloscan (longue traîne) — à relever à la main sur Google, téléphone",
+          "echantillon": "{\"keyword\":\"stage motocross enfant somme\",\"errors\":[{\"requested_data\":\"serp\",\"errorCode\":\"KEYWORD_UNKNOWN\"},{\"requested_data\":\"metrics\",\"errorCode\":\"KEYWORD_UNKNOWN\"}],\"serp\":{\"errorCode\":\"KEYWORD_UNKNOWN\",\"results\":[],\"filtered_result_count\":0,\"total_result_count\":0}}"
+        },
+        {
+          "requete": "stage motocross assevillers",
+          "volume": null,
+          "statut": "non vérifiable",
+          "raison": "recherche inconnue de l'index Haloscan (longue traîne) — à relever à la main sur Google, téléphone",
+          "echantillon": "{\"keyword\":\"stage motocross assevillers\",\"errors\":[{\"requested_data\":\"serp\",\"errorCode\":\"KEYWORD_UNKNOWN\"},{\"requested_data\":\"metrics\",\"errorCode\":\"KEYWORD_UNKNOWN\"}],\"serp\":{\"errorCode\":\"KEYWORD_UNKNOWN\",\"results\":[],\"filtered_result_count\":0,\"total_result_count\":0}}"
+        }
+      ],
+      "synthese": {
+        "recherches_testees": 10,
+        "dans_les_3_premiers": 1,
+        "dans_les_50_premiers": 1,
+        "absent": 1,
+        "premier_le_plus_frequent": [
+          "sport-decouverte.com",
+          1
+        ]
+      },
+      "catalogue_et_contenus": {
+        "statut": "non vérifiable",
+        "raison": "site non lu"
+      },
+      "shopping": {
+        "statut": "non vérifiable",
+        "raison": "onglet Google Shopping : relevé à la main"
+      }
+    },
+    "3_fiche_google": {
+      "prospect": {
+        "correspondance": "même ville",
+        "source": "Places API (New), searchText",
+        "date": "2026-10-27T21:23:30.807Z",
+        "requete": "Pro-Stage Assevillers",
+        "candidats": 1,
+        "nom": "Pro Stage",
+        "categorie": "Club de sport",
+        "note": 4.7,
+        "nb_avis": 38,
+        "telephone": "06 15 46 14 27",
+        "site": "http://www.prostagemx.fr/",
+        "horaires": true,
+        "nb_photos": 10,
+        "adresse": "1 La Ruelle, 80200 Assevillers",
+        "maps": "https://maps.google.com/?cid=2994627198327040756&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "limites": "nb_photos = photos renvoyées par l'API (10 max) ; publications et produits de la fiche non exposés par Places → critère 19 à lire à la main"
+      },
+      "concurrents": []
+    },
+    "4_parcours": {
+      "statut": "non vérifiable",
+      "raison": "accueil injoignable (HTTP 503)"
+    }
+  },
+  "lecture_site": {
+    "statut": "non vérifiable",
+    "raison": "accueil injoignable (HTTP 503)"
+  },
+  "a_lire_a_la_main": [
+    "critère 10 (présence dans le pack local Maps : relevé direct des recherches)",
+    "critère 11 (pages service / zone : juger le menu)",
+    "critère 19 (publications/produits sur la fiche)",
+    "critère 20 (téléphone au premier écran sur téléphone : confirmer)",
+    "critère 26 (délais : comparer `delais_cites`)",
+    "incohérences de téléphone : comparer `telephones`"
+  ]
+}
