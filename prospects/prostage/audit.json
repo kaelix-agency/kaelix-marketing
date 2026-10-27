@@ -12,37 +12,37 @@
     "date": "2026-10-27",
     "auteur": "Axel",
     "score": 58,
-    "verdict_titre": "Vous êtes 1er sur Assevillers et 2e sur la Picardie. Mais votre site parle de casinos en ligne, et les revendeurs vendent vos stages avant vous.",
+    "verdict_titre": "Vous êtes 1er sur Assevillers et 2e sur la Picardie. Mais votre site contient un texte caché sur les casinos en ligne, et les revendeurs vendent vos stages avant vous.",
     "verdict_texte": "Nous avons testé votre site sur téléphone comme un parent qui cherche un stage, puis regardé qui prend la première page sur 10 recherches, de « stage motocross somme » à « formation dejeps motocross ». Votre école est solide : 4,7 sur 38 avis Google, en première page sur 7 recherches sur 10, 1re sur votre ville. Trois points vous empêchent d'en faire des inscriptions.",
     "perimetre": {
       "pages": 2,
       "recherches": 10,
       "concurrents": 0
     },
-    "echelle": "Une note de 58 n'est pas un site cassé : c'est un site qui laisse une partie de ses inscriptions aux revendeurs. La note sert à comparer et à prioriser.",
+    "echelle": "Une note de 58 n'est pas un site cassé : c'est un site qui laisse les revendeurs passer devant lui. La note sert à comparer et à prioriser.",
     "notation": "grille KAELIX du 21/10/2026, calculée le 2026-10-27 (23/26 critères vérifiés)"
   },
   "concurrents": [],
   "points": [
     {
-      "titre": "Votre site a été modifié à votre insu : il parle de casinos en ligne",
-      "vu": "Sur votre page d'accueil, entre la formation des encadrants et les tarifs, un paragraphe vante les casinos en ligne français avec un lien vers un site de casino ; un article de 2022 du même genre est publié dans vos actualités ; et toutes les adresses de vos pages ressemblent à « dejeps-2-2-2-2-3-2-2-6-2-2 ». Par ailleurs, la page met 6,3 s à s'afficher sur téléphone (note Google : 52 sur 100, 14 Mo à charger) et Google n'a pas assez de visiteurs pour mesurer ce que vivent vos vrais visiteurs.",
-      "vu_court": "Sur votre page d'accueil, entre la formation des encadrants et les tarifs, un paragraphe vante les casinos en ligne avec un lien vers un site de casino, et les adresses de vos pages ressemblent à « dejeps-2-2-2-2-3-2-2-6-2-2 ». La page met 6,3 s à s'afficher sur téléphone (note Google : 52 sur 100).",
-      "coute": "Un parent qui lit « casino » en cherchant un stage pour son enfant ferme la page ; et Google finit par écarter un site qui héberge ce genre de texte.",
+      "titre": "Votre site a été modifié à votre insu : un texte caché sur les casinos en ligne",
+      "vu": "Sur votre page d'accueil, entre la formation des encadrants et les tarifs, un paragraphe caché, invisible à l'écran mais lu par Google, vante les casinos en ligne avec un lien vers un site de casino ; un article de 2022 du même genre est publié sur votre site, relié depuis un point caché dans un titre de l'accueil ; et toutes les adresses de votre menu ressemblent à « dejeps-2-2-2-2-3-2-2-6-2-2 ». Par ailleurs, la page met 6,3 s à s'afficher sur téléphone (note Google : 52 sur 100, 14 Mo à charger) et Google n'a pas assez de visiteurs pour mesurer ce que vivent vos vrais visiteurs.",
+      "vu_court": "Sur votre page d'accueil, un paragraphe caché, invisible à l'écran mais lu par Google, vante les casinos en ligne avec un lien vers un site de casino, et toutes les adresses de votre menu ressemblent à « dejeps-2-2-2-2-3-2-2-6-2-2 ». La page met 6,3 s à s'afficher sur téléphone (note Google : 52 sur 100).",
+      "coute": "Ce texte est invisible pour vos visiteurs, pas pour Google : un site qui héberge ce genre de contenu caché peut finir par être écarté, et le jour où il devient visible, un parent qui cherche un stage pour son enfant ferme la page.",
       "action": "nettoyage complet puis site refait propre et rapide (moins de 2 s sur téléphone), même adresse, avec le numéro cliquable et le calendrier dès le premier écran."
     },
     {
       "titre": "Les revendeurs vendent vos stages avant vous, même sur votre ville",
-      "vu": "Sur « stage motocross assevillers », vous êtes 1er ; sur « stage moto cross picardie », 2e ; sur « stage motocross somme », 5e. Mais sur ces trois recherches, le client voit d'abord deux à trois annonces d'Adrenactive, Sport Découverte et Manawa, puis un résumé par IA, avant d'arriver à vous. Sur « école de pilotage motocross » (170 recherches par mois), « initiation motocross amiens » et « stage motocross enfant somme », vous n'êtes pas en première page, et votre fiche n'apparaît jamais sur la carte, là où d'autres écoles y sont.",
-      "vu_court": "1er sur « stage motocross assevillers », 2e sur « stage moto cross picardie », 5e sur « stage motocross somme » : mais sur ces trois recherches, deux à trois annonces d'Adrenactive, Sport Découverte et Manawa, puis un résumé par IA, passent avant vous. Sur « école de pilotage motocross », « initiation motocross amiens » et « stage motocross enfant somme », vous n'êtes pas en première page, et votre fiche n'apparaît jamais sur la carte.",
-      "coute": "Chaque stage vendu par un revendeur vous coûte sa commission ; et le parent qui cherche « initiation » ou « enfant » ne vous rencontre pas.",
+      "vu": "Sur « stage motocross assevillers », vous êtes 1er ; sur « stage moto cross picardie », 2e ; sur « stage motocross somme », 5e. Mais sur ces trois recherches, le client voit d'abord deux à trois annonces de revendeurs (Adrenactive, Sport Découverte, Manawa), puis un résumé par IA, avant d'arriver à vous. Sur « école de pilotage motocross » (170 recherches par mois), « initiation motocross amiens » et « stage motocross enfant somme », vous n'êtes pas en première page, et votre fiche n'apparaît jamais sur la carte, là où d'autres écoles y sont.",
+      "vu_court": "1er sur « stage motocross assevillers », 2e sur « stage moto cross picardie », 5e sur « stage motocross somme » : mais sur ces trois recherches, deux à trois annonces de revendeurs (Adrenactive, Sport Découverte, Manawa), puis un résumé par IA, passent avant vous. Sur « école de pilotage motocross », « initiation motocross amiens » et « stage motocross enfant somme », vous n'êtes pas en première page, et votre fiche n'apparaît jamais sur la carte.",
+      "coute": "Un stage réservé chez un revendeur passe par un intermédiaire avant d'arriver à vous ; et le parent qui cherche « initiation » ou « enfant » ne vous rencontre pas.",
       "action": "une page par public (enfant, initiation, perfectionnement, trail) et par ville servie (Amiens, Péronne, Saint-Quentin…), pour reprendre ces recherches aux revendeurs et entrer sur la carte."
     },
     {
       "titre": "Votre fiche Google vous présente comme un « Club de sport », reliée à un autre site",
       "vu": "La fiche s'appelle « Pro Stage », sa catégorie est « Club de sport », et son site web est prostagemx.fr, un second nom de domaine qui affiche le même site. Elle a 4,7 sur 38 avis et des horaires. Vos 38 avis n'apparaissent pas sur votre site : l'accueil montre trois témoignages de stagiaires, sans note ni lien.",
       "vu_court": "La fiche s'appelle « Pro Stage », sa catégorie est « Club de sport », et son site web est prostagemx.fr, un second nom de domaine. Vos 38 avis à 4,7 n'apparaissent pas sur votre site.",
-      "coute": "Google ne sait pas que vous êtes une école de pilotage et un centre de formation : il ne vous montre pas sur la carte quand on cherche l'un ou l'autre.",
+      "coute": "Google ne sait pas que vous êtes une école de pilotage et un centre de formation : c'est l'une des raisons pour lesquelles il ne vous montre pas sur la carte quand on cherche l'un ou l'autre.",
       "action": "fiche corrigée (nom, catégorie école de pilotage / centre de formation, un seul site), alimentée chaque semaine avec vos stages et vos dates, avis Google affichés sur chaque page du site."
     }
   ],
@@ -51,7 +51,7 @@
     {
       "nom": "Site & vitesse",
       "score": 56,
-      "constats": "52/100 sur mobile · 6,3 s d'affichage · 14 Mo · pas de mesure terrain · texte de casino injecté (hors grille)"
+      "constats": "52/100 sur mobile · 6,3 s d'affichage · 14 Mo · pas de mesure terrain · texte caché sur les casinos (hors grille)"
     },
     {
       "nom": "Visibilité Google",

@@ -1,0 +1,207 @@
+{
+  "_mode_d_emploi": "Pré-rempli depuis audit.json. Remplacer chaque « [À RÉDIGER] », relire les notes d'orateur (aside), puis relancer scripts/audit-deck.mjs. Un fait n'apparaît qu'une fois : les frictions (diapo 3) parlent du site seul, l'écart (diapo 4) seulement de ce que montre la comparaison. Pas de vocabulaire technique.",
+  "date_presentation": "2026-10-27",
+  "cover": {
+    "titre": "Vous êtes 1er sur Assevillers et 2e sur la Picardie. Mais votre site contient un texte caché sur les casinos en ligne, et les revendeurs vendent vos stages avant vous.",
+    "sous_titre": "Ce qui est solide chez vous, ce qui vous coûte des appels, ce que font vos concurrents — et ce qu'on fait contre, point par point.",
+    "criteres": 26,
+    "aside": "Le 58 sur 100 est celui de l'audit envoyé : ne pas en changer. [À RÉDIGER] le fil de la présentation."
+  },
+  "forces": {
+    "titre": "Ce qui est solide chez vous",
+    "cartes": [
+      {
+        "chiffre": "[À RÉDIGER]",
+        "titre": "[À RÉDIGER]",
+        "texte": "[À RÉDIGER] une force mesurée (trafic relatif, vitesse chez les vrais visiteurs, livraison…)"
+      },
+      {
+        "chiffre": "[À RÉDIGER]",
+        "titre": "[À RÉDIGER]",
+        "texte": "[À RÉDIGER] ce que les concurrents n'ont pas (spécialité, zone, délai, garanties)"
+      },
+      {
+        "chiffre": "[À RÉDIGER]",
+        "titre": "[À RÉDIGER]",
+        "texte": "[À RÉDIGER] la base saine (site sécurisé, pages renseignées…)"
+      }
+    ],
+    "conclusion": "Vous avez déjà le plus difficile : <b>un métier bien fait et des clients qui le disent.</b> Le reste — être vraiment trouvé, et ne plus perdre ceux qui arrivent — se répare.",
+    "aside": "Commencer par là, et le dire sans flatterie : ce sont des chiffres, pas des compliments."
+  },
+  "frictions": {
+    "titre": "Votre site a été modifié à votre insu : un texte caché sur les casinos en ligne",
+    "sous_titre": "Sur votre page d'accueil, entre la formation des encadrants et les tarifs, un paragraphe caché, invisible à l'écran mais lu par Google, vante les casinos en ligne avec un lien vers un site de casino ; un article de 2022 du même genre est publié sur votre site, relié depuis un point caché dans un titre de l'accueil ; et toutes les adresses de votre menu ressemblent à « dejeps-2-2-2-2-3-2-2-6-2-2 ». Par ailleurs, la page met 6,3 s à s'afficher sur téléphone (note Google : 52 sur 100, 14 Mo à charger) et Google n'a pas assez de visiteurs pour mesurer ce que vivent vos vrais visiteurs.",
+    "lignes": [
+      {
+        "etape": "arrive",
+        "bloque": "Sur votre page d'accueil, entre la formation des encadrants et les tarifs, un paragraphe caché, invisible à l'écran mais lu par Google, vante les casinos en ligne avec un lien vers un site de casino ; un article de 2022 du même genre est publié sur votre site, relié depuis un point caché dans un titre de l'accueil ; et toutes les adresses de votre menu ressemblent à « dejeps-2-2-2-2-3-2-2-6-2-2 ». Par ailleurs, la page met 6,3 s à s'afficher sur téléphone (note Google : 52 sur 100, 14 Mo à charger) et Google n'a pas assez de visiteurs pour mesurer ce que vivent vos vrais visiteurs.",
+        "fait": "nettoyage complet puis site refait propre et rapide (moins de 2 s sur téléphone), même adresse, avec le numéro cliquable et le calendrier dès le premier écran."
+      },
+      {
+        "etape": "cherche",
+        "bloque": "[À RÉDIGER]",
+        "fait": "[À RÉDIGER]"
+      },
+      {
+        "etape": "compare",
+        "bloque": "[À RÉDIGER]",
+        "fait": "[À RÉDIGER]"
+      },
+      {
+        "etape": "hésite",
+        "bloque": "[À RÉDIGER]",
+        "fait": "[À RÉDIGER]"
+      },
+      {
+        "etape": "s'en va",
+        "bloque": "[À RÉDIGER]",
+        "fait": "[À RÉDIGER]"
+      }
+    ],
+    "pied": "Relevé du 27 octobre 2026 · Vitesse mesurée avec l'outil de Google, sur téléphone",
+    "aside": "Une ligne à la fois. Ne pas promettre de pourcentages : on n'a pas encore de mesure sur son site, c'est ce qu'on installe."
+  },
+  "ecart": {
+    "titre": "Ce qu'ils ont et que vous n'avez pas",
+    "lignes": [
+      {
+        "sujet": "La place sur la carte",
+        "ecart": "[À RÉDIGER]",
+        "fait": "Fiche publiée chaque semaine, avis demandés après chaque intervention, catégories et services complets"
+      },
+      {
+        "sujet": "Les avis sur le site",
+        "ecart": "[À RÉDIGER]",
+        "fait": "Vos avis Google affichés sur chaque page, au premier écran"
+      },
+      {
+        "sujet": "Les pages par ville et par service",
+        "ecart": "[À RÉDIGER]",
+        "fait": "Une page par ville servie, une par service"
+      },
+      {
+        "sujet": "La place sur Google",
+        "ecart": "Sur « stage motocross assevillers », vous êtes 1er ; sur « stage moto cross picardie », 2e ; sur « stage motocross somme », 5e. Mais sur ces trois recherches, le client voit d'abord deux à trois annonces de revendeurs (Adrenactive, Sport Découverte, Manawa), puis un résumé par IA, avant d'arriver à vous. Sur « école de pilotage motocross » (170 recherches par mois), « initiation motocross amiens » et « stage motocross enfant somme », vous n'êtes pas en première page, et votre fiche n'apparaît jamais sur la carte, là où d'autres écoles y sont.",
+        "fait": "une page par public (enfant, initiation, perfectionnement, trail) et par ville servie (Amiens, Péronne, Saint-Quentin…), pour reprendre ces recherches aux revendeurs et entrer sur la carte."
+      },
+      {
+        "sujet": "Les publications",
+        "ecart": "[À RÉDIGER]",
+        "fait": "Chantiers et conseils publiés sur la fiche et sur le site"
+      }
+    ],
+    "pied": "Relevé du 27 octobre 2026 : sites, fiches Google et carte des enseignes comparées",
+    "aside": "Le prix : poser la question, ne pas y répondre à sa place. Ne pas revenir sur ce qui était dans la diapositive d'avant."
+  },
+  "prestations": {
+    "titre": "Ce qu'on met en place chez vous",
+    "colonnes": [
+      {
+        "periode": "Semaines 1 à 5",
+        "titre": "Site propre et rapide",
+        "puces": [
+          "Nettoyage, puis un site refait à la même adresse : moins de 2 s sur téléphone, calendrier et numéro dès le premier écran, vos 38 avis sur chaque page.",
+          "[À RÉDIGER]",
+          "[À RÉDIGER]"
+        ]
+      },
+      {
+        "periode": "Dès la mise en ligne",
+        "titre": "Fiche Google d'école",
+        "puces": [
+          "Nom, catégorie et site corrigés ; stages, dates et formations publiés chaque semaine ; demande d'avis après chaque stage.",
+          "[À RÉDIGER]",
+          "[À RÉDIGER]"
+        ]
+      },
+      {
+        "periode": "Mois 2 à 6",
+        "titre": "Vos stages avant les revendeurs",
+        "puces": [
+          "Une page par public et par ville : viser la première page et la carte sur « initiation », « enfant », « Amiens », là où les revendeurs vendent vos stages aujourd'hui.",
+          "[À RÉDIGER]",
+          "[À RÉDIGER]"
+        ]
+      }
+    ],
+    "aside": "La seule diapositive où l'on parle de nous. Dire les trois temps et s'arrêter."
+  },
+  "offre": {
+    "titre": "Un site qui appelle, une fiche qui travaille. Deux lignes, chacune se juge.",
+    "mois_bilan": 4,
+    "lignes": [
+      {
+        "kicker": "Le site vitrine",
+        "prix": 80,
+        "sous": "hors taxes, par mois",
+        "texte": "Sans frais de création. Sans engagement. Création, hébergement, maintenance et mises à jour compris.",
+        "couleur": "#3D5BFF"
+      },
+      {
+        "kicker": "La formule Local",
+        "prix": 199,
+        "sous": "hors taxes, par mois",
+        "texte": "La fiche Google est comprise : fiche gérée et publiée, coordonnées cohérentes dans les annuaires, réponse aux avis, pages ville, suivi mensuel de la position sur la carte. Engagement 3 mois, puis mensuel.",
+        "couleur": "#2E9A64"
+      }
+    ],
+    "total": 279,
+    "bandeau": {
+      "gauche": "279 € hors taxes par mois, les deux lignes",
+      "droite": "Rien n'est débité avant le démarrage, le code du site vous appartient si vous partez, et le site seul reste possible à 80 €."
+    },
+    "aside": "Deux chiffres, pas plus : 80 et 199. Si on demande National : 199 € aussi, ou Local + National à 349 €.",
+    "_remise": "Une remise de lancement (ex. « offert 4 mois ») se décide ici, prospect par prospect : modifier prix / sous / texte des lignes et le bandeau. Jamais par défaut."
+  },
+  "bilan": {
+    "titre": "Vous décidez avec les chiffres",
+    "sous_titre": "D'abord ceux que votre site ne vous donne pas aujourd'hui : combien de visiteurs, d'où ils viennent, combien appellent ou demandent un devis, et à quel moment les autres s'en vont.",
+    "options": [
+      {
+        "nom": "Le site",
+        "bilan": "Appels et demandes de devis depuis le site, vitesse mesurée chez vos vrais visiteurs"
+      },
+      {
+        "nom": "La fiche Google",
+        "bilan": "Appels et itinéraires depuis la fiche, avis gagnés, publications parues"
+      },
+      {
+        "nom": "La place sur la carte",
+        "bilan": "Sur les 10 recherches : dans les 3 premiers de la carte, ou non, ville par ville"
+      },
+      {
+        "nom": "Les pages ville et service",
+        "bilan": "Recherches où vous êtes en première page, et ce qu'elles apportent"
+      },
+      {
+        "nom": "Les annuaires",
+        "bilan": "Coordonnées identiques partout, fiches créées ou corrigées"
+      }
+    ],
+    "conclusion": "Chaque ligne se décide séparément : vous gardez ce qui vous apporte des appels, vous coupez le reste. <b>Et si la carte est gagnée, on regarde National.</b>",
+    "aside": "C'est la diapositive qui fait signer : un essai qui se juge sur pièces, en appels et en devis. Si on demande le prix de National : 199 € par mois."
+  },
+  "suite": {
+    "titre": "[À RÉDIGER] (une date : « Si on démarre cette semaine, le site est en ligne avant… »)",
+    "etapes": [
+      {
+        "quand": "Aujourd'hui",
+        "titre": "Vous recevez le lien pour démarrer votre projet",
+        "texte": "Vous vérifiez, vous validez. Rien n'est débité avant le démarrage des travaux."
+      },
+      {
+        "quand": "Semaine 1",
+        "titre": "Une heure ensemble",
+        "texte": "Vos chantiers, vos photos, votre fiche Google, et les villes où vous intervenez."
+      },
+      {
+        "quand": "Semaines 3 à 5",
+        "titre": "Mise en ligne, vitesse vérifiée devant vous",
+        "texte": "Puis un point de 15 minutes chaque mois, et le bilan au 4e mois."
+      }
+    ],
+    "contact": "Axel · 06 35 44 30 10 · axel@kaelix.fr · kaelix.fr",
+    "aside": "Terminer par une date, pas par « réfléchissez »."
+  }
+}

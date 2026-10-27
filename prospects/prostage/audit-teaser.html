@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Audit gratuit — Pro-Stage · KAELIX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+<style>
+:root{--bg:#F7F5F0;--card:#FFFFFF;--line:#E6E2D9;--ink:#141413;--ink-2:#4A4945;--mute:#6B6963;--faint:#8C8A82;--accent:#3D5BFF;--track:#F0EDE6;--me:#E8893C;--me-ink:#B8601A;--other:#8C8A82}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#2A47E0}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+.top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;padding-top:32px}
+.logo{font-size:26px;font-weight:800;letter-spacing:-.02em}.logo b{color:var(--accent);font-weight:800}
+.meta{font-size:13px;color:var(--mute)}
+.hero{display:flex;flex-wrap:wrap;align-items:center;gap:40px;padding:56px 0 48px}
+.hero-txt{flex:1 1 440px;min-width:0}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+h1{margin:0 0 16px;font-size:clamp(30px,5vw,44px);line-height:1.08;font-weight:800;letter-spacing:-.025em}
+.lead{font-size:17px;line-height:1.55;color:var(--ink-2);max-width:560px}
+.ring{width:200px;height:200px;border-radius:50%;background:conic-gradient(var(--me) 0 58%,var(--line) 58% 100%);display:flex;align-items:center;justify-content:center;margin:0 auto}
+.ring-in{width:160px;height:160px;border-radius:50%;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center}
+.ring-n{font-size:64px;line-height:1;font-weight:800;letter-spacing:-.04em}.ring-s{font-size:13px;font-weight:600;color:var(--mute)}
+.ring-l{text-align:center;font-size:14px;font-weight:700;color:var(--me-ink);margin-top:12px}
+h2{margin:0 0 20px;font-size:clamp(22px,3.5vw,30px);font-weight:800;letter-spacing:-.025em}
+.sec{padding:0 0 56px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+@media(max-width:860px){.grid3,.grid4{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.grid3,.grid4{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px}
+.num{width:38px;height:38px;border-radius:11px;background:var(--accent);color:#fff;font-weight:800;font-size:16px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+h3{margin:0 0 10px;font-size:19px;line-height:1.25;font-weight:800}
+.vu{font-size:15px;line-height:1.5;color:var(--ink-2);margin-bottom:14px}
+.coute{padding:12px 14px;border-radius:12px;background:var(--bg);margin-bottom:14px}
+.coute small{display:block;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin-bottom:4px}
+.coute div{font-size:15px;font-weight:700;line-height:1.4}
+.act{font-size:14px;line-height:1.5}.act b{color:var(--accent)}
+.band{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:56px 0 64px}
+.band .sub{font-size:16px;color:var(--mute);margin:-10px 0 28px}
+.chart{border:1px solid var(--line);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:18px}
+.chart-title{font-size:16px;font-weight:800}.chart-sub{font-size:13px;color:var(--mute);margin-top:3px}
+.chart-rows{display:flex;flex-direction:column;gap:12px}
+.row-head{display:flex;justify-content:space-between;font-size:13px;color:var(--ink-2);margin-bottom:6px}
+.row-head .me{font-weight:700;color:var(--ink)}.me-val{font-weight:800;color:var(--me-ink)}.val{font-weight:700}
+.track{height:13px;border-radius:7px;background:var(--track);overflow:hidden}
+.fill{height:100%;border-radius:7px;background:var(--other)}.fill-me{background:var(--me)}
+.chart-foot{font-size:14px;line-height:1.5;padding-top:14px;border-top:1px solid var(--line)}
+.pil .nom{font-size:14px;font-weight:700;color:var(--mute);margin-bottom:10px}
+.pil .sc{font-size:42px;font-weight:800;letter-spacing:-.03em;line-height:1;margin-bottom:10px}
+.pil .bar{height:8px;border-radius:4px;background:var(--track);overflow:hidden;margin-bottom:12px}.pil .bar div{height:100%;border-radius:4px}
+.pil .ct{font-size:13px;line-height:1.5;color:var(--ink-2)}
+.hint{font-size:14px;color:var(--mute)}
+.plan{background:var(--ink);color:#ECEAE4;border-radius:24px;padding:40px}
+.plan h2{color:#ECEAE4}.plan .sub{color:#9C9A93;font-size:15px;margin:-10px 0 28px}
+.step small{display:block;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8FA0FF;margin-bottom:8px}
+.step b{display:block;font-size:18px;font-weight:800;margin-bottom:8px}.step p{margin:0;font-size:14px;line-height:1.5;color:#C9C7C0}
+.cta{display:flex;flex-wrap:wrap;align-items:center;gap:22px;padding-top:26px;margin-top:28px;border-top:1px solid #2A2A2E}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 30px;border-radius:14px;background:var(--accent);color:#fff;font-size:17px;font-weight:800;text-decoration:none}
+.cta p{margin:0;flex:1 1 260px;font-size:14px;line-height:1.5;color:#9C9A93}.cta a.tel{color:#ECEAE4;font-weight:700}
+.foot{font-size:12px;line-height:1.6;color:var(--faint);padding:20px 4px 60px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div class="logo">KÆLI<b>X</b></div>
+    <div class="meta">Audit gratuit · préparé par Axel pour [PRÉNOM] · 27 octobre 2026</div>
+  </div>
+
+  <div class="hero">
+    <div class="hero-txt">
+      <div class="eyebrow">Pro-Stage · prostage.fr</div>
+      <h1>Vous êtes 1er sur Assevillers et 2e sur la Picardie. Mais votre site contient un texte caché sur les casinos en ligne, et les revendeurs vendent vos stages avant vous.</h1>
+      <div class="lead">Nous avons testé votre site sur téléphone comme un parent qui cherche un stage, puis regardé qui prend la première page sur 10 recherches, de « stage motocross somme » à « formation dejeps motocross ». Votre école est solide : 4,7 sur 38 avis Google, en première page sur 7 recherches sur 10, 1re sur votre ville. Trois points vous empêchent d'en faire des inscriptions.</div>
+    </div>
+    <div>
+      <div class="ring"><div class="ring-in"><div class="ring-n">58</div><div class="ring-s">sur 100</div></div></div>
+      <div class="ring-l" style="color:#B8601A">Visibilité insuffisante</div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h2>Les 3 points qui vous coûtent le plus</h2>
+    <div class="grid3">
+      <div class="card">
+        <div class="num">1</div>
+        <h3>Votre site a été modifié à votre insu : un texte caché sur les casinos en ligne</h3>
+        <div class="vu">Sur votre page d'accueil, un paragraphe caché, invisible à l'écran mais lu par Google, vante les casinos en ligne avec un lien vers un site de casino, et toutes les adresses de votre menu ressemblent à « dejeps-2-2-2-2-3-2-2-6-2-2 ». La page met 6,3 s à s'afficher sur téléphone (note Google : 52 sur 100).</div>
+        <div class="coute"><small>Ce que ça vous coûte</small><div>Ce texte est invisible pour vos visiteurs, pas pour Google : un site qui héberge ce genre de contenu caché peut finir par être écarté, et le jour où il devient visible, un parent qui cherche un stage pour son enfant ferme la page.</div></div>
+        
+      </div>
+      <div class="card">
+        <div class="num">2</div>
+        <h3>Les revendeurs vendent vos stages avant vous, même sur votre ville</h3>
+        <div class="vu">1er sur « stage motocross assevillers », 2e sur « stage moto cross picardie », 5e sur « stage motocross somme » : mais sur ces trois recherches, deux à trois annonces de revendeurs (Adrenactive, Sport Découverte, Manawa), puis un résumé par IA, passent avant vous. Sur « école de pilotage motocross », « initiation motocross amiens » et « stage motocross enfant somme », vous n'êtes pas en première page, et votre fiche n'apparaît jamais sur la carte.</div>
+        <div class="coute"><small>Ce que ça vous coûte</small><div>Un stage réservé chez un revendeur passe par un intermédiaire avant d'arriver à vous ; et le parent qui cherche « initiation » ou « enfant » ne vous rencontre pas.</div></div>
+        
+      </div>
+      <div class="card">
+        <div class="num">3</div>
+        <h3>Votre fiche Google vous présente comme un « Club de sport », reliée à un autre site</h3>
+        <div class="vu">La fiche s'appelle « Pro Stage », sa catégorie est « Club de sport », et son site web est prostagemx.fr, un second nom de domaine. Vos 38 avis à 4,7 n'apparaissent pas sur votre site.</div>
+        <div class="coute"><small>Ce que ça vous coûte</small><div>Google ne sait pas que vous êtes une école de pilotage et un centre de formation : c'est l'une des raisons pour lesquelles il ne vous montre pas sur la carte quand on cherche l'un ou l'autre.</div></div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="wrap">
+  
+
+  <div class="sec">
+    <div class="plan">
+      <h2>Le détail, et par où on commencerait</h2>
+      <div class="sub">Les quatre piliers, ce qu'on ferait contre chaque point et dans quel ordre : on vous le présente en 30 minutes, à l'écran.</div>
+      
+      <div class="cta">
+        <a class="btn" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0b7XxxhsgnC20SAT-i8jAAZH40WpqlmYFN_jgX_eOoyPQ-HV_uD7yjtjhDB0zdkjI2GRUADRwx">Réserver 30 min avec Axel</a>
+        <p>Visio Google Meet, 30 minutes, sans engagement. On passe en revue le détail des 4 piliers et ce qu'on ferait, dans l'ordre — le nettoyage du site en premier. Ou par téléphone : <a class="tel" href="tel:0635443010">06 35 44 30 10</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">
+    Mesures réalisées le 27 octobre 2026 sur prostage.fr et la fiche Google « Pro-Stage ». Vitesse : outil de mesure de Google, sur téléphone, le 27 octobre 2026. Positions : relevé en France sur 10 recherches, sur ordinateur, le 27 octobre 2026, confronté à un outil de positions ; relevé sur téléphone non fait. Fiche Google et site : lecture du 27 octobre. Aucune donnée de trafic ni aucun chiffre de l'école n'a été utilisé.<br>
+    KAELIX · agence web &amp; SEO pour artisans et PME · kaelix.fr · Document personnel et confidentiel.
+  </div>
+</div>
+</body>
+</html>
