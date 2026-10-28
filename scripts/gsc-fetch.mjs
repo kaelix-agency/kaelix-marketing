@@ -44,7 +44,11 @@ async function getToken(scopes) {
   const keyFile = process.env.GSC_KEY_FILE || join(homedir(), ".kaelix", "gsc-service-account.json");
   let key;
   try {
-    key = JSON.parse(await readFile(keyFile, "utf8"));
+    // Cloud session (scheduled task): the key comes from the environment variable GSC_SERVICE_ACCOUNT_B64
+    // (the service-account JSON, base64), set once in the cloud environment — never in git.
+    key = process.env.GSC_SERVICE_ACCOUNT_B64
+      ? JSON.parse(Buffer.from(process.env.GSC_SERVICE_ACCOUNT_B64, "base64").toString("utf8"))
+      : JSON.parse(await readFile(keyFile, "utf8"));
   } catch (e) {
     console.error(`ERREUR: clé de compte de service introuvable ou illisible: ${keyFile}`);
     console.error(`Posez la clé JSON là, ou définissez GSC_KEY_FILE. La clé ne doit JAMAIS être commitée.`);
