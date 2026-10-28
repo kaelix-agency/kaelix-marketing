@@ -8,8 +8,9 @@ Ce document est le **mode d'emploi opérationnel** du repo : ce que l'opérateur
 
 | Moment | Durée indicative | Quoi | Command(s) |
 |---|---|---|---|
-| **Lundi matin** | 30-45 min / client | Revue de performance + plan de la semaine | `/weekly-review` |
-| **1ᵉʳ lundi du mois — GO mensuel** (décision 2026-10-28, rationnel §1.30) | 15-30 min, tous clients | Valider en une fois les contenus du mois : sujets du plan → statut `go-MM/AAAA`. Sanctuarisé : plus aucun GO sujet par sujet ensuite ; la production s'enchaîne (tâche « Production du mois »), l'opérateur ne revoit que les briefs (au fil de l'eau) et les PR (gate) | (gate humain, depuis la discussion ou le résumé matinal) |
+| **Lundi matin** | 30-45 min / client | Revue de performance + **PR prêtes à relire** (la production de la semaine précédente) ; l'opérateur relit et merge | `/weekly-review` |
+| **Début de mois — rapport + GO mensuel** (décisions 2026-10-28, rationnel §1.30-1.31) | 30 min / client | Le brouillon du rapport mensuel contient le plan du mois à venir ; l'opérateur arbitre les sujets → statut `go-MM/AAAA` ; le rapport part. Sanctuarisé : plus aucun GO sujet par sujet ; la production (recherche + rédaction + PR) s'enchaîne en autonomie dans la semaine | `/report` (gate humain) |
+| **J90 de campagne** | 1 h / client | Bilan en visio : fait, résultats, suite — deck de 8 diapositives | `/bilan-j90` (à construire) |
 | **Sessions de production** (1-3 / semaine, selon plan) | 45-90 min / contenu | Recherche → rédaction → fact-check → PR | `/research` puis `/write` |
 | **Relecture & gate** (après chaque production) | 15-30 min / contenu | Relire, corriger, merger, indexer | (gate humain) |
 | **Fil de l'eau (client local)** | 5-15 min / occurrence | Avis à répondre, post GBP à publier | `/review-response`, `/gbp-post` |
