@@ -2,7 +2,7 @@
 description: Produire un contenu (phases 1-3) — rédaction MDX + schema + publication gatée
 argument-hint: <slug-client> <mot-clé> [--brief <fichier>]
 ---
-Production pour `$ARGUMENTS`. **La rédaction se fait ici, en session principale** — elle a besoin du contexte complet (brief, voix, first-party). Utilise les skills `article-writer` et `geo-schema` (+ `local-seo` si page locale). Les **vérifications** sont ensuite déléguées à deux subagents en contexte isolé : `fact-checker` puis `contract-checker`.
+Production pour `$ARGUMENTS`. **GO mensuel (§1.30)** : un sujet au statut `go-MM/AAAA` (ou `brief validé`) se rédige sans nouvelle demande ; la PR reste le gate. Passe la ligne du plan en `PR ouverte` à l'ouverture de la PR. **La rédaction se fait ici, en session principale** — elle a besoin du contexte complet (brief, voix, first-party). Utilise les skills `article-writer` et `geo-schema` (+ `local-seo` si page locale). Les **vérifications** sont ensuite déléguées à deux subagents en contexte isolé : `fact-checker` puis `contract-checker`.
 
 1. Lis `clients/<slug>/client-brief.md` (+ `nap.md` si local). Si aucun brief de production n'est fourni, exécute d'abord la logique de `/research`.
    - **Relève la version du contrat supportée par le site** (§2 du brief) : elle détermine les composants utilisables. **v1** → `Callout(info/astuce/attention)`, `CTA`, `FAQ` uniquement ; les éléments riches se font en Markdown pur (blockquote attribuée, liste « à retenir », table titrée). **v2** → + `StatGrid`, `ExpertQuote`, `Testimonial`, `ErrorTip`, `Callout(retenir)`. Une version est tout ou rien. **N'utilise jamais un composant hors version** — le build du site casse (comportement voulu).

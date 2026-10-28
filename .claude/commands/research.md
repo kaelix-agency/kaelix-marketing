@@ -2,7 +2,7 @@
 description: Recherche complète avant production (phase 0) — SERP, intention, format, angle, information gain
 argument-hint: <slug-client> <mot-clé ou sujet>
 ---
-Recherche pour `$ARGUMENTS`.
+Recherche pour `$ARGUMENTS`. **GO mensuel (§1.30)** : si le sujet porte le statut `go-MM/AAAA` dans `content-plan.md`, ne redemande aucun feu vert — enchaîne ; passe la ligne du plan en `en recherche`, puis `brief validé` quand l'opérateur a dit un mot sur le brief (un mot suffit). Si le sujet n'a pas de GO et que l'opérateur n'est pas en session, arrête-toi et signale-le comme gate manqué.
 
 1. Lis `clients/<slug>/client-brief.md` (+ `nap.md` si local), `tracking.md` et `content-plan.md` s'il existe.
 2. **Analyse du mot-clé — délègue au subagent `serp-analyst`** (fournis-lui le mot-clé + le chemin du dossier client). **Avant de les lancer, teste le MCP Haloscan par un appel réel (`get_user_credit`) ; s'il ne répond pas, pré-charge les KPI de tous les mots-clés en une commande — `node scripts/haloscan-fetch.mjs bulk <mot-clé> …` (§1.29) — et colle le tableau dans le prompt de chaque agent** : aucune analyse ne doit plus tourner sur les chiffres d'un relevé antérieur quand l'API répond. Il rend un mini-brief compact : intention, volume, difficulté, SERP réelle (qui se classe, quel format domine, quelle profondeur), questions PAA, secondaires du cluster, verdict scroll et cannibalisation. **Si le sujet appelle plusieurs mots-clés à qualifier, invoque plusieurs instances en parallèle** — une par mot-clé — et assemble leurs sorties.

@@ -4,7 +4,7 @@
 GABARIT — copié par /content-plan vers clients/<slug>/content-plan.md
 La CARTE DU PRÉVU sur plusieurs mois (tracking.md est le journal du RÉALISÉ).
 ⚠️ DOCUMENT VIVANT — c'est l'exception au régime « fichier figé » des reports/ et prompts/.
-Les statuts par sujet bougent au fil des semaines (/weekly-review re-priorise) ; le fichier
+Statuts : `prévu` → **`go-MM/AAAA`** (validé au GO mensuel du 1ᵉʳ lundi, sanctuarisé — rationnel §1.30) → `en recherche` / `brief validé` / `PR ouverte` → `publié` ; ou `reporté` / `abandonné` (motif). Les statuts par sujet bougent au fil des semaines (/weekly-review re-priorise) ; le fichier
 n'est JAMAIS re-généré et une ligne ne s'efface JAMAIS. Un sujet abandonné se raye par son
 statut, il ne disparaît pas — sa trace d'audit passe par le statut et par git.
 Justification : docs/rationnel-des-choix.md §1.11.
