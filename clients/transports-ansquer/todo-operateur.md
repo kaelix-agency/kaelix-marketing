@@ -40,6 +40,7 @@
 
 | Date | Changement |
 |---|---|
+| 2026-10-29 (2) | **Bilan client 90 jours 📤 émis à 16h25** (Gmail opérateur → contact@transportsansquer.fr, cc Mickael, PDF en PJ, envoi vérifié) — fichier figé |
 | 2026-10-29 | **Revue stratégique J90 + GO d'Axel** : #18 ✅ (commissionnaire `go-11/2026`) ; plan nov→janv commité (accueil + page entrepôt + commissionnaire en novembre). **#2/#2b re-justifiés** : prérequis du refresh de l'accueil de novembre (« transporteur gennevilliers » 203 imprs / 0 clic sur 90 j) — le bilan client annonce la fiche Google en novembre |
 | 2026-10-22 | Décision d'Axel (15 h 05) : fiche Google (#2, a2b), 118000 (#10, a10) et lot 2 de citations (#11, a11) **mis de côté, rappel le lundi 27/10** — tableau de bord à jour (`rappel_le: 2026-10-27`) |
 | 2026-08-28 | Création (gate mise en page du rapport) : 5 actions initialisées + Cuik différé reporté sans date |

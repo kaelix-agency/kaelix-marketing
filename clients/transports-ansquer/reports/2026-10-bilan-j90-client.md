@@ -3,7 +3,7 @@
 | **Client** | Transports Ansquer |
 | **Période** | Bilan 90 jours · août → octobre 2026 |
 | **Généré le** | 2026-10-29, session avec Axel (cahier des charges : récap mensuel, pages et recherches, actions faites, actions à venir) |
-| **Statut** | ✅ validé par Axel le 29/10 (« ok ça me va ») — support de la visio J90, non émis à ce jour |
+| **Statut** | 📤 **émis le 29/10/2026 à 16h25** (Gmail axel@kaelix.fr → contact@transportsansquer.fr, cc mickael@kaelix.fr, PDF en PJ ajouté par Axel — vérifié dans les messages envoyés). **Fichier FIGÉ** (md + PDF) : toute correction = nouveau fichier daté. Historique : ✅ validé le 29/10 (« ok ça me va ») ; support de la visio J90 |
 | **Sources** | `reports/2026-10-29-releve-donnees-j90.md` : Search Console du 30/07 au 27/10 (affichages, clics), Haloscan du 29/10 (positions), PostHog du 17/10 au 28/10 (contacts) ; `tracking.md`, `todo-operateur.md` (actions faites) ; plan proposé par la revue J90 interne + choix d'articles d'Axel du 29/10 (actions à venir) |
 | **Points à confirmer** | Plan nov→janv à passer au statut `go-MM/AAAA` dans `content-plan.md` au GO. Fiche Google (#2/#2b) annoncée en novembre : geste opérateur encore à faire. Avis Google non relevés depuis le 04/09, donc aucun chiffre d'avis dans ce bilan |
 
