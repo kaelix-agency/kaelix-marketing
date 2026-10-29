@@ -38,7 +38,9 @@
 
 ## Gouvernance
 
-- La revue est un document INTERNE (`clients/<slug>/reports/<AAAA-MM>-revue-strategique-j90.md`).
+- La revue est un document INTERNE (`clients/<slug>/reports/<AAAA-MM>-revue-strategique-j90.md`) : toutes les statistiques, au format de la revue hebdo.
+- **Deuxième livrable, pour le client (décision d'Axel du 29/10/2026)** : `clients/<slug>/reports/<AAAA-MM>-bilan-j90-client.md` (+ PDF), support de la visio de bilan — rédigé selon `docs/lexique-client.md`, sur le modèle de `clients/transports-ansquer/reports/2026-10-bilan-j90-client.md` : ① récap mois par mois ② d'où viennent visites et contacts ③ ce que nous avons fait ④ ce qui arrive dans les 90 jours, mois par mois, chaque action précise, puis « ce que nous attendons de vous ». Statut 🕓 brouillon jusqu'au GO d'Axel ; figé après envoi.
+- **Données** : si la session n'a pas les clés (Search Console, Haloscan, PostHog), elle ne peut pas faire la revue sur des chiffres à jour — dans ce cas, chercher d'abord un relevé `reports/<AAAA-MM-JJ>-releve-donnees-j90.md` fait en session interactive ; à défaut, le dire en tête et ne pas présenter de verdict sur des chiffres périmés.
 - Livraison : PDF via `scripts/report-to-html.mjs` + WeasyPrint → SendUserFile, message =
   les 2-3 décisions attendues, pas un résumé.
 - La tâche ne commite rien, n'envoie rien au client, ne modifie pas le plan : l'opérateur
@@ -53,11 +55,13 @@ dépôt GitHub public `kaelix-agency/kaelix-marketing`.
 2. Lis `CLAUDE.md`, `docs/revue-strategique-j90.md` (ce protocole), puis chez le client
    `clients/<SLUG>/` : content-plan.md, tracking.md, client-brief.md, et tout `reports/`.
 3. Rédige `clients/<SLUG>/reports/<AAAA-MM>-revue-strategique-j90.md` avec les 7 sections
-   obligatoires du protocole.
-4. Génère le PDF (`npm install marked` si besoin, `node scripts/report-to-html.mjs <md>`,
+   obligatoires du protocole (document interne), PUIS le bilan client
+   `clients/<SLUG>/reports/<AAAA-MM>-bilan-j90-client.md` selon `docs/lexique-client.md` et le
+   modèle `clients/transports-ansquer/reports/2026-10-bilan-j90-client.md` (statut 🕓 brouillon).
+4. Génère les deux PDF (`npm install marked` si besoin, `node scripts/report-to-html.mjs <md>`,
    `pip install weasyprint --break-system-packages`, `python3 -m weasyprint <html> <pdf>` —
    Chromium/Playwright indisponible, ne PAS lancer `playwright install`).
-5. Livre le PDF à Axel via SendUserFile, message = les 2-3 décisions qui l'attendent.
+5. Livre les deux PDF à Axel via SendUserFile, message = les 2-3 décisions qui l'attendent.
 6. RECONDUIS LE JALON : via le connecteur Claude Code Remote, crée la tâche planifiée
    one-shot « KAELIX — Revue stratégique J90 <SLUG> » à +90 jours, 07:49 Europe/Paris,
    notifications push + email, avec ce même prompt canonique relu depuis ce fichier

@@ -73,3 +73,7 @@ Testimonial invérifiables, citations inventées. « aucun » si vide.>
 ```
 
 Si zéro correction : dis-le explicitement (« passe effectuée, aucun point en défaut ») — l'absence de rapport ne doit jamais pouvoir passer pour un rapport vide.
+
+
+## Documents client (rapport, bilan 90 jours, audit) — décision du 29/10/2026
+Dans la partie destinée au client (sous `<!-- CLIENT -->`, ou tout audit/teaser), signale en ⚠️ tout terme de la colonne « interne » de `docs/lexique-client.md` (mot anglais, jargon SEO, nom d'outil hors légende de source), avec la traduction proposée par le lexique. Les mots du métier du client sont admis.
