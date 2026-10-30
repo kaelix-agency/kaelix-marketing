@@ -29,6 +29,12 @@
 | 2026-09-02 (indexé **2026-10-16**) | `/blog/transport-dedie-messagerie-ou-coursier/` (3e article) | 2026-12-01 (publi.) / **~2027-01-14 (effectif, J0 = 16/10)** | ⛔ aucune retouche avant J90 ; exception technique refermée le 16/10 ; exception prévue : câblage du renvoi € à la publication du sujet 10/2026. NB : l'article tournée a reçu sa retouche de maillage prévue le 02/09 (lien comparatif) — son J90 reste ~22/11 |
 | 2026-09-14 | `/blog/combien-de-palettes-dans-un-conteneur/` (4e article) | 2026-12-13 | ⛔ aucune retouche avant J90 ; exception prévue : lien vers le futur article « Poids d'un conteneur » (commentaire MDX) à sa publication. Guide empotage : exception 90 j **consommée** le 14/09 (renvoi câblé, lien seul) |
 
+### Refreshes de pages existantes
+
+| Date PR | Page | Raison | Nature des changements | Statut | Lecture |
+|---|---|---|---|---|---|
+| 2026-10-30 | `/stockage/entrepot-gennevilliers/` | `ctr` + `position` léger — « crossdocking île de france » 94 imprs / 0 clic / pos. 4,0 sur 90 j (relevé J90 du 29/10) | title « Cross-docking Île-de-France, quai PL et VL à Gennevilliers », meta réécrite, H1, accroche, section « Le flux » + schéma SVG first-party (quai PL → tri 300 m² → quai VL → fourgons, hayon sur le 20 m³), FAQ ×6 + JSON-LD FAQPage (prop `faq` de ServicePage), carte Cross-docking en tête, maillage + tournée régulière / groupage ; brief `research/2026-10-30-refresh-entrepot-cross-docking-ile-de-france.md` | 🕓 **PR [#11](https://github.com/kaelix-agency/transports-ansquer/pull/11) ouverte** (double PASS : fact-checker FAIL→PASS en 2 passes, contract-checker PASS×2 ; Vercel ✅) — gate weekly du 2/11 | `ctr-gap` à J+30 / J+60 après merge ; verdict J90 ≈ fin 01/2027 sur « crossdocking île de france » × page |
+
 ## 2. Historique des revues hebdo
 
 | Semaine | Fichier | Diagnostic en une ligne | Décisions prises |
