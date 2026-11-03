@@ -27,10 +27,10 @@
 |---|---|
 | URL du repo | https://github.com/kaelix-agency/web-agency (confirmé entretien 16/10) |
 | Forge | `github` (`gh`) |
-| Chemin local convenu | à convenir à la première session de production |
-| Chemin des articles | `src/content/blog/<slug>.mdx` (3 articles de février 2026, relevé à l'audit du 17/10) — route `src/app/(public)/blog/[slug]` ; **pipeline MDX (frontmatter, composants) à relever avant tout `/write`** |
+| Chemin local convenu | `/home/user/web-agency` en session cloud (clone du dépôt) ; sur le poste, le worktree de web-agency |
+| Chemin des articles | `apps/kaelix/src/content/blog/<slug>.mdx` (monorepo depuis le 01/11 ; blog vidé le 17/10, relancé par la ligne 13 le 03/11) — route `apps/kaelix/src/app/(public)/blog/[slug]` ; pipeline relevé le 03/11 (ligne « version du contrat ») |
 | Chemin des pages locales | ⚠️ pas de dossier de contenu : les 8 pages villes sont une **route dynamique** `src/app/(public)/agence-web/[ville]` (template TSX, pas MDX) — à requalifier (audit 17/10, C3) avant toute page locale |
-| **Version du contrat de contenu supportée** | ⚠️ **à auditer avant le premier `/write`** — champ critique, tout ou rien (v1/v2) |
+| **Version du contrat de contenu supportée** | ⚠️ **Markdown pur, sans composant — en deçà de la v1** (audité le 2026-11-03 au premier `/write` d'article, ligne 13) : le blog est rendu par `next-mdx-remote` avec les seuls éléments Markdown standard (titres, listes, table, blockquote, liens) ; **aucun `Callout`, `CTA`, `FAQ` ni composant v2** (ils casseraient le build — comportement voulu). Frontmatter propre au site (`apps/kaelix/src/lib/blog.ts`) : `title` (= H1), `seoTitle` (optionnel, title ≤ 60 — ajouté le 03/11), `excerpt` (meta), `date`, `updatedAt`, `category` (`guides` / `tendances` / `etudes-de-cas` / `seo` / `comparatifs`), `author`, `image`, `faq` (liste `q`/`a` → `FAQPage`, ajouté le 03/11) ; `typology` et `keywords` acceptés mais ignorés par le site. JSON-LD `Article` + `BreadcrumbList` + `FAQPage` générés par la route. Capture = lien Markdown vers `/audit-gratuit` ou `/contact`. Passer en v1/v2 = une change dédiée du site (contrat §4.5) |
 | Branche par défaut | `main` (confirmé 17/10) |
 | Rendu | SSR/SSG confirmé le 17/10 (`X-Nextjs-Prerender: 1`, HTML complet sans JS) |
 
