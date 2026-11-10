@@ -4,10 +4,12 @@
 |---|---|
 | **Client** | `kaelix` (l'agence, cliente d'elle-même) |
 | **Sujet du plan** | 11/2026 **S3** — **ligne 10**, cluster E (refonte) — persona **P3** (repreneur / créateur déjà lancé, site existant qui fait défaut), P1 en secondaire |
-| **Typologie** | **evergreen** — **page business** du site (route TSX propre `apps/kaelix/src/app/(public)/refonte-site-internet/page.tsx`, copy `apps/kaelix/src/lib/data/refonte-page.ts`, comme la page Val-d'Oise de la PR #81) ; le contrat de contenu s'applique sur le fond (véracité, lexique, FAQ, maillage), pas sur la whitelist MDX (`research/README.md`) |
+| **Typologie** | **guide** (colonne du plan validé ; re-check bimestriel : à compléter) — **page business** du site (route TSX propre `apps/kaelix/src/app/(public)/refonte-site-internet/page.tsx`, copy `apps/kaelix/src/lib/data/refonte-page.ts`, comme la page Val-d'Oise de la PR #81) ; le contrat de contenu s'applique sur le fond (véracité, lexique, FAQ, maillage), pas sur la whitelist MDX (`research/README.md`) |
 | **URL cible** | `/refonte-site-internet` (à créer) |
 | **Recherche faite le** | 2026-11-10 (`/research` en exécution planifiée « Production du mois » : 4 `serp-analyst` en parallèle + KPI Haloscan du jour par API directe) |
-| **Statut** | ✅ **`go-11/2026` (GO mensuel d'Axel du 02/11, §1.30) — brief prêt, aucun feu vert à redemander → `/write` enchaîné dans la même exécution** |
+| **Statut** | ⛔ **doublon** (voir l'encadré ci-dessous) — le sujet était déjà en **PR ouverte (#83, 2026-11-09)** |
+
+> ⛔ **DOUBLON — lire d'abord [`2026-11-09-refonte-site-internet.md`](./2026-11-09-refonte-site-internet.md).** Ce brief a été produit le 10/11 par une exécution planifiée qui a relu `origin/main` sans la trace du 09/11 (ses commits — brief, PR [web-agency#83](https://github.com/kaelix-agency/web-agency/pull/83), gate — étaient restés sur une branche de travail non fusionnée). La page a été rédigée une seconde fois et a passé le double PASS, mais **aucune seconde PR n'a été ouverte** : la PR #83 fait foi. Ce fichier reste comme contre-lecture (même verdict ; différences utiles : lien vers l'article #82 rendu seulement s'il est dans le build, section prix avec la boutique à 150 € et la reprise d'une boutique existante « chiffrée après un échange »). Statut réel de la ligne 10 : **PR ouverte (#83, 2026-11-09)**.
 
 > **Semaine du sujet** : la ligne 10 porte `11/2026 S3`. S1 = 26/10-01/11 (semaine du 1er), S2 = 02/11-08/11, **S3 = 09/11-15/11**. Le 10/11 est dans la semaine du sujet : il se lance. (Ligne 14 = S4 à partir du 16/11 : « en attente de sa semaine ».)
 
