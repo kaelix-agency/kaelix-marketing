@@ -28,3 +28,4 @@ Deux types de livrables cohabitent ici, avec des régimes différents — **ne j
 |---|---|---|---|
 | [`2026-10-19-revue-hebdo.md`](./2026-10-19-revue-hebdo.md) | revue hebdo (première) | semaine du 12/10 au 18/10 — GSC 7 j 11/10-17/10, 28 j 20/09-17/10 (vides) | interne |
 | [`2026-11-16-revue-hebdo.md`](./2026-11-16-revue-hebdo.md) | revue hebdo (S47) | semaine du 09/11 au 15/11 — GSC 7 j 08/11-14/11 (1 impr.), 28 j 18/10-14/11 (19 impr. / 3 clics, marque) ; PostHog + Haloscan API empêchés | interne |
+| [`2026-11-23-revue-hebdo.md`](./2026-11-23-revue-hebdo.md) | revue hebdo (S48) | semaine du 16/11 au 22/11 — GSC 7 j 15/11-21/11 (4 impr. / 1 clic), 28 j 25/10-21/11 (8 impr. / 2 clics, marque) ; J30 accueil et /audit-gratuit passés ; 4 PR non relues, prod figée depuis le 23/10 ; PostHog + Haloscan API + `gh api` empêchés (3e fois) | interne |
