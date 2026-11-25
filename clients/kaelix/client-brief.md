@@ -36,9 +36,11 @@
 
 ## 3. Marque & voix
 
+- **Positionnement (étude du 25/11/2026, décision d'Axel)** : « Un site qui vous appartient, dont on s'occupe pour vous. » Promesse = liberté (code cédé, domaine au client, départ propre à prix connu, sans engagement ou 3 mois) ; preuves = (1) codé à la main sans WordPress ni extension : moins exposé, mis à jour par nous, surveillé — jamais « inattaquable » —, (2) résultats chiffrés (Ansquer). Contenu **par métier** avec un cas réel ; aucun sujet de métier du web. Étude : doc claude.ai « Positionnement kaelix.fr ».
+
 - **Ton** : direct, chaleureux, sans jargon ; vouvoiement ; concret (chiffres réels, avant/après) plutôt qu'adjectifs. Slogan : « Faites votre métier, on s'occupe du reste. »
 - **Vocabulaire maison** : site « codé à la main », « from scratch », « sans modèle », « le code vous appartient », un seul interlocuteur, « Crafted Code, Proven Performance ».
-- **Interdits** : aucune garantie de position Google ; pas de dénigrement nominatif d'un concurrent (on compare des catégories — « agence WordPress classique », « plateforme en self-service » — pas des noms) ; pas de jargon SEO non expliqué ; aucun chiffre client sans source vérifiable ; anonymisation des clients non référencés publiquement (les 3 références du site sont publiables).
+- **Interdits** : **« deux cousins » et toute mention du lien familial (décision d'Axel du 25/11/2026 : « deux associés », Axel vous parle, Mickael écrit votre site) ;** aucune garantie de position Google ; pas de dénigrement nominatif d'un concurrent (on compare des catégories — « agence WordPress classique », « plateforme en self-service » — pas des noms) ; pas de jargon SEO non expliqué ; aucun chiffre client sans source vérifiable ; anonymisation des clients non référencés publiquement (les 3 références du site sont publiables).
 - **Auteur affiché** (E-E-A-T) : **Axel** (co-fondateur — marketing, SEO, rédaction) pour la stratégie/SEO/acquisition ; **Mickael** (co-fondateur — développement, 10 ans, ex-salles de marché) pour la technique/performance. Attribution par sujet, décidée au brief de chaque contenu.
 - **Exemples de référence** : la page d'accueil kaelix.fr (avant/après Ansquer chiffré) ; l'étude de cas /realisations/transports-ansquer.
 
