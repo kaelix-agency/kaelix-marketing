@@ -42,7 +42,7 @@ Si l'une manque, demande-la et ne vérifie rien.
 | 11 | **`description` entre 140 et 155 caractères** | ⚠️ hors bornes |
 | 12 | **H1 unique**, distinct du `title` mot pour mot | 🔴 |
 | 13 | **Aucun style dans le corps** : pas de classe CSS, `<div>`, style inline, couleur, taille de police, HTML de mise en page | 🔴 |
-| 14 | **Densité (sites v2 uniquement)** : ≥1 élément riche par grande section (`StatGrid`, tableau titré, `Callout retenir`, `ErrorTip`). Un article de 2000+ mots sans aucun élément visuel échoue | 🔴 |
+| 14 | **Densité et visuels (tous les sites, quelle que soit la version du contrat — décision d'Axel du 25/11/2026)** : ≥1 élément riche par grande section (`StatGrid`, tableau titré, `Callout retenir`, `ErrorTip` en v2 ; tableau titré, blockquote attribuée, liste « à retenir » en v1 ou Markdown pur) **et ≥1 visuel figuratif par ~800 mots** (`![alt](src)`, schéma SVG first-party d'abord — règle de `article-writer`, « Rythme visuel »). **Un article de 2000+ mots sans aucune image échoue, sur tout site** : un schéma SVG est une image Markdown standard, aucun site ne peut l'empêcher. *(Trou constaté le 25/11/2026 : le critère ne s'appliquait qu'en v2, les quatre contenus kaelix.fr de novembre sont passés sans image.)* | 🔴 |
 | 15 | **Tableaux titrés** : chaque table Markdown est précédée d'un H3 descriptif | ⚠️ |
 | 16 | **NAP conforme** (clients locaux) : toute coordonnée est identique à `nap.md` ou figure dans ses variantes acceptées | 🔴 |
 | 17 | **Images** : `alt` descriptif présent sur chacune ; chemin sous `public/blog/<slug>/` ou `public/zones/<slug>/` | ⚠️ |
